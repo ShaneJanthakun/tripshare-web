@@ -12,7 +12,7 @@ const FAQ = [
   },
   {
     q: 'Can I make my guide private?',
-    a: 'Yes. You can toggle between Public and Private at any time from within the guide. Private guides are only visible to you.',
+    a: 'Yes. When you switch a guide to Private, TripShare automatically generates a 4-character access code. Anyone you share the guide with will need to enter this code to view it. You can find and copy the code inside the guide.',
   },
   {
     q: 'How do I add images to my guide?',

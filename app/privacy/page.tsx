@@ -23,6 +23,10 @@ const SECTIONS = [
     body: `Photos you upload are stored in Supabase Storage and are publicly accessible via a unique URL if attached to a public guide. If you delete your account, your images are removed along with all your data.`,
   },
   {
+    title: 'Private Guides and Access Codes',
+    body: `When you create a private guide, TripShare generates a 4-character access code. This code is stored securely and is only visible to you (the guide owner). Anyone who wants to view your private guide must enter this code. The code is transmitted securely and is never exposed in the public feed or search results.`,
+  },
+  {
     title: 'Third-Party Services',
     body: `TripShare uses Supabase for authentication, database and file storage. We use Apple Maps for location-based features. We do not integrate with advertising networks, analytics trackers or social media platforms.`,
   },
@@ -62,7 +66,7 @@ export default function Privacy() {
         <div className="max-w-2xl mx-auto">
           <p className="text-accent text-sm font-medium mb-3 tracking-wide uppercase">Legal</p>
           <h1 className="text-4xl font-bold mb-3">Privacy Policy</h1>
-          <p className="text-gray-500 text-sm mb-12">Last updated: June 2025</p>
+          <p className="text-gray-500 text-sm mb-12">Last updated: July 2025</p>
 
           <p className="text-gray-300 leading-relaxed mb-12">
             TripShare (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy.

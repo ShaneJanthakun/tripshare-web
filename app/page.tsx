@@ -20,6 +20,8 @@ async function getPublicGuides(): Promise<Guide[]> {
   const { data } = await sb
     .from('guides')
     .select('id, title, destination, country, upvotes, data')
+    .eq('is_draft', false)
+    .eq('is_public', true)
     .order('upvotes', { ascending: false })
     .limit(6);
   return (data ?? []) as Guide[];
@@ -48,68 +50,6 @@ const FEATURES = [
   },
 ];
 
-const DETAIL_FEATURES = [
-  {
-    category: 'Creating guides',
-    icon: '✏️',
-    items: [
-      'Set destination, country and language',
-      'Add a cover photo with adjustable crop',
-      '13 trip categories — City Tour, Hiking, Beach, Road Trip, Foodie and more',
-      'Public or private — share private guides via access code',
-    ],
-  },
-  {
-    category: 'Day-by-day itinerary',
-    icon: '📅',
-    items: [
-      'Organise your trip into days with multiple stops',
-      'Each stop has a name, address, notes and photos',
-      'Apple Maps integration — tap any address to open in Maps',
-      'Reorder days and stops freely',
-    ],
-  },
-  {
-    category: 'Custom sections',
-    icon: '📋',
-    items: [
-      'List — text items you can add and remove',
-      'Note — free-text travel notes',
-      'Gallery — photo collections',
-      'Map — visualise your route',
-      'Accommodation — hotel name, booking link and photos',
-    ],
-  },
-  {
-    category: 'Social features',
-    icon: '👥',
-    items: [
-      'Follow other travelers and see their guides first',
-      'Upvote guides you love',
-      'Comment on guides (owner can disable comments)',
-      'View public profiles with guide count and following status',
-    ],
-  },
-  {
-    category: 'Discovery',
-    icon: '🔍',
-    items: [
-      'Home feed sorted by following-first, then popular',
-      'Search guides by destination or title',
-      'View count and upvote count on all guides',
-    ],
-  },
-  {
-    category: 'Your profile',
-    icon: '👤',
-    items: [
-      'Manage all your guides in one place',
-      'See and manage who you follow',
-      'Edit your name and profile photo',
-      'Delete your account at any time',
-    ],
-  },
-];
 
 export default async function Home() {
   const guides = await getPublicGuides();
@@ -122,6 +62,7 @@ export default async function Home() {
           <span className="text-lg font-bold tracking-tight">TripShare</span>
           <div className="flex items-center gap-6 text-sm text-gray-400">
             <Link href="#guides" className="hover:text-white transition-colors">Guides</Link>
+            <Link href="/features" className="hover:text-white transition-colors">Features</Link>
             <Link href="/support" className="hover:text-white transition-colors">Support</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
           </div>
@@ -184,29 +125,16 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Detailed features */}
-      <section className="py-20 px-6 border-t border-border">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-3">Everything inside TripShare</h2>
-          <p className="text-gray-400 text-center mb-14">A full-featured travel companion — built for people who love to plan.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {DETAIL_FEATURES.map(f => (
-              <div key={f.category} className="bg-surface border border-border rounded-2xl p-6 hover:border-accent/40 transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl">{f.icon}</span>
-                  <h3 className="text-base font-semibold">{f.category}</h3>
-                </div>
-                <ul className="space-y-2">
-                  {f.items.map(item => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-400">
-                      <span className="text-accent mt-0.5 shrink-0">·</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+      {/* Features CTA */}
+      <section className="py-12 px-6 border-t border-border text-center">
+        <div className="max-w-xl mx-auto">
+          <p className="text-gray-400 mb-4">Want to see everything TripShare can do?</p>
+          <Link
+            href="/features"
+            className="inline-flex items-center gap-2 bg-surface border border-border hover:border-accent/50 rounded-2xl px-6 py-3 text-sm font-semibold transition-colors"
+          >
+            View all features →
+          </Link>
         </div>
       </section>
 
@@ -268,6 +196,7 @@ export default async function Home() {
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
           <span>© {new Date().getFullYear()} TripShare. All rights reserved.</span>
           <div className="flex items-center gap-6">
+            <Link href="/features" className="hover:text-white transition-colors">Features</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/support" className="hover:text-white transition-colors">Support</Link>
           </div>
