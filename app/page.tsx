@@ -108,6 +108,31 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Screenshots */}
+      <section className="py-20 px-6 border-t border-border overflow-hidden">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-3">See it in action</h2>
+          <p className="text-gray-400 text-center mb-14">Everything you need to plan, share and discover travel — in your pocket.</p>
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 sm:grid sm:grid-cols-4 sm:overflow-visible sm:mx-0 sm:px-0">
+            {[
+              { src: '/screenshots/screen1.png', caption: 'Discover Free Travel Guides' },
+              { src: '/screenshots/screen2.png', caption: 'Made by Travelers for Travelers' },
+              { src: '/screenshots/screen3.png', caption: 'Build & Share Your Guides' },
+              { src: '/screenshots/screen4.png', caption: 'Visual Day-By-Day Blueprints' },
+              { src: '/screenshots/screen5.png', caption: 'See Your Route on the Map' },
+              { src: '/screenshots/screen6.png', caption: 'Build It Your Way For Free' },
+              { src: '/screenshots/screen7.png', caption: 'Make Your Guide Private' },
+            ].map((s, i) => (
+              <div key={i} className="flex-shrink-0 w-48 snap-start sm:w-auto">
+                <div className="rounded-2xl overflow-hidden border border-border shadow-xl">
+                  <Image src={s.src} alt={s.caption} width={390} height={844} className="w-full h-auto" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="py-20 px-6 border-t border-border">
         <div className="max-w-5xl mx-auto">
