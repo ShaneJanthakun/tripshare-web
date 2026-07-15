@@ -56,6 +56,7 @@ export default function Privacy() {
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" className="text-lg font-bold tracking-tight">TripShare</Link>
           <div className="flex items-center gap-6 text-sm text-gray-400">
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
             <Link href="/support" className="hover:text-white transition-colors">Support</Link>
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
           </div>
@@ -66,7 +67,7 @@ export default function Privacy() {
         <div className="max-w-2xl mx-auto">
           <p className="text-accent text-sm font-medium mb-3 tracking-wide uppercase">Legal</p>
           <h1 className="text-4xl font-bold mb-3">Privacy Policy</h1>
-          <p className="text-gray-500 text-sm mb-12">Last updated: July 2025</p>
+          <p className="text-gray-500 text-sm mb-12">Last updated: July 2026</p>
 
           <p className="text-gray-300 leading-relaxed mb-12">
             TripShare (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy.
@@ -101,7 +102,10 @@ export default function Privacy() {
       <footer className="border-t border-border py-8 px-6">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
           <span>© {new Date().getFullYear()} TripShare. All rights reserved.</span>
-          <Link href="/" className="hover:text-white transition-colors">← Back to home</Link>
+          <div className="flex items-center gap-4">
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+            <Link href="/" className="hover:text-white transition-colors">← Back to home</Link>
+          </div>
         </div>
       </footer>
     </div>
