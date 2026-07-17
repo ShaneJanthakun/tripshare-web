@@ -238,7 +238,10 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-border py-8 px-6 mt-auto">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <span>© {new Date().getFullYear()} TripShare</span>
+          <div className="flex flex-col items-center sm:items-start gap-1">
+            <span>© {new Date().getFullYear()} TripShare</span>
+            <span className="text-xs text-gray-600">Janthakun Tech · Org.nr. 931 202 162</span>
+          </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
