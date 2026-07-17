@@ -115,7 +115,7 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="relative pt-32 pb-28 px-6 text-center overflow-hidden">
+      <section className="relative pt-24 pb-28 px-6 text-center overflow-hidden">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
           <source src="/hero.mp4" type="video/mp4" />
         </video>
@@ -123,11 +123,6 @@ export default function Home() {
         <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-bg to-transparent" style={{ zIndex: 2 }} />
 
         <div className="relative max-w-2xl mx-auto" style={{ zIndex: 3 }}>
-          <div className="inline-flex items-center gap-2 bg-surface/80 border border-border rounded-full px-4 py-1.5 text-xs text-gray-400 mb-10 font-medium tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Free on the App Store
-          </div>
-
           <h1 className="text-5xl sm:text-6xl font-bold leading-[1.08] tracking-tight mb-6">
             The travel app built by<br />
             <span className="text-accent">people who actually go</span>
