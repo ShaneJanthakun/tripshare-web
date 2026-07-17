@@ -78,7 +78,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
           <span className="text-base font-bold tracking-tight">TripShare</span>
           <div className="flex items-center gap-6 text-sm text-gray-400">
-            <Link href="/features" className="hover:text-white transition-colors hidden sm:block">Features</Link>
+            <Link href="/features" className="hover:text-white transition-colors">Features</Link>
             <Link href="/support" className="hover:text-white transition-colors hidden sm:block">Support</Link>
             <Link href="/privacy" className="hover:text-white transition-colors hidden sm:block">Privacy</Link>
             <a
