@@ -133,7 +133,7 @@ export default function Home() {
             <span className="text-accent">people who actually go</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-400 max-w-lg mx-auto mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-200 max-w-lg mx-auto mb-10 leading-relaxed">
             Create day-by-day travel guides with real stops, maps and photos — and discover trips shared by people who&apos;ve actually been there. No ads. No influencers. Just honest travel.
           </p>
 
