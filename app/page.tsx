@@ -9,6 +9,7 @@ const SCREENSHOTS = [
   { src: '/screenshots/screen5.png', alt: 'Map Integration' },
   { src: '/screenshots/screen6.png', alt: 'Build It Your Way' },
   { src: '/screenshots/screen7.png', alt: 'Make Your Guides Private' },
+  { src: '/screenshots/screen8.png', alt: 'Discover guides by people who have been there' },
 ];
 
 const FEATURES = [
