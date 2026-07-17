@@ -93,42 +93,50 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="relative pt-36 pb-20 px-6 text-center overflow-hidden">
+      <section className="relative pt-32 pb-24 px-6 text-center overflow-hidden">
         {/* glow */}
         <div className="pointer-events-none absolute inset-0 flex items-start justify-center">
-          <div className="w-[700px] h-[400px] rounded-full bg-accent/10 blur-[120px] -translate-y-20" />
+          <div className="w-[800px] h-[500px] rounded-full bg-accent/10 blur-[140px] -translate-y-24" />
         </div>
 
-        <div className="relative max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-1.5 text-xs text-gray-400 mb-8 font-medium tracking-wide uppercase">
+        <div className="relative max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-1.5 text-xs text-gray-400 mb-10 font-medium tracking-wide uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Now on the App Store
+            Free on the App Store
           </div>
 
-          <h1 className="text-5xl sm:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
-            Travel guides by<br />
-            <span className="text-accent">people who&apos;ve been there</span>
+          <h1 className="text-5xl sm:text-6xl font-bold leading-[1.08] tracking-tight mb-6">
+            The travel app built by<br />
+            <span className="text-accent">people who actually go</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
-            Create and discover real travel itineraries — day by day, stop by stop,
-            with addresses that open straight in Maps.
+          <p className="text-base sm:text-lg text-gray-400 max-w-lg mx-auto mb-10 leading-relaxed">
+            TripShare lets you create day-by-day travel guides with real stops, maps and photos — and discover trips shared by people who&apos;ve actually been there. No ads. No influencers. Just honest travel.
           </p>
 
-          <a
-            href="https://apps.apple.com/app/id6778097653"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-black rounded-2xl px-7 py-4 hover:bg-gray-100 transition-colors shadow-xl"
-          >
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-            </svg>
-            <div className="text-left">
-              <div className="text-[10px] text-gray-600 leading-none font-medium">Download on the</div>
-              <div className="text-sm font-bold leading-tight">App Store</div>
-            </div>
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="https://apps.apple.com/app/id6778097653"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-accent text-white font-bold text-base rounded-xl px-8 py-4 hover:bg-orange-500 transition-colors shadow-lg shadow-accent/20 w-full sm:w-auto"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              </svg>
+              Download Now
+            </a>
+            <a
+              href="https://apps.apple.com/app/id6778097653"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-surface border border-border text-white font-semibold text-base rounded-xl px-8 py-4 hover:border-accent/40 transition-colors w-full sm:w-auto"
+            >
+              Start Sharing
+            </a>
+          </div>
+
+          <p className="text-xs text-gray-600 mt-5">Free to download · iOS</p>
         </div>
       </section>
 
