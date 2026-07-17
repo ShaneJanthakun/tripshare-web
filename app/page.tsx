@@ -119,7 +119,7 @@ export default function Home() {
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-bg/72" style={{ zIndex: 1 }} />
+        <div className="absolute inset-0 bg-black/80" style={{ zIndex: 1 }} />
         <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-bg to-transparent" style={{ zIndex: 2 }} />
 
         <div className="relative max-w-2xl mx-auto" style={{ zIndex: 3 }}>
