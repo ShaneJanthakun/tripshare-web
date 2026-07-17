@@ -78,6 +78,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
           <span className="text-base font-bold tracking-tight">TripShare</span>
           <div className="flex items-center gap-6 text-sm text-gray-400">
+            <Link href="/features" className="hover:text-white transition-colors hidden sm:block">Features</Link>
             <Link href="/support" className="hover:text-white transition-colors hidden sm:block">Support</Link>
             <Link href="/privacy" className="hover:text-white transition-colors hidden sm:block">Privacy</Link>
             <a
@@ -243,6 +244,7 @@ export default function Home() {
             <span className="text-xs text-gray-600">Janthakun Tech · Org.nr. 931 202 162</span>
           </div>
           <div className="flex items-center gap-6">
+            <Link href="/features" className="hover:text-white transition-colors">Features</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
             <Link href="/support" className="hover:text-white transition-colors">Support</Link>
