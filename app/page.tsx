@@ -94,12 +94,23 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-24 px-6 text-center overflow-hidden">
-        {/* glow */}
-        <div className="pointer-events-none absolute inset-0 flex items-start justify-center">
-          <div className="w-[800px] h-[500px] rounded-full bg-accent/10 blur-[140px] -translate-y-24" />
-        </div>
+        {/* video background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 0 }}
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
+        {/* dark overlay so text stays readable */}
+        <div className="absolute inset-0 bg-bg/70" style={{ zIndex: 1 }} />
+        {/* subtle bottom fade into page */}
+        <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-bg to-transparent" style={{ zIndex: 2 }} />
 
-        <div className="relative max-w-2xl mx-auto">
+        <div className="relative max-w-2xl mx-auto" style={{ zIndex: 3 }}>
           <div className="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-1.5 text-xs text-gray-400 mb-10 font-medium tracking-wide uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             Free on the App Store
