@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "support": "Support",
+    "privacy": "Confidentialité",
+    "download": "Télécharger"
+  },
+  "hero": {
+    "title": "L'app de voyage créée par",
+    "titleAccent": "des gens qui voyagent vraiment",
+    "subtitle": "Créez des guides de voyage jour par jour avec de vrais arrêts, des cartes et des photos — et découvrez des voyages partagés par des gens qui y ont vraiment été. Pas de pubs. Pas d'influenceurs. Juste un voyage honnête.",
+    "badge": "Gratuit · iOS"
+  },
+  "screenshots": {
+    "label": "Voir en action"
+  },
+  "tagline": {
+    "heading": "De vrais itinéraires de vrais voyageurs.",
+    "sub": "Pas généré par IA. Pas sponsorisé. Juste des gens qui y ont été — partageant exactement où ils sont allés et ce qu'ils ont fait."
+  },
+  "features": {
+    "heading": "Tout ce qu'il faut pour voyager mieux",
+    "sub": "Conçu pour les voyageurs qui planifient soigneusement et partagent généreusement.",
+    "seeAll": "Voir toutes les fonctionnalités",
+    "items": [
+      {
+        "title": "Itinéraires jour par jour",
+        "desc": "De vrais arrêts, de vraies adresses. Chaque jour de votre voyage détaillé avec cartes et conseils."
+      },
+      {
+        "title": "Découvrez de vrais voyages",
+        "desc": "Parcourez des guides de vrais voyageurs. Des trésors cachés introuvables sur aucun algorithme."
+      },
+      {
+        "title": "Intégration cartographique",
+        "desc": "Chaque arrêt sur une carte. Appuyez sur une adresse pour l'ouvrir directement dans Apple Maps."
+      },
+      {
+        "title": "Créez à votre façon",
+        "desc": "Jours, listes, notes, galeries, hébergements — structurez votre guide comme il vous convient."
+      },
+      {
+        "title": "Public ou privé",
+        "desc": "Partagez avec le monde ou gardez-le privé avec un code d'accès personnel."
+      },
+      {
+        "title": "Fait pour la communauté",
+        "desc": "Suivez des voyageurs, aimez des guides et construisez un fil qui reflète vraiment comment vous voyagez."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Commencez à explorer aujourd'hui",
+    "sub": "Gratuit à télécharger. Gratuit à utiliser. Toujours.",
+    "button": "Télécharger sur l'App Store"
+  },
+  "footer": {
+    "org": "Janthakun Tech · Org.nr. 931 202 162",
+    "features": "Fonctionnalités",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "support": "Support"
+  },
+  "lang": {
+    "label": "Langue"
+  }
+}

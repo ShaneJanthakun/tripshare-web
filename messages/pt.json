@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "features": "Funcionalidades",
+    "support": "Suporte",
+    "privacy": "Privacidade",
+    "download": "Descarregar"
+  },
+  "hero": {
+    "title": "A app de viagens criada por",
+    "titleAccent": "pessoas que realmente viajam",
+    "subtitle": "Cria guias de viagem dia a dia com paragens reais, mapas e fotos — e descobre viagens partilhadas por pessoas que estiveram lá de verdade. Sem anúncios. Sem influencers. Só viagens honestas.",
+    "badge": "Grátis · iOS"
+  },
+  "screenshots": {
+    "label": "Ver em ação"
+  },
+  "tagline": {
+    "heading": "Itinerários reais de viajantes reais.",
+    "sub": "Não gerado por IA. Não patrocinado. Apenas pessoas que estiveram lá — partilhando exatamente onde foram e o que fizeram."
+  },
+  "features": {
+    "heading": "Tudo o que precisas para viajar melhor",
+    "sub": "Feito para viajantes que planeiam cuidadosamente e partilham generosamente.",
+    "seeAll": "Ver todas as funcionalidades",
+    "items": [
+      {
+        "title": "Itinerários dia a dia",
+        "desc": "Paragens reais, endereços reais. Cada dia da tua viagem com mapas e dicas."
+      },
+      {
+        "title": "Descobre viagens reais",
+        "desc": "Explora guias de viajantes reais. Joias escondidas que não encontras em nenhum algoritmo."
+      },
+      {
+        "title": "Integração com mapas",
+        "desc": "Cada paragem marcada num mapa. Toca em qualquer endereço para abrir no Apple Maps."
+      },
+      {
+        "title": "Constrói à tua maneira",
+        "desc": "Dias, listas, notas, galerias, alojamento — estrutura o teu guia como fizer mais sentido."
+      },
+      {
+        "title": "Público ou privado",
+        "desc": "Partilha com o mundo ou mantém privado com um código de acesso pessoal."
+      },
+      {
+        "title": "Feito para a comunidade",
+        "desc": "Segue viajantes, dá gostos a guias e constrói um feed que reflete como viajas."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Começa a explorar hoje",
+    "sub": "Grátis para descarregar. Grátis para usar. Sempre.",
+    "button": "Descarregar na App Store"
+  },
+  "footer": {
+    "org": "Janthakun Tech · Org.nr. 931 202 162",
+    "features": "Funcionalidades",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "support": "Suporte"
+  },
+  "lang": {
+    "label": "Idioma"
+  }
+}

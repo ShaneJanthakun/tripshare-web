@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "features": "Features",
+    "support": "Support",
+    "privacy": "Privacy",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "The travel app built by",
+    "titleAccent": "people who actually go",
+    "subtitle": "Create day-by-day travel guides with real stops, maps and photos — and discover trips shared by people who've actually been there. No ads. No influencers. Just honest travel.",
+    "badge": "Free · iOS"
+  },
+  "screenshots": {
+    "label": "See it in action"
+  },
+  "tagline": {
+    "heading": "Real itineraries from real travelers.",
+    "sub": "Not AI-generated. Not sponsored. Just people who have been there — sharing exactly where they went and what they did."
+  },
+  "features": {
+    "heading": "Everything you need to travel smarter",
+    "sub": "Built for travelers who plan carefully and share generously.",
+    "seeAll": "See all features",
+    "items": [
+      {
+        "title": "Day-by-day itineraries",
+        "desc": "Real stops, real addresses. Every day of your trip laid out with maps and tips."
+      },
+      {
+        "title": "Discover real trips",
+        "desc": "Browse guides from real travelers. Hidden gems you won't find on any algorithm."
+      },
+      {
+        "title": "Map integration",
+        "desc": "Every stop plotted on a map. Tap any address to open directly in Apple Maps."
+      },
+      {
+        "title": "Build it your way",
+        "desc": "Days, lists, notes, galleries, accommodation — structure your guide however makes sense."
+      },
+      {
+        "title": "Public or private",
+        "desc": "Share with the world or keep it private with a personal access code."
+      },
+      {
+        "title": "Built for community",
+        "desc": "Follow travelers, like guides and build a feed that actually reflects how you travel."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Start exploring today",
+    "sub": "Free to download. Free to use. Always.",
+    "button": "Download on the App Store"
+  },
+  "footer": {
+    "org": "Janthakun Tech · Org.nr. 931 202 162",
+    "features": "Features",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "support": "Support"
+  },
+  "lang": {
+    "label": "Language"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "features": "Funksjoner",
+    "support": "Support",
+    "privacy": "Personvern",
+    "download": "Last ned"
+  },
+  "hero": {
+    "title": "Reiseappen laget av",
+    "titleAccent": "folk som faktisk reiser",
+    "subtitle": "Lag dag-for-dag reiseguider med ekte stopp, kart og bilder — og oppdag turer delt av folk som faktisk har vært der. Ingen reklame. Ingen influensere. Bare ærlig reising.",
+    "badge": "Gratis · iOS"
+  },
+  "screenshots": {
+    "label": "Se den i bruk"
+  },
+  "tagline": {
+    "heading": "Ekte reiseruter fra ekte reisende.",
+    "sub": "Ikke AI-generert. Ikke sponset. Bare folk som har vært der — som deler nøyaktig hvor de gikk og hva de gjorde."
+  },
+  "features": {
+    "heading": "Alt du trenger for å reise smartere",
+    "sub": "Laget for reisende som planlegger nøye og deler generøst.",
+    "seeAll": "Se alle funksjoner",
+    "items": [
+      {
+        "title": "Dag-for-dag reiseruter",
+        "desc": "Ekte stopp, ekte adresser. Hver dag av turen lagt ut med kart og tips."
+      },
+      {
+        "title": "Oppdag ekte turer",
+        "desc": "Bla gjennom guider fra ekte reisende. Skjulte perler du ikke finner på noe algoritme."
+      },
+      {
+        "title": "Kartintegrasjon",
+        "desc": "Hvert stopp plottet på et kart. Trykk på en adresse for å åpne direkte i Apple Maps."
+      },
+      {
+        "title": "Bygg det på din måte",
+        "desc": "Dager, lister, notater, gallerier, overnatting — strukturer guiden din slik det gir mening."
+      },
+      {
+        "title": "Offentlig eller privat",
+        "desc": "Del med verden eller hold det privat med en personlig tilgangskode."
+      },
+      {
+        "title": "Laget for fellesskap",
+        "desc": "Følg reisende, lik guider og bygg en feed som faktisk gjenspeiler hvordan du reiser."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Begynn å utforske i dag",
+    "sub": "Gratis å laste ned. Gratis å bruke. Alltid.",
+    "button": "Last ned på App Store"
+  },
+  "footer": {
+    "org": "Janthakun Tech · Org.nr. 931 202 162",
+    "features": "Funksjoner",
+    "privacy": "Personvern",
+    "terms": "Vilkår",
+    "support": "Support"
+  },
+  "lang": {
+    "label": "Språk"
+  }
+}
