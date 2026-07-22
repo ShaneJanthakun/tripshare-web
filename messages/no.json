@@ -11,9 +11,7 @@
     "subtitle": "Lag dag-for-dag reiseguider med ekte stopp, kart og bilder — og oppdag turer delt av folk som faktisk har vært der. Ingen reklame. Ingen influensere. Bare ærlig reising.",
     "badge": "Gratis · iOS"
   },
-  "screenshots": {
-    "label": "Se den i bruk"
-  },
+  "screenshots": { "label": "Se den i bruk" },
   "tagline": {
     "heading": "Ekte reiseruter fra ekte reisende.",
     "sub": "Ikke AI-generert. Ikke sponset. Bare folk som har vært der — som deler nøyaktig hvor de gikk og hva de gjorde."
@@ -23,30 +21,12 @@
     "sub": "Laget for reisende som planlegger nøye og deler generøst.",
     "seeAll": "Se alle funksjoner",
     "items": [
-      {
-        "title": "Dag-for-dag reiseruter",
-        "desc": "Ekte stopp, ekte adresser. Hver dag av turen lagt ut med kart og tips."
-      },
-      {
-        "title": "Oppdag ekte turer",
-        "desc": "Bla gjennom guider fra ekte reisende. Skjulte perler du ikke finner på noe algoritme."
-      },
-      {
-        "title": "Kartintegrasjon",
-        "desc": "Hvert stopp plottet på et kart. Trykk på en adresse for å åpne direkte i Apple Maps."
-      },
-      {
-        "title": "Bygg det på din måte",
-        "desc": "Dager, lister, notater, gallerier, overnatting — strukturer guiden din slik det gir mening."
-      },
-      {
-        "title": "Offentlig eller privat",
-        "desc": "Del med verden eller hold det privat med en personlig tilgangskode."
-      },
-      {
-        "title": "Laget for fellesskap",
-        "desc": "Følg reisende, lik guider og bygg en feed som faktisk gjenspeiler hvordan du reiser."
-      }
+      { "title": "Dag-for-dag reiseruter", "desc": "Ekte stopp, ekte adresser. Hver dag av turen lagt ut med kart og tips." },
+      { "title": "Oppdag ekte turer", "desc": "Bla gjennom guider fra ekte reisende. Skjulte perler du ikke finner på noe algoritme." },
+      { "title": "Kartintegrasjon", "desc": "Hvert stopp plottet på et kart. Trykk på en adresse for å åpne direkte i Apple Maps." },
+      { "title": "Bygg det på din måte", "desc": "Dager, lister, notater, gallerier, overnatting — strukturer guiden din slik det gir mening." },
+      { "title": "Offentlig eller privat", "desc": "Del med verden eller hold det privat med en personlig tilgangskode." },
+      { "title": "Laget for fellesskap", "desc": "Følg reisende, lik guider og bygg en feed som faktisk gjenspeiler hvordan du reiser." }
     ]
   },
   "cta": {
@@ -59,9 +39,211 @@
     "features": "Funksjoner",
     "privacy": "Personvern",
     "terms": "Vilkår",
-    "support": "Support"
+    "support": "Support",
+    "allRights": "TripShare. Alle rettigheter forbeholdt."
   },
-  "lang": {
-    "label": "Språk"
+  "lang": { "label": "Språk" },
+  "featuresPage": {
+    "badge": "Appen",
+    "heading": "Slik fungerer TripShare",
+    "sub": "Alt du kan gjøre i appen — fra å lage din første guide til å dele den med verden.",
+    "missing": "Mangler noe?",
+    "backHome": "← Tilbake til forsiden",
+    "sections": [
+      {
+        "title": "Lag en guide",
+        "desc": "Start en ny guide på sekunder. Sett destinasjon, velg språk og velg reisetype.",
+        "items": [
+          "Skriv inn destinasjonsby og land",
+          "Velg guidespråk — påkrevd før publisering",
+          "Velg opptil 12 tagger: Byrundtur, Fotturer, Strand, Roadtrip, Matelsker, Familie, Budsjett, Luksus og mer",
+          "Sett synlighet: Offentlig (alle kan finne den) eller Privat (tilgangskode kreves)",
+          "Forsidebilde med justerbart vertikalt utsnitt",
+          "Guider starter som utkast — bare du kan se dem til du trykker Fullfør guide"
+        ]
+      },
+      {
+        "title": "Dag-for-dag reiserute",
+        "desc": "Del turen din inn i dager. Hver dag får sitt eget kort med så mange stopp du trenger.",
+        "items": [
+          "Legg til ubegrenset antall dager, hver med egendefinert etikett",
+          "Hvert stopp har navn, adresse, notater og bilder",
+          "Trykk på en adresse for å åpne den direkte i Apple Maps",
+          "Endre rekkefølge på dager og stopp fritt med opp/ned-piler",
+          "Trykk på en dagsoverskrift for å gi den nytt navn"
+        ]
+      },
+      {
+        "title": "Egendefinerte seksjoner",
+        "desc": "Utover reiseruten kan du legge til alle typer innhold guiden din trenger.",
+        "items": [
+          "Liste — punktlister (pakkelister, restaurantanbefalinger)",
+          "Notat — fritekst reisenotater og lengre beskrivelser",
+          "Galleri — fotosamlinger for å vise frem et sted",
+          "Kart — visualiser alle stopp på et interaktivt kart",
+          "Overnatting — hotellnavn, adresse, bestillingslenke og bilder",
+          "Gi nytt navn til en seksjon ved å trykke på overskriften",
+          "Endre rekkefølge på seksjoner fritt"
+        ]
+      },
+      {
+        "title": "Personvern og tilgangskoder",
+        "desc": "Full kontroll over hvem som ser guidene dine.",
+        "items": [
+          "Offentlige guider vises i feeden og kan finnes av alle",
+          "Private guider krever en 4-tegns tilgangskode for å se",
+          "Tilgangskoder genereres automatisk når du bytter til Privat",
+          "Del koden med venner — de skriver den inn når de åpner lenken",
+          "Bytt mellom Offentlig og Privat når som helst fra innsiden av guiden",
+          "Private guider vises aldri i den offentlige feeden"
+        ]
+      },
+      {
+        "title": "Kart",
+        "desc": "Se hele turen din på et kart, ikke bare en liste.",
+        "items": [
+          "Hver guide har en Kart-fane som viser alle stopp med adresser",
+          "Trykk på en adresse i et stopp for å åpne Apple Maps for veibeskrivelse",
+          "Egendefinerte Kart-seksjoner lar deg bygge en fokusert rute for en del av turen",
+          "Kartet tilpasser seg automatisk for å vise alle pinnene dine når det lastes"
+        ]
+      },
+      {
+        "title": "Sosiale funksjoner",
+        "desc": "TripShare er laget for fellesskap — oppdag guider fra folk du stoler på.",
+        "items": [
+          "Følg andre reisende for å se guidene deres først i feeden",
+          "Lik guider — de lagres i profilen din for enkel tilgang senere",
+          "Kommenter på guider for å stille spørsmål eller dele tips",
+          "Guideeiere kan deaktivere kommentarer på guidene sine",
+          "Se enhver brukers offentlige profil med guider og statistikk",
+          "Blokker brukere for å skjule kommentarene deres",
+          "Rapporter upassende guider direkte fra guidesiden"
+        ]
+      },
+      {
+        "title": "Oppdagelse og feed",
+        "desc": "Finn guider som betyr noe for deg — ikke bare det som er populært.",
+        "items": [
+          "Hjemfeeden viser guider fra folk du følger først",
+          "Deretter vises populære offentlige guider du ikke har sett",
+          "Velg foretrukne tagger og land under onboarding for å forme feeden",
+          "Søk etter destinasjon, by eller guidetittel",
+          "Søk etter brukere etter navn for å finne og følge reisende",
+          "Feeden laster 20 guider om gangen og paginerer mens du scroller"
+        ]
+      },
+      {
+        "title": "Din profil",
+        "desc": "Alt du har laget eller likt, på ett sted.",
+        "items": [
+          "Mine guider-fanen — alle guidene dine med utkast/publisert-status",
+          "Likt-fanen — alle guider du har likt",
+          "Følger-liste — administrer hvem du følger med ett trykk for å slutte å følge",
+          "Rediger visningsnavnet og profilbildet ditt",
+          "Skriv en kort bio som er synlig for andre brukere",
+          "Logg ut eller slett kontoen din fra innstillinger"
+        ]
+      },
+      {
+        "title": "Deling",
+        "desc": "Send guiden din til hvem som helst — innenfor eller utenfor appen.",
+        "items": [
+          "Del enhver guide via iOS-delingsarket",
+          "Offentlige guider: alle med lenken kan se dem i appen",
+          "Private guider: lenke + tilgangskode inkluderes automatisk ved deling",
+          "Del fra innsiden av guiden eller via tre-punkts-menyen"
+        ]
+      },
+      {
+        "title": "Varslinger",
+        "desc": "Hold deg oppdatert når ting skjer på guidene dine.",
+        "items": [
+          "Bli varslet når noen følger deg",
+          "Varslinger bruker iOS-push — aktiver dem når du blir bedt om det"
+        ]
+      }
+    ]
+  },
+  "supportPage": {
+    "badge": "Hjelpesenter",
+    "heading": "Support",
+    "sub": "Finner du ikke det du leter etter? Send oss en e-post og vi svarer innen 48 timer.",
+    "emailLabel": "Send e-post",
+    "faqHeading": "Vanlige spørsmål",
+    "allRights": "TripShare. Alle rettigheter forbeholdt.",
+    "backHome": "← Tilbake til forsiden",
+    "faq": [
+      {
+        "q": "Hvordan lager jeg en reiseguide?",
+        "a": "Trykk på +-knappen på hjemskjermen, skriv inn en destinasjon, velg tagger og synlighet, og trykk deretter Opprett. Du sendes rett til guideeditoren der du kan legge til dager, stopp, tips og bilder."
+      },
+      {
+        "q": "Kan jeg gjøre guiden min privat?",
+        "a": "Ja. Når du bytter en guide til Privat, genererer TripShare automatisk en 4-tegns tilgangskode. Alle du deler guiden med må skrive inn denne koden for å se den. Du kan finne og kopiere koden inne i guiden."
+      },
+      {
+        "q": "Hvordan legger jeg til bilder i guiden min?",
+        "a": "Åpne en guide du eier og trykk på kameraikonet øverst på forsidebildet. Du kan dra bildet for å plassere det nøyaktig slik du vil ha det."
+      },
+      {
+        "q": "Hvordan sletter jeg kontoen min?",
+        "a": "Gå til Profil → Innstillinger → Slett konto. Dette sletter alle dine data, guider og bilder permanent. Handlingen kan ikke angres."
+      },
+      {
+        "q": "Hvorfor kan jeg ikke kommentere på noen guider?",
+        "a": "Noen guider, inkludert AI Explorer-guidene våre, har kommentarer deaktivert av skaperen."
+      },
+      {
+        "q": "Jeg fant en feil eller noe fungerer ikke.",
+        "a": "Send oss en e-post på support@tripshare.online og beskriv hva som skjedde. Vi leser alle meldinger og sikter mot å svare innen 48 timer."
+      }
+    ]
+  },
+  "privacyPage": {
+    "badge": "Juridisk",
+    "heading": "Personvernerklæring",
+    "updated": "Sist oppdatert: juli 2026",
+    "intro": "TripShare (\"vi\", \"vår\", \"oss\") er forpliktet til å beskytte personvernet ditt. Denne erklæringen forklarer hvilken informasjon vi samler inn, hvordan vi bruker den, og rettighetene dine angående dataene dine.",
+    "questions": "Spørsmål om denne erklæringen?",
+    "termsOfUse": "Brukervilkår",
+    "backHome": "← Tilbake til forsiden",
+    "allRights": "TripShare. Alle rettigheter forbeholdt.",
+    "sections": [
+      { "title": "Hva vi samler inn", "body": "Når du oppretter en konto, samler vi inn navn og e-postadresse. Når du bruker TripShare, lagrer vi reiseguidene du lager, inkludert tekst, bilder, destinasjoner og reisedetaljer. Vi lagrer også aktiviteten din i appen, som guider du har likt og brukere du følger." },
+      { "title": "Hvordan vi bruker dataene dine", "body": "Dataene dine brukes utelukkende til å levere og forbedre TripShare. Vi bruker dem til å vise guidene dine til andre brukere (hvis du velger å gjøre dem offentlige), tilpasse feeden din og aktivere sosiale funksjoner som å følge og like. Vi selger ikke personopplysningene dine til tredjeparter og bruker dem ikke til reklame." },
+      { "title": "Datalagring", "body": "Dataene dine lagres sikkert ved hjelp av Supabase, en SOC 2 Type II-sertifisert skyleverandør. Data lagres på servere i EU. Alle tilkoblinger er kryptert med TLS." },
+      { "title": "Bilder", "body": "Bilder du laster opp lagres i Supabase Storage og er offentlig tilgjengelige via en unik URL hvis de er knyttet til en offentlig guide. Hvis du sletter kontoen din, fjernes bildene dine sammen med alle dataene dine." },
+      { "title": "Private guider og tilgangskoder", "body": "Når du lager en privat guide, genererer TripShare en 4-tegns tilgangskode. Denne koden lagres sikkert og er kun synlig for deg (guidens eier). Alle som ønsker å se den private guiden din må skrive inn denne koden. Koden overføres sikkert og eksponeres aldri i den offentlige feeden eller søkeresultater." },
+      { "title": "Tredjepartstjenester", "body": "TripShare bruker Supabase for autentisering, database og fillagring. Vi bruker Apple Maps for stedsbaserte funksjoner. Vi integrerer ikke med reklamenettverk, analysesporere eller sosiale medieplattformer." },
+      { "title": "Sletting av konto", "body": "Du kan permanent slette kontoen din når som helst fra Innstillinger → Slett konto i appen. Sletting av kontoen fjerner alle personopplysningene dine, guider, kommentarer og bilder fra systemene våre. Denne handlingen er irreversibel." },
+      { "title": "Dine rettigheter", "body": "Du har rett til å få tilgang til, korrigere eller slette personopplysningene dine når som helst. For å be om dataeksport eller ta opp et personvernproblem, kontakt oss på support@tripshare.online." },
+      { "title": "Barn", "body": "TripShare er ikke rettet mot barn under 13 år. Vi samler ikke bevisst inn personopplysninger fra noen under 13 år. Hvis du tror et barn har gitt oss personopplysninger, vennligst kontakt oss og vi vil slette dem umiddelbart." },
+      { "title": "Endringer i denne erklæringen", "body": "Vi kan oppdatere denne personvernerklæringen fra tid til annen. Når vi gjør det, oppdaterer vi datoen nedenfor. Fortsatt bruk av appen etter endringer utgjør aksept av den oppdaterte erklæringen." }
+    ]
+  },
+  "termsPage": {
+    "badge": "Juridisk",
+    "heading": "Brukervilkår",
+    "updated": "Sist oppdatert: juli 2026",
+    "intro": "Disse brukervilkårene regulerer din tilgang til og bruk av TripShare (\"vi\", \"vår\", \"oss\"). Les dem nøye før du bruker appen.",
+    "questions": "Spørsmål om disse vilkårene?",
+    "privacyPolicy": "Personvernerklæring",
+    "backHome": "← Tilbake til forsiden",
+    "allRights": "TripShare. Alle rettigheter forbeholdt.",
+    "sections": [
+      { "title": "Aksept av vilkår", "body": "Ved å laste ned, installere eller bruke TripShare, samtykker du til å være bundet av disse brukervilkårene. Hvis du ikke godtar disse vilkårene, ikke bruk appen. Disse vilkårene gjelder for alle brukere av TripShare, inkludert brukere som lager og deler innhold." },
+      { "title": "Kvalifikasjonskrav", "body": "Du må være minst 13 år gammel for å bruke TripShare. Ved å bruke appen bekrefter du at du oppfyller dette alderskravet. Hvis du er under 18 år, må du ha tillatelse fra en forelder eller verge." },
+      { "title": "Din konto", "body": "Du er ansvarlig for å opprettholde sikkerheten til kontoen din og for all aktivitet som skjer under den. Du må oppgi nøyaktig informasjon når du oppretter kontoen din. Ikke del innloggingsopplysningene dine med andre. Vi forbeholder oss retten til å suspendere eller avslutte kontoer som bryter disse vilkårene." },
+      { "title": "Brukerinnhold", "body": "Du beholder eierskapet til innholdet du lager og deler på TripShare, inkludert reiseguider, bilder og beskrivelser. Ved å publisere innhold på TripShare, gir du oss en ikke-eksklusiv, royaltyfri lisens til å vise og distribuere det innholdet i appen. Du er alene ansvarlig for innholdet du publiserer. Ikke last opp innhold som er ulovlig, skadelig, villedende eller som krenker andres rettigheter." },
+      { "title": "Forbudt atferd", "body": "Du samtykker til å ikke: bruke TripShare til ulovlige formål; publisere falsk, villedende eller skadelig innhold; trakassere, true eller misbruke andre brukere; forsøke å få uautorisert tilgang til systemene våre; skrape, kopiere eller videredistribuere innhold uten tillatelse; utgi deg for å være en person eller enhet; eller bruke appen til å distribuere spam eller skadelig programvare." },
+      { "title": "Private guider og tilgangskoder", "body": "Når du lager en privat guide, mottar du en 4-tegns tilgangskode. Du er ansvarlig for å bestemme hvem du deler denne koden med. Vi er ikke ansvarlige for tilgang til den private guiden din som skyldes at du deler koden." },
+      { "title": "Immaterielle rettigheter", "body": "TripShare og all tilhørende merkevarebygging, design og teknologi eies av oss og er beskyttet av gjeldende immaterialrettslovgivning. Du kan ikke kopiere, modifisere, distribuere eller reversere noen del av appen uten skriftlig tillatelse fra oss." },
+      { "title": "Ansvarsfraskrivelser", "body": "TripShare tilbys \"som den er\" uten garantier av noe slag. Reiseguider på TripShare er laget av brukere og vi verifiserer ikke nøyaktigheten av noe guideinnhold. Bruk alltid din egen vurdering når du følger reiseråd og sjekk offisielle kilder for viktig informasjon som visumkrav, sikkerhetsrådgivning og innreiserestriksjoner." },
+      { "title": "Ansvarsbegrensning", "body": "I den grad loven tillater det, er ikke TripShare og dets operatører ansvarlige for indirekte, tilfeldige, spesielle eller følgeskader som oppstår fra din bruk av appen eller innhold i den. Vårt totale ansvar for ethvert krav skal ikke overstige beløpet du betalte oss i de tolv månedene før kravet." },
+      { "title": "Sletting av konto", "body": "Du kan slette kontoen din når som helst fra Innstillinger → Slett konto i appen. Dette fjerner permanent profilen din, guider, kommentarer og tilhørende data. Vi kan også suspendere eller avslutte kontoen din hvis du bryter disse vilkårene." },
+      { "title": "Endringer i disse vilkårene", "body": "Vi kan oppdatere disse brukervilkårene fra tid til annen. Vi oppdaterer datoen øverst på denne siden når vi gjør det. Fortsatt bruk av TripShare etter at endringer er gjort utgjør aksept av de oppdaterte vilkårene." },
+      { "title": "Gjeldende lov", "body": "Disse vilkårene er underlagt norsk lov. Eventuelle tvister som oppstår fra disse vilkårene eller din bruk av TripShare skal behandles av norske domstoler." }
+    ]
   }
 }

@@ -1,60 +1,26 @@
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
+import Nav from '../Nav';
+import { Link } from '../../i18n/navigation';
 
 export const metadata: Metadata = {
   title: 'Support – TripShare',
 };
 
-const FAQ = [
-  {
-    q: 'How do I create a travel guide?',
-    a: 'Tap the + button on the home screen, enter a destination, choose your tags and visibility, then tap Create. You\'ll be taken straight to the guide editor where you can add days, stops, tips and photos.',
-  },
-  {
-    q: 'Can I make my guide private?',
-    a: 'Yes. When you switch a guide to Private, TripShare automatically generates a 4-character access code. Anyone you share the guide with will need to enter this code to view it. You can find and copy the code inside the guide.',
-  },
-  {
-    q: 'How do I add images to my guide?',
-    a: 'Open any guide you own and tap the camera icon at the top of the cover image. You can drag the photo to position it exactly how you want it.',
-  },
-  {
-    q: 'How do I delete my account?',
-    a: 'Go to Profile → Settings → Delete Account. This permanently removes all your data, guides and images. The action cannot be undone.',
-  },
-  {
-    q: 'Why can\'t I comment on some guides?',
-    a: 'Some guides, including our AI Explorer guides, have comments disabled by the creator.',
-  },
-  {
-    q: 'I found a bug or something isn\'t working.',
-    a: 'Please email us at support@tripshare.online and describe what happened. We read every message and aim to respond within 48 hours.',
-  },
-];
-
 export default function Support() {
+  const t = useTranslations('supportPage');
+  const faq = t.raw('faq') as Array<{ q: string; a: string }>;
+
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Nav */}
-      <nav className="fixed top-0 inset-x-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight">TripShare</Link>
-          <div className="flex items-center gap-6 text-sm text-gray-400">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          </div>
-        </div>
-      </nav>
+      <Nav active="support" />
 
       <main className="flex-1 pt-28 pb-24 px-6">
         <div className="max-w-2xl mx-auto">
-          <p className="text-accent text-sm font-medium mb-3 tracking-wide uppercase">Help centre</p>
-          <h1 className="text-4xl font-bold mb-3">Support</h1>
-          <p className="text-gray-400 mb-12 text-lg leading-relaxed">
-            Can't find what you're looking for? Email us and we'll get back to you within 48 hours.
-          </p>
+          <p className="text-accent text-sm font-medium mb-3 tracking-wide uppercase">{t('badge')}</p>
+          <h1 className="text-4xl font-bold mb-3">{t('heading')}</h1>
+          <p className="text-gray-400 mb-12 text-lg leading-relaxed">{t('sub')}</p>
 
-          {/* Contact card */}
           <a
             href="mailto:support@tripshare.online"
             className="flex items-center gap-4 bg-surface border border-border hover:border-accent/50 rounded-2xl p-5 mb-16 transition-colors group"
@@ -65,7 +31,7 @@ export default function Support() {
               </svg>
             </div>
             <div>
-              <p className="font-semibold text-white">Email Support</p>
+              <p className="font-semibold text-white">{t('emailLabel')}</p>
               <p className="text-sm text-accent">support@tripshare.online</p>
             </div>
             <svg className="w-4 h-4 text-gray-600 ml-auto group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -73,10 +39,9 @@ export default function Support() {
             </svg>
           </a>
 
-          {/* FAQ */}
-          <h2 className="text-2xl font-bold mb-8">Frequently asked questions</h2>
+          <h2 className="text-2xl font-bold mb-8">{t('faqHeading')}</h2>
           <div className="flex flex-col gap-px rounded-2xl overflow-hidden border border-border">
-            {FAQ.map((item, i) => (
+            {faq.map((item, i) => (
               <details key={i} className="bg-surface group">
                 <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-sm font-medium hover:text-white transition-colors list-none">
                   {item.q}
@@ -93,8 +58,8 @@ export default function Support() {
 
       <footer className="border-t border-border py-8 px-6">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <span>© {new Date().getFullYear()} TripShare. All rights reserved.</span>
-          <Link href="/" className="hover:text-white transition-colors">← Back to home</Link>
+          <span>© {new Date().getFullYear()} {t('allRights')}</span>
+          <Link href="/" className="hover:text-white transition-colors">{t('backHome')}</Link>
         </div>
       </footer>
     </div>
