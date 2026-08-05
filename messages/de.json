@@ -1,0 +1,357 @@
+{
+  "nav": {
+    "features": "Funktionen",
+    "support": "Support",
+    "privacy": "Datenschutz",
+    "download": "Laden"
+  },
+  "hero": {
+    "title": "Die Reise-App von Leuten,",
+    "titleAccent": "die wirklich reisen",
+    "subtitle": "Erstelle Reiseguides Tag für Tag — mit echten Stopps, Karten und Fotos — und entdecke Trips von Menschen, die wirklich dort waren. Keine Werbung. Keine Influencer. Nur ehrliches Reisen.",
+    "badge": "Kostenlos · iOS & Mac"
+  },
+  "screenshots": {
+    "label": "So sieht es aus"
+  },
+  "tagline": {
+    "heading": "Echte Reisepläne von echten Reisenden.",
+    "sub": "Nicht KI-generiert. Nicht gesponsert. Nur Menschen, die dort waren — und genau teilen, wohin sie gingen und was sie erlebten."
+  },
+  "features": {
+    "heading": "Alles, was du für klügeres Reisen brauchst",
+    "sub": "Gemacht für Reisende, die sorgfältig planen und großzügig teilen.",
+    "seeAll": "Alle Funktionen ansehen",
+    "items": [
+      {
+        "title": "Tagespläne",
+        "desc": "Echte Stopps, echte Adressen. Jeder Reisetag mit Karten und Tipps aufbereitet."
+      },
+      {
+        "title": "Echte Trips entdecken",
+        "desc": "Stöbere in Guides echter Reisender. Geheimtipps, die kein Algorithmus findet."
+      },
+      {
+        "title": "Kartenintegration",
+        "desc": "Jeder Stopp auf der Karte, mit eingezeichneten Fußwegen dazwischen. Tippe auf eine Adresse und öffne sie direkt in Apple Karten."
+      },
+      {
+        "title": "Nach deinen Regeln",
+        "desc": "Tage, Listen, Notizen, Galerien, Unterkünfte — strukturiere deinen Guide, wie es für dich passt."
+      },
+      {
+        "title": "Öffentlich oder privat",
+        "desc": "Teile mit der Welt oder bleib privat mit einem persönlichen Zugangscode."
+      },
+      {
+        "title": "Für die Community",
+        "desc": "Folge Reisenden, like Guides und baue einen Feed, der zeigt, wie du wirklich reist."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Starte noch heute",
+    "sub": "Kostenlos herunterladen. Kostenlos nutzen. Für immer.",
+    "button": "Im App Store laden"
+  },
+  "footer": {
+    "org": "Janthakun Tech · Org.nr. 931 202 162",
+    "features": "Funktionen",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "support": "Support",
+    "allRights": "TripShare. Alle Rechte vorbehalten."
+  },
+  "lang": {
+    "label": "Sprache"
+  },
+  "featuresPage": {
+    "badge": "Die App",
+    "heading": "So funktioniert TripShare",
+    "sub": "Alles, was du in der App tun kannst — vom ersten Guide bis zum Teilen mit der Welt.",
+    "missing": "Fehlt etwas?",
+    "backHome": "← Zur Startseite",
+    "sections": [
+      {
+        "title": "Einen Guide erstellen",
+        "desc": "Starte in Sekunden einen neuen Guide. Wähle Ziel, Sprache und Reiseart.",
+        "items": [
+          "Zielstadt und Land eingeben",
+          "Guide-Sprache wählen — erforderlich vor der Veröffentlichung",
+          "Bis zu 12 Tags wählen: Städtetour, Wandern, Strand, Roadtrip, Foodie, Familie, Budget, Luxus und mehr",
+          "Sichtbarkeit festlegen: Öffentlich (für alle auffindbar) oder Privat (Zugangscode erforderlich)",
+          "Coverfoto mit anpassbarem Bildausschnitt",
+          "Guides starten als Entwurf — nur du siehst sie, bis du auf „Guide abschließen“ tippst"
+        ]
+      },
+      {
+        "title": "Tagesplanung",
+        "desc": "Teile deine Reise in Tage auf. Jeder Tag bekommt eine eigene Karte mit beliebig vielen Stopps.",
+        "items": [
+          "Unbegrenzt Tage hinzufügen, jeder mit eigenem Namen",
+          "Jeder Stopp hat Name, Adresse, Notizen und Fotos",
+          "Adresse antippen und direkt in Apple Karten öffnen",
+          "Tage und Stopps frei mit Pfeilen umsortieren",
+          "Tages-Überschrift antippen, um sie umzubenennen"
+        ]
+      },
+      {
+        "title": "Eigene Abschnitte",
+        "desc": "Ergänze über den Reiseplan hinaus jede Art von Inhalt, die dein Guide braucht.",
+        "items": [
+          "Liste — Stichpunkte (Packlisten, Restaurantempfehlungen)",
+          "Notiz — freie Reisenotizen und längere Beschreibungen",
+          "Galerie — Fotosammlungen, um einen Ort zu zeigen",
+          "Karte — alle Stopps auf einer interaktiven Karte",
+          "Unterkunft — Hotelname, Adresse, Buchungslink und Fotos",
+          "Jede Abschnitts-Überschrift durch Antippen umbenennen",
+          "Abschnitte frei umsortieren"
+        ]
+      },
+      {
+        "title": "Privatsphäre und Zugangscodes",
+        "desc": "Volle Kontrolle darüber, wer deine Guides sieht.",
+        "items": [
+          "Öffentliche Guides erscheinen im Feed und sind für alle auffindbar",
+          "Private Guides erfordern einen 4-stelligen Zugangscode",
+          "Zugangscodes werden beim Wechsel auf Privat automatisch erstellt",
+          "Teile den Code mit Freunden — sie geben ihn beim Öffnen deines Links ein",
+          "Wechsle jederzeit zwischen Öffentlich und Privat",
+          "Private Guides erscheinen nie im öffentlichen Feed"
+        ]
+      },
+      {
+        "title": "Karten",
+        "desc": "Sieh deine ganze Reise auf einer Karte, nicht nur als Liste.",
+        "items": [
+          "Jeder Guide hat einen Karten-Tab mit allen Stopps",
+          "Adresse antippen und Apple Karten für die Route öffnen",
+          "Eigene Karten-Abschnitte für fokussierte Teilrouten",
+          "Die Karte zoomt automatisch auf alle deine Pins",
+          "Fußrouten zwischen den Stopps jedes Tages — echte Straßenwege, keine Luftlinien",
+          "Karte nach Tagen filtern — jeder Tag hat seine eigene Farbe",
+          "Routenlinie pro Tag ein- oder ausschalten"
+        ]
+      },
+      {
+        "title": "Soziale Funktionen",
+        "desc": "TripShare ist für die Community gebaut — entdecke Guides von Menschen, deren Geschmack du vertraust.",
+        "items": [
+          "Folge anderen Reisenden und sieh ihre Guides zuerst im Feed",
+          "Like Guides — sie werden in deinem Profil gespeichert",
+          "Kommentiere Guides, um Fragen zu stellen oder Tipps zu teilen",
+          "Guide-Besitzer können Kommentare deaktivieren",
+          "Öffentliche Profile mit Guides und Statistiken ansehen",
+          "Nutzer blockieren, um ihre Kommentare auszublenden",
+          "Unangemessene Guides direkt von der Guide-Seite melden"
+        ]
+      },
+      {
+        "title": "Entdecken und Feed",
+        "desc": "Finde Guides, die zu dir passen — nicht nur das Beliebteste.",
+        "items": [
+          "Der Feed zeigt zuerst Guides von Leuten, denen du folgst",
+          "Danach beliebte öffentliche Guides, die du noch nicht kennst",
+          "Wähle beim Onboarding bevorzugte Tags und Länder für deinen Feed",
+          "Suche nach Ziel, Stadt oder Guide-Titel",
+          "Suche Nutzer nach Namen, um Reisenden zu folgen",
+          "Der Feed lädt 20 Guides auf einmal und mehr beim Scrollen",
+          "Feed nach Reiseart, Sprache und Land filtern"
+        ]
+      },
+      {
+        "title": "Dein Profil",
+        "desc": "Alles, was du erstellt oder geliked hast, an einem Ort.",
+        "items": [
+          "Meine Guides — alle deine Guides mit Entwurfs-/Veröffentlicht-Status",
+          "Geliked — alle Guides, die du hochgevotet hast",
+          "Folge-Liste — verwalte, wem du folgst, mit einem Tipp zum Entfolgen",
+          "Anzeigename und Profilfoto bearbeiten",
+          "Kurze Bio schreiben, sichtbar für andere Nutzer",
+          "Abmelden oder Konto in den Einstellungen löschen",
+          "Gespeichert-Tab — Guides für später merken",
+          "App-Sprache wählen — 10 Sprachen verfügbar"
+        ]
+      },
+      {
+        "title": "Teilen",
+        "desc": "Sende deinen Guide an alle — innerhalb oder außerhalb der App.",
+        "items": [
+          "Jeden Guide über das iOS-Teilen-Menü versenden",
+          "Öffentliche Guides: Jeder mit dem Link kann sie in der App ansehen",
+          "Private Guides: Link + Zugangscode werden beim Teilen automatisch mitgeschickt",
+          "Teilen direkt im Guide oder über das Drei-Punkte-Menü"
+        ]
+      },
+      {
+        "title": "Als PDF herunterladen",
+        "desc": "Nimm jeden Guide mit — als schön formatiertes PDF.",
+        "items": [
+          "Jeden Guide über das Drei-Punkte-Menü herunterladen",
+          "Alles inklusive: Cover, Tipps, Tage mit Stopps, Fotos und Unterkunft",
+          "In Dateien sichern, per AirDrop teilen oder per E-Mail senden",
+          "Funktioniert offline, sobald gespeichert — perfekt für Reisetage ohne Netz"
+        ]
+      },
+      {
+        "title": "Benachrichtigungen",
+        "desc": "Bleib auf dem Laufenden, wenn etwas mit deinen Guides passiert.",
+        "items": [
+          "Werde benachrichtigt, wenn dir jemand folgt",
+          "Benachrichtigungen laufen über iOS-Push — aktiviere sie bei der Abfrage"
+        ]
+      }
+    ]
+  },
+  "supportPage": {
+    "badge": "Hilfecenter",
+    "heading": "Support",
+    "sub": "Nicht gefunden, was du suchst? Schreib uns eine E-Mail — wir antworten innerhalb von 48 Stunden.",
+    "emailLabel": "E-Mail-Support",
+    "faqHeading": "Häufig gestellte Fragen",
+    "allRights": "TripShare. Alle Rechte vorbehalten.",
+    "backHome": "← Zur Startseite",
+    "faq": [
+      {
+        "q": "Wie erstelle ich einen Reiseguide?",
+        "a": "Tippe auf dem Startbildschirm auf +, gib ein Ziel ein, wähle Tags und Sichtbarkeit und tippe auf Erstellen. Du landest direkt im Guide-Editor, wo du Tage, Stopps, Tipps und Fotos hinzufügen kannst."
+      },
+      {
+        "q": "Kann ich meinen Guide privat machen?",
+        "a": "Ja. Wenn du einen Guide auf Privat stellst, erzeugt TripShare automatisch einen 4-stelligen Zugangscode. Jeder, mit dem du den Guide teilst, muss diesen Code eingeben. Du findest den Code im Guide."
+      },
+      {
+        "q": "Wie füge ich Bilder zu meinem Guide hinzu?",
+        "a": "Öffne einen eigenen Guide und tippe auf das Kamera-Symbol oben am Coverbild. Du kannst das Foto ziehen, um es genau richtig zu positionieren."
+      },
+      {
+        "q": "Wie lösche ich mein Konto?",
+        "a": "Gehe zu Profil → Einstellungen → Konto löschen. Damit werden alle deine Daten, Guides und Bilder dauerhaft entfernt. Die Aktion kann nicht rückgängig gemacht werden."
+      },
+      {
+        "q": "Warum kann ich manche Guides nicht kommentieren?",
+        "a": "Bei manchen Guides, einschließlich unserer AI-Explorer-Guides, hat der Ersteller die Kommentare deaktiviert."
+      },
+      {
+        "q": "Ich habe einen Fehler gefunden oder etwas funktioniert nicht.",
+        "a": "Schreib uns an support@tripshare.online und beschreibe, was passiert ist. Wir lesen jede Nachricht und antworten in der Regel innerhalb von 48 Stunden."
+      },
+      {
+        "q": "Kann ich einen Guide als PDF speichern?",
+        "a": "Ja. Öffne einen Guide, tippe auf das Drei-Punkte-Menü und wähle Als PDF herunterladen. Das PDF enthält den kompletten Guide — Tage, Stopps, Fotos und Unterkunft — und lässt sich in Dateien sichern oder mit allen teilen."
+      }
+    ]
+  },
+  "privacyPage": {
+    "badge": "Rechtliches",
+    "heading": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: August 2026",
+    "intro": "TripShare („wir“, „unser“, „uns“) verpflichtet sich zum Schutz deiner Privatsphäre. Diese Erklärung beschreibt, welche Daten wir erheben, wie wir sie nutzen und welche Rechte du hast.",
+    "questions": "Fragen zu dieser Erklärung?",
+    "termsOfUse": "Nutzungsbedingungen",
+    "backHome": "← Zur Startseite",
+    "allRights": "TripShare. Alle Rechte vorbehalten.",
+    "sections": [
+      {
+        "title": "Was wir erheben",
+        "body": "Wenn du ein Konto erstellst, erheben wir deinen Namen und deine E-Mail-Adresse. Wenn du TripShare nutzt, speichern wir die von dir erstellten Reiseguides einschließlich Texten, Bildern, Zielen und Reisedetails. Wir speichern außerdem deine Aktivität in der App, etwa gelikte Guides und Nutzer, denen du folgst."
+      },
+      {
+        "title": "Wie wir deine Daten nutzen",
+        "body": "Deine Daten werden ausschließlich genutzt, um TripShare bereitzustellen und zu verbessern. Wir verwenden sie, um deine Guides anderen Nutzern anzuzeigen (wenn du sie öffentlich machst), deinen Feed zu personalisieren und soziale Funktionen wie Folgen und Liken zu ermöglichen. Wir verkaufen deine personenbezogenen Daten nicht an Dritte und nutzen sie nicht für Werbung."
+      },
+      {
+        "title": "Datenspeicherung",
+        "body": "Deine Daten werden sicher bei Supabase gespeichert, einem SOC 2 Typ II zertifizierten Cloud-Datenbankanbieter. Die Daten liegen auf Servern in der Europäischen Union. Alle Verbindungen sind mit TLS verschlüsselt."
+      },
+      {
+        "title": "Bilder",
+        "body": "Hochgeladene Fotos werden in Supabase Storage gespeichert und sind über eine eindeutige URL öffentlich zugänglich, wenn sie zu einem öffentlichen Guide gehören. Wenn du dein Konto löschst, werden deine Bilder zusammen mit allen deinen Daten entfernt."
+      },
+      {
+        "title": "Private Guides und Zugangscodes",
+        "body": "Wenn du einen privaten Guide erstellst, erzeugt TripShare einen 4-stelligen Zugangscode. Dieser Code wird sicher gespeichert und ist nur für dich (den Guide-Besitzer) sichtbar. Wer deinen privaten Guide ansehen möchte, muss diesen Code eingeben. Der Code wird sicher übertragen und erscheint nie im öffentlichen Feed oder in Suchergebnissen."
+      },
+      {
+        "title": "Drittanbieter-Dienste",
+        "body": "TripShare nutzt Supabase für Authentifizierung, Datenbank und Dateispeicherung. Für standortbasierte Funktionen verwenden wir Apple Karten. Wir integrieren keine Werbenetzwerke, Analyse-Tracker oder Social-Media-Plattformen. Um Fußrouten auf Guide-Karten zu zeichnen, werden Stopp-Koordinaten an den Routing-Dienst von OpenStreetMap (OSRM) gesendet; diese Anfragen enthalten keine persönlichen Daten."
+      },
+      {
+        "title": "Kontolöschung",
+        "body": "Du kannst dein Konto jederzeit in der App unter Einstellungen → Konto löschen dauerhaft entfernen. Dabei werden alle deine personenbezogenen Daten, Guides, Kommentare und Bilder aus unseren Systemen gelöscht. Diese Aktion ist unwiderruflich."
+      },
+      {
+        "title": "Deine Rechte",
+        "body": "Du hast jederzeit das Recht, auf deine personenbezogenen Daten zuzugreifen, sie zu berichtigen oder zu löschen. Für einen Datenexport oder Datenschutzanliegen kontaktiere uns unter support@tripshare.online."
+      },
+      {
+        "title": "Kinder",
+        "body": "TripShare richtet sich nicht an Kinder unter 13 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Personen unter 13. Wenn du glaubst, dass ein Kind uns Daten übermittelt hat, kontaktiere uns bitte — wir löschen sie umgehend."
+      },
+      {
+        "title": "Änderungen dieser Erklärung",
+        "body": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. In diesem Fall aktualisieren wir das Datum. Die weitere Nutzung der App nach Änderungen gilt als Zustimmung zur aktualisierten Erklärung."
+      }
+    ]
+  },
+  "termsPage": {
+    "badge": "Rechtliches",
+    "heading": "Nutzungsbedingungen",
+    "updated": "Zuletzt aktualisiert: Juli 2026",
+    "intro": "Diese Nutzungsbedingungen regeln deinen Zugang zu und deine Nutzung von TripShare („wir“, „unser“, „uns“). Bitte lies sie sorgfältig, bevor du die App nutzt.",
+    "questions": "Fragen zu diesen Bedingungen?",
+    "privacyPolicy": "Datenschutzerklärung",
+    "backHome": "← Zur Startseite",
+    "allRights": "TripShare. Alle Rechte vorbehalten.",
+    "sections": [
+      {
+        "title": "Annahme der Bedingungen",
+        "body": "Durch das Herunterladen, Installieren oder Nutzen von TripShare erklärst du dich mit diesen Nutzungsbedingungen einverstanden. Wenn du nicht einverstanden bist, nutze die App nicht. Diese Bedingungen gelten für alle Nutzer von TripShare, einschließlich derer, die Inhalte erstellen und teilen."
+      },
+      {
+        "title": "Teilnahmevoraussetzungen",
+        "body": "Du musst mindestens 13 Jahre alt sein, um TripShare zu nutzen. Mit der Nutzung der App bestätigst du, dass du diese Altersanforderung erfüllst. Wenn du unter 18 bist, benötigst du die Erlaubnis eines Erziehungsberechtigten."
+      },
+      {
+        "title": "Dein Konto",
+        "body": "Du bist für die Sicherheit deines Kontos und alle darüber erfolgenden Aktivitäten verantwortlich. Bei der Kontoerstellung musst du korrekte Angaben machen. Teile deine Zugangsdaten nicht mit anderen. Wir behalten uns vor, Konten zu sperren oder zu löschen, die gegen diese Bedingungen verstoßen."
+      },
+      {
+        "title": "Nutzerinhalte",
+        "body": "Du behältst das Eigentum an den Inhalten, die du auf TripShare erstellst und teilst, einschließlich Reiseguides, Fotos und Beschreibungen. Mit der Veröffentlichung räumst du uns eine nicht-exklusive, gebührenfreie Lizenz ein, diese Inhalte in der App anzuzeigen und zu verbreiten. Du bist allein für deine Inhalte verantwortlich. Lade keine Inhalte hoch, die rechtswidrig, schädlich oder irreführend sind oder Rechte Dritter verletzen."
+      },
+      {
+        "title": "Verbotenes Verhalten",
+        "body": "Du verpflichtest dich: TripShare nicht für rechtswidrige Zwecke zu nutzen; keine falschen, irreführenden oder schädlichen Inhalte zu posten; andere Nutzer nicht zu belästigen, zu bedrohen oder zu beleidigen; keinen unbefugten Zugriff auf unsere Systeme zu versuchen; Inhalte nicht ohne Erlaubnis zu kopieren oder weiterzuverbreiten; dich nicht als andere Person oder Organisation auszugeben; und die App nicht zur Verbreitung von Spam oder Schadsoftware zu nutzen."
+      },
+      {
+        "title": "Private Guides und Zugangscodes",
+        "body": "Wenn du einen privaten Guide erstellst, erhältst du einen 4-stelligen Zugangscode. Du entscheidest selbst, mit wem du diesen Code teilst. Wir sind nicht verantwortlich für Zugriffe auf deinen privaten Guide, die daraus entstehen, dass du den Code weitergegeben hast."
+      },
+      {
+        "title": "Geistiges Eigentum",
+        "body": "TripShare sowie alle zugehörigen Marken, Designs und Technologien gehören uns und sind durch geltendes Recht zum Schutz geistigen Eigentums geschützt. Du darfst keinen Teil der App ohne unsere schriftliche Erlaubnis kopieren, verändern, verbreiten oder zurückentwickeln."
+      },
+      {
+        "title": "Haftungsausschluss",
+        "body": "TripShare wird „wie besehen“ ohne jegliche Gewährleistung bereitgestellt. Reiseguides auf TripShare werden von Nutzern erstellt, und wir überprüfen deren Inhalte nicht auf Richtigkeit. Nutze bei Reisetipps stets dein eigenes Urteilsvermögen und prüfe offizielle Quellen für wichtige Informationen wie Visabestimmungen, Sicherheitshinweise und Einreisebeschränkungen."
+      },
+      {
+        "title": "Haftungsbeschränkung",
+        "body": "Soweit gesetzlich zulässig, haften TripShare und seine Betreiber nicht für indirekte, zufällige, besondere oder Folgeschäden aus der Nutzung der App oder ihrer Inhalte. Unsere Gesamthaftung für Ansprüche übersteigt nicht den Betrag, den du uns in den zwölf Monaten vor dem Anspruch gezahlt hast."
+      },
+      {
+        "title": "Kontolöschung",
+        "body": "Du kannst dein Konto jederzeit in der App unter Einstellungen → Konto löschen entfernen. Damit werden dein Profil, deine Guides, Kommentare und zugehörigen Daten dauerhaft gelöscht. Wir können dein Konto auch sperren oder löschen, wenn du gegen diese Bedingungen verstößt."
+      },
+      {
+        "title": "Änderungen dieser Bedingungen",
+        "body": "Wir können diese Nutzungsbedingungen von Zeit zu Zeit aktualisieren. In diesem Fall aktualisieren wir das Datum oben auf dieser Seite. Die weitere Nutzung von TripShare nach Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen."
+      },
+      {
+        "title": "Anwendbares Recht",
+        "body": "Diese Bedingungen unterliegen norwegischem Recht. Für Streitigkeiten aus diesen Bedingungen oder deiner Nutzung von TripShare sind ausschließlich die Gerichte Norwegens zuständig."
+      }
+    ]
+  }
+}

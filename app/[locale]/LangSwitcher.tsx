@@ -11,6 +11,10 @@ const LANGUAGES = [
   { code: 'fr', label: 'Français', flag: '🇫🇷' },
   { code: 'pt', label: 'Português', flag: '🇵🇹' },
   { code: 'th', label: 'ภาษาไทย', flag: '🇹🇭' },
+  { code: 'ja', label: '日本語', flag: '🇯🇵' },
+  { code: 'zh', label: '中文', flag: '🇨🇳' },
+  { code: 'ko', label: '한국어', flag: '🇰🇷' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
 ];
 
 export default function LangSwitcher() {

@@ -9,9 +9,11 @@
     "title": "The travel app built by",
     "titleAccent": "people who actually go",
     "subtitle": "Create day-by-day travel guides with real stops, maps and photos — and discover trips shared by people who've actually been there. No ads. No influencers. Just honest travel.",
-    "badge": "Free · iOS"
+    "badge": "Free · iOS & Mac"
   },
-  "screenshots": { "label": "See it in action" },
+  "screenshots": {
+    "label": "See it in action"
+  },
   "tagline": {
     "heading": "Real itineraries from real travelers.",
     "sub": "Not AI-generated. Not sponsored. Just people who have been there — sharing exactly where they went and what they did."
@@ -21,12 +23,30 @@
     "sub": "Built for travelers who plan carefully and share generously.",
     "seeAll": "See all features",
     "items": [
-      { "title": "Day-by-day itineraries", "desc": "Real stops, real addresses. Every day of your trip laid out with maps and tips." },
-      { "title": "Discover real trips", "desc": "Browse guides from real travelers. Hidden gems you won't find on any algorithm." },
-      { "title": "Map integration", "desc": "Every stop plotted on a map. Tap any address to open directly in Apple Maps." },
-      { "title": "Build it your way", "desc": "Days, lists, notes, galleries, accommodation — structure your guide however makes sense." },
-      { "title": "Public or private", "desc": "Share with the world or keep it private with a personal access code." },
-      { "title": "Built for community", "desc": "Follow travelers, like guides and build a feed that actually reflects how you travel." }
+      {
+        "title": "Day-by-day itineraries",
+        "desc": "Real stops, real addresses. Every day of your trip laid out with maps and tips."
+      },
+      {
+        "title": "Discover real trips",
+        "desc": "Browse guides from real travelers. Hidden gems you won't find on any algorithm."
+      },
+      {
+        "title": "Map integration",
+        "desc": "Every stop plotted on a map, with walking routes drawn between them. Tap any address to open directly in Apple Maps."
+      },
+      {
+        "title": "Build it your way",
+        "desc": "Days, lists, notes, galleries, accommodation — structure your guide however makes sense."
+      },
+      {
+        "title": "Public or private",
+        "desc": "Share with the world or keep it private with a personal access code."
+      },
+      {
+        "title": "Built for community",
+        "desc": "Follow travelers, like guides and build a feed that actually reflects how you travel."
+      }
     ]
   },
   "cta": {
@@ -42,7 +62,9 @@
     "support": "Support",
     "allRights": "TripShare. All rights reserved."
   },
-  "lang": { "label": "Language" },
+  "lang": {
+    "label": "Language"
+  },
   "featuresPage": {
     "badge": "The app",
     "heading": "How TripShare works",
@@ -105,7 +127,10 @@
           "Every guide has a Map tab showing all stops with addresses",
           "Tap any address in a stop to open Apple Maps for directions",
           "Custom Map sections let you build a focused route for part of your trip",
-          "Map auto-fits to show all your pins when it loads"
+          "Map auto-fits to show all your pins when it loads",
+          "Walking routes drawn between each day's stops — real street paths, not straight lines",
+          "Filter the map by day — each day has its own colour",
+          "Toggle the route line on or off for each day"
         ]
       },
       {
@@ -130,7 +155,8 @@
           "Choose preferred tags and countries during onboarding to shape your feed",
           "Search by destination, city or guide title",
           "Search users by name to find and follow travelers",
-          "Feed loads 20 guides at a time and paginates as you scroll"
+          "Feed loads 20 guides at a time and paginates as you scroll",
+          "Filter the feed by travel type, language and country"
         ]
       },
       {
@@ -142,7 +168,9 @@
           "Following list — manage who you follow with one tap to unfollow",
           "Edit your display name and profile photo",
           "Write a short bio visible to other users",
-          "Sign out or delete your account from settings"
+          "Sign out or delete your account from settings",
+          "Saved tab — bookmark guides to read later",
+          "Choose your app language — 10 languages supported"
         ]
       },
       {
@@ -153,6 +181,16 @@
           "Public guides: anyone with the link can view them in the app",
           "Private guides: link + access code is automatically included when sharing",
           "Share from inside the guide or via the three-dot menu"
+        ]
+      },
+      {
+        "title": "Download as PDF",
+        "desc": "Take any guide with you — as a beautifully formatted PDF.",
+        "items": [
+          "Download any guide from the three-dot menu",
+          "Includes everything: cover, tips, days with stops, photos and accommodation",
+          "Save to Files, AirDrop it or send it by email",
+          "Works offline once saved — perfect for travel days without data"
         ]
       },
       {
@@ -197,29 +235,63 @@
       {
         "q": "I found a bug or something isn't working.",
         "a": "Please email us at support@tripshare.online and describe what happened. We read every message and aim to respond within 48 hours."
+      },
+      {
+        "q": "Can I save a guide as a PDF?",
+        "a": "Yes. Open any guide, tap the three-dot menu and choose Download as PDF. The PDF includes the full guide — days, stops, photos and accommodation — and can be saved to Files or shared with anyone."
       }
     ]
   },
   "privacyPage": {
     "badge": "Legal",
     "heading": "Privacy Policy",
-    "updated": "Last updated: July 2026",
+    "updated": "Last updated: August 2026",
     "intro": "TripShare (\"we\", \"our\", \"us\") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding your data.",
     "questions": "Questions about this policy?",
     "termsOfUse": "Terms of Use",
     "backHome": "← Back to home",
     "allRights": "TripShare. All rights reserved.",
     "sections": [
-      { "title": "What We Collect", "body": "When you create an account, we collect your name and email address. When you use TripShare, we store the travel guides you create, including text, images, destinations and trip details. We also store your activity within the app, such as guides you have liked and users you follow." },
-      { "title": "How We Use Your Data", "body": "Your data is used solely to provide and improve TripShare. We use it to display your guides to other users (if you choose to make them public), personalise your feed, and enable social features such as following and liking. We do not sell your personal data to third parties and we do not use it for advertising." },
-      { "title": "Data Storage", "body": "Your data is stored securely using Supabase, a SOC 2 Type II certified cloud database provider. Data is stored on servers in the European Union. All connections are encrypted using TLS." },
-      { "title": "Images", "body": "Photos you upload are stored in Supabase Storage and are publicly accessible via a unique URL if attached to a public guide. If you delete your account, your images are removed along with all your data." },
-      { "title": "Private Guides and Access Codes", "body": "When you create a private guide, TripShare generates a 4-character access code. This code is stored securely and is only visible to you (the guide owner). Anyone who wants to view your private guide must enter this code. The code is transmitted securely and is never exposed in the public feed or search results." },
-      { "title": "Third-Party Services", "body": "TripShare uses Supabase for authentication, database and file storage. We use Apple Maps for location-based features. We do not integrate with advertising networks, analytics trackers or social media platforms." },
-      { "title": "Account Deletion", "body": "You can permanently delete your account at any time from Settings → Delete Account inside the app. Deleting your account removes all your personal data, guides, comments and images from our systems. This action is irreversible." },
-      { "title": "Your Rights", "body": "You have the right to access, correct or delete your personal data at any time. To request a data export or raise a privacy concern, contact us at support@tripshare.online." },
-      { "title": "Children", "body": "TripShare is not directed at children under 13. We do not knowingly collect personal information from anyone under 13. If you believe a child has provided us with personal data, please contact us and we will delete it promptly." },
-      { "title": "Changes to This Policy", "body": "We may update this Privacy Policy from time to time. When we do, we will update the date below. Continued use of the app after changes constitutes acceptance of the updated policy." }
+      {
+        "title": "What We Collect",
+        "body": "When you create an account, we collect your name and email address. When you use TripShare, we store the travel guides you create, including text, images, destinations and trip details. We also store your activity within the app, such as guides you have liked and users you follow."
+      },
+      {
+        "title": "How We Use Your Data",
+        "body": "Your data is used solely to provide and improve TripShare. We use it to display your guides to other users (if you choose to make them public), personalise your feed, and enable social features such as following and liking. We do not sell your personal data to third parties and we do not use it for advertising."
+      },
+      {
+        "title": "Data Storage",
+        "body": "Your data is stored securely using Supabase, a SOC 2 Type II certified cloud database provider. Data is stored on servers in the European Union. All connections are encrypted using TLS."
+      },
+      {
+        "title": "Images",
+        "body": "Photos you upload are stored in Supabase Storage and are publicly accessible via a unique URL if attached to a public guide. If you delete your account, your images are removed along with all your data."
+      },
+      {
+        "title": "Private Guides and Access Codes",
+        "body": "When you create a private guide, TripShare generates a 4-character access code. This code is stored securely and is only visible to you (the guide owner). Anyone who wants to view your private guide must enter this code. The code is transmitted securely and is never exposed in the public feed or search results."
+      },
+      {
+        "title": "Third-Party Services",
+        "body": "TripShare uses Supabase for authentication, database and file storage. We use Apple Maps for location-based features. We do not integrate with advertising networks, analytics trackers or social media platforms. To draw walking routes on guide maps, stop coordinates are sent to the OpenStreetMap routing service (OSRM); these requests contain no personal information."
+      },
+      {
+        "title": "Account Deletion",
+        "body": "You can permanently delete your account at any time from Settings → Delete Account inside the app. Deleting your account removes all your personal data, guides, comments and images from our systems. This action is irreversible."
+      },
+      {
+        "title": "Your Rights",
+        "body": "You have the right to access, correct or delete your personal data at any time. To request a data export or raise a privacy concern, contact us at support@tripshare.online."
+      },
+      {
+        "title": "Children",
+        "body": "TripShare is not directed at children under 13. We do not knowingly collect personal information from anyone under 13. If you believe a child has provided us with personal data, please contact us and we will delete it promptly."
+      },
+      {
+        "title": "Changes to This Policy",
+        "body": "We may update this Privacy Policy from time to time. When we do, we will update the date below. Continued use of the app after changes constitutes acceptance of the updated policy."
+      }
     ]
   },
   "termsPage": {
@@ -232,18 +304,54 @@
     "backHome": "← Back to home",
     "allRights": "TripShare. All rights reserved.",
     "sections": [
-      { "title": "Acceptance of Terms", "body": "By downloading, installing or using TripShare, you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the app. These terms apply to all users of TripShare, including users who create and share content." },
-      { "title": "Eligibility", "body": "You must be at least 13 years old to use TripShare. By using the app, you confirm that you meet this age requirement. If you are under 18, you must have permission from a parent or guardian." },
-      { "title": "Your Account", "body": "You are responsible for maintaining the security of your account and for all activity that occurs under it. You must provide accurate information when creating your account. Do not share your login credentials with others. We reserve the right to suspend or terminate accounts that violate these terms." },
-      { "title": "User Content", "body": "You retain ownership of the content you create and share on TripShare, including travel guides, photos and descriptions. By publishing content on TripShare, you grant us a non-exclusive, royalty-free licence to display and distribute that content within the app. You are solely responsible for the content you post. Do not upload content that is illegal, harmful, misleading, or that infringes on the rights of others." },
-      { "title": "Prohibited Conduct", "body": "You agree not to: use TripShare for any unlawful purpose; post false, misleading or harmful content; harass, threaten or abuse other users; attempt to gain unauthorised access to our systems; scrape, copy or redistribute content without permission; impersonate any person or entity; or use the app to distribute spam or malware." },
-      { "title": "Private Guides and Access Codes", "body": "When you create a private guide, you receive a 4-character access code. You are responsible for deciding who you share this code with. We are not responsible for any access to your private guide resulting from you sharing the code." },
-      { "title": "Intellectual Property", "body": "TripShare and all associated branding, design and technology are owned by us and protected by applicable intellectual property laws. You may not copy, modify, distribute or reverse-engineer any part of the app without our written permission." },
-      { "title": "Disclaimers", "body": "TripShare is provided \"as is\" without warranties of any kind. Travel guides on TripShare are created by users and we do not verify the accuracy of any guide content. Always exercise your own judgement when following travel advice and check official sources for important information such as visa requirements, safety advisories and entry restrictions." },
-      { "title": "Limitation of Liability", "body": "To the maximum extent permitted by law, TripShare and its operators are not liable for any indirect, incidental, special or consequential damages arising from your use of the app or any content within it. Our total liability for any claim shall not exceed the amount you paid us in the twelve months preceding the claim." },
-      { "title": "Account Deletion", "body": "You can delete your account at any time from Settings → Delete Account within the app. This permanently removes your profile, guides, comments and associated data. We may also suspend or terminate your account if you violate these terms." },
-      { "title": "Changes to These Terms", "body": "We may update these Terms of Use from time to time. We will update the date at the top of this page when we do. Continued use of TripShare after changes have been made constitutes your acceptance of the updated terms." },
-      { "title": "Governing Law", "body": "These terms are governed by the laws of Norway. Any disputes arising from these terms or your use of TripShare shall be subject to the exclusive jurisdiction of the courts of Norway." }
+      {
+        "title": "Acceptance of Terms",
+        "body": "By downloading, installing or using TripShare, you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the app. These terms apply to all users of TripShare, including users who create and share content."
+      },
+      {
+        "title": "Eligibility",
+        "body": "You must be at least 13 years old to use TripShare. By using the app, you confirm that you meet this age requirement. If you are under 18, you must have permission from a parent or guardian."
+      },
+      {
+        "title": "Your Account",
+        "body": "You are responsible for maintaining the security of your account and for all activity that occurs under it. You must provide accurate information when creating your account. Do not share your login credentials with others. We reserve the right to suspend or terminate accounts that violate these terms."
+      },
+      {
+        "title": "User Content",
+        "body": "You retain ownership of the content you create and share on TripShare, including travel guides, photos and descriptions. By publishing content on TripShare, you grant us a non-exclusive, royalty-free licence to display and distribute that content within the app. You are solely responsible for the content you post. Do not upload content that is illegal, harmful, misleading, or that infringes on the rights of others."
+      },
+      {
+        "title": "Prohibited Conduct",
+        "body": "You agree not to: use TripShare for any unlawful purpose; post false, misleading or harmful content; harass, threaten or abuse other users; attempt to gain unauthorised access to our systems; scrape, copy or redistribute content without permission; impersonate any person or entity; or use the app to distribute spam or malware."
+      },
+      {
+        "title": "Private Guides and Access Codes",
+        "body": "When you create a private guide, you receive a 4-character access code. You are responsible for deciding who you share this code with. We are not responsible for any access to your private guide resulting from you sharing the code."
+      },
+      {
+        "title": "Intellectual Property",
+        "body": "TripShare and all associated branding, design and technology are owned by us and protected by applicable intellectual property laws. You may not copy, modify, distribute or reverse-engineer any part of the app without our written permission."
+      },
+      {
+        "title": "Disclaimers",
+        "body": "TripShare is provided \"as is\" without warranties of any kind. Travel guides on TripShare are created by users and we do not verify the accuracy of any guide content. Always exercise your own judgement when following travel advice and check official sources for important information such as visa requirements, safety advisories and entry restrictions."
+      },
+      {
+        "title": "Limitation of Liability",
+        "body": "To the maximum extent permitted by law, TripShare and its operators are not liable for any indirect, incidental, special or consequential damages arising from your use of the app or any content within it. Our total liability for any claim shall not exceed the amount you paid us in the twelve months preceding the claim."
+      },
+      {
+        "title": "Account Deletion",
+        "body": "You can delete your account at any time from Settings → Delete Account within the app. This permanently removes your profile, guides, comments and associated data. We may also suspend or terminate your account if you violate these terms."
+      },
+      {
+        "title": "Changes to These Terms",
+        "body": "We may update these Terms of Use from time to time. We will update the date at the top of this page when we do. Continued use of TripShare after changes have been made constitutes your acceptance of the updated terms."
+      },
+      {
+        "title": "Governing Law",
+        "body": "These terms are governed by the laws of Norway. Any disputes arising from these terms or your use of TripShare shall be subject to the exclusive jurisdiction of the courts of Norway."
+      }
     ]
   }
 }

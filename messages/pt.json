@@ -1,12 +1,19 @@
 {
-  "nav": { "features": "Funcionalidades", "support": "Suporte", "privacy": "Privacidade", "download": "Descarregar" },
+  "nav": {
+    "features": "Funcionalidades",
+    "support": "Suporte",
+    "privacy": "Privacidade",
+    "download": "Descarregar"
+  },
   "hero": {
     "title": "A app de viagens criada por",
     "titleAccent": "pessoas que realmente viajam",
     "subtitle": "Cria guias de viagem dia a dia com paragens reais, mapas e fotos — e descobre viagens partilhadas por pessoas que estiveram lá de verdade. Sem anúncios. Sem influencers. Só viagens honestas.",
-    "badge": "Grátis · iOS"
+    "badge": "Grátis · iOS e Mac"
   },
-  "screenshots": { "label": "Ver em ação" },
+  "screenshots": {
+    "label": "Ver em ação"
+  },
   "tagline": {
     "heading": "Itinerários reais de viajantes reais.",
     "sub": "Não gerado por IA. Não patrocinado. Apenas pessoas que estiveram lá — partilhando exatamente onde foram e o que fizeram."
@@ -16,17 +23,48 @@
     "sub": "Feito para viajantes que planeiam cuidadosamente e partilham generosamente.",
     "seeAll": "Ver todas as funcionalidades",
     "items": [
-      { "title": "Itinerários dia a dia", "desc": "Paragens reais, endereços reais. Cada dia da tua viagem com mapas e dicas." },
-      { "title": "Descobre viagens reais", "desc": "Explora guias de viajantes reais. Joias escondidas que não encontras em nenhum algoritmo." },
-      { "title": "Integração com mapas", "desc": "Cada paragem marcada num mapa. Toca em qualquer endereço para abrir no Apple Maps." },
-      { "title": "Constrói à tua maneira", "desc": "Dias, listas, notas, galerias, alojamento — estrutura o teu guia como fizer mais sentido." },
-      { "title": "Público ou privado", "desc": "Partilha com o mundo ou mantém privado com um código de acesso pessoal." },
-      { "title": "Feito para a comunidade", "desc": "Segue viajantes, dá gostos a guias e constrói um feed que reflete como viajas." }
+      {
+        "title": "Itinerários dia a dia",
+        "desc": "Paragens reais, endereços reais. Cada dia da tua viagem com mapas e dicas."
+      },
+      {
+        "title": "Descobre viagens reais",
+        "desc": "Explora guias de viajantes reais. Joias escondidas que não encontras em nenhum algoritmo."
+      },
+      {
+        "title": "Integração com mapas",
+        "desc": "Cada parada aparece no mapa, com rotas a pé traçadas entre elas. Toque em qualquer endereço para abrir diretamente no Apple Maps."
+      },
+      {
+        "title": "Constrói à tua maneira",
+        "desc": "Dias, listas, notas, galerias, alojamento — estrutura o teu guia como fizer mais sentido."
+      },
+      {
+        "title": "Público ou privado",
+        "desc": "Partilha com o mundo ou mantém privado com um código de acesso pessoal."
+      },
+      {
+        "title": "Feito para a comunidade",
+        "desc": "Segue viajantes, dá gostos a guias e constrói um feed que reflete como viajas."
+      }
     ]
   },
-  "cta": { "heading": "Começa a explorar hoje", "sub": "Grátis para descarregar. Grátis para usar. Sempre.", "button": "Descarregar na App Store" },
-  "footer": { "org": "Janthakun Tech · Org.nr. 931 202 162", "features": "Funcionalidades", "privacy": "Privacidade", "terms": "Termos", "support": "Suporte", "allRights": "TripShare. Todos os direitos reservados." },
-  "lang": { "label": "Idioma" },
+  "cta": {
+    "heading": "Começa a explorar hoje",
+    "sub": "Grátis para descarregar. Grátis para usar. Sempre.",
+    "button": "Descarregar na App Store"
+  },
+  "footer": {
+    "org": "Janthakun Tech · Org.nr. 931 202 162",
+    "features": "Funcionalidades",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "support": "Suporte",
+    "allRights": "TripShare. Todos os direitos reservados."
+  },
+  "lang": {
+    "label": "Idioma"
+  },
   "featuresPage": {
     "badge": "A app",
     "heading": "Como funciona o TripShare",
@@ -34,16 +72,135 @@
     "missing": "Falta algo?",
     "backHome": "← Voltar ao início",
     "sections": [
-      { "title": "Criar um guia", "desc": "Começa um novo guia em segundos. Define o teu destino, escolhe um idioma e seleciona o tipo de viagem.", "items": ["Introduz a cidade e o país de destino", "Escolhe o idioma do guia — obrigatório antes de publicar", "Escolhe até 12 etiquetas: Visita urbana, Caminhada, Praia, Road Trip, Gastronomia, Família, Orçamento, Luxo e mais", "Define a visibilidade: Público (qualquer um pode descobrir) ou Privado (código necessário)", "Foto de capa com recorte vertical ajustável", "Os guias começam como rascunhos — só tu podes vê-los até premires Concluir guia"] },
-      { "title": "Itinerário dia a dia", "desc": "Divide a tua viagem em dias. Cada dia tem o seu próprio cartão com tantas paragens quantas precisares.", "items": ["Adiciona dias ilimitados, cada um com uma etiqueta personalizada", "Cada paragem tem nome, endereço, notas e fotos", "Toca em qualquer endereço para o abrir diretamente no Apple Maps", "Reordena dias e paragens livremente com as setas cima/baixo", "Toca no título de um dia para o renomear"] },
-      { "title": "Secções personalizadas", "desc": "Para além do itinerário, adiciona qualquer tipo de conteúdo que o teu guia precise.", "items": ["Lista — itens com marcadores (listas de bagagem, recomendações de restaurantes)", "Nota — notas de viagem em texto livre e descrições mais longas", "Galeria — coleções de fotos para mostrar um lugar", "Mapa — visualiza todas as tuas paragens num mapa interativo", "Alojamento — nome do hotel, endereço, link de reserva e fotos", "Renomeia qualquer secção tocando no seu título", "Reordena secções livremente"] },
-      { "title": "Privacidade e códigos de acesso", "desc": "Controlo total sobre quem vê os teus guias.", "items": ["Os guias públicos aparecem no feed e podem ser encontrados por qualquer um", "Os guias privados requerem um código de acesso de 4 caracteres", "Os códigos são gerados automaticamente ao mudar para Privado", "Partilha o código com amigos — eles introduzem-no ao abrir o link", "Alterna entre Público e Privado a qualquer momento dentro do guia", "Os guias privados nunca aparecem no feed público"] },
-      { "title": "Mapas", "desc": "Vê toda a tua viagem num mapa, não apenas numa lista.", "items": ["Cada guia tem um separador de Mapa mostrando todas as paragens com endereços", "Toca em qualquer endereço para abrir o Apple Maps com indicações", "As secções de Mapa personalizadas permitem criar uma rota focada", "O mapa ajusta-se automaticamente para mostrar todos os teus marcadores"] },
-      { "title": "Funcionalidades sociais", "desc": "TripShare é feito para a comunidade — descobre guias de pessoas em quem confias.", "items": ["Segue outros viajantes para ver os seus guias primeiro no teu feed", "Dá gostos a guias — são guardados no teu perfil para acesso fácil", "Comenta nos guias para fazer perguntas ou partilhar dicas", "Os proprietários de guias podem desativar comentários", "Vê o perfil público de qualquer utilizador com os seus guias e estatísticas", "Bloqueia utilizadores para ocultar os seus comentários", "Reporta guias inadequados diretamente da página do guia"] },
-      { "title": "Descoberta e feed", "desc": "Encontra guias que te importam — não apenas o que é popular.", "items": ["O feed inicial mostra primeiro guias de pessoas que segues", "Depois mostra guias públicos populares que não viste", "Escolhe etiquetas e países preferidos durante o onboarding", "Pesquisa por destino, cidade ou título de guia", "Pesquisa utilizadores por nome para encontrar e seguir viajantes", "O feed carrega 20 guias de cada vez e pagina enquanto fazes scroll"] },
-      { "title": "O teu perfil", "desc": "Tudo o que criaste ou adoraste, num só lugar.", "items": ["Separador Os meus guias — todos os teus guias com estado rascunho/publicado", "Separador Gostos — todos os guias que avaliaste", "Lista de seguidos — gere quem segues com um toque para deixar de seguir", "Edita o teu nome de exibição e foto de perfil", "Escreve uma bio curta visível para outros utilizadores", "Termina sessão ou elimina a conta nas definições"] },
-      { "title": "Partilha", "desc": "Envia o teu guia a qualquer pessoa — dentro ou fora da app.", "items": ["Partilha qualquer guia via o painel de partilha do iOS", "Guias públicos: qualquer um com o link pode vê-los na app", "Guias privados: link + código de acesso incluídos automaticamente ao partilhar", "Partilha de dentro do guia ou via o menu de três pontos"] },
-      { "title": "Notificações", "desc": "Mantém-te informado quando algo acontece nos teus guias.", "items": ["Recebe notificações quando alguém te segue", "As notificações usam push iOS — ativa-as quando solicitado"] }
+      {
+        "title": "Criar um guia",
+        "desc": "Começa um novo guia em segundos. Define o teu destino, escolhe um idioma e seleciona o tipo de viagem.",
+        "items": [
+          "Introduz a cidade e o país de destino",
+          "Escolhe o idioma do guia — obrigatório antes de publicar",
+          "Escolhe até 12 etiquetas: Visita urbana, Caminhada, Praia, Road Trip, Gastronomia, Família, Orçamento, Luxo e mais",
+          "Define a visibilidade: Público (qualquer um pode descobrir) ou Privado (código necessário)",
+          "Foto de capa com recorte vertical ajustável",
+          "Os guias começam como rascunhos — só tu podes vê-los até premires Concluir guia"
+        ]
+      },
+      {
+        "title": "Itinerário dia a dia",
+        "desc": "Divide a tua viagem em dias. Cada dia tem o seu próprio cartão com tantas paragens quantas precisares.",
+        "items": [
+          "Adiciona dias ilimitados, cada um com uma etiqueta personalizada",
+          "Cada paragem tem nome, endereço, notas e fotos",
+          "Toca em qualquer endereço para o abrir diretamente no Apple Maps",
+          "Reordena dias e paragens livremente com as setas cima/baixo",
+          "Toca no título de um dia para o renomear"
+        ]
+      },
+      {
+        "title": "Secções personalizadas",
+        "desc": "Para além do itinerário, adiciona qualquer tipo de conteúdo que o teu guia precise.",
+        "items": [
+          "Lista — itens com marcadores (listas de bagagem, recomendações de restaurantes)",
+          "Nota — notas de viagem em texto livre e descrições mais longas",
+          "Galeria — coleções de fotos para mostrar um lugar",
+          "Mapa — visualiza todas as tuas paragens num mapa interativo",
+          "Alojamento — nome do hotel, endereço, link de reserva e fotos",
+          "Renomeia qualquer secção tocando no seu título",
+          "Reordena secções livremente"
+        ]
+      },
+      {
+        "title": "Privacidade e códigos de acesso",
+        "desc": "Controlo total sobre quem vê os teus guias.",
+        "items": [
+          "Os guias públicos aparecem no feed e podem ser encontrados por qualquer um",
+          "Os guias privados requerem um código de acesso de 4 caracteres",
+          "Os códigos são gerados automaticamente ao mudar para Privado",
+          "Partilha o código com amigos — eles introduzem-no ao abrir o link",
+          "Alterna entre Público e Privado a qualquer momento dentro do guia",
+          "Os guias privados nunca aparecem no feed público"
+        ]
+      },
+      {
+        "title": "Mapas",
+        "desc": "Vê toda a tua viagem num mapa, não apenas numa lista.",
+        "items": [
+          "Cada guia tem um separador de Mapa mostrando todas as paragens com endereços",
+          "Toca em qualquer endereço para abrir o Apple Maps com indicações",
+          "As secções de Mapa personalizadas permitem criar uma rota focada",
+          "O mapa ajusta-se automaticamente para mostrar todos os teus marcadores",
+          "Rotas a pé traçadas entre as paradas de cada dia — caminhos reais, não linhas retas",
+          "Filtre o mapa por dia — cada dia tem sua própria cor",
+          "Ative ou desative a linha de rota para cada dia"
+        ]
+      },
+      {
+        "title": "Funcionalidades sociais",
+        "desc": "TripShare é feito para a comunidade — descobre guias de pessoas em quem confias.",
+        "items": [
+          "Segue outros viajantes para ver os seus guias primeiro no teu feed",
+          "Dá gostos a guias — são guardados no teu perfil para acesso fácil",
+          "Comenta nos guias para fazer perguntas ou partilhar dicas",
+          "Os proprietários de guias podem desativar comentários",
+          "Vê o perfil público de qualquer utilizador com os seus guias e estatísticas",
+          "Bloqueia utilizadores para ocultar os seus comentários",
+          "Reporta guias inadequados diretamente da página do guia"
+        ]
+      },
+      {
+        "title": "Descoberta e feed",
+        "desc": "Encontra guias que te importam — não apenas o que é popular.",
+        "items": [
+          "O feed inicial mostra primeiro guias de pessoas que segues",
+          "Depois mostra guias públicos populares que não viste",
+          "Escolhe etiquetas e países preferidos durante o onboarding",
+          "Pesquisa por destino, cidade ou título de guia",
+          "Pesquisa utilizadores por nome para encontrar e seguir viajantes",
+          "O feed carrega 20 guias de cada vez e pagina enquanto fazes scroll",
+          "Filtre o feed por tipo de viagem, idioma e país"
+        ]
+      },
+      {
+        "title": "O teu perfil",
+        "desc": "Tudo o que criaste ou adoraste, num só lugar.",
+        "items": [
+          "Separador Os meus guias — todos os teus guias com estado rascunho/publicado",
+          "Separador Gostos — todos os guias que avaliaste",
+          "Lista de seguidos — gere quem segues com um toque para deixar de seguir",
+          "Edita o teu nome de exibição e foto de perfil",
+          "Escreve uma bio curta visível para outros utilizadores",
+          "Termina sessão ou elimina a conta nas definições",
+          "Aba Salvos — marque guias para ler mais tarde",
+          "Escolha o idioma do app — 10 idiomas disponíveis"
+        ]
+      },
+      {
+        "title": "Partilha",
+        "desc": "Envia o teu guia a qualquer pessoa — dentro ou fora da app.",
+        "items": [
+          "Partilha qualquer guia via o painel de partilha do iOS",
+          "Guias públicos: qualquer um com o link pode vê-los na app",
+          "Guias privados: link + código de acesso incluídos automaticamente ao partilhar",
+          "Partilha de dentro do guia ou via o menu de três pontos"
+        ]
+      },
+      {
+        "title": "Baixar como PDF",
+        "desc": "Leve qualquer guia com você — como um PDF lindamente formatado.",
+        "items": [
+          "Baixe qualquer guia pelo menu de três pontos",
+          "Inclui tudo: capa, dicas, dias com paradas, fotos e hospedagem",
+          "Salve em Arquivos, compartilhe por AirDrop ou envie por e-mail",
+          "Funciona offline depois de salvo — perfeito para dias de viagem sem internet"
+        ]
+      },
+      {
+        "title": "Notificações",
+        "desc": "Mantém-te informado quando algo acontece nos teus guias.",
+        "items": [
+          "Recebe notificações quando alguém te segue",
+          "As notificações usam push iOS — ativa-as quando solicitado"
+        ]
+      }
     ]
   },
   "supportPage": {
@@ -55,34 +212,86 @@
     "allRights": "TripShare. Todos os direitos reservados.",
     "backHome": "← Voltar ao início",
     "faq": [
-      { "q": "Como crio um guia de viagem?", "a": "Toca no botão + no ecrã inicial, introduz um destino, escolhe as tuas etiquetas e visibilidade, e toca em Criar. Serás levado diretamente para o editor onde podes adicionar dias, paragens, dicas e fotos." },
-      { "q": "Posso tornar o meu guia privado?", "a": "Sim. Ao mudar um guia para Privado, o TripShare gera automaticamente um código de acesso de 4 caracteres. Qualquer pessoa com quem partilhes o guia precisará de introduzir este código para o ver. Podes encontrar e copiar o código dentro do guia." },
-      { "q": "Como adiciono imagens ao meu guia?", "a": "Abre qualquer guia que possuas e toca no ícone de câmara no topo da imagem de capa. Podes arrastar a foto para a posicionar exatamente como queres." },
-      { "q": "Como elimino a minha conta?", "a": "Vai a Perfil → Definições → Eliminar conta. Isto elimina permanentemente todos os teus dados, guias e imagens. A ação não pode ser desfeita." },
-      { "q": "Por que não consigo comentar em alguns guias?", "a": "Alguns guias, incluindo os nossos guias AI Explorer, têm comentários desativados pelo criador." },
-      { "q": "Encontrei um erro ou algo não está a funcionar.", "a": "Por favor envia-nos um email para support@tripshare.online descrevendo o que aconteceu. Lemos todas as mensagens e procuramos responder em 48 horas." }
+      {
+        "q": "Como crio um guia de viagem?",
+        "a": "Toca no botão + no ecrã inicial, introduz um destino, escolhe as tuas etiquetas e visibilidade, e toca em Criar. Serás levado diretamente para o editor onde podes adicionar dias, paragens, dicas e fotos."
+      },
+      {
+        "q": "Posso tornar o meu guia privado?",
+        "a": "Sim. Ao mudar um guia para Privado, o TripShare gera automaticamente um código de acesso de 4 caracteres. Qualquer pessoa com quem partilhes o guia precisará de introduzir este código para o ver. Podes encontrar e copiar o código dentro do guia."
+      },
+      {
+        "q": "Como adiciono imagens ao meu guia?",
+        "a": "Abre qualquer guia que possuas e toca no ícone de câmara no topo da imagem de capa. Podes arrastar a foto para a posicionar exatamente como queres."
+      },
+      {
+        "q": "Como elimino a minha conta?",
+        "a": "Vai a Perfil → Definições → Eliminar conta. Isto elimina permanentemente todos os teus dados, guias e imagens. A ação não pode ser desfeita."
+      },
+      {
+        "q": "Por que não consigo comentar em alguns guias?",
+        "a": "Alguns guias, incluindo os nossos guias AI Explorer, têm comentários desativados pelo criador."
+      },
+      {
+        "q": "Encontrei um erro ou algo não está a funcionar.",
+        "a": "Por favor envia-nos um email para support@tripshare.online descrevendo o que aconteceu. Lemos todas as mensagens e procuramos responder em 48 horas."
+      },
+      {
+        "q": "Posso salvar um guia como PDF?",
+        "a": "Sim. Abra qualquer guia, toque no menu de três pontos e escolha Baixar como PDF. O PDF inclui o guia completo — dias, paradas, fotos e hospedagem — e pode ser salvo em Arquivos ou compartilhado com qualquer pessoa."
+      }
     ]
   },
   "privacyPage": {
     "badge": "Legal",
     "heading": "Política de Privacidade",
-    "updated": "Última atualização: julho de 2026",
+    "updated": "Última atualização: agosto de 2026",
     "intro": "TripShare (\"nós\", \"nosso\", \"nos\") está comprometido em proteger a tua privacidade. Esta política explica que informações recolhemos, como as usamos e os teus direitos sobre os teus dados.",
     "questions": "Perguntas sobre esta política?",
     "termsOfUse": "Termos de Utilização",
     "backHome": "← Voltar ao início",
     "allRights": "TripShare. Todos os direitos reservados.",
     "sections": [
-      { "title": "O que recolhemos", "body": "Quando crias uma conta, recolhemos o teu nome e endereço de email. Quando usas o TripShare, armazenamos os guias de viagem que crias, incluindo texto, imagens, destinos e detalhes da viagem. Também armazenamos a tua atividade na app, como guias que gostaste e utilizadores que segues." },
-      { "title": "Como usamos os teus dados", "body": "Os teus dados são usados apenas para fornecer e melhorar o TripShare. Usamo-los para mostrar os teus guias a outros utilizadores (se escolheres tornά-los públicos), personalizar o teu feed e ativar funcionalidades sociais. Não vendemos os teus dados pessoais a terceiros nem os usamos para publicidade." },
-      { "title": "Armazenamento de dados", "body": "Os teus dados são armazenados em segurança usando Supabase, um fornecedor de base de dados em nuvem certificado SOC 2 Tipo II. Os dados são armazenados em servidores na União Europeia. Todas as ligações são encriptadas com TLS." },
-      { "title": "Imagens", "body": "As fotos que carregas são armazenadas no Supabase Storage e são publicamente acessíveis via URL única se anexadas a um guia público. Se eliminares a tua conta, as tuas imagens são removidas juntamente com todos os teus dados." },
-      { "title": "Guias privados e códigos de acesso", "body": "Quando crias um guia privado, o TripShare gera um código de acesso de 4 caracteres. Este código é armazenado em segurança e só é visível para ti. Qualquer pessoa que queira ver o teu guia privado deve introduzir este código. O código é transmitido em segurança e nunca é exposto no feed público." },
-      { "title": "Serviços de terceiros", "body": "TripShare usa Supabase para autenticação, base de dados e armazenamento de ficheiros. Usamos Apple Maps para funcionalidades baseadas em localização. Não nos integramos com redes publicitárias, rastreadores de análise ou plataformas de redes sociais." },
-      { "title": "Eliminação de conta", "body": "Podes eliminar permanentemente a tua conta a qualquer momento em Definições → Eliminar conta na app. Eliminar a tua conta remove todos os teus dados pessoais, guias, comentários e imagens dos nossos sistemas. Esta ação é irreversível." },
-      { "title": "Os teus direitos", "body": "Tens o direito de aceder, corrigir ou eliminar os teus dados pessoais a qualquer momento. Para solicitar uma exportação de dados ou colocar uma questão de privacidade, contacta-nos em support@tripshare.online." },
-      { "title": "Crianças", "body": "TripShare não é direcionado a crianças com menos de 13 anos. Não recolhemos intencionalmente informações pessoais de ninguém com menos de 13 anos. Se acreditas que uma criança nos forneceu dados pessoais, contacta-nos e eliminaremos prontamente." },
-      { "title": "Alterações a esta política", "body": "Podemos atualizar esta Política de Privacidade de tempos em tempos. Quando o fizermos, atualizaremos a data abaixo. O uso continuado da app após alterações constitui a aceitação da política atualizada." }
+      {
+        "title": "O que recolhemos",
+        "body": "Quando crias uma conta, recolhemos o teu nome e endereço de email. Quando usas o TripShare, armazenamos os guias de viagem que crias, incluindo texto, imagens, destinos e detalhes da viagem. Também armazenamos a tua atividade na app, como guias que gostaste e utilizadores que segues."
+      },
+      {
+        "title": "Como usamos os teus dados",
+        "body": "Os teus dados são usados apenas para fornecer e melhorar o TripShare. Usamo-los para mostrar os teus guias a outros utilizadores (se escolheres tornά-los públicos), personalizar o teu feed e ativar funcionalidades sociais. Não vendemos os teus dados pessoais a terceiros nem os usamos para publicidade."
+      },
+      {
+        "title": "Armazenamento de dados",
+        "body": "Os teus dados são armazenados em segurança usando Supabase, um fornecedor de base de dados em nuvem certificado SOC 2 Tipo II. Os dados são armazenados em servidores na União Europeia. Todas as ligações são encriptadas com TLS."
+      },
+      {
+        "title": "Imagens",
+        "body": "As fotos que carregas são armazenadas no Supabase Storage e são publicamente acessíveis via URL única se anexadas a um guia público. Se eliminares a tua conta, as tuas imagens são removidas juntamente com todos os teus dados."
+      },
+      {
+        "title": "Guias privados e códigos de acesso",
+        "body": "Quando crias um guia privado, o TripShare gera um código de acesso de 4 caracteres. Este código é armazenado em segurança e só é visível para ti. Qualquer pessoa que queira ver o teu guia privado deve introduzir este código. O código é transmitido em segurança e nunca é exposto no feed público."
+      },
+      {
+        "title": "Serviços de terceiros",
+        "body": "TripShare usa Supabase para autenticação, base de dados e armazenamento de ficheiros. Usamos Apple Maps para funcionalidades baseadas em localização. Não nos integramos com redes publicitárias, rastreadores de análise ou plataformas de redes sociais. Para traçar rotas a pé nos mapas dos guias, as coordenadas das paradas são enviadas ao serviço de rotas do OpenStreetMap (OSRM); essas solicitações não contêm informações pessoais."
+      },
+      {
+        "title": "Eliminação de conta",
+        "body": "Podes eliminar permanentemente a tua conta a qualquer momento em Definições → Eliminar conta na app. Eliminar a tua conta remove todos os teus dados pessoais, guias, comentários e imagens dos nossos sistemas. Esta ação é irreversível."
+      },
+      {
+        "title": "Os teus direitos",
+        "body": "Tens o direito de aceder, corrigir ou eliminar os teus dados pessoais a qualquer momento. Para solicitar uma exportação de dados ou colocar uma questão de privacidade, contacta-nos em support@tripshare.online."
+      },
+      {
+        "title": "Crianças",
+        "body": "TripShare não é direcionado a crianças com menos de 13 anos. Não recolhemos intencionalmente informações pessoais de ninguém com menos de 13 anos. Se acreditas que uma criança nos forneceu dados pessoais, contacta-nos e eliminaremos prontamente."
+      },
+      {
+        "title": "Alterações a esta política",
+        "body": "Podemos atualizar esta Política de Privacidade de tempos em tempos. Quando o fizermos, atualizaremos a data abaixo. O uso continuado da app após alterações constitui a aceitação da política atualizada."
+      }
     ]
   },
   "termsPage": {
@@ -95,18 +304,54 @@
     "backHome": "← Voltar ao início",
     "allRights": "TripShare. Todos os direitos reservados.",
     "sections": [
-      { "title": "Aceitação dos termos", "body": "Ao descarregar, instalar ou usar o TripShare, concordas em ficar vinculado por estes Termos de Utilização. Se não concordares com estes termos, não uses a app. Estes termos aplicam-se a todos os utilizadores do TripShare, incluindo quem cria e partilha conteúdo." },
-      { "title": "Elegibilidade", "body": "Deves ter pelo menos 13 anos para usar o TripShare. Ao usar a app, confirmas que cumpres este requisito de idade. Se tiveres menos de 18 anos, deves ter permissão de um pai ou tutor." },
-      { "title": "A tua conta", "body": "És responsável por manter a segurança da tua conta e por toda a atividade que ocorra sob ela. Deves fornecer informações precisas ao criar a tua conta. Não partilhes as tuas credenciais de acesso. Reservamo-nos o direito de suspender ou cancelar contas que violem estes termos." },
-      { "title": "Conteúdo do utilizador", "body": "Reténs a propriedade do conteúdo que crias e partilhas no TripShare. Ao publicar conteúdo no TripShare, concedes-nos uma licença não exclusiva e sem royalties para exibir e distribuir esse conteúdo na app. És o único responsável pelo conteúdo que publicas." },
-      { "title": "Conduta proibida", "body": "Concordas em não: usar o TripShare para fins ilegais; publicar conteúdo falso, enganoso ou prejudicial; assediar, ameaçar ou abusar de outros utilizadores; tentar obter acesso não autorizado aos nossos sistemas; extrair ou redistribuir conteúdo sem permissão; personificar qualquer pessoa; ou usar a app para distribuir spam ou malware." },
-      { "title": "Guias privados e códigos de acesso", "body": "Quando crias um guia privado, recebes um código de acesso de 4 caracteres. És responsável por decidir com quem partilhas este código. Não somos responsáveis por qualquer acesso ao teu guia privado resultante de partilhares o código." },
-      { "title": "Propriedade intelectual", "body": "TripShare e toda a marca, design e tecnologia associados são propriedade nossa e protegidos pelas leis de propriedade intelectual aplicáveis. Não podes copiar, modificar, distribuir ou fazer engenharia inversa de qualquer parte da app sem a nossa permissão escrita." },
-      { "title": "Avisos legais", "body": "TripShare é fornecido \"tal como está\" sem garantias de qualquer tipo. Os guias de viagem no TripShare são criados por utilizadores e não verificamos a exatidão do conteúdo. Usa sempre o teu próprio julgamento ao seguir conselhos de viagem e consulta fontes oficiais para informações importantes." },
-      { "title": "Limitação de responsabilidade", "body": "Na máxima medida permitida por lei, TripShare e os seus operadores não são responsáveis por danos indiretos, incidentais, especiais ou consequentes decorrentes do teu uso da app. A nossa responsabilidade total por qualquer reclamação não excederá o valor que nos pagaste nos doze meses anteriores à reclamação." },
-      { "title": "Eliminação de conta", "body": "Podes eliminar a tua conta a qualquer momento em Definições → Eliminar conta na app. Isto remove permanentemente o teu perfil, guias, comentários e dados associados. Também podemos suspender ou cancelar a tua conta se violares estes termos." },
-      { "title": "Alterações a estes termos", "body": "Podemos atualizar estes Termos de Utilização de tempos em tempos. Atualizaremos a data no topo desta página quando o fizermos. O uso continuado do TripShare após alterações constitui a tua aceitação dos termos atualizados." },
-      { "title": "Lei aplicável", "body": "Estes termos são regidos pelas leis da Noruega. Quaisquer disputas decorrentes destes termos ou do teu uso do TripShare estarão sujeitas à jurisdição exclusiva dos tribunais noruegueses." }
+      {
+        "title": "Aceitação dos termos",
+        "body": "Ao descarregar, instalar ou usar o TripShare, concordas em ficar vinculado por estes Termos de Utilização. Se não concordares com estes termos, não uses a app. Estes termos aplicam-se a todos os utilizadores do TripShare, incluindo quem cria e partilha conteúdo."
+      },
+      {
+        "title": "Elegibilidade",
+        "body": "Deves ter pelo menos 13 anos para usar o TripShare. Ao usar a app, confirmas que cumpres este requisito de idade. Se tiveres menos de 18 anos, deves ter permissão de um pai ou tutor."
+      },
+      {
+        "title": "A tua conta",
+        "body": "És responsável por manter a segurança da tua conta e por toda a atividade que ocorra sob ela. Deves fornecer informações precisas ao criar a tua conta. Não partilhes as tuas credenciais de acesso. Reservamo-nos o direito de suspender ou cancelar contas que violem estes termos."
+      },
+      {
+        "title": "Conteúdo do utilizador",
+        "body": "Reténs a propriedade do conteúdo que crias e partilhas no TripShare. Ao publicar conteúdo no TripShare, concedes-nos uma licença não exclusiva e sem royalties para exibir e distribuir esse conteúdo na app. És o único responsável pelo conteúdo que publicas."
+      },
+      {
+        "title": "Conduta proibida",
+        "body": "Concordas em não: usar o TripShare para fins ilegais; publicar conteúdo falso, enganoso ou prejudicial; assediar, ameaçar ou abusar de outros utilizadores; tentar obter acesso não autorizado aos nossos sistemas; extrair ou redistribuir conteúdo sem permissão; personificar qualquer pessoa; ou usar a app para distribuir spam ou malware."
+      },
+      {
+        "title": "Guias privados e códigos de acesso",
+        "body": "Quando crias um guia privado, recebes um código de acesso de 4 caracteres. És responsável por decidir com quem partilhas este código. Não somos responsáveis por qualquer acesso ao teu guia privado resultante de partilhares o código."
+      },
+      {
+        "title": "Propriedade intelectual",
+        "body": "TripShare e toda a marca, design e tecnologia associados são propriedade nossa e protegidos pelas leis de propriedade intelectual aplicáveis. Não podes copiar, modificar, distribuir ou fazer engenharia inversa de qualquer parte da app sem a nossa permissão escrita."
+      },
+      {
+        "title": "Avisos legais",
+        "body": "TripShare é fornecido \"tal como está\" sem garantias de qualquer tipo. Os guias de viagem no TripShare são criados por utilizadores e não verificamos a exatidão do conteúdo. Usa sempre o teu próprio julgamento ao seguir conselhos de viagem e consulta fontes oficiais para informações importantes."
+      },
+      {
+        "title": "Limitação de responsabilidade",
+        "body": "Na máxima medida permitida por lei, TripShare e os seus operadores não são responsáveis por danos indiretos, incidentais, especiais ou consequentes decorrentes do teu uso da app. A nossa responsabilidade total por qualquer reclamação não excederá o valor que nos pagaste nos doze meses anteriores à reclamação."
+      },
+      {
+        "title": "Eliminação de conta",
+        "body": "Podes eliminar a tua conta a qualquer momento em Definições → Eliminar conta na app. Isto remove permanentemente o teu perfil, guias, comentários e dados associados. Também podemos suspender ou cancelar a tua conta se violares estes termos."
+      },
+      {
+        "title": "Alterações a estes termos",
+        "body": "Podemos atualizar estes Termos de Utilização de tempos em tempos. Atualizaremos a data no topo desta página quando o fizermos. O uso continuado do TripShare após alterações constitui a tua aceitação dos termos atualizados."
+      },
+      {
+        "title": "Lei aplicável",
+        "body": "Estes termos são regidos pelas leis da Noruega. Quaisquer disputas decorrentes destes termos ou do teu uso do TripShare estarão sujeitas à jurisdição exclusiva dos tribunais noruegueses."
+      }
     ]
   }
 }

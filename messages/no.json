@@ -9,9 +9,11 @@
     "title": "Reiseappen laget av",
     "titleAccent": "folk som faktisk reiser",
     "subtitle": "Lag dag-for-dag reiseguider med ekte stopp, kart og bilder — og oppdag turer delt av folk som faktisk har vært der. Ingen reklame. Ingen influensere. Bare ærlig reising.",
-    "badge": "Gratis · iOS"
+    "badge": "Gratis · iOS og Mac"
   },
-  "screenshots": { "label": "Se den i bruk" },
+  "screenshots": {
+    "label": "Se den i bruk"
+  },
   "tagline": {
     "heading": "Ekte reiseruter fra ekte reisende.",
     "sub": "Ikke AI-generert. Ikke sponset. Bare folk som har vært der — som deler nøyaktig hvor de gikk og hva de gjorde."
@@ -21,12 +23,30 @@
     "sub": "Laget for reisende som planlegger nøye og deler generøst.",
     "seeAll": "Se alle funksjoner",
     "items": [
-      { "title": "Dag-for-dag reiseruter", "desc": "Ekte stopp, ekte adresser. Hver dag av turen lagt ut med kart og tips." },
-      { "title": "Oppdag ekte turer", "desc": "Bla gjennom guider fra ekte reisende. Skjulte perler du ikke finner på noe algoritme." },
-      { "title": "Kartintegrasjon", "desc": "Hvert stopp plottet på et kart. Trykk på en adresse for å åpne direkte i Apple Maps." },
-      { "title": "Bygg det på din måte", "desc": "Dager, lister, notater, gallerier, overnatting — strukturer guiden din slik det gir mening." },
-      { "title": "Offentlig eller privat", "desc": "Del med verden eller hold det privat med en personlig tilgangskode." },
-      { "title": "Laget for fellesskap", "desc": "Følg reisende, lik guider og bygg en feed som faktisk gjenspeiler hvordan du reiser." }
+      {
+        "title": "Dag-for-dag reiseruter",
+        "desc": "Ekte stopp, ekte adresser. Hver dag av turen lagt ut med kart og tips."
+      },
+      {
+        "title": "Oppdag ekte turer",
+        "desc": "Bla gjennom guider fra ekte reisende. Skjulte perler du ikke finner på noe algoritme."
+      },
+      {
+        "title": "Kartintegrasjon",
+        "desc": "Hvert stopp vises på kartet, med gåruter tegnet mellom dem. Trykk på en adresse for å åpne den direkte i Apple Kart."
+      },
+      {
+        "title": "Bygg det på din måte",
+        "desc": "Dager, lister, notater, gallerier, overnatting — strukturer guiden din slik det gir mening."
+      },
+      {
+        "title": "Offentlig eller privat",
+        "desc": "Del med verden eller hold det privat med en personlig tilgangskode."
+      },
+      {
+        "title": "Laget for fellesskap",
+        "desc": "Følg reisende, lik guider og bygg en feed som faktisk gjenspeiler hvordan du reiser."
+      }
     ]
   },
   "cta": {
@@ -42,7 +62,9 @@
     "support": "Support",
     "allRights": "TripShare. Alle rettigheter forbeholdt."
   },
-  "lang": { "label": "Språk" },
+  "lang": {
+    "label": "Språk"
+  },
   "featuresPage": {
     "badge": "Appen",
     "heading": "Slik fungerer TripShare",
@@ -105,7 +127,10 @@
           "Hver guide har en Kart-fane som viser alle stopp med adresser",
           "Trykk på en adresse i et stopp for å åpne Apple Maps for veibeskrivelse",
           "Egendefinerte Kart-seksjoner lar deg bygge en fokusert rute for en del av turen",
-          "Kartet tilpasser seg automatisk for å vise alle pinnene dine når det lastes"
+          "Kartet tilpasser seg automatisk for å vise alle pinnene dine når det lastes",
+          "Gåruter tegnes mellom dagens stopp — ekte gateruter, ikke luftlinjer",
+          "Filtrer kartet per dag — hver dag har sin egen farge",
+          "Skru rutelinjen av eller på for hver enkelt dag"
         ]
       },
       {
@@ -130,7 +155,8 @@
           "Velg foretrukne tagger og land under onboarding for å forme feeden",
           "Søk etter destinasjon, by eller guidetittel",
           "Søk etter brukere etter navn for å finne og følge reisende",
-          "Feeden laster 20 guider om gangen og paginerer mens du scroller"
+          "Feeden laster 20 guider om gangen og paginerer mens du scroller",
+          "Filtrer feeden på reisetype, språk og land"
         ]
       },
       {
@@ -142,7 +168,9 @@
           "Følger-liste — administrer hvem du følger med ett trykk for å slutte å følge",
           "Rediger visningsnavnet og profilbildet ditt",
           "Skriv en kort bio som er synlig for andre brukere",
-          "Logg ut eller slett kontoen din fra innstillinger"
+          "Logg ut eller slett kontoen din fra innstillinger",
+          "Lagret-fane — bokmerk guider for å lese dem senere",
+          "Velg app-språk — 10 språk støttes"
         ]
       },
       {
@@ -153,6 +181,16 @@
           "Offentlige guider: alle med lenken kan se dem i appen",
           "Private guider: lenke + tilgangskode inkluderes automatisk ved deling",
           "Del fra innsiden av guiden eller via tre-punkts-menyen"
+        ]
+      },
+      {
+        "title": "Last ned som PDF",
+        "desc": "Ta med deg hvilken som helst guide — som en lekker formatert PDF.",
+        "items": [
+          "Last ned en guide fra treprikk-menyen",
+          "Alt er med: forside, tips, dager med stopp, bilder og overnatting",
+          "Arkiver i Filer, del med AirDrop eller send på e-post",
+          "Fungerer uten nett når den er lagret — perfekt for reisedager uten data"
         ]
       },
       {
@@ -197,29 +235,63 @@
       {
         "q": "Jeg fant en feil eller noe fungerer ikke.",
         "a": "Send oss en e-post på support@tripshare.online og beskriv hva som skjedde. Vi leser alle meldinger og sikter mot å svare innen 48 timer."
+      },
+      {
+        "q": "Kan jeg lagre en guide som PDF?",
+        "a": "Ja. Åpne en guide, trykk på treprikk-menyen og velg Last ned som PDF. PDF-en inneholder hele guiden — dager, stopp, bilder og overnatting — og kan arkiveres i Filer eller deles med hvem som helst."
       }
     ]
   },
   "privacyPage": {
     "badge": "Juridisk",
     "heading": "Personvernerklæring",
-    "updated": "Sist oppdatert: juli 2026",
+    "updated": "Sist oppdatert: august 2026",
     "intro": "TripShare (\"vi\", \"vår\", \"oss\") er forpliktet til å beskytte personvernet ditt. Denne erklæringen forklarer hvilken informasjon vi samler inn, hvordan vi bruker den, og rettighetene dine angående dataene dine.",
     "questions": "Spørsmål om denne erklæringen?",
     "termsOfUse": "Brukervilkår",
     "backHome": "← Tilbake til forsiden",
     "allRights": "TripShare. Alle rettigheter forbeholdt.",
     "sections": [
-      { "title": "Hva vi samler inn", "body": "Når du oppretter en konto, samler vi inn navn og e-postadresse. Når du bruker TripShare, lagrer vi reiseguidene du lager, inkludert tekst, bilder, destinasjoner og reisedetaljer. Vi lagrer også aktiviteten din i appen, som guider du har likt og brukere du følger." },
-      { "title": "Hvordan vi bruker dataene dine", "body": "Dataene dine brukes utelukkende til å levere og forbedre TripShare. Vi bruker dem til å vise guidene dine til andre brukere (hvis du velger å gjøre dem offentlige), tilpasse feeden din og aktivere sosiale funksjoner som å følge og like. Vi selger ikke personopplysningene dine til tredjeparter og bruker dem ikke til reklame." },
-      { "title": "Datalagring", "body": "Dataene dine lagres sikkert ved hjelp av Supabase, en SOC 2 Type II-sertifisert skyleverandør. Data lagres på servere i EU. Alle tilkoblinger er kryptert med TLS." },
-      { "title": "Bilder", "body": "Bilder du laster opp lagres i Supabase Storage og er offentlig tilgjengelige via en unik URL hvis de er knyttet til en offentlig guide. Hvis du sletter kontoen din, fjernes bildene dine sammen med alle dataene dine." },
-      { "title": "Private guider og tilgangskoder", "body": "Når du lager en privat guide, genererer TripShare en 4-tegns tilgangskode. Denne koden lagres sikkert og er kun synlig for deg (guidens eier). Alle som ønsker å se den private guiden din må skrive inn denne koden. Koden overføres sikkert og eksponeres aldri i den offentlige feeden eller søkeresultater." },
-      { "title": "Tredjepartstjenester", "body": "TripShare bruker Supabase for autentisering, database og fillagring. Vi bruker Apple Maps for stedsbaserte funksjoner. Vi integrerer ikke med reklamenettverk, analysesporere eller sosiale medieplattformer." },
-      { "title": "Sletting av konto", "body": "Du kan permanent slette kontoen din når som helst fra Innstillinger → Slett konto i appen. Sletting av kontoen fjerner alle personopplysningene dine, guider, kommentarer og bilder fra systemene våre. Denne handlingen er irreversibel." },
-      { "title": "Dine rettigheter", "body": "Du har rett til å få tilgang til, korrigere eller slette personopplysningene dine når som helst. For å be om dataeksport eller ta opp et personvernproblem, kontakt oss på support@tripshare.online." },
-      { "title": "Barn", "body": "TripShare er ikke rettet mot barn under 13 år. Vi samler ikke bevisst inn personopplysninger fra noen under 13 år. Hvis du tror et barn har gitt oss personopplysninger, vennligst kontakt oss og vi vil slette dem umiddelbart." },
-      { "title": "Endringer i denne erklæringen", "body": "Vi kan oppdatere denne personvernerklæringen fra tid til annen. Når vi gjør det, oppdaterer vi datoen nedenfor. Fortsatt bruk av appen etter endringer utgjør aksept av den oppdaterte erklæringen." }
+      {
+        "title": "Hva vi samler inn",
+        "body": "Når du oppretter en konto, samler vi inn navn og e-postadresse. Når du bruker TripShare, lagrer vi reiseguidene du lager, inkludert tekst, bilder, destinasjoner og reisedetaljer. Vi lagrer også aktiviteten din i appen, som guider du har likt og brukere du følger."
+      },
+      {
+        "title": "Hvordan vi bruker dataene dine",
+        "body": "Dataene dine brukes utelukkende til å levere og forbedre TripShare. Vi bruker dem til å vise guidene dine til andre brukere (hvis du velger å gjøre dem offentlige), tilpasse feeden din og aktivere sosiale funksjoner som å følge og like. Vi selger ikke personopplysningene dine til tredjeparter og bruker dem ikke til reklame."
+      },
+      {
+        "title": "Datalagring",
+        "body": "Dataene dine lagres sikkert ved hjelp av Supabase, en SOC 2 Type II-sertifisert skyleverandør. Data lagres på servere i EU. Alle tilkoblinger er kryptert med TLS."
+      },
+      {
+        "title": "Bilder",
+        "body": "Bilder du laster opp lagres i Supabase Storage og er offentlig tilgjengelige via en unik URL hvis de er knyttet til en offentlig guide. Hvis du sletter kontoen din, fjernes bildene dine sammen med alle dataene dine."
+      },
+      {
+        "title": "Private guider og tilgangskoder",
+        "body": "Når du lager en privat guide, genererer TripShare en 4-tegns tilgangskode. Denne koden lagres sikkert og er kun synlig for deg (guidens eier). Alle som ønsker å se den private guiden din må skrive inn denne koden. Koden overføres sikkert og eksponeres aldri i den offentlige feeden eller søkeresultater."
+      },
+      {
+        "title": "Tredjepartstjenester",
+        "body": "TripShare bruker Supabase for autentisering, database og fillagring. Vi bruker Apple Maps for stedsbaserte funksjoner. Vi integrerer ikke med reklamenettverk, analysesporere eller sosiale medieplattformer. For å tegne gåruter på guidekart sendes stoppkoordinater til rutetjenesten OpenStreetMap (OSRM); disse forespørslene inneholder ingen personopplysninger."
+      },
+      {
+        "title": "Sletting av konto",
+        "body": "Du kan permanent slette kontoen din når som helst fra Innstillinger → Slett konto i appen. Sletting av kontoen fjerner alle personopplysningene dine, guider, kommentarer og bilder fra systemene våre. Denne handlingen er irreversibel."
+      },
+      {
+        "title": "Dine rettigheter",
+        "body": "Du har rett til å få tilgang til, korrigere eller slette personopplysningene dine når som helst. For å be om dataeksport eller ta opp et personvernproblem, kontakt oss på support@tripshare.online."
+      },
+      {
+        "title": "Barn",
+        "body": "TripShare er ikke rettet mot barn under 13 år. Vi samler ikke bevisst inn personopplysninger fra noen under 13 år. Hvis du tror et barn har gitt oss personopplysninger, vennligst kontakt oss og vi vil slette dem umiddelbart."
+      },
+      {
+        "title": "Endringer i denne erklæringen",
+        "body": "Vi kan oppdatere denne personvernerklæringen fra tid til annen. Når vi gjør det, oppdaterer vi datoen nedenfor. Fortsatt bruk av appen etter endringer utgjør aksept av den oppdaterte erklæringen."
+      }
     ]
   },
   "termsPage": {
@@ -232,18 +304,54 @@
     "backHome": "← Tilbake til forsiden",
     "allRights": "TripShare. Alle rettigheter forbeholdt.",
     "sections": [
-      { "title": "Aksept av vilkår", "body": "Ved å laste ned, installere eller bruke TripShare, samtykker du til å være bundet av disse brukervilkårene. Hvis du ikke godtar disse vilkårene, ikke bruk appen. Disse vilkårene gjelder for alle brukere av TripShare, inkludert brukere som lager og deler innhold." },
-      { "title": "Kvalifikasjonskrav", "body": "Du må være minst 13 år gammel for å bruke TripShare. Ved å bruke appen bekrefter du at du oppfyller dette alderskravet. Hvis du er under 18 år, må du ha tillatelse fra en forelder eller verge." },
-      { "title": "Din konto", "body": "Du er ansvarlig for å opprettholde sikkerheten til kontoen din og for all aktivitet som skjer under den. Du må oppgi nøyaktig informasjon når du oppretter kontoen din. Ikke del innloggingsopplysningene dine med andre. Vi forbeholder oss retten til å suspendere eller avslutte kontoer som bryter disse vilkårene." },
-      { "title": "Brukerinnhold", "body": "Du beholder eierskapet til innholdet du lager og deler på TripShare, inkludert reiseguider, bilder og beskrivelser. Ved å publisere innhold på TripShare, gir du oss en ikke-eksklusiv, royaltyfri lisens til å vise og distribuere det innholdet i appen. Du er alene ansvarlig for innholdet du publiserer. Ikke last opp innhold som er ulovlig, skadelig, villedende eller som krenker andres rettigheter." },
-      { "title": "Forbudt atferd", "body": "Du samtykker til å ikke: bruke TripShare til ulovlige formål; publisere falsk, villedende eller skadelig innhold; trakassere, true eller misbruke andre brukere; forsøke å få uautorisert tilgang til systemene våre; skrape, kopiere eller videredistribuere innhold uten tillatelse; utgi deg for å være en person eller enhet; eller bruke appen til å distribuere spam eller skadelig programvare." },
-      { "title": "Private guider og tilgangskoder", "body": "Når du lager en privat guide, mottar du en 4-tegns tilgangskode. Du er ansvarlig for å bestemme hvem du deler denne koden med. Vi er ikke ansvarlige for tilgang til den private guiden din som skyldes at du deler koden." },
-      { "title": "Immaterielle rettigheter", "body": "TripShare og all tilhørende merkevarebygging, design og teknologi eies av oss og er beskyttet av gjeldende immaterialrettslovgivning. Du kan ikke kopiere, modifisere, distribuere eller reversere noen del av appen uten skriftlig tillatelse fra oss." },
-      { "title": "Ansvarsfraskrivelser", "body": "TripShare tilbys \"som den er\" uten garantier av noe slag. Reiseguider på TripShare er laget av brukere og vi verifiserer ikke nøyaktigheten av noe guideinnhold. Bruk alltid din egen vurdering når du følger reiseråd og sjekk offisielle kilder for viktig informasjon som visumkrav, sikkerhetsrådgivning og innreiserestriksjoner." },
-      { "title": "Ansvarsbegrensning", "body": "I den grad loven tillater det, er ikke TripShare og dets operatører ansvarlige for indirekte, tilfeldige, spesielle eller følgeskader som oppstår fra din bruk av appen eller innhold i den. Vårt totale ansvar for ethvert krav skal ikke overstige beløpet du betalte oss i de tolv månedene før kravet." },
-      { "title": "Sletting av konto", "body": "Du kan slette kontoen din når som helst fra Innstillinger → Slett konto i appen. Dette fjerner permanent profilen din, guider, kommentarer og tilhørende data. Vi kan også suspendere eller avslutte kontoen din hvis du bryter disse vilkårene." },
-      { "title": "Endringer i disse vilkårene", "body": "Vi kan oppdatere disse brukervilkårene fra tid til annen. Vi oppdaterer datoen øverst på denne siden når vi gjør det. Fortsatt bruk av TripShare etter at endringer er gjort utgjør aksept av de oppdaterte vilkårene." },
-      { "title": "Gjeldende lov", "body": "Disse vilkårene er underlagt norsk lov. Eventuelle tvister som oppstår fra disse vilkårene eller din bruk av TripShare skal behandles av norske domstoler." }
+      {
+        "title": "Aksept av vilkår",
+        "body": "Ved å laste ned, installere eller bruke TripShare, samtykker du til å være bundet av disse brukervilkårene. Hvis du ikke godtar disse vilkårene, ikke bruk appen. Disse vilkårene gjelder for alle brukere av TripShare, inkludert brukere som lager og deler innhold."
+      },
+      {
+        "title": "Kvalifikasjonskrav",
+        "body": "Du må være minst 13 år gammel for å bruke TripShare. Ved å bruke appen bekrefter du at du oppfyller dette alderskravet. Hvis du er under 18 år, må du ha tillatelse fra en forelder eller verge."
+      },
+      {
+        "title": "Din konto",
+        "body": "Du er ansvarlig for å opprettholde sikkerheten til kontoen din og for all aktivitet som skjer under den. Du må oppgi nøyaktig informasjon når du oppretter kontoen din. Ikke del innloggingsopplysningene dine med andre. Vi forbeholder oss retten til å suspendere eller avslutte kontoer som bryter disse vilkårene."
+      },
+      {
+        "title": "Brukerinnhold",
+        "body": "Du beholder eierskapet til innholdet du lager og deler på TripShare, inkludert reiseguider, bilder og beskrivelser. Ved å publisere innhold på TripShare, gir du oss en ikke-eksklusiv, royaltyfri lisens til å vise og distribuere det innholdet i appen. Du er alene ansvarlig for innholdet du publiserer. Ikke last opp innhold som er ulovlig, skadelig, villedende eller som krenker andres rettigheter."
+      },
+      {
+        "title": "Forbudt atferd",
+        "body": "Du samtykker til å ikke: bruke TripShare til ulovlige formål; publisere falsk, villedende eller skadelig innhold; trakassere, true eller misbruke andre brukere; forsøke å få uautorisert tilgang til systemene våre; skrape, kopiere eller videredistribuere innhold uten tillatelse; utgi deg for å være en person eller enhet; eller bruke appen til å distribuere spam eller skadelig programvare."
+      },
+      {
+        "title": "Private guider og tilgangskoder",
+        "body": "Når du lager en privat guide, mottar du en 4-tegns tilgangskode. Du er ansvarlig for å bestemme hvem du deler denne koden med. Vi er ikke ansvarlige for tilgang til den private guiden din som skyldes at du deler koden."
+      },
+      {
+        "title": "Immaterielle rettigheter",
+        "body": "TripShare og all tilhørende merkevarebygging, design og teknologi eies av oss og er beskyttet av gjeldende immaterialrettslovgivning. Du kan ikke kopiere, modifisere, distribuere eller reversere noen del av appen uten skriftlig tillatelse fra oss."
+      },
+      {
+        "title": "Ansvarsfraskrivelser",
+        "body": "TripShare tilbys \"som den er\" uten garantier av noe slag. Reiseguider på TripShare er laget av brukere og vi verifiserer ikke nøyaktigheten av noe guideinnhold. Bruk alltid din egen vurdering når du følger reiseråd og sjekk offisielle kilder for viktig informasjon som visumkrav, sikkerhetsrådgivning og innreiserestriksjoner."
+      },
+      {
+        "title": "Ansvarsbegrensning",
+        "body": "I den grad loven tillater det, er ikke TripShare og dets operatører ansvarlige for indirekte, tilfeldige, spesielle eller følgeskader som oppstår fra din bruk av appen eller innhold i den. Vårt totale ansvar for ethvert krav skal ikke overstige beløpet du betalte oss i de tolv månedene før kravet."
+      },
+      {
+        "title": "Sletting av konto",
+        "body": "Du kan slette kontoen din når som helst fra Innstillinger → Slett konto i appen. Dette fjerner permanent profilen din, guider, kommentarer og tilhørende data. Vi kan også suspendere eller avslutte kontoen din hvis du bryter disse vilkårene."
+      },
+      {
+        "title": "Endringer i disse vilkårene",
+        "body": "Vi kan oppdatere disse brukervilkårene fra tid til annen. Vi oppdaterer datoen øverst på denne siden når vi gjør det. Fortsatt bruk av TripShare etter at endringer er gjort utgjør aksept av de oppdaterte vilkårene."
+      },
+      {
+        "title": "Gjeldende lov",
+        "body": "Disse vilkårene er underlagt norsk lov. Eventuelle tvister som oppstår fra disse vilkårene eller din bruk av TripShare skal behandles av norske domstoler."
+      }
     ]
   }
 }

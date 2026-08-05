@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 import Nav from '../Nav';
-import { Link } from '../../i18n/navigation';
+import Footer from '../Footer';
 
 export const metadata: Metadata = {
   title: 'Support – TripShare',
@@ -17,9 +17,9 @@ export default function Support() {
 
       <main className="flex-1 pt-28 pb-24 px-6">
         <div className="max-w-2xl mx-auto">
-          <p className="text-accent text-sm font-medium mb-3 tracking-wide uppercase">{t('badge')}</p>
-          <h1 className="text-4xl font-bold mb-3">{t('heading')}</h1>
-          <p className="text-gray-400 mb-12 text-lg leading-relaxed">{t('sub')}</p>
+          <p className="text-accent text-xs font-semibold mb-3 tracking-[0.25em] uppercase">{t('badge')}</p>
+          <h1 className="font-display text-4xl sm:text-5xl font-bold mb-3 tracking-tight">{t('heading')}</h1>
+          <p className="text-muted mb-12 text-lg leading-relaxed">{t('sub')}</p>
 
           <a
             href="mailto:support@tripshare.online"
@@ -39,7 +39,7 @@ export default function Support() {
             </svg>
           </a>
 
-          <h2 className="text-2xl font-bold mb-8">{t('faqHeading')}</h2>
+          <h2 className="font-display text-2xl font-bold mb-8 tracking-tight">{t('faqHeading')}</h2>
           <div className="flex flex-col gap-px rounded-2xl overflow-hidden border border-border">
             {faq.map((item, i) => (
               <details key={i} className="bg-surface group">
@@ -56,12 +56,7 @@ export default function Support() {
         </div>
       </main>
 
-      <footer className="border-t border-border py-8 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <span>© {new Date().getFullYear()} {t('allRights')}</span>
-          <Link href="/" className="hover:text-white transition-colors">{t('backHome')}</Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

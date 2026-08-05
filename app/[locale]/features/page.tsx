@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 import Nav from '../Nav';
+import Footer from '../Footer';
 import { Link } from '../../i18n/navigation';
 
 export const metadata: Metadata = {
@@ -18,12 +19,12 @@ const ICONS = [
   <svg key="6" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>,
   <svg key="7" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>,
   <svg key="8" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>,
-  <svg key="9" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>,
+  <svg key="9" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>,
+  <svg key="10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>,
 ];
 
 export default function Features() {
   const t = useTranslations('featuresPage');
-  const tFooter = useTranslations('footer');
   const sections = t.raw('sections') as Array<{ title: string; desc: string; items: string[] }>;
 
   return (
@@ -32,18 +33,18 @@ export default function Features() {
 
       <main className="flex-1 pt-28 pb-24 px-6">
         <div className="max-w-3xl mx-auto">
-          <p className="text-accent text-xs font-semibold mb-3 tracking-widest uppercase">{t('badge')}</p>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight">{t('heading')}</h1>
-          <p className="text-gray-500 mb-16 text-base leading-relaxed max-w-xl">{t('sub')}</p>
+          <p className="text-accent text-xs font-semibold mb-3 tracking-[0.25em] uppercase">{t('badge')}</p>
+          <h1 className="font-display text-4xl sm:text-5xl font-bold mb-4 tracking-tight">{t('heading')}</h1>
+          <p className="text-muted mb-16 text-base leading-relaxed max-w-xl">{t('sub')}</p>
 
           <div className="flex flex-col gap-10">
             {sections.map((s, i) => (
-              <section key={s.title} className="bg-surface border border-border rounded-2xl p-6 sm:p-8">
+              <section key={s.title} className="bg-surface border border-border rounded-3xl p-6 sm:p-8 transition-colors hover:border-accent/30">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent shrink-0">
                     {ICONS[i]}
                   </div>
-                  <h2 className="text-base font-bold text-white">{s.title}</h2>
+                  <h2 className="font-display text-base font-bold text-ink">{s.title}</h2>
                 </div>
                 <p className="text-gray-500 text-sm mb-5 leading-relaxed pl-11">{s.desc}</p>
                 <ul className="space-y-2.5 pl-11">
@@ -74,20 +75,7 @@ export default function Features() {
         </div>
       </main>
 
-      <footer className="border-t border-border py-8 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <div className="flex flex-col items-center sm:items-start gap-1">
-            <span>© {new Date().getFullYear()} TripShare</span>
-            <span className="text-xs text-gray-600">{tFooter('org')}</span>
-          </div>
-          <div className="flex items-center gap-6">
-            <Link href="/features" className="hover:text-white transition-colors">{tFooter('features')}</Link>
-            <Link href="/privacy" className="hover:text-white transition-colors">{tFooter('privacy')}</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">{tFooter('terms')}</Link>
-            <Link href="/support" className="hover:text-white transition-colors">{tFooter('support')}</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

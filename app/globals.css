@@ -7,5 +7,32 @@ html { scroll-behavior: smooth; }
 ::selection { background: #FF5C38; color: #fff; }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0E0E0E; }
-::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #0F0D0C; }
+::-webkit-scrollbar-thumb { background: #2B2622; border-radius: 3px; }
+
+:focus-visible {
+  outline: 2px solid #FF5C38;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Marquee pauses when the strip is hovered */
+.marquee-track:hover .marquee-inner { animation-play-state: paused; }
+
+/* Staggered hero entrance */
+.stagger > * { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.15s; }
+.stagger > *:nth-child(3) { animation-delay: 0.25s; }
+.stagger > *:nth-child(4) { animation-delay: 0.35s; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .stagger > *, .animate-marquee, .animate-fade-up { animation: none !important; }
+  * { transition-duration: 0.01ms !important; }
+}
