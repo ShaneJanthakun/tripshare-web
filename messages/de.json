@@ -156,7 +156,8 @@
           "Suche nach Ziel, Stadt oder Guide-Titel",
           "Suche Nutzer nach Namen, um Reisenden zu folgen",
           "Der Feed lädt 20 Guides auf einmal und mehr beim Scrollen",
-          "Feed nach Reiseart, Sprache und Land filtern"
+          "Feed nach Reiseart, Sprache und Land filtern",
+          "Übersetze jeden Guide mit einem Tipp in deine Sprache — powered by DeepL"
         ]
       },
       {
@@ -169,7 +170,6 @@
           "Anzeigename und Profilfoto bearbeiten",
           "Kurze Bio schreiben, sichtbar für andere Nutzer",
           "Abmelden oder Konto in den Einstellungen löschen",
-          "Gespeichert-Tab — Guides für später merken",
           "App-Sprache wählen — 10 Sprachen verfügbar"
         ]
       },
@@ -274,7 +274,7 @@
       },
       {
         "title": "Drittanbieter-Dienste",
-        "body": "TripShare nutzt Supabase für Authentifizierung, Datenbank und Dateispeicherung. Für standortbasierte Funktionen verwenden wir Apple Karten. Wir integrieren keine Werbenetzwerke, Analyse-Tracker oder Social-Media-Plattformen. Um Fußrouten auf Guide-Karten zu zeichnen, werden Stopp-Koordinaten an den Routing-Dienst von OpenStreetMap (OSRM) gesendet; diese Anfragen enthalten keine persönlichen Daten."
+        "body": "TripShare nutzt Supabase für Authentifizierung, Datenbank und Dateispeicherung. Für standortbasierte Funktionen verwenden wir Apple Karten. Wir integrieren keine Werbenetzwerke, Analyse-Tracker oder Social-Media-Plattformen. Um Fußrouten auf Guide-Karten zu zeichnen, werden Stopp-Koordinaten an den Routing-Dienst von OpenStreetMap (OSRM) gesendet; diese Anfragen enthalten keine persönlichen Daten. Wenn du bei einem öffentlichen Guide auf Übersetzen tippst, wird der Text des Guides an DeepL, einen Übersetzungsdienst, gesendet, um die Übersetzung zu erstellen; diese Anfragen enthalten keine persönlichen Informationen, und Übersetzungen werden zwischengespeichert, sodass jeder Guide pro Sprache nur einmal übersetzt wird."
       },
       {
         "title": "Kontolöschung",

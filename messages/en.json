@@ -156,7 +156,8 @@
           "Search by destination, city or guide title",
           "Search users by name to find and follow travelers",
           "Feed loads 20 guides at a time and paginates as you scroll",
-          "Filter the feed by travel type, language and country"
+          "Filter the feed by travel type, language and country",
+          "Translate any guide to your language with one tap — powered by DeepL"
         ]
       },
       {
@@ -169,7 +170,6 @@
           "Edit your display name and profile photo",
           "Write a short bio visible to other users",
           "Sign out or delete your account from settings",
-          "Saved tab — bookmark guides to read later",
           "Choose your app language — 10 languages supported"
         ]
       },
@@ -274,7 +274,7 @@
       },
       {
         "title": "Third-Party Services",
-        "body": "TripShare uses Supabase for authentication, database and file storage. We use Apple Maps for location-based features. We do not integrate with advertising networks, analytics trackers or social media platforms. To draw walking routes on guide maps, stop coordinates are sent to the OpenStreetMap routing service (OSRM); these requests contain no personal information."
+        "body": "TripShare uses Supabase for authentication, database and file storage. We use Apple Maps for location-based features. We do not integrate with advertising networks, analytics trackers or social media platforms. To draw walking routes on guide maps, stop coordinates are sent to the OpenStreetMap routing service (OSRM); these requests contain no personal information. When you tap Translate on a public guide, the guide's text is sent to DeepL, a translation service, to generate the translation; these requests contain no personal information, and translations are cached so each guide is only translated once per language."
       },
       {
         "title": "Account Deletion",

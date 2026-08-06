@@ -156,7 +156,8 @@
           "Recherchez par destination, ville ou titre de guide",
           "Recherchez des utilisateurs par nom pour les trouver et les suivre",
           "Le fil charge 20 guides à la fois et pagine au fil du défilement",
-          "Filtrez le fil par type de voyage, langue et pays"
+          "Filtrez le fil par type de voyage, langue et pays",
+          "Traduisez n'importe quel guide dans votre langue en un geste — propulsé par DeepL"
         ]
       },
       {
@@ -169,7 +170,6 @@
           "Modifiez votre nom d'affichage et photo de profil",
           "Rédigez une courte bio visible par les autres utilisateurs",
           "Déconnectez-vous ou supprimez votre compte depuis les paramètres",
-          "Onglet Enregistrés — mettez des guides de côté pour plus tard",
           "Choisissez la langue de l'app — 10 langues disponibles"
         ]
       },
@@ -274,7 +274,7 @@
       },
       {
         "title": "Services tiers",
-        "body": "TripShare utilise Supabase pour l'authentification, la base de données et le stockage de fichiers. Nous utilisons Apple Maps pour les fonctionnalités basées sur la localisation. Nous ne nous intégrons pas avec des réseaux publicitaires, des traceurs d'analyse ou des plateformes de réseaux sociaux. Pour tracer les itinéraires à pied sur les cartes des guides, les coordonnées des étapes sont envoyées au service d'itinéraires OpenStreetMap (OSRM) ; ces requêtes ne contiennent aucune information personnelle."
+        "body": "TripShare utilise Supabase pour l'authentification, la base de données et le stockage de fichiers. Nous utilisons Apple Maps pour les fonctionnalités basées sur la localisation. Nous ne nous intégrons pas avec des réseaux publicitaires, des traceurs d'analyse ou des plateformes de réseaux sociaux. Pour tracer les itinéraires à pied sur les cartes des guides, les coordonnées des étapes sont envoyées au service d'itinéraires OpenStreetMap (OSRM) ; ces requêtes ne contiennent aucune information personnelle. Lorsque vous touchez Traduire sur un guide public, le texte du guide est envoyé à DeepL, un service de traduction, pour générer la traduction ; ces requêtes ne contiennent aucune information personnelle et les traductions sont mises en cache afin que chaque guide ne soit traduit qu'une seule fois par langue."
       },
       {
         "title": "Suppression du compte",

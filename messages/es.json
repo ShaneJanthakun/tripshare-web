@@ -156,7 +156,8 @@
           "Busca por destino, ciudad o título de guía",
           "Busca usuarios por nombre para encontrar y seguir viajeros",
           "El feed carga 20 guías a la vez y pagina mientras haces scroll",
-          "Filtra el feed por tipo de viaje, idioma y país"
+          "Filtra el feed por tipo de viaje, idioma y país",
+          "Traduce cualquier guía a tu idioma con un toque — con tecnología DeepL"
         ]
       },
       {
@@ -169,7 +170,6 @@
           "Edita tu nombre visible y foto de perfil",
           "Escribe una bio corta visible para otros usuarios",
           "Cierra sesión o elimina tu cuenta desde ajustes",
-          "Pestaña Guardados — marca guías para leerlas más tarde",
           "Elige el idioma de la app — 10 idiomas disponibles"
         ]
       },
@@ -274,7 +274,7 @@
       },
       {
         "title": "Servicios de terceros",
-        "body": "TripShare usa Supabase para autenticación, base de datos y almacenamiento de archivos. Usamos Apple Maps para funciones basadas en ubicación. No nos integramos con redes publicitarias, rastreadores de análisis ni plataformas de redes sociales. Para trazar rutas a pie en los mapas de las guías, las coordenadas de las paradas se envían al servicio de rutas de OpenStreetMap (OSRM); estas solicitudes no contienen información personal."
+        "body": "TripShare usa Supabase para autenticación, base de datos y almacenamiento de archivos. Usamos Apple Maps para funciones basadas en ubicación. No nos integramos con redes publicitarias, rastreadores de análisis ni plataformas de redes sociales. Para trazar rutas a pie en los mapas de las guías, las coordenadas de las paradas se envían al servicio de rutas de OpenStreetMap (OSRM); estas solicitudes no contienen información personal. Cuando tocas Traducir en una guía pública, el texto de la guía se envía a DeepL, un servicio de traducción, para generar la traducción; estas solicitudes no contienen información personal y las traducciones se almacenan en caché para que cada guía se traduzca solo una vez por idioma."
       },
       {
         "title": "Eliminación de cuenta",

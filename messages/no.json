@@ -156,7 +156,8 @@
           "Søk etter destinasjon, by eller guidetittel",
           "Søk etter brukere etter navn for å finne og følge reisende",
           "Feeden laster 20 guider om gangen og paginerer mens du scroller",
-          "Filtrer feeden på reisetype, språk og land"
+          "Filtrer feeden på reisetype, språk og land",
+          "Oversett enhver guide til ditt språk med ett trykk — drevet av DeepL"
         ]
       },
       {
@@ -169,7 +170,6 @@
           "Rediger visningsnavnet og profilbildet ditt",
           "Skriv en kort bio som er synlig for andre brukere",
           "Logg ut eller slett kontoen din fra innstillinger",
-          "Lagret-fane — bokmerk guider for å lese dem senere",
           "Velg app-språk — 10 språk støttes"
         ]
       },
@@ -274,7 +274,7 @@
       },
       {
         "title": "Tredjepartstjenester",
-        "body": "TripShare bruker Supabase for autentisering, database og fillagring. Vi bruker Apple Maps for stedsbaserte funksjoner. Vi integrerer ikke med reklamenettverk, analysesporere eller sosiale medieplattformer. For å tegne gåruter på guidekart sendes stoppkoordinater til rutetjenesten OpenStreetMap (OSRM); disse forespørslene inneholder ingen personopplysninger."
+        "body": "TripShare bruker Supabase for autentisering, database og fillagring. Vi bruker Apple Maps for stedsbaserte funksjoner. Vi integrerer ikke med reklamenettverk, analysesporere eller sosiale medieplattformer. For å tegne gåruter på guidekart sendes stoppkoordinater til rutetjenesten OpenStreetMap (OSRM); disse forespørslene inneholder ingen personopplysninger. Når du trykker Oversett på en offentlig guide, sendes guidens tekst til oversettelsestjenesten DeepL for å lage oversettelsen; disse forespørslene inneholder ingen personlig informasjon, og oversettelser mellomlagres slik at hver guide kun oversettes én gang per språk."
       },
       {
         "title": "Sletting av konto",
