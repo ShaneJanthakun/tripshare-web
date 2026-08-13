@@ -5,14 +5,12 @@ import Nav from './Nav';
 import Footer from './Footer';
 
 const SCREENSHOTS = [
-  { src: '/screenshots/screen1.png', alt: 'Discover Travel Guides' },
-  { src: '/screenshots/screen2.png', alt: 'Made By Travelers For Travelers' },
-  { src: '/screenshots/screen3.png', alt: 'Build & Share Your Guides' },
-  { src: '/screenshots/screen4.png', alt: 'Day-By-Day Blueprints' },
-  { src: '/screenshots/screen5.png', alt: 'Map Integration' },
-  { src: '/screenshots/screen6.png', alt: 'Build It Your Way' },
-  { src: '/screenshots/screen7.png', alt: 'Make Your Guides Private' },
-  { src: '/screenshots/screen8.png', alt: 'Discover guides by people who have been there' },
+  { src: '/screenshots/screen1.png', alt: 'Your Next Adventure Starts Here' },
+  { src: '/screenshots/screen2.png', alt: 'Discover Travel Guides Worldwide' },
+  { src: '/screenshots/screen3.png', alt: 'Explore Every Destination in Detail' },
+  { src: '/screenshots/screen4.png', alt: 'Create Your Perfect Travel Guide' },
+  { src: '/screenshots/screen5.png', alt: 'Choose Privacy Your Way' },
+  { src: '/screenshots/screen6.png', alt: 'Interactive Maps for Every Journey' },
 ];
 
 const FEATURE_ICONS = [
@@ -38,7 +36,7 @@ function DownloadButton({ label, variant = 'accent' }: { label: string; variant?
     ? `${base} bg-gradient-to-b from-accent to-accent2 text-white shadow-glow hover:shadow-[0_0_100px_-8px_rgba(255,92,56,0.5)]`
     : `${base} bg-ink text-bg hover:bg-white shadow-xl`;
   return (
-    <a href="https://apps.apple.com/app/id6778097653" target="_blank" rel="noopener noreferrer" className={styles}>
+    <a href="https://apps.apple.com/app/apple-store/id6778097653?pt=123110991&ct=tripshare.online&mt=8" target="_blank" rel="noopener noreferrer" className={styles}>
       <AppleIcon className="w-5 h-5" />
       {label}
     </a>

@@ -48,7 +48,7 @@ export default function Nav({ active }: { active?: 'features' | 'support' | 'pri
           <Link href="/privacy" className={item('privacy')}>{t('privacy')}</Link>
           <LangSwitcher />
           <a
-            href="https://apps.apple.com/app/id6778097653"
+            href="https://apps.apple.com/app/apple-store/id6778097653?pt=123110991&ct=tripshare.online&mt=8"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-ink text-bg text-xs font-semibold rounded-xl px-4 py-2 hover:bg-white transition-colors whitespace-nowrap"
