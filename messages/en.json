@@ -1,4 +1,26 @@
 {
+  "meta": {
+    "home": {
+      "title": "TripShare – Trip Planner & Travel Guides by Real Travelers",
+      "description": "Plan day-by-day trips with stops, maps and walking routes, and discover hidden gems from people who've actually been there. Free on iPhone and Mac."
+    },
+    "features": {
+      "title": "Features: Itineraries, Maps & Private Guides | TripShare",
+      "description": "Everything TripShare can do: day-by-day itineraries, maps with walking routes, private guides with access codes, translation and PDF export."
+    },
+    "support": {
+      "title": "Support & FAQ | TripShare",
+      "description": "Answers to common questions about creating, sharing and managing travel guides in TripShare, and how to contact us."
+    },
+    "privacy": {
+      "title": "Privacy Policy | TripShare",
+      "description": "How TripShare collects, uses and protects your data."
+    },
+    "terms": {
+      "title": "Terms of Use | TripShare",
+      "description": "The terms that apply when you use the TripShare app and website."
+    }
+  },
   "nav": {
     "features": "Features",
     "support": "Support",

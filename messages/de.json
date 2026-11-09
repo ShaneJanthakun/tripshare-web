@@ -1,4 +1,26 @@
 {
+  "meta": {
+    "home": {
+      "title": "TripShare – Reiseplaner & Reiseguides von echten Reisenden",
+      "description": "Plane deine Reise Tag für Tag mit Stopps, Karten und Fußwegen und entdecke Geheimtipps von Menschen, die wirklich dort waren. Kostenlos für iPhone und Mac."
+    },
+    "features": {
+      "title": "Funktionen: Reiserouten, Karten & private Guides | TripShare",
+      "description": "Alles, was TripShare kann: Tagespläne, Karten mit Fußwegen, private Guides mit Zugangscode, Übersetzung und PDF-Export."
+    },
+    "support": {
+      "title": "Hilfe & FAQ | TripShare",
+      "description": "Antworten auf häufige Fragen zum Erstellen, Teilen und Verwalten von Reiseguides in TripShare und wie du uns erreichst."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung | TripShare",
+      "description": "Wie TripShare deine Daten erhebt, nutzt und schützt."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen | TripShare",
+      "description": "Die Bedingungen für die Nutzung der TripShare-App und -Website."
+    }
+  },
   "nav": {
     "features": "Funktionen",
     "support": "Support",

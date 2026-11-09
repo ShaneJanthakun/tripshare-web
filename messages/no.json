@@ -1,4 +1,26 @@
 {
+  "meta": {
+    "home": {
+      "title": "TripShare – Reiseplanlegger og reiseguider fra ekte reisende",
+      "description": "Lag reiseplan dag for dag med stopp, kart og gåruter, og finn skjulte perler fra folk som faktisk har vært der. Gratis på iPhone og Mac."
+    },
+    "features": {
+      "title": "Funksjoner: reiseruter, kart og private guider | TripShare",
+      "description": "Alt TripShare kan: reiseplan dag for dag, kart med gåruter, private guider med tilgangskode, oversettelse og PDF-eksport."
+    },
+    "support": {
+      "title": "Hjelp og vanlige spørsmål | TripShare",
+      "description": "Svar på vanlige spørsmål om å lage, dele og administrere reiseguider i TripShare, og hvordan du kontakter oss."
+    },
+    "privacy": {
+      "title": "Personvernerklæring | TripShare",
+      "description": "Slik samler TripShare inn, bruker og beskytter dataene dine."
+    },
+    "terms": {
+      "title": "Vilkår for bruk | TripShare",
+      "description": "Vilkårene som gjelder når du bruker TripShare-appen og nettsiden."
+    }
+  },
   "nav": {
     "features": "Funksjoner",
     "support": "Support",

@@ -1,4 +1,26 @@
 {
+  "meta": {
+    "home": {
+      "title": "TripShare – 旅行规划App｜真实旅行者的旅行攻略",
+      "description": "按天规划行程，包含地点、地图和步行路线，还能发现去过的人分享的小众景点。iPhone 和 Mac 免费使用。"
+    },
+    "features": {
+      "title": "功能：行程规划、地图与私密攻略｜TripShare",
+      "description": "TripShare 能做什么：按天行程、带步行路线的地图、带访问码的私密攻略、翻译和 PDF 导出。"
+    },
+    "support": {
+      "title": "帮助与常见问题｜TripShare",
+      "description": "关于在 TripShare 中创建、分享和管理旅行攻略的常见问题解答，以及联系我们的方式。"
+    },
+    "privacy": {
+      "title": "隐私政策｜TripShare",
+      "description": "TripShare 如何收集、使用和保护你的数据。"
+    },
+    "terms": {
+      "title": "使用条款｜TripShare",
+      "description": "使用 TripShare 应用和网站时适用的条款。"
+    }
+  },
   "nav": {
     "features": "功能",
     "support": "支持",

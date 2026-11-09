@@ -1,8 +1,10 @@
+import { use } from 'react';
 import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Nav from '../Nav';
 import Footer from '../Footer';
-import { pageMetadata } from '../../seo';
+import { localizedMetadata } from '../../seo';
 
 export async function generateMetadata({
   params,
@@ -10,15 +12,11 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return pageMetadata({
-    locale,
-    path: '/support',
-    title: 'Support – TripShare',
-    description: 'Get help with TripShare: answers to common questions about creating, sharing and managing your travel guides.',
-  });
+  return localizedMetadata(locale, 'support');
 }
 
-export default function Support() {
+export default function Support({ params }: { params: Promise<{ locale: string }> }) {
+  setRequestLocale(use(params).locale);
   const t = useTranslations('supportPage');
   const faq = t.raw('faq') as Array<{ q: string; a: string }>;
 

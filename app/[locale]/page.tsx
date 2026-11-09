@@ -1,8 +1,21 @@
+import { use } from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { Link } from '../i18n/navigation';
+import { localizedMetadata } from '../seo';
 import Nav from './Nav';
 import Footer from './Footer';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedMetadata(locale, 'home');
+}
 
 const SCREENSHOTS = [
   { src: '/screenshots/screen1.png', alt: 'Your Next Adventure Starts Here' },
@@ -43,7 +56,8 @@ function DownloadButton({ label, variant = 'accent' }: { label: string; variant?
   );
 }
 
-export default function Home() {
+export default function Home({ params }: { params: Promise<{ locale: string }> }) {
+  setRequestLocale(use(params).locale);
   const t = useTranslations();
 
   const featureItems = t.raw('features.items') as { title: string; desc: string }[];
@@ -56,7 +70,8 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative min-h-[92svh] flex items-center px-6 overflow-hidden">
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
+        {/* poster = exact first frame, so the hero paints instantly and doesn't jump when playback starts */}
+        <video autoPlay muted loop playsInline preload="auto" poster="/hero-poster.jpg" className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
           <source src="/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/80 to-bg/30" style={{ zIndex: 1 }} />
@@ -98,7 +113,7 @@ export default function Home() {
                 key={i}
                 className="flex-shrink-0 w-48 sm:w-56 rounded-[2rem] overflow-hidden border border-white/10 shadow-card transition-transform duration-300 hover:scale-[1.03] hover:border-accent/40"
               >
-                <Image src={s.src} alt={s.alt} width={390} height={844} className="w-full h-auto block" priority={i < 4} />
+                <Image src={s.src} alt={s.alt} width={390} height={844} sizes="(min-width: 640px) 224px, 192px" className="w-full h-auto block" priority={i < 4} />
               </div>
             ))}
           </div>

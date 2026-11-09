@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import { routing } from '../i18n/routing';
-import { SITE_URL, APP_STORE_URL, OG_IMAGE, pageMetadata } from '../seo';
+import { SITE_URL, APP_STORE_URL, OG_IMAGE } from '../seo';
 import '../globals.css';
 
 const display = Bricolage_Grotesque({
@@ -19,21 +19,16 @@ const body = Instrument_Sans({
   weight: ['400', '500', '600', '700'],
 });
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  return {
-    metadataBase: new URL(SITE_URL),
-    ...pageMetadata({
-      locale,
-      title: 'TripShare – Share Your Journey',
-      description:
-        'Create beautiful travel guides, discover trips from real travelers, and share your adventures with the world.',
-    }),
-  };
+// Title, description, canonical and hreflang are set per page (localizedMetadata in seo.ts),
+// so a page that forgets them never inherits the home page's canonical.
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+};
+
+// Prerender every locale at build time. Static pages get their metadata in <head>
+// (dynamic pages stream it into <body>) and are served straight from the CDN.
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 const JSON_LD = {
@@ -80,6 +75,7 @@ export default async function LocaleLayout({
   if (!(routing.locales as readonly string[]).includes(locale)) {
     notFound();
   }
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 

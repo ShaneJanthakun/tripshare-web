@@ -1,4 +1,26 @@
 {
+  "meta": {
+    "home": {
+      "title": "TripShare – 旅行プランナー｜実際に旅した人の旅行ガイド",
+      "description": "スポット、地図、徒歩ルートで旅程を1日ずつ計画。実際に行った人だけが知る穴場も見つかります。iPhoneとMacで無料。"
+    },
+    "features": {
+      "title": "機能：旅程作成・地図・非公開ガイド｜TripShare",
+      "description": "TripShareでできること：日別の旅程、徒歩ルート付きの地図、アクセスコード付きの非公開ガイド、翻訳、PDF書き出し。"
+    },
+    "support": {
+      "title": "サポート・よくある質問｜TripShare",
+      "description": "TripShareでの旅行ガイドの作成・共有・管理に関するよくある質問と、お問い合わせ方法。"
+    },
+    "privacy": {
+      "title": "プライバシーポリシー｜TripShare",
+      "description": "TripShareがあなたのデータをどのように収集・利用・保護するかについて。"
+    },
+    "terms": {
+      "title": "利用規約｜TripShare",
+      "description": "TripShareのアプリとウェブサイトをご利用の際に適用される規約です。"
+    }
+  },
   "nav": {
     "features": "機能",
     "support": "サポート",

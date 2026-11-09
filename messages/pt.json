@@ -1,4 +1,26 @@
 {
+  "meta": {
+    "home": {
+      "title": "TripShare – Planeador de viagens e guias de viajantes reais",
+      "description": "Planeia a tua viagem dia a dia com paragens, mapas e percursos a pé, e descobre tesouros escondidos partilhados por quem lá esteve. Grátis no iPhone e Mac."
+    },
+    "features": {
+      "title": "Funcionalidades: roteiros, mapas e guias privados | TripShare",
+      "description": "Tudo o que o TripShare faz: roteiros dia a dia, mapas com percursos a pé, guias privados com código de acesso, tradução e exportação em PDF."
+    },
+    "support": {
+      "title": "Ajuda e perguntas frequentes | TripShare",
+      "description": "Respostas às perguntas mais comuns sobre criar, partilhar e gerir guias de viagem no TripShare, e como nos contactar."
+    },
+    "privacy": {
+      "title": "Política de privacidade | TripShare",
+      "description": "Como o TripShare recolhe, utiliza e protege os teus dados."
+    },
+    "terms": {
+      "title": "Termos de utilização | TripShare",
+      "description": "Os termos aplicáveis quando utilizas a app e o site do TripShare."
+    }
+  },
   "nav": {
     "features": "Funcionalidades",
     "support": "Suporte",

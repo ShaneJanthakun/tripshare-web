@@ -1,9 +1,11 @@
+import { use } from 'react';
 import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import { Link } from '../../i18n/navigation';
-import { pageMetadata } from '../../seo';
+import { localizedMetadata } from '../../seo';
 
 export async function generateMetadata({
   params,
@@ -11,12 +13,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return pageMetadata({
-    locale,
-    path: '/features',
-    title: 'Features – TripShare',
-    description: 'Everything TripShare can do — from day-by-day itineraries to private guides with access codes.',
-  });
+  return localizedMetadata(locale, 'features');
 }
 
 const ICONS = [
@@ -33,7 +30,8 @@ const ICONS = [
   <svg key="10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>,
 ];
 
-export default function Features() {
+export default function Features({ params }: { params: Promise<{ locale: string }> }) {
+  setRequestLocale(use(params).locale);
   const t = useTranslations('featuresPage');
   const sections = t.raw('sections') as Array<{ title: string; desc: string; items: string[] }>;
 

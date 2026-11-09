@@ -1,4 +1,26 @@
 {
+  "meta": {
+    "home": {
+      "title": "TripShare – 여행 플래너 | 실제 여행자의 여행 가이드",
+      "description": "장소, 지도, 도보 경로로 여행 일정을 하루씩 계획하고, 직접 다녀온 사람들이 알려주는 숨은 명소를 찾아보세요. iPhone과 Mac에서 무료."
+    },
+    "features": {
+      "title": "기능: 여행 일정, 지도, 비공개 가이드 | TripShare",
+      "description": "TripShare로 할 수 있는 모든 것: 일자별 일정, 도보 경로가 표시되는 지도, 접근 코드가 있는 비공개 가이드, 번역, PDF 내보내기."
+    },
+    "support": {
+      "title": "지원 및 자주 묻는 질문 | TripShare",
+      "description": "TripShare에서 여행 가이드를 만들고 공유하고 관리하는 방법에 대한 자주 묻는 질문과 문의 방법."
+    },
+    "privacy": {
+      "title": "개인정보 처리방침 | TripShare",
+      "description": "TripShare가 사용자의 데이터를 수집, 사용, 보호하는 방법."
+    },
+    "terms": {
+      "title": "이용약관 | TripShare",
+      "description": "TripShare 앱과 웹사이트를 이용할 때 적용되는 약관입니다."
+    }
+  },
   "nav": {
     "features": "기능",
     "support": "지원",
