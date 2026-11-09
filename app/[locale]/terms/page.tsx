@@ -2,10 +2,21 @@ import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 import Nav from '../Nav';
 import Footer from '../Footer';
+import { pageMetadata } from '../../seo';
 
-export const metadata: Metadata = {
-  title: 'Terms of Use – TripShare',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata({
+    locale,
+    path: '/terms',
+    title: 'Terms of Use – TripShare',
+    description: 'The terms that apply when you use the TripShare app and website.',
+  });
+}
 
 export default function Terms() {
   const t = useTranslations('termsPage');

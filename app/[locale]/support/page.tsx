@@ -2,10 +2,21 @@ import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 import Nav from '../Nav';
 import Footer from '../Footer';
+import { pageMetadata } from '../../seo';
 
-export const metadata: Metadata = {
-  title: 'Support – TripShare',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata({
+    locale,
+    path: '/support',
+    title: 'Support – TripShare',
+    description: 'Get help with TripShare: answers to common questions about creating, sharing and managing your travel guides.',
+  });
+}
 
 export default function Support() {
   const t = useTranslations('supportPage');

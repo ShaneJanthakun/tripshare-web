@@ -2,10 +2,21 @@ import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 import Nav from '../Nav';
 import Footer from '../Footer';
+import { pageMetadata } from '../../seo';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy – TripShare',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata({
+    locale,
+    path: '/privacy',
+    title: 'Privacy Policy – TripShare',
+    description: 'How TripShare collects, uses and protects your data.',
+  });
+}
 
 export default function Privacy() {
   const t = useTranslations('privacyPage');

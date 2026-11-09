@@ -4,6 +4,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import { routing } from '../i18n/routing';
+import { SITE_URL, APP_STORE_URL, OG_IMAGE, pageMetadata } from '../seo';
 import '../globals.css';
 
 const display = Bricolage_Grotesque({
@@ -18,17 +19,49 @@ const body = Instrument_Sans({
   weight: ['400', '500', '600', '700'],
 });
 
-export const metadata: Metadata = {
-  title: 'TripShare – Share Your Journey',
-  description: 'Create beautiful travel guides, discover trips from real travelers, and share your adventures with the world.',
-  metadataBase: new URL('https://tripshare.online'),
-  openGraph: {
-    title: 'TripShare – Share Your Journey',
-    description: 'Create beautiful travel guides and discover trips from real travelers.',
-    url: 'https://tripshare.online',
-    siteName: 'TripShare',
-    type: 'website',
-  },
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    metadataBase: new URL(SITE_URL),
+    ...pageMetadata({
+      locale,
+      title: 'TripShare – Share Your Journey',
+      description:
+        'Create beautiful travel guides, discover trips from real travelers, and share your adventures with the world.',
+    }),
+  };
+}
+
+const JSON_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#org`,
+      name: 'TripShare',
+      legalName: 'Janthakun Tech',
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon.png`,
+    },
+    {
+      '@type': 'MobileApplication',
+      name: 'TripShare – Trip Planner',
+      operatingSystem: 'iOS, iPadOS, macOS',
+      applicationCategory: 'TravelApplication',
+      description:
+        'Create day-by-day travel guides with real stops, maps and photos — and discover trips shared by people who have actually been there.',
+      url: SITE_URL,
+      downloadUrl: APP_STORE_URL,
+      installUrl: APP_STORE_URL,
+      image: `${SITE_URL}${OG_IMAGE.url}`,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      publisher: { '@id': `${SITE_URL}/#org` },
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -53,6 +86,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${display.variable} ${body.variable}`}>
       <body className="bg-bg text-ink antialiased font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+        />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
