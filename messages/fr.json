@@ -375,5 +375,16 @@
         "body": "Ces conditions sont régies par les lois de Norvège. Tout litige découlant de ces conditions ou de votre utilisation de TripShare sera soumis à la juridiction exclusive des tribunaux norvégiens."
       }
     ]
+  },
+  "share": {
+    "openInApp": "Ouvrir dans l'application TripShare",
+    "getApp": "Téléchargez TripShare – gratuit sur iPhone",
+    "by": "par {name}",
+    "days": "{count, plural, one {# jour} other {# jours}}",
+    "stops": "{count, plural, one {# étape} other {# étapes}}",
+    "privateTitle": "Ce guide est privé ou n'existe plus",
+    "privateMsg": "Si l'on vous a donné un code d'accès, ouvrez le guide dans l'application TripShare.",
+    "tagline": "Des guides de voyage écrits par de vrais voyageurs",
+    "fallbackDescription": "Un guide de voyage jour par jour pour {destination}, avec étapes, carte et conseils."
   }
 }

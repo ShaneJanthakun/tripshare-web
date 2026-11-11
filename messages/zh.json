@@ -375,5 +375,16 @@
         "body": "本条款受挪威法律管辖。因本条款或您对TripShare的使用而产生的任何争议，均由挪威法院专属管辖。"
       }
     ]
+  },
+  "share": {
+    "openInApp": "在 TripShare 应用中打开",
+    "getApp": "获取 TripShare – iPhone 免费下载",
+    "by": "作者：{name}",
+    "days": "{count} 天",
+    "stops": "{count} 个地点",
+    "privateTitle": "此攻略为私密攻略或已不存在",
+    "privateMsg": "如果你收到了访问码，请在 TripShare 应用中打开此攻略。",
+    "tagline": "真实旅行者的旅行攻略",
+    "fallbackDescription": "{destination}逐日旅行攻略，包含地点、地图和小贴士。"
   }
 }

@@ -375,5 +375,16 @@
         "body": "본 약관은 노르웨이 법률의 적용을 받습니다. 본 약관 또는 TripShare 사용으로 인한 분쟁은 노르웨이 법원의 전속 관할에 따릅니다."
       }
     ]
+  },
+  "share": {
+    "openInApp": "TripShare 앱에서 열기",
+    "getApp": "TripShare 받기 – iPhone에서 무료",
+    "by": "작성자: {name}",
+    "days": "{count}일",
+    "stops": "{count}곳",
+    "privateTitle": "이 가이드는 비공개이거나 더 이상 존재하지 않습니다",
+    "privateMsg": "액세스 코드를 받았다면 TripShare 앱에서 가이드를 여세요.",
+    "tagline": "실제 여행자의 여행 가이드",
+    "fallbackDescription": "{destination} 일자별 여행 가이드 – 장소, 지도, 팁 포함."
   }
 }

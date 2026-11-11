@@ -375,5 +375,16 @@
         "body": "本規約はノルウェーの法律に準拠します。本規約またはTripShareの利用から生じる紛争は、ノルウェーの裁判所の専属管轄に服するものとします。"
       }
     ]
+  },
+  "share": {
+    "openInApp": "TripShareアプリで開く",
+    "getApp": "TripShareを入手 – iPhone版は無料",
+    "by": "作成者：{name}",
+    "days": "{count}日間",
+    "stops": "{count}か所",
+    "privateTitle": "このガイドは非公開か、すでに存在しません",
+    "privateMsg": "アクセスコードを受け取った場合は、TripShareアプリでガイドを開いてください。",
+    "tagline": "実際に旅した人の旅行ガイド",
+    "fallbackDescription": "{destination}の日ごとの旅行ガイド。スポット、地図、ヒント付き。"
   }
 }

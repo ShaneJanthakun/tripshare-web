@@ -375,5 +375,16 @@
         "body": "These terms are governed by the laws of Norway. Any disputes arising from these terms or your use of TripShare shall be subject to the exclusive jurisdiction of the courts of Norway."
       }
     ]
+  },
+  "share": {
+    "openInApp": "Open in the TripShare app",
+    "getApp": "Get TripShare – free on iPhone",
+    "by": "by {name}",
+    "days": "{count, plural, one {# day} other {# days}}",
+    "stops": "{count, plural, one {# stop} other {# stops}}",
+    "privateTitle": "This guide is private or no longer exists",
+    "privateMsg": "If someone gave you an access code, open the guide in the TripShare app.",
+    "tagline": "Travel guides by real travelers",
+    "fallbackDescription": "A day-by-day travel guide to {destination}, with stops, a map and tips."
   }
 }

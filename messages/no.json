@@ -375,5 +375,16 @@
         "body": "Disse vilkårene er underlagt norsk lov. Eventuelle tvister som oppstår fra disse vilkårene eller din bruk av TripShare skal behandles av norske domstoler."
       }
     ]
+  },
+  "share": {
+    "openInApp": "Åpne i TripShare-appen",
+    "getApp": "Last ned TripShare – gratis på iPhone",
+    "by": "av {name}",
+    "days": "{count, plural, one {# dag} other {# dager}}",
+    "stops": "{count, plural, one {# stopp} other {# stopp}}",
+    "privateTitle": "Denne guiden er privat eller finnes ikke lenger",
+    "privateMsg": "Har du fått en tilgangskode, åpner du guiden i TripShare-appen.",
+    "tagline": "Reiseguider fra ekte reisende",
+    "fallbackDescription": "En reiseguide dag for dag til {destination}, med stopp, kart og tips."
   }
 }

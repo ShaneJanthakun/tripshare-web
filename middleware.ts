@@ -4,5 +4,7 @@ import { routing } from './app/i18n/routing';
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/((?!_next|_vercel|.*\\..*).*)'],
+  // Outside the locale middleware: API routes, auth callbacks, short links (/g/<id>),
+  // .well-known (apple-app-site-association) and files with an extension.
+  matcher: ['/((?!api|auth|g/|_next|_vercel|\\.well-known|.*\\..*).*)'],
 };
