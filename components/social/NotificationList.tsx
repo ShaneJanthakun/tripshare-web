@@ -56,7 +56,8 @@ export default function NotificationList({ locale, items, profiles }: { locale: 
             <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg ${n.read ? 'bg-s2' : 'bg-accent/20'}`} aria-hidden>{icon}</span>
             <div className="min-w-0 flex-1">
               <p className={`text-sm leading-relaxed ${n.read ? 'text-muted' : 'text-ink'}`}>{text}</p>
-              <p className="mt-0.5 text-xs text-faint">{ago(n.createdAt)}</p>
+              {/* "2 minutes ago" depends on the clock, so server and browser may differ by a step. */}
+              <p className="mt-0.5 text-xs text-faint" suppressHydrationWarning>{ago(n.createdAt)}</p>
             </div>
             {!n.read && <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-accent" aria-label={t('unread')} />}
           </div>
