@@ -267,7 +267,7 @@
   "privacyPage": {
     "badge": "Juridisk",
     "heading": "Personvernerklæring",
-    "updated": "Sist oppdatert: august 2026",
+    "updated": "Sist oppdatert: november 2026",
     "intro": "TripShare (\"vi\", \"vår\", \"oss\") er forpliktet til å beskytte personvernet ditt. Denne erklæringen forklarer hvilken informasjon vi samler inn, hvordan vi bruker den, og rettighetene dine angående dataene dine.",
     "questions": "Spørsmål om denne erklæringen?",
     "termsOfUse": "Brukervilkår",
@@ -280,7 +280,7 @@
       },
       {
         "title": "Hvordan vi bruker dataene dine",
-        "body": "Dataene dine brukes utelukkende til å levere og forbedre TripShare. Vi bruker dem til å vise guidene dine til andre brukere (hvis du velger å gjøre dem offentlige), tilpasse feeden din og aktivere sosiale funksjoner som å følge og like. Vi selger ikke personopplysningene dine til tredjeparter og bruker dem ikke til reklame."
+        "body": "Dataene dine brukes utelukkende til å levere og forbedre TripShare. Vi bruker dem til å vise guidene dine til andre brukere (hvis du velger å gjøre dem offentlige), tilpasse feeden din og aktivere sosiale funksjoner som å følge og like. Vi selger ikke personopplysningene dine til tredjeparter og bruker dem ikke til reklame. Offentlige guider vises også på tripshare.online sammen med navnet ditt: alle med lenken kan lese dem, og søkemotorer som Google kan vise dem. Private guider og utkast vises ikke offentlig."
       },
       {
         "title": "Datalagring",

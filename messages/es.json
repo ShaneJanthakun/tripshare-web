@@ -267,7 +267,7 @@
   "privacyPage": {
     "badge": "Legal",
     "heading": "Política de Privacidad",
-    "updated": "Última actualización: agosto de 2026",
+    "updated": "Última actualización: noviembre de 2026",
     "intro": "TripShare (\"nosotros\", \"nuestro\", \"nos\") está comprometido a proteger tu privacidad. Esta política explica qué información recopilamos, cómo la usamos y tus derechos sobre tus datos.",
     "questions": "¿Preguntas sobre esta política?",
     "termsOfUse": "Términos de uso",
@@ -280,7 +280,7 @@
       },
       {
         "title": "Cómo usamos tus datos",
-        "body": "Tus datos se usan únicamente para proporcionar y mejorar TripShare. Los usamos para mostrar tus guías a otros usuarios (si eliges hacerlas públicas), personalizar tu feed y habilitar funciones sociales como seguir y dar me gusta. No vendemos tus datos personales a terceros ni los usamos para publicidad."
+        "body": "Tus datos se usan únicamente para proporcionar y mejorar TripShare. Los usamos para mostrar tus guías a otros usuarios (si eliges hacerlas públicas), personalizar tu feed y habilitar funciones sociales como seguir y dar me gusta. No vendemos tus datos personales a terceros ni los usamos para publicidad. Las guías públicas también se muestran en tripshare.online junto con tu nombre: cualquiera con el enlace puede leerlas, y buscadores como Google pueden mostrarlas. Las guías privadas y los borradores no se muestran públicamente."
       },
       {
         "title": "Almacenamiento de datos",

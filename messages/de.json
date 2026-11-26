@@ -267,7 +267,7 @@
   "privacyPage": {
     "badge": "Rechtliches",
     "heading": "Datenschutzerklärung",
-    "updated": "Zuletzt aktualisiert: August 2026",
+    "updated": "Zuletzt aktualisiert: November 2026",
     "intro": "TripShare („wir“, „unser“, „uns“) verpflichtet sich zum Schutz deiner Privatsphäre. Diese Erklärung beschreibt, welche Daten wir erheben, wie wir sie nutzen und welche Rechte du hast.",
     "questions": "Fragen zu dieser Erklärung?",
     "termsOfUse": "Nutzungsbedingungen",
@@ -280,7 +280,7 @@
       },
       {
         "title": "Wie wir deine Daten nutzen",
-        "body": "Deine Daten werden ausschließlich genutzt, um TripShare bereitzustellen und zu verbessern. Wir verwenden sie, um deine Guides anderen Nutzern anzuzeigen (wenn du sie öffentlich machst), deinen Feed zu personalisieren und soziale Funktionen wie Folgen und Liken zu ermöglichen. Wir verkaufen deine personenbezogenen Daten nicht an Dritte und nutzen sie nicht für Werbung."
+        "body": "Deine Daten werden ausschließlich genutzt, um TripShare bereitzustellen und zu verbessern. Wir verwenden sie, um deine Guides anderen Nutzern anzuzeigen (wenn du sie öffentlich machst), deinen Feed zu personalisieren und soziale Funktionen wie Folgen und Liken zu ermöglichen. Wir verkaufen deine personenbezogenen Daten nicht an Dritte und nutzen sie nicht für Werbung. Öffentliche Guides werden zusammen mit deinem Namen auch auf tripshare.online angezeigt: Jeder mit dem Link kann sie lesen, und Suchmaschinen wie Google können sie anzeigen. Private Guides und Entwürfe werden nicht öffentlich angezeigt."
       },
       {
         "title": "Datenspeicherung",
