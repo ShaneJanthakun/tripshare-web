@@ -468,7 +468,8 @@
     "savePassword": "Guardar palavra-passe",
     "saved": "Palavra-passe guardada! A levar-te para os teus guias…",
     "expired": "A ligação expirou ou já foi usada. Pede uma nova abaixo.",
-    "backToLogin": "Voltar ao início de sessão"
+    "backToLogin": "Voltar ao início de sessão",
+    "samePassword": "A nova palavra-passe tem de ser diferente da anterior."
   },
   "app": {
     "guideDetail": {

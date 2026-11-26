@@ -468,7 +468,8 @@
     "savePassword": "Lagre passord",
     "saved": "Passordet er lagret! Sender deg til guidene dine …",
     "expired": "Lenken er utløpt eller allerede brukt. Be om en ny under.",
-    "backToLogin": "Tilbake til innlogging"
+    "backToLogin": "Tilbake til innlogging",
+    "samePassword": "Det nye passordet må være forskjellig fra det gamle."
   },
   "app": {
     "guideDetail": {

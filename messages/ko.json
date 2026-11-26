@@ -468,7 +468,8 @@
     "savePassword": "비밀번호 저장",
     "saved": "비밀번호가 저장되었습니다! 가이드로 이동합니다…",
     "expired": "링크가 만료되었거나 이미 사용되었습니다. 아래에서 새 링크를 요청하세요.",
-    "backToLogin": "로그인으로 돌아가기"
+    "backToLogin": "로그인으로 돌아가기",
+    "samePassword": "새 비밀번호는 이전 비밀번호와 달라야 합니다."
   },
   "app": {
     "guideDetail": {

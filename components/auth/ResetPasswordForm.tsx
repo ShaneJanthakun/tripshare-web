@@ -9,7 +9,7 @@ import { authErrorKey } from '../../lib/auth/errors';
 type Labels = Record<
   | 'emailPlaceholder' | 'sendLink' | 'sent' | 'newPasswordPlaceholder' | 'savePassword' | 'saved'
   | 'errorEmail' | 'errorPasswordLength' | 'errorGeneric' | 'errorRateLimit' | 'errorNetwork' | 'errorWeakPassword'
-  | 'errorInvalidCredentials' | 'errorUserExists' | 'errorEmailInvalid',
+  | 'errorInvalidCredentials' | 'errorUserExists' | 'errorEmailInvalid' | 'errorSamePassword',
   string
 >;
 

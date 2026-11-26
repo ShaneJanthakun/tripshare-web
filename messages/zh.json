@@ -468,7 +468,8 @@
     "savePassword": "保存密码",
     "saved": "密码已保存！正在前往您的攻略…",
     "expired": "链接已过期或已被使用。请在下方重新获取。",
-    "backToLogin": "返回登录"
+    "backToLogin": "返回登录",
+    "samePassword": "新密码不能与旧密码相同。"
   },
   "app": {
     "guideDetail": {

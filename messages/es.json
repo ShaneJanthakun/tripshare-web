@@ -468,7 +468,8 @@
     "savePassword": "Guardar contraseña",
     "saved": "¡Contraseña guardada! Te llevamos a tus guías…",
     "expired": "El enlace ha caducado o ya se ha usado. Pide uno nuevo abajo.",
-    "backToLogin": "Volver a iniciar sesión"
+    "backToLogin": "Volver a iniciar sesión",
+    "samePassword": "La contraseña nueva debe ser distinta de la anterior."
   },
   "app": {
     "guideDetail": {

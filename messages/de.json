@@ -468,7 +468,8 @@
     "savePassword": "Passwort speichern",
     "saved": "Passwort gespeichert! Du wirst zu deinen Guides weitergeleitet …",
     "expired": "Der Link ist abgelaufen oder wurde schon verwendet. Fordere unten einen neuen an.",
-    "backToLogin": "Zurück zur Anmeldung"
+    "backToLogin": "Zurück zur Anmeldung",
+    "samePassword": "Das neue Passwort muss sich vom alten unterscheiden."
   },
   "app": {
     "guideDetail": {

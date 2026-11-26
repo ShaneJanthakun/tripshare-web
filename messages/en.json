@@ -468,7 +468,8 @@
     "savePassword": "Save password",
     "saved": "Password saved! Taking you to your guides…",
     "expired": "The link has expired or was already used. Ask for a new one below.",
-    "backToLogin": "Back to sign in"
+    "backToLogin": "Back to sign in",
+    "samePassword": "The new password must be different from the old one."
   },
   "app": {
     "guideDetail": {

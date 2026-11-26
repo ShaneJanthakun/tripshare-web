@@ -38,7 +38,7 @@ export default async function ResetPasswordPage({
   const labels = {
     ...Object.fromEntries(AUTH_KEYS.map(k => [k, ta(k)])),
     sendLink: t('sendLink'), sent: t('sent'), newPasswordPlaceholder: t('newPasswordPlaceholder'),
-    savePassword: t('savePassword'), saved: t('saved'),
+    savePassword: t('savePassword'), saved: t('saved'), errorSamePassword: t('samePassword'),
   } as Parameters<typeof ResetPasswordForm>[0]['labels'];
 
   return (
