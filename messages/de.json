@@ -428,7 +428,8 @@
     "title": "Bei TripShare anmelden",
     "intro": "Nutze dasselbe Konto wie in der App – deine Guides kommen mit.",
     "sameMethodHint": "Melde dich genauso an wie in der App, dann findest du deine Guides.",
-    "errorProvider": "Die Anmeldung wurde abgebrochen oder ist fehlgeschlagen. Versuche es erneut."
+    "errorProvider": "Die Anmeldung wurde abgebrochen oder ist fehlgeschlagen. Versuche es erneut.",
+    "forgotPassword": "Passwort vergessen?"
   },
   "myGuides": {
     "title": "Meine Guides",
@@ -455,6 +456,19 @@
     "title": "Wie sollen wir dich nennen?",
     "intro": "Dein Name wird bei den Guides angezeigt, die du teilst.",
     "continue": "Weiter"
+  },
+  "resetPassword": {
+    "title": "Passwort zurücksetzen",
+    "intro": "Gib deine E-Mail-Adresse ein, dann schicken wir dir einen Link, um ein neues Passwort zu wählen.",
+    "sendLink": "Link senden",
+    "sent": "Falls es ein Konto mit dieser E-Mail gibt, haben wir dir einen Link geschickt. Sieh in deinem Posteingang (und im Spam) nach.",
+    "newTitle": "Neues Passwort wählen",
+    "newIntro": "Es gilt auch in der App.",
+    "newPasswordPlaceholder": "Neues Passwort (mindestens 6 Zeichen)",
+    "savePassword": "Passwort speichern",
+    "saved": "Passwort gespeichert! Du wirst zu deinen Guides weitergeleitet …",
+    "expired": "Der Link ist abgelaufen oder wurde schon verwendet. Fordere unten einen neuen an.",
+    "backToLogin": "Zurück zur Anmeldung"
   },
   "app": {
     "guideDetail": {

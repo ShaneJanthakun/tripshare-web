@@ -36,6 +36,7 @@ export default async function LoginPage({
     or: tc('or'),
     sameMethodHint: t('sameMethodHint'),
     errorProvider: t('errorProvider'),
+    forgotPassword: t('forgotPassword'),
   } as Parameters<typeof LoginForm>[0]['labels'];
 
   return (
@@ -45,7 +46,7 @@ export default async function LoginPage({
         <h1 className="text-center font-display text-3xl font-bold tracking-tight">{t('title')}</h1>
         <p className="mb-8 mt-3 text-center text-muted">{t('intro')}</p>
         <div className="rounded-3xl border border-border bg-surface p-6 shadow-card sm:p-8">
-          <LoginForm next={safeNext(next, locale)} initialError={error} labels={labels} />
+          <LoginForm next={safeNext(next, locale)} initialError={error} labels={labels} forgotHref={`/${locale}/reset-password`} />
         </div>
         <p className="mt-6 text-center text-xs text-faint">
           <a href={webPageLink(locale, 'terms')} className="hover:text-muted">{ta('terms')}</a>

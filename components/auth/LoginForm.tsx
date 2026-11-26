@@ -10,13 +10,13 @@ import { authErrorKey } from '../../lib/auth/errors';
 type Labels = Record<
   | 'logIn' | 'createAccount' | 'namePlaceholder' | 'emailPlaceholder' | 'passwordPlaceholder'
   | 'continueWithApple' | 'continueWithGoogle' | 'or' | 'noAccount' | 'signUp' | 'haveAccount'
-  | 'emailConfirmation' | 'sameMethodHint' | 'errorProvider'
+  | 'emailConfirmation' | 'sameMethodHint' | 'errorProvider' | 'forgotPassword'
   | 'errorEmail' | 'errorPassword' | 'errorName' | 'errorPasswordLength' | 'errorGeneric' | 'errorApple' | 'errorGoogle'
   | 'errorInvalidCredentials' | 'errorUserExists' | 'errorWeakPassword' | 'errorEmailInvalid' | 'errorRateLimit' | 'errorNetwork',
   string
 >;
 
-export default function LoginForm({ next, initialError, labels }: { next: string; initialError?: string; labels: Labels }) {
+export default function LoginForm({ next, initialError, labels, forgotHref }: { next: string; initialError?: string; labels: Labels; forgotHref: string }) {
   const [mode, setMode] = useState<'signin' | 'signup'>('signin');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -91,6 +91,9 @@ export default function LoginForm({ next, initialError, labels }: { next: string
         <input className={input} type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder={labels.emailPlaceholder} autoComplete="email" inputMode="email" />
         <input className={input} type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder={labels.passwordPlaceholder}
           autoComplete={mode === 'signup' ? 'new-password' : 'current-password'} />
+        {mode === 'signin' && (
+          <p className="text-right text-sm"><a href={forgotHref} className="text-muted hover:text-ink">{labels.forgotPassword}</a></p>
+        )}
         {error && <p role="alert" className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-2.5 text-sm text-red-300">{error}</p>}
         {notice && <p role="status" className="rounded-xl border border-accent/30 bg-accent/10 px-4 py-2.5 text-sm text-ink">{notice}</p>}
         <button type="submit" disabled={busy}

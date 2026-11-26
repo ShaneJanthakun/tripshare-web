@@ -428,7 +428,8 @@
     "title": "Inicia sessão no TripShare",
     "intro": "Usa a mesma conta que na app e os teus guias acompanham-te.",
     "sameMethodHint": "Inicia sessão da mesma forma que na app para encontrares os teus guias.",
-    "errorProvider": "O início de sessão foi cancelado ou falhou. Tenta novamente."
+    "errorProvider": "O início de sessão foi cancelado ou falhou. Tenta novamente.",
+    "forgotPassword": "Esqueceste a palavra-passe?"
   },
   "myGuides": {
     "title": "Os meus guias",
@@ -455,6 +456,19 @@
     "title": "Como te devemos chamar?",
     "intro": "O teu nome aparece nos guias que partilhas.",
     "continue": "Continuar"
+  },
+  "resetPassword": {
+    "title": "Repõe a tua palavra-passe",
+    "intro": "Escreve o teu e-mail e enviamos-te uma ligação para escolheres uma nova palavra-passe.",
+    "sendLink": "Enviar ligação",
+    "sent": "Se existir uma conta com este e-mail, enviámos-te uma ligação. Verifica a tua caixa de entrada (e o spam).",
+    "newTitle": "Escolhe uma nova palavra-passe",
+    "newIntro": "Também vai funcionar na app.",
+    "newPasswordPlaceholder": "Nova palavra-passe (mínimo 6 caracteres)",
+    "savePassword": "Guardar palavra-passe",
+    "saved": "Palavra-passe guardada! A levar-te para os teus guias…",
+    "expired": "A ligação expirou ou já foi usada. Pede uma nova abaixo.",
+    "backToLogin": "Voltar ao início de sessão"
   },
   "app": {
     "guideDetail": {

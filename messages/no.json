@@ -428,7 +428,8 @@
     "title": "Logg inn på TripShare",
     "intro": "Bruk samme konto som i appen, så følger guidene dine med.",
     "sameMethodHint": "Logg inn på samme måte som i appen, så finner du guidene dine.",
-    "errorProvider": "Innloggingen ble avbrutt eller feilet. Prøv igjen."
+    "errorProvider": "Innloggingen ble avbrutt eller feilet. Prøv igjen.",
+    "forgotPassword": "Glemt passord?"
   },
   "myGuides": {
     "title": "Mine guider",
@@ -455,6 +456,19 @@
     "title": "Hva skal vi kalle deg?",
     "intro": "Navnet ditt vises på guidene du deler.",
     "continue": "Fortsett"
+  },
+  "resetPassword": {
+    "title": "Tilbakestill passordet",
+    "intro": "Skriv inn e-posten din, så sender vi deg en lenke for å velge nytt passord.",
+    "sendLink": "Send lenke",
+    "sent": "Finnes det en konto med denne e-posten, har vi sendt en lenke. Sjekk innboksen (og søppelpost).",
+    "newTitle": "Velg nytt passord",
+    "newIntro": "Det nye passordet gjelder også i appen.",
+    "newPasswordPlaceholder": "Nytt passord (minst 6 tegn)",
+    "savePassword": "Lagre passord",
+    "saved": "Passordet er lagret! Sender deg til guidene dine …",
+    "expired": "Lenken er utløpt eller allerede brukt. Be om en ny under.",
+    "backToLogin": "Tilbake til innlogging"
   },
   "app": {
     "guideDetail": {

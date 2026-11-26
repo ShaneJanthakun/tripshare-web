@@ -428,7 +428,8 @@
     "title": "Se connecter à TripShare",
     "intro": "Utilisez le même compte que dans l’app : vos guides vous suivent.",
     "sameMethodHint": "Connectez-vous de la même façon que dans l’app pour retrouver vos guides.",
-    "errorProvider": "La connexion a été annulée ou a échoué. Réessayez."
+    "errorProvider": "La connexion a été annulée ou a échoué. Réessayez.",
+    "forgotPassword": "Mot de passe oublié ?"
   },
   "myGuides": {
     "title": "Mes guides",
@@ -455,6 +456,19 @@
     "title": "Comment devons-nous vous appeler ?",
     "intro": "Votre nom apparaît sur les guides que vous partagez.",
     "continue": "Continuer"
+  },
+  "resetPassword": {
+    "title": "Réinitialiser votre mot de passe",
+    "intro": "Saisissez votre e-mail et nous vous enverrons un lien pour choisir un nouveau mot de passe.",
+    "sendLink": "Envoyer le lien",
+    "sent": "S’il existe un compte avec cet e-mail, nous vous avons envoyé un lien. Vérifiez votre boîte de réception (et les spams).",
+    "newTitle": "Choisissez un nouveau mot de passe",
+    "newIntro": "Il fonctionnera aussi dans l’app.",
+    "newPasswordPlaceholder": "Nouveau mot de passe (6 caractères minimum)",
+    "savePassword": "Enregistrer le mot de passe",
+    "saved": "Mot de passe enregistré ! Redirection vers vos guides…",
+    "expired": "Le lien a expiré ou a déjà été utilisé. Demandez-en un nouveau ci-dessous.",
+    "backToLogin": "Retour à la connexion"
   },
   "app": {
     "guideDetail": {

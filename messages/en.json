@@ -428,7 +428,8 @@
     "title": "Sign in to TripShare",
     "intro": "Use the same account as in the app – your guides come with you.",
     "sameMethodHint": "Sign in the same way as in the app, and you'll find your guides.",
-    "errorProvider": "Sign-in was cancelled or failed. Try again."
+    "errorProvider": "Sign-in was cancelled or failed. Try again.",
+    "forgotPassword": "Forgot password?"
   },
   "myGuides": {
     "title": "My guides",
@@ -455,6 +456,19 @@
     "title": "What should we call you?",
     "intro": "Your name is shown on the guides you share.",
     "continue": "Continue"
+  },
+  "resetPassword": {
+    "title": "Reset your password",
+    "intro": "Enter your e-mail and we'll send you a link to choose a new password.",
+    "sendLink": "Send link",
+    "sent": "If there's an account with this e-mail, we've sent a link. Check your inbox (and spam).",
+    "newTitle": "Choose a new password",
+    "newIntro": "It works in the app too.",
+    "newPasswordPlaceholder": "New password (at least 6 characters)",
+    "savePassword": "Save password",
+    "saved": "Password saved! Taking you to your guides…",
+    "expired": "The link has expired or was already used. Ask for a new one below.",
+    "backToLogin": "Back to sign in"
   },
   "app": {
     "guideDetail": {

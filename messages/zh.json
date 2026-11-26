@@ -428,7 +428,8 @@
     "title": "登录 TripShare",
     "intro": "使用与应用相同的账户，您的攻略会随之同步。",
     "sameMethodHint": "用与应用相同的方式登录，即可找到您的攻略。",
-    "errorProvider": "登录已取消或失败，请重试。"
+    "errorProvider": "登录已取消或失败，请重试。",
+    "forgotPassword": "忘记密码？"
   },
   "myGuides": {
     "title": "我的攻略",
@@ -455,6 +456,19 @@
     "title": "我们该怎么称呼您？",
     "intro": "您的名字会显示在您分享的攻略上。",
     "continue": "继续"
+  },
+  "resetPassword": {
+    "title": "重置密码",
+    "intro": "输入您的邮箱，我们会发送一个链接，让您设置新密码。",
+    "sendLink": "发送链接",
+    "sent": "如果该邮箱对应有账户，我们已发送链接。请查看收件箱（和垃圾邮件）。",
+    "newTitle": "设置新密码",
+    "newIntro": "新密码在应用中同样适用。",
+    "newPasswordPlaceholder": "新密码（至少 6 个字符）",
+    "savePassword": "保存密码",
+    "saved": "密码已保存！正在前往您的攻略…",
+    "expired": "链接已过期或已被使用。请在下方重新获取。",
+    "backToLogin": "返回登录"
   },
   "app": {
     "guideDetail": {
