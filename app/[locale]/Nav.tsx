@@ -26,6 +26,40 @@ function useSignedIn(): boolean {
   return signedIn;
 }
 
+// Unread notifications for the bell (plan M8); 0 when signed out or before M8 exists.
+function useUnread(signedIn: boolean): number {
+  const [n, setN] = useState(0);
+  useEffect(() => {
+    if (!signedIn) return;
+    let cancelled = false;
+    const load = () => Promise.all([import('../../lib/supabase/client'), import('../../lib/notifications')])
+      .then(([{ createClient }, { unreadCount }]) => unreadCount(createClient()))
+      .then(c => { if (!cancelled) setN(c); });
+    void load();
+    const reset = () => setN(0);
+    window.addEventListener('tripshare:notifications-read', reset);
+    window.addEventListener('focus', load);
+    return () => { cancelled = true; window.removeEventListener('tripshare:notifications-read', reset); window.removeEventListener('focus', load); };
+  }, [signedIn]);
+  return n;
+}
+
+function Bell({ count, label, active, onClick }: { count: number; label: string; active: boolean; onClick?: () => void }) {
+  return (
+    <Link href="/notifications" aria-label={count ? `${label} (${count})` : label} title={label} onClick={onClick}
+      className={`relative hidden h-9 w-9 items-center justify-center rounded-xl transition-colors hover:bg-white/5 sm:flex ${active ? 'text-ink' : 'text-muted hover:text-ink'}`}>
+      <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+        <path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+      </svg>
+      {count > 0 && (
+        <span className="absolute -right-0.5 -top-0.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-accent px-1 text-[10px] font-bold text-white">
+          {count > 99 ? '99+' : count}
+        </span>
+      )}
+    </Link>
+  );
+}
+
 async function signOut(locale: string) {
   const { createClient } = await import('../../lib/supabase/client');
   // Local only: the default signs out every device, the app too (plan, fallgruve 22b).
@@ -48,10 +82,11 @@ function GlobeIcon({ className = '' }: { className?: string }) {
   );
 }
 
-export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' | 'myGuides' | 'login' | 'feed' | 'liked' | 'profile' }) {
+export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' | 'myGuides' | 'login' | 'feed' | 'liked' | 'profile' | 'notifications' }) {
   const t = useTranslations('nav');
   const locale = useLocale();
   const signedIn = useSignedIn();
+  const unread = useUnread(signedIn);
   const webHref = signedIn ? '/my-guides' : WEB_APP_PATH;
   const webLabel = signedIn ? t('myGuides') : t('webApp');
   const webActive = active === (signedIn ? 'myGuides' : 'guides');
@@ -66,7 +101,7 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  type Key = 'guides' | 'features' | 'support' | 'privacy' | 'feed' | 'liked' | 'profile';
+  type Key = 'guides' | 'features' | 'support' | 'privacy' | 'feed' | 'liked' | 'profile' | 'notifications';
   const item = (key: Key) =>
     `hover:text-ink transition-colors hidden sm:block ${active === key ? 'text-ink' : ''}`;
   const mobileItem = (key: Key) =>
@@ -96,6 +131,7 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
               <Link href="/privacy" className={item('privacy')}>{t('privacy')}</Link>
             </>
           )}
+          {signedIn && <Bell count={unread} label={t('notifications')} active={active === 'notifications'} />}
           <LangSwitcher />
           {signedIn ? (
             <button type="button" onClick={() => signOut(locale)} className="hidden sm:block hover:text-ink transition-colors">{t('logout')}</button>
@@ -132,8 +168,10 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
             onClick={() => setMenuOpen(v => !v)}
             aria-label="Menu"
             aria-expanded={menuOpen}
-            className="sm:hidden p-2 -mr-1 rounded-lg text-muted hover:text-ink hover:bg-white/5 transition-colors"
+            className="relative sm:hidden p-2 -mr-1 rounded-lg text-muted hover:text-ink hover:bg-white/5 transition-colors"
           >
+            {/* Phones: the bell lives in the menu; a dot here says there is something unread. */}
+            {unread > 0 && !menuOpen && <span className="absolute right-1 top-1 h-2.5 w-2.5 rounded-full bg-accent" aria-hidden />}
             {menuOpen ? (
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
@@ -163,6 +201,10 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
               <Link href="/feed" className={mobileItem('feed')} onClick={() => setMenuOpen(false)}>{t('feed')}</Link>
               <Link href="/liked" className={mobileItem('liked')} onClick={() => setMenuOpen(false)}>{t('liked')}</Link>
               <Link href="/profile" className={mobileItem('profile')} onClick={() => setMenuOpen(false)}>{t('profile')}</Link>
+              <Link href="/notifications" className={`${mobileItem('notifications')} flex items-center justify-between`} onClick={() => setMenuOpen(false)}>
+                {t('notifications')}
+                {unread > 0 && <span className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-bold text-white">{unread}</span>}
+              </Link>
             </>
           )}
           <Link href="/guides" className={mobileItem('guides')} onClick={() => setMenuOpen(false)}>{t('guides')}</Link>

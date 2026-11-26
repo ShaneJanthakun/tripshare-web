@@ -49,7 +49,8 @@
     "logout": "ログアウト",
     "feed": "見つける",
     "liked": "いいね",
-    "profile": "プロフィール"
+    "profile": "プロフィール",
+    "notifications": "お知らせ"
   },
   "hero": {
     "title": "本当に旅する人たちが",
@@ -877,5 +878,16 @@
     "remove": "削除",
     "saved": "保存しました ✓",
     "changePhoto": "変更"
+  },
+  "notifications": {
+    "title": "お知らせ",
+    "empty": "まだお知らせはありません",
+    "emptySub": "ガイドへのいいねやコメント、フォローがあるとここに表示されます。",
+    "like": "{name}さんが「{title}」にいいねしました",
+    "comment": "{name}さんが「{title}」にコメントしました",
+    "follow": "{name}さんがあなたをフォローしました",
+    "publish": "{name}さんが新しいガイドを公開しました：「{title}」",
+    "someone": "誰か",
+    "unread": "未読"
   }
 }

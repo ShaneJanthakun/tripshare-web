@@ -49,7 +49,8 @@
     "logout": "Abmelden",
     "feed": "Entdecken",
     "liked": "Gefällt mir",
-    "profile": "Profil"
+    "profile": "Profil",
+    "notifications": "Benachrichtigungen"
   },
   "hero": {
     "title": "Die Reise-App von Leuten,",
@@ -877,5 +878,16 @@
     "remove": "Entfernen",
     "saved": "Gespeichert ✓",
     "changePhoto": "Ändern"
+  },
+  "notifications": {
+    "title": "Benachrichtigungen",
+    "empty": "Noch keine Benachrichtigungen",
+    "emptySub": "Wenn jemand deine Guides mag, kommentiert oder dir folgt, siehst du es hier.",
+    "like": "{name} gefällt „{title}“",
+    "comment": "{name} hat „{title}“ kommentiert",
+    "follow": "{name} folgt dir jetzt",
+    "publish": "{name} hat einen neuen Guide veröffentlicht: „{title}“",
+    "someone": "Jemand",
+    "unread": "Ungelesen"
   }
 }

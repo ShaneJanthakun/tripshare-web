@@ -49,7 +49,8 @@
     "logout": "Terminar sessão",
     "feed": "Descobrir",
     "liked": "Gostos",
-    "profile": "Perfil"
+    "profile": "Perfil",
+    "notifications": "Notificações"
   },
   "hero": {
     "title": "A app de viagens criada por",
@@ -877,5 +878,16 @@
     "remove": "Remover",
     "saved": "Guardado ✓",
     "changePhoto": "Mudar"
+  },
+  "notifications": {
+    "title": "Notificações",
+    "empty": "Ainda não há notificações",
+    "emptySub": "Quando alguém gostar ou comentar os teus guias, ou te seguir, vais vê-lo aqui.",
+    "like": "{name} gostou de «{title}»",
+    "comment": "{name} comentou «{title}»",
+    "follow": "{name} começou a seguir-te",
+    "publish": "{name} publicou um novo guia: «{title}»",
+    "someone": "Alguém",
+    "unread": "Não lida"
   }
 }

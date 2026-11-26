@@ -49,7 +49,8 @@
     "logout": "Logg ut",
     "feed": "Oppdag",
     "liked": "Likte",
-    "profile": "Profil"
+    "profile": "Profil",
+    "notifications": "Varsler"
   },
   "hero": {
     "title": "Reiseappen laget av",
@@ -877,5 +878,16 @@
     "remove": "Fjern",
     "saved": "Lagret ✓",
     "changePhoto": "Bytt"
+  },
+  "notifications": {
+    "title": "Varsler",
+    "empty": "Ingen varsler ennå",
+    "emptySub": "Når noen liker eller kommenterer guidene dine, eller følger deg, ser du det her.",
+    "like": "{name} likte «{title}»",
+    "comment": "{name} kommenterte «{title}»",
+    "follow": "{name} begynte å følge deg",
+    "publish": "{name} publiserte en ny guide: «{title}»",
+    "someone": "Noen",
+    "unread": "Ulest"
   }
 }

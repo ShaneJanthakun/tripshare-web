@@ -49,7 +49,8 @@
     "logout": "退出登录",
     "feed": "发现",
     "liked": "喜欢",
-    "profile": "个人资料"
+    "profile": "个人资料",
+    "notifications": "通知"
   },
   "hero": {
     "title": "由真正旅行的人",
@@ -877,5 +878,16 @@
     "remove": "移除",
     "saved": "已保存 ✓",
     "changePhoto": "更换"
+  },
+  "notifications": {
+    "title": "通知",
+    "empty": "还没有通知",
+    "emptySub": "当有人点赞或评论你的攻略，或关注你时，会显示在这里。",
+    "like": "{name} 赞了“{title}”",
+    "comment": "{name} 评论了“{title}”",
+    "follow": "{name} 关注了你",
+    "publish": "{name} 发布了新攻略：“{title}”",
+    "someone": "有人",
+    "unread": "未读"
   }
 }

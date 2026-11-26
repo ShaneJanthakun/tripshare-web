@@ -8,9 +8,9 @@ const intl = createIntlMiddleware(routing);
 
 // Only the signed-in areas refresh the Supabase session, so public pages make no network calls
 // (plan/01-arkitektur.md, Middleware).
-const SESSION_PATHS = /^\/(?:[a-z]{2}\/)?(?:my-guides|edit|feed|liked|profile|login|reset-password|welcome)(?:\/|$)/;
+const SESSION_PATHS = /^\/(?:[a-z]{2}\/)?(?:my-guides|edit|feed|liked|profile|notifications|login|reset-password|welcome)(?:\/|$)/;
 // Signed-in areas: without a user, go to the login page and come back afterwards.
-const PROTECTED = /^\/([a-z]{2})\/(?:my-guides|edit|feed|liked|profile|welcome)(?:\/|$)/;
+const PROTECTED = /^\/([a-z]{2})\/(?:my-guides|edit|feed|liked|profile|notifications|welcome)(?:\/|$)/;
 
 export default async function middleware(request: NextRequest) {
   if (!SESSION_PATHS.test(request.nextUrl.pathname)) return intl(request);

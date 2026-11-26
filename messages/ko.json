@@ -49,7 +49,8 @@
     "logout": "로그아웃",
     "feed": "둘러보기",
     "liked": "좋아요",
-    "profile": "프로필"
+    "profile": "프로필",
+    "notifications": "알림"
   },
   "hero": {
     "title": "진짜 여행하는 사람들이",
@@ -877,5 +878,16 @@
     "remove": "삭제",
     "saved": "저장됨 ✓",
     "changePhoto": "변경"
+  },
+  "notifications": {
+    "title": "알림",
+    "empty": "아직 알림이 없어요",
+    "emptySub": "누군가 내 가이드에 좋아요나 댓글을 남기거나 나를 팔로우하면 여기에 표시돼요.",
+    "like": "{name}님이 ‘{title}’을(를) 좋아해요",
+    "comment": "{name}님이 ‘{title}’에 댓글을 남겼어요",
+    "follow": "{name}님이 나를 팔로우하기 시작했어요",
+    "publish": "{name}님이 새 가이드를 게시했어요: ‘{title}’",
+    "someone": "누군가",
+    "unread": "읽지 않음"
   }
 }

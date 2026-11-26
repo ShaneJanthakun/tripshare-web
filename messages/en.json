@@ -49,7 +49,8 @@
     "logout": "Log out",
     "feed": "Discover",
     "liked": "Liked",
-    "profile": "Profile"
+    "profile": "Profile",
+    "notifications": "Notifications"
   },
   "hero": {
     "title": "The travel app built by",
@@ -877,5 +878,16 @@
     "remove": "Remove",
     "saved": "Saved ✓",
     "changePhoto": "Change"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "No notifications yet",
+    "emptySub": "When someone likes or comments on your guides or follows you, you’ll see it here.",
+    "like": "{name} liked “{title}”",
+    "comment": "{name} commented on “{title}”",
+    "follow": "{name} started following you",
+    "publish": "{name} published a new guide: “{title}”",
+    "someone": "Someone",
+    "unread": "Unread"
   }
 }
