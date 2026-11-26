@@ -3,6 +3,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import FeaturedGuides from '../../components/guide/FeaturedGuides';
 import { Link } from '../i18n/navigation';
 import { localizedMetadata } from '../seo';
 import Nav from './Nav';
@@ -56,8 +57,12 @@ function DownloadButton({ label, variant = 'accent' }: { label: string; variant?
   );
 }
 
+// Featured guides are refreshed with the guides (ISR, 10 minutes).
+export const revalidate = 600;
+
 export default function Home({ params }: { params: Promise<{ locale: string }> }) {
-  setRequestLocale(use(params).locale);
+  const { locale } = use(params);
+  setRequestLocale(locale);
   const t = useTranslations();
 
   const featureItems = t.raw('features.items') as { title: string; desc: string }[];
@@ -130,6 +135,9 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
           <p className="text-muted mt-4 text-base leading-relaxed max-w-lg mx-auto">{t('tagline.sub')}</p>
         </div>
       </section>
+
+      {/* Featured itineraries (F1.9) */}
+      <FeaturedGuides locale={locale} />
 
       {/* Features bento grid */}
       <section className="py-20 px-6">

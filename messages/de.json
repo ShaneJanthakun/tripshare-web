@@ -19,13 +19,22 @@
     "terms": {
       "title": "Nutzungsbedingungen | TripShare",
       "description": "Die Bedingungen für die Nutzung der TripShare-App und -Website."
-    }
+    },
+    "guides": {
+      "title": "Reiseführer & Reiserouten Tag für Tag | TripShare",
+      "description": "Entdecke Reiserouten Tag für Tag mit Karten, Fußwegen und Tipps – erstellt auf TripShare."
+    },
+    "guideTitle": "{destination}: {days}-Tage-Reiseroute – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "{days}-Tage-Reiseroute für {destination}",
+    "guideFallback": "{days}-Tage-Reiseführer für {destination} mit {stops} Stopps, Karte und Fußwegen."
   },
   "nav": {
     "features": "Funktionen",
     "support": "Support",
     "privacy": "Datenschutz",
-    "download": "Laden"
+    "download": "Laden",
+    "guides": "Guides"
   },
   "hero": {
     "title": "Die Reise-App von Leuten,",
@@ -82,7 +91,8 @@
     "privacy": "Datenschutz",
     "terms": "AGB",
     "support": "Support",
-    "allRights": "TripShare. Alle Rechte vorbehalten."
+    "allRights": "TripShare. Alle Rechte vorbehalten.",
+    "guides": "Guides"
   },
   "lang": {
     "label": "Sprache"
@@ -386,6 +396,28 @@
     "privateMsg": "Wenn du einen Zugangscode bekommen hast, öffne den Guide in der TripShare-App.",
     "tagline": "Reiseguides von echten Reisenden",
     "fallbackDescription": "Ein Reiseguide Tag für Tag für {destination}, mit Stopps, Karte und Tipps."
+  },
+  "guide": {
+    "views": "{count, plural, one {# Aufruf} other {# Aufrufe}}",
+    "likes": "{count, plural, one {# Like} other {# Likes}}",
+    "mapAll": "Alle",
+    "mapError": "Die Karte konnte nicht geladen werden.",
+    "allGuides": "Alle Guides",
+    "ctaTitle": "Plane deine eigene Reise mit TripShare",
+    "ctaText": "Erstelle Guides Tag für Tag mit Karten und Fußwegen und teile sie mit Freunden.",
+    "makeYourOwn": "Eigenen Guide erstellen"
+  },
+  "featured": {
+    "title": "Ausgewählte Reiserouten",
+    "sub": "Guides Tag für Tag mit Karten, Fußwegen und Tipps.",
+    "seeAll": "Alle Guides ansehen"
+  },
+  "guidesPage": {
+    "heading": "Reiseführer",
+    "intro": "Reiserouten Tag für Tag mit Karten, Fußwegen und Tipps. Öffne eine oder lade die App und erstelle deine eigene.",
+    "mostLoved": "Am beliebtesten",
+    "newest": "Neueste",
+    "count": "{count, plural, one {# Guide} other {# Guides}}"
   },
   "app": {
     "guideDetail": {

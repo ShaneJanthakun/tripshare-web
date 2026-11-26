@@ -19,13 +19,22 @@
     "terms": {
       "title": "Conditions d'utilisation | TripShare",
       "description": "Les conditions applicables lorsque vous utilisez l'app et le site TripShare."
-    }
+    },
+    "guides": {
+      "title": "Guides de voyage et itinéraires jour par jour | TripShare",
+      "description": "Parcourez des itinéraires jour par jour avec cartes, itinéraires à pied et conseils, créés sur TripShare."
+    },
+    "guideTitle": "{destination} : itinéraire de {days} jours – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "Itinéraire de {days} jours à {destination}",
+    "guideFallback": "Guide de {days} jours à {destination} avec {stops} étapes, une carte et des itinéraires à pied."
   },
   "nav": {
     "features": "Fonctionnalités",
     "support": "Support",
     "privacy": "Confidentialité",
-    "download": "Télécharger"
+    "download": "Télécharger",
+    "guides": "Guides"
   },
   "hero": {
     "title": "L'app de voyage créée par",
@@ -82,7 +91,8 @@
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "support": "Support",
-    "allRights": "TripShare. Tous droits réservés."
+    "allRights": "TripShare. Tous droits réservés.",
+    "guides": "Guides"
   },
   "lang": {
     "label": "Langue"
@@ -386,6 +396,28 @@
     "privateMsg": "Si l'on vous a donné un code d'accès, ouvrez le guide dans l'application TripShare.",
     "tagline": "Des guides de voyage écrits par de vrais voyageurs",
     "fallbackDescription": "Un guide de voyage jour par jour pour {destination}, avec étapes, carte et conseils."
+  },
+  "guide": {
+    "views": "{count, plural, one {# vue} other {# vues}}",
+    "likes": "{count, plural, other {# j’aime}}",
+    "mapAll": "Tous",
+    "mapError": "Impossible de charger la carte.",
+    "allGuides": "Tous les guides",
+    "ctaTitle": "Planifiez votre propre voyage avec TripShare",
+    "ctaText": "Créez des guides jour par jour avec cartes et itinéraires à pied, et partagez-les avec vos amis.",
+    "makeYourOwn": "Créer votre guide"
+  },
+  "featured": {
+    "title": "Itinéraires à la une",
+    "sub": "Des guides jour par jour avec cartes, itinéraires à pied et conseils.",
+    "seeAll": "Voir tous les guides"
+  },
+  "guidesPage": {
+    "heading": "Guides de voyage",
+    "intro": "Des itinéraires jour par jour avec cartes, itinéraires à pied et conseils. Ouvrez-en un, ou téléchargez l’app et créez le vôtre.",
+    "mostLoved": "Les plus aimés",
+    "newest": "Les plus récents",
+    "count": "{count, plural, one {# guide} other {# guides}}"
   },
   "app": {
     "guideDetail": {

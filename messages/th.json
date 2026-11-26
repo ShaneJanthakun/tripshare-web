@@ -19,13 +19,22 @@
     "terms": {
       "title": "ข้อกำหนดการใช้งาน | TripShare",
       "description": "ข้อกำหนดที่ใช้เมื่อคุณใช้แอปและเว็บไซต์ TripShare"
-    }
+    },
+    "guides": {
+      "title": "ไกด์ท่องเที่ยวและแผนเที่ยวรายวัน | TripShare",
+      "description": "ค้นหาแผนเที่ยวรายวันพร้อมแผนที่ เส้นทางเดิน และเคล็ดลับ ที่สร้างบน TripShare"
+    },
+    "guideTitle": "แผนเที่ยว{destination} {days} วัน – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "แผนเที่ยว{destination} {days} วัน",
+    "guideFallback": "ไกด์เที่ยว{destination} {days} วัน พร้อม {stops} จุดแวะ แผนที่ และเส้นทางเดิน"
   },
   "nav": {
     "features": "ฟีเจอร์",
     "support": "ช่วยเหลือ",
     "privacy": "ความเป็นส่วนตัว",
-    "download": "ดาวน์โหลด"
+    "download": "ดาวน์โหลด",
+    "guides": "ไกด์"
   },
   "hero": {
     "title": "แอปท่องเที่ยวที่สร้างโดย",
@@ -82,7 +91,8 @@
     "privacy": "ความเป็นส่วนตัว",
     "terms": "ข้อกำหนด",
     "support": "ช่วยเหลือ",
-    "allRights": "TripShare. สงวนลิขสิทธิ์ทั้งหมด"
+    "allRights": "TripShare. สงวนลิขสิทธิ์ทั้งหมด",
+    "guides": "ไกด์"
   },
   "lang": {
     "label": "ภาษา"
@@ -386,6 +396,28 @@
     "privateMsg": "หากคุณได้รับรหัสเข้าถึง ให้เปิดคู่มือในแอป TripShare",
     "tagline": "คู่มือท่องเที่ยวจากนักเดินทางตัวจริง",
     "fallbackDescription": "คู่มือท่องเที่ยวรายวันสำหรับ {destination} พร้อมจุดแวะ แผนที่ และเคล็ดลับ"
+  },
+  "guide": {
+    "views": "{count, plural, other {ดู # ครั้ง}}",
+    "likes": "{count, plural, other {# ถูกใจ}}",
+    "mapAll": "ทั้งหมด",
+    "mapError": "โหลดแผนที่ไม่ได้",
+    "allGuides": "ไกด์ทั้งหมด",
+    "ctaTitle": "วางแผนทริปของคุณเองด้วย TripShare",
+    "ctaText": "สร้างไกด์รายวันพร้อมแผนที่และเส้นทางเดิน แล้วแชร์ให้เพื่อน",
+    "makeYourOwn": "สร้างไกด์ของคุณเอง"
+  },
+  "featured": {
+    "title": "แผนเที่ยวแนะนำ",
+    "sub": "ไกด์รายวันพร้อมแผนที่ เส้นทางเดิน และเคล็ดลับ",
+    "seeAll": "ดูไกด์ทั้งหมด"
+  },
+  "guidesPage": {
+    "heading": "ไกด์ท่องเที่ยว",
+    "intro": "แผนเที่ยวรายวันพร้อมแผนที่ เส้นทางเดิน และเคล็ดลับ เปิดดูได้เลย หรือดาวน์โหลดแอปแล้วสร้างของคุณเอง",
+    "mostLoved": "ถูกใจมากที่สุด",
+    "newest": "ใหม่ล่าสุด",
+    "count": "{count, plural, other {# ไกด์}}"
   },
   "app": {
     "guideDetail": {

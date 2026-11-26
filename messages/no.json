@@ -19,13 +19,22 @@
     "terms": {
       "title": "Vilkår for bruk | TripShare",
       "description": "Vilkårene som gjelder når du bruker TripShare-appen og nettsiden."
-    }
+    },
+    "guides": {
+      "title": "Reiseguider og reiseruter dag for dag | TripShare",
+      "description": "Bla i reiseruter dag for dag med kart, gåruter og tips – laget på TripShare."
+    },
+    "guideTitle": "{destination} på {days} dager – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "Reiserute for {destination} på {days} dager",
+    "guideFallback": "Guide til {destination} på {days} dager med {stops} stopp, kart og gåruter."
   },
   "nav": {
     "features": "Funksjoner",
     "support": "Support",
     "privacy": "Personvern",
-    "download": "Last ned"
+    "download": "Last ned",
+    "guides": "Guider"
   },
   "hero": {
     "title": "Reiseappen laget av",
@@ -82,7 +91,8 @@
     "privacy": "Personvern",
     "terms": "Vilkår",
     "support": "Support",
-    "allRights": "TripShare. Alle rettigheter forbeholdt."
+    "allRights": "TripShare. Alle rettigheter forbeholdt.",
+    "guides": "Guider"
   },
   "lang": {
     "label": "Språk"
@@ -386,6 +396,28 @@
     "privateMsg": "Har du fått en tilgangskode, åpner du guiden i TripShare-appen.",
     "tagline": "Reiseguider fra ekte reisende",
     "fallbackDescription": "En reiseguide dag for dag til {destination}, med stopp, kart og tips."
+  },
+  "guide": {
+    "views": "{count, plural, one {# visning} other {# visninger}}",
+    "likes": "{count} liker",
+    "mapAll": "Alle",
+    "mapError": "Kartet kunne ikke lastes.",
+    "allGuides": "Alle guider",
+    "ctaTitle": "Planlegg din egen tur med TripShare",
+    "ctaText": "Lag guider dag for dag med kart og gåruter, og del dem med venner.",
+    "makeYourOwn": "Lag din egen guide"
+  },
+  "featured": {
+    "title": "Utvalgte reiseruter",
+    "sub": "Guider dag for dag med kart, gåruter og tips.",
+    "seeAll": "Se alle guider"
+  },
+  "guidesPage": {
+    "heading": "Reiseguider",
+    "intro": "Reiseruter dag for dag med kart, gåruter og tips. Åpne en, eller last ned appen og lag din egen.",
+    "mostLoved": "Mest likt",
+    "newest": "Nyeste",
+    "count": "{count, plural, one {# guide} other {# guider}}"
   },
   "app": {
     "guideDetail": {

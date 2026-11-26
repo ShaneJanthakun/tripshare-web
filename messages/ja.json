@@ -19,13 +19,22 @@
     "terms": {
       "title": "利用規約｜TripShare",
       "description": "TripShareのアプリとウェブサイトをご利用の際に適用される規約です。"
-    }
+    },
+    "guides": {
+      "title": "旅行ガイド・日ごとの旅程 | TripShare",
+      "description": "地図、徒歩ルート、ヒント付きの日ごとの旅程をチェック。TripShareで作られた旅行ガイドです。"
+    },
+    "guideTitle": "{destination} {days}日間の旅程 – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "{destination} {days}日間の旅程",
+    "guideFallback": "{destination}を巡る{days}日間のガイド。立ち寄り先{stops}か所、地図、徒歩ルート付き。"
   },
   "nav": {
     "features": "機能",
     "support": "サポート",
     "privacy": "プライバシー",
-    "download": "ダウンロード"
+    "download": "ダウンロード",
+    "guides": "ガイド"
   },
   "hero": {
     "title": "本当に旅する人たちが",
@@ -82,7 +91,8 @@
     "privacy": "プライバシー",
     "terms": "利用規約",
     "support": "サポート",
-    "allRights": "TripShare. All rights reserved."
+    "allRights": "TripShare. All rights reserved.",
+    "guides": "ガイド"
   },
   "lang": {
     "label": "言語"
@@ -386,6 +396,28 @@
     "privateMsg": "アクセスコードを受け取った場合は、TripShareアプリでガイドを開いてください。",
     "tagline": "実際に旅した人の旅行ガイド",
     "fallbackDescription": "{destination}の日ごとの旅行ガイド。スポット、地図、ヒント付き。"
+  },
+  "guide": {
+    "views": "{count, plural, other {#回閲覧}}",
+    "likes": "{count, plural, other {#件のいいね}}",
+    "mapAll": "すべて",
+    "mapError": "地図を読み込めませんでした。",
+    "allGuides": "すべてのガイド",
+    "ctaTitle": "TripShareで自分の旅を計画しよう",
+    "ctaText": "地図と徒歩ルート付きの日ごとのガイドを作って、友達とシェアしましょう。",
+    "makeYourOwn": "自分のガイドを作る"
+  },
+  "featured": {
+    "title": "おすすめの旅程",
+    "sub": "地図、徒歩ルート、ヒント付きの日ごとのガイド。",
+    "seeAll": "すべてのガイドを見る"
+  },
+  "guidesPage": {
+    "heading": "旅行ガイド",
+    "intro": "地図、徒歩ルート、ヒント付きの日ごとの旅程。気になるものを開くか、アプリで自分のガイドを作りましょう。",
+    "mostLoved": "人気順",
+    "newest": "新着順",
+    "count": "{count, plural, other {#件のガイド}}"
   },
   "app": {
     "guideDetail": {

@@ -19,13 +19,22 @@
     "terms": {
       "title": "이용약관 | TripShare",
       "description": "TripShare 앱과 웹사이트를 이용할 때 적용되는 약관입니다."
-    }
+    },
+    "guides": {
+      "title": "여행 가이드와 일별 일정 | TripShare",
+      "description": "지도, 도보 경로, 팁이 담긴 일별 여행 일정을 둘러보세요. TripShare에서 만든 가이드입니다."
+    },
+    "guideTitle": "{destination} {days}일 여행 일정 – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "{destination} {days}일 여행 일정",
+    "guideFallback": "{destination} {days}일 가이드: 방문지 {stops}곳, 지도, 도보 경로 포함."
   },
   "nav": {
     "features": "기능",
     "support": "지원",
     "privacy": "개인정보",
-    "download": "다운로드"
+    "download": "다운로드",
+    "guides": "가이드"
   },
   "hero": {
     "title": "진짜 여행하는 사람들이",
@@ -82,7 +91,8 @@
     "privacy": "개인정보",
     "terms": "이용약관",
     "support": "지원",
-    "allRights": "TripShare. All rights reserved."
+    "allRights": "TripShare. All rights reserved.",
+    "guides": "가이드"
   },
   "lang": {
     "label": "언어"
@@ -386,6 +396,28 @@
     "privateMsg": "액세스 코드를 받았다면 TripShare 앱에서 가이드를 여세요.",
     "tagline": "실제 여행자의 여행 가이드",
     "fallbackDescription": "{destination} 일자별 여행 가이드 – 장소, 지도, 팁 포함."
+  },
+  "guide": {
+    "views": "{count, plural, other {조회 #회}}",
+    "likes": "{count, plural, other {좋아요 #개}}",
+    "mapAll": "전체",
+    "mapError": "지도를 불러오지 못했습니다.",
+    "allGuides": "모든 가이드",
+    "ctaTitle": "TripShare로 나만의 여행을 계획하세요",
+    "ctaText": "지도와 도보 경로가 담긴 일별 가이드를 만들고 친구와 공유하세요.",
+    "makeYourOwn": "나만의 가이드 만들기"
+  },
+  "featured": {
+    "title": "추천 여행 일정",
+    "sub": "지도, 도보 경로, 팁이 담긴 일별 가이드.",
+    "seeAll": "모든 가이드 보기"
+  },
+  "guidesPage": {
+    "heading": "여행 가이드",
+    "intro": "지도, 도보 경로, 팁이 담긴 일별 여행 일정. 하나를 열어 보거나 앱을 받아 나만의 가이드를 만드세요.",
+    "mostLoved": "인기순",
+    "newest": "최신순",
+    "count": "{count, plural, other {가이드 #개}}"
   },
   "app": {
     "guideDetail": {

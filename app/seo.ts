@@ -18,6 +18,7 @@ export const PAGE_PATHS = {
   support: '/support',
   privacy: '/privacy',
   terms: '/terms',
+  guides: '/guides',
 } as const;
 export type PageKey = keyof typeof PAGE_PATHS;
 export const PAGES = Object.values(PAGE_PATHS);

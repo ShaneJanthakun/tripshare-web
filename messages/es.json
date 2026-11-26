@@ -19,13 +19,22 @@
     "terms": {
       "title": "Condiciones de uso | TripShare",
       "description": "Las condiciones que se aplican al usar la app y el sitio web de TripShare."
-    }
+    },
+    "guides": {
+      "title": "Guías de viaje e itinerarios día a día | TripShare",
+      "description": "Explora itinerarios de viaje día a día con mapas, rutas a pie y consejos, creados en TripShare."
+    },
+    "guideTitle": "{destination}: itinerario de {days} días – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "Itinerario de {days} días por {destination}",
+    "guideFallback": "Guía de {days} días por {destination} con {stops} paradas, mapa y rutas a pie."
   },
   "nav": {
     "features": "Funciones",
     "support": "Soporte",
     "privacy": "Privacidad",
-    "download": "Descargar"
+    "download": "Descargar",
+    "guides": "Guías"
   },
   "hero": {
     "title": "La app de viajes creada por",
@@ -82,7 +91,8 @@
     "privacy": "Privacidad",
     "terms": "Términos",
     "support": "Soporte",
-    "allRights": "TripShare. Todos los derechos reservados."
+    "allRights": "TripShare. Todos los derechos reservados.",
+    "guides": "Guías"
   },
   "lang": {
     "label": "Idioma"
@@ -386,6 +396,28 @@
     "privateMsg": "Si te han dado un código de acceso, abre la guía en la app de TripShare.",
     "tagline": "Guías de viaje de viajeros reales",
     "fallbackDescription": "Una guía de viaje día a día de {destination}, con paradas, mapa y consejos."
+  },
+  "guide": {
+    "views": "{count, plural, one {# visita} other {# visitas}}",
+    "likes": "{count, plural, other {# me gusta}}",
+    "mapAll": "Todos",
+    "mapError": "No se pudo cargar el mapa.",
+    "allGuides": "Todas las guías",
+    "ctaTitle": "Planifica tu propio viaje con TripShare",
+    "ctaText": "Crea guías día a día con mapas y rutas a pie, y compártelas con tus amigos.",
+    "makeYourOwn": "Crea tu propia guía"
+  },
+  "featured": {
+    "title": "Itinerarios destacados",
+    "sub": "Guías día a día con mapas, rutas a pie y consejos.",
+    "seeAll": "Ver todas las guías"
+  },
+  "guidesPage": {
+    "heading": "Guías de viaje",
+    "intro": "Itinerarios día a día con mapas, rutas a pie y consejos. Abre uno o descarga la app y crea el tuyo.",
+    "mostLoved": "Los más queridos",
+    "newest": "Más recientes",
+    "count": "{count, plural, one {# guía} other {# guías}}"
   },
   "app": {
     "guideDetail": {

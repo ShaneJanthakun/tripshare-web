@@ -3,10 +3,10 @@ import { routing } from '../i18n/routing';
 
 const SUPPORTED = routing.locales as readonly string[];
 
-// Best match for the visitor among our 10 languages (Accept-Language), else English.
+// Best match for the visitor among our 10 languages (Accept-Language), else the fallback (English).
 // iOS and browsers report Norwegian as nb/nn; the site's Norwegian is "no".
-export function pickLocale(acceptLanguage: string | null): string {
-  if (!acceptLanguage) return routing.defaultLocale;
+export function pickLocale(acceptLanguage: string | null, fallback: string = routing.defaultLocale): string {
+  if (!acceptLanguage) return fallback;
   const prefs = acceptLanguage
     .split(',')
     .map(part => {
@@ -19,7 +19,7 @@ export function pickLocale(acceptLanguage: string | null): string {
     const code = base === 'nb' || base === 'nn' ? 'no' : base;
     if (SUPPORTED.includes(code)) return code;
   }
-  return routing.defaultLocale;
+  return fallback;
 }
 
 // Short-link pages live outside [locale] (no next-intl middleware), so translate directly.

@@ -19,13 +19,22 @@
     "terms": {
       "title": "使用条款｜TripShare",
       "description": "使用 TripShare 应用和网站时适用的条款。"
-    }
+    },
+    "guides": {
+      "title": "旅行攻略与每日行程 | TripShare",
+      "description": "浏览带地图、步行路线和贴士的每日旅行行程，均在 TripShare 上创建。"
+    },
+    "guideTitle": "{destination}{days}日游行程 – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "{destination}{days}日游行程",
+    "guideFallback": "{destination}{days}日游攻略，含{stops}个停留点、地图和步行路线。"
   },
   "nav": {
     "features": "功能",
     "support": "支持",
     "privacy": "隐私",
-    "download": "下载"
+    "download": "下载",
+    "guides": "攻略"
   },
   "hero": {
     "title": "由真正旅行的人",
@@ -82,7 +91,8 @@
     "privacy": "隐私",
     "terms": "条款",
     "support": "支持",
-    "allRights": "TripShare. 保留所有权利。"
+    "allRights": "TripShare. 保留所有权利。",
+    "guides": "攻略"
   },
   "lang": {
     "label": "语言"
@@ -386,6 +396,28 @@
     "privateMsg": "如果你收到了访问码，请在 TripShare 应用中打开此攻略。",
     "tagline": "真实旅行者的旅行攻略",
     "fallbackDescription": "{destination}逐日旅行攻略，包含地点、地图和小贴士。"
+  },
+  "guide": {
+    "views": "{count, plural, other {#次浏览}}",
+    "likes": "{count, plural, other {#个赞}}",
+    "mapAll": "全部",
+    "mapError": "地图加载失败。",
+    "allGuides": "全部攻略",
+    "ctaTitle": "用 TripShare 规划您的旅行",
+    "ctaText": "创建带地图和步行路线的每日攻略，并与朋友分享。",
+    "makeYourOwn": "创建您的攻略"
+  },
+  "featured": {
+    "title": "精选行程",
+    "sub": "带地图、步行路线和贴士的每日攻略。",
+    "seeAll": "查看全部攻略"
+  },
+  "guidesPage": {
+    "heading": "旅行攻略",
+    "intro": "带地图、步行路线和贴士的每日行程。打开看看，或下载应用创建您自己的攻略。",
+    "mostLoved": "最受欢迎",
+    "newest": "最新",
+    "count": "{count, plural, other {#篇攻略}}"
   },
   "app": {
     "guideDetail": {

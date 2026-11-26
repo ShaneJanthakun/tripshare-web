@@ -19,13 +19,22 @@
     "terms": {
       "title": "Terms of Use | TripShare",
       "description": "The terms that apply when you use the TripShare app and website."
-    }
+    },
+    "guides": {
+      "title": "Travel Guides & Itineraries by Real Travelers | TripShare",
+      "description": "Browse day-by-day travel itineraries with maps, walking routes and local tips – made on TripShare."
+    },
+    "guideTitle": "{destination} {days}-Day Itinerary – {title}",
+    "guideTitleNoDays": "{title} – {destination}",
+    "guideLead": "{days}-day {destination} itinerary",
+    "guideFallback": "A {days}-day guide to {destination} with {stops} stops, a map and walking routes."
   },
   "nav": {
     "features": "Features",
     "support": "Support",
     "privacy": "Privacy",
-    "download": "Download"
+    "download": "Download",
+    "guides": "Guides"
   },
   "hero": {
     "title": "The travel app built by",
@@ -82,7 +91,8 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "support": "Support",
-    "allRights": "TripShare. All rights reserved."
+    "allRights": "TripShare. All rights reserved.",
+    "guides": "Guides"
   },
   "lang": {
     "label": "Language"
@@ -386,6 +396,28 @@
     "privateMsg": "If someone gave you an access code, open the guide in the TripShare app.",
     "tagline": "Travel guides by real travelers",
     "fallbackDescription": "A day-by-day travel guide to {destination}, with stops, a map and tips."
+  },
+  "guide": {
+    "views": "{count, plural, one {# view} other {# views}}",
+    "likes": "{count, plural, one {# like} other {# likes}}",
+    "mapAll": "All",
+    "mapError": "The map couldn’t be loaded.",
+    "allGuides": "All guides",
+    "ctaTitle": "Plan your own trip with TripShare",
+    "ctaText": "Build day-by-day guides with maps and walking routes, and share them with friends.",
+    "makeYourOwn": "Make your own guide"
+  },
+  "featured": {
+    "title": "Featured itineraries",
+    "sub": "Day-by-day guides with maps, walking routes and tips.",
+    "seeAll": "See all guides"
+  },
+  "guidesPage": {
+    "heading": "Travel guides",
+    "intro": "Day-by-day itineraries with maps, walking routes and tips. Open one, or get the app and make your own.",
+    "mostLoved": "Most loved",
+    "newest": "Newest",
+    "count": "{count, plural, one {# guide} other {# guides}}"
   },
   "app": {
     "guideDetail": {

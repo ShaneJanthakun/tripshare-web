@@ -16,6 +16,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex items-center gap-6">
+          <Link href="/guides" className="hover:text-ink transition-colors">{t('guides')}</Link>
           <Link href="/features" className="hover:text-ink transition-colors">{t('features')}</Link>
           <Link href="/privacy" className="hover:text-ink transition-colors">{t('privacy')}</Link>
           <Link href="/terms" className="hover:text-ink transition-colors">{t('terms')}</Link>

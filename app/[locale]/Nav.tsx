@@ -15,7 +15,7 @@ export function LogoMark({ className = 'w-6 h-6' }: { className?: string }) {
   );
 }
 
-export default function Nav({ active }: { active?: 'features' | 'support' | 'privacy' | 'terms' }) {
+export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' }) {
   const t = useTranslations('nav');
   const [menuOpen, setMenuOpen] = useState(false);
   const ref = useRef<HTMLElement>(null);
@@ -28,9 +28,9 @@ export default function Nav({ active }: { active?: 'features' | 'support' | 'pri
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  const item = (key: 'features' | 'support' | 'privacy') =>
+  const item = (key: 'guides' | 'features' | 'support' | 'privacy') =>
     `hover:text-ink transition-colors hidden sm:block ${active === key ? 'text-ink' : ''}`;
-  const mobileItem = (key: 'features' | 'support' | 'privacy') =>
+  const mobileItem = (key: 'guides' | 'features' | 'support' | 'privacy') =>
     `block px-4 py-3 rounded-xl text-sm transition-colors hover:bg-white/5 ${
       active === key ? 'text-ink font-semibold' : 'text-muted'
     }`;
@@ -43,6 +43,7 @@ export default function Nav({ active }: { active?: 'features' | 'support' | 'pri
           TripShare
         </Link>
         <div className="flex items-center gap-1 sm:gap-5 text-sm text-muted">
+          <Link href="/guides" className={item('guides')}>{t('guides')}</Link>
           <Link href="/features" className={item('features')}>{t('features')}</Link>
           <Link href="/support" className={item('support')}>{t('support')}</Link>
           <Link href="/privacy" className={item('privacy')}>{t('privacy')}</Link>
@@ -76,6 +77,7 @@ export default function Nav({ active }: { active?: 'features' | 'support' | 'pri
 
       {menuOpen && (
         <div className="sm:hidden max-w-5xl mx-auto mt-2 rounded-2xl border border-white/10 bg-bg/90 backdrop-blur-2xl shadow-card p-2">
+          <Link href="/guides" className={mobileItem('guides')} onClick={() => setMenuOpen(false)}>{t('guides')}</Link>
           <Link href="/features" className={mobileItem('features')} onClick={() => setMenuOpen(false)}>{t('features')}</Link>
           <Link href="/support" className={mobileItem('support')} onClick={() => setMenuOpen(false)}>{t('support')}</Link>
           <Link href="/privacy" className={mobileItem('privacy')} onClick={() => setMenuOpen(false)}>{t('privacy')}</Link>

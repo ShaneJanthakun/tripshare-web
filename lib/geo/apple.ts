@@ -3,6 +3,7 @@ import { signMapsJwt } from './jwt';
 // Apple Maps Server API, called from the server only (plan/01-arkitektur.md).
 // Quota (shared with MapKit JS): 25 000 lookups per day. A 429 throws QuotaError, and callers
 // show the guide without those pins.
+// No cache option on purpose: `cache: 'no-store'` would force the static guide pages to be dynamic.
 const API = 'https://maps-api.apple.com/v1';
 const TIMEOUT_MS = 5000;
 
@@ -28,7 +29,6 @@ async function accessToken(force = false): Promise<string> {
   const res = await fetch(`${API}/token`, {
     headers: { Authorization: `Bearer ${signMapsJwt().token}` },
     signal: AbortSignal.timeout(TIMEOUT_MS),
-    cache: 'no-store',
   });
   if (res.status === 429) throw new QuotaError('Apple Maps quota reached (token)');
   if (!res.ok) throw new Error(`Apple Maps token: HTTP ${res.status}`);
@@ -43,7 +43,6 @@ async function call(path: string, params: Record<string, string | undefined>): P
     const res = await fetch(`${API}${path}?${qs}`, {
       headers: { Authorization: `Bearer ${await accessToken(retry)}` },
       signal: AbortSignal.timeout(TIMEOUT_MS),
-      cache: 'no-store',
     });
     if (res.status === 401 && !retry) continue; // token expired early: fetch a new one once
     if (res.status === 429) throw new QuotaError(`Apple Maps quota reached (${path})`);

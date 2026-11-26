@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { loadPublicGuide as loadFullGuide } from '../../../lib/guides/queries';
+import { guideLocale, guidePath } from '../../../lib/guides/model';
 import { APP_STORE_URL, OG_IMAGE } from '../../seo';
 import { pickLocale, shareTranslator } from '../locale';
 
@@ -8,7 +11,8 @@ import { pickLocale, shareTranslator } from '../locale';
 // With app v1.3+ installed, iOS opens the app directly (universal link) and this page isn't shown.
 // Everyone else (no app, PC, in-app browsers) gets a preview with buttons to the app and App Store,
 // and link previews (WhatsApp, iMessage, Slack) get the guide's title and cover.
-// In phase 1 this route redirects to the full guide page instead (plan F1.6).
+// Phase 1 (F1.6): a published public guide redirects (307) to its full page, in the visitor's
+// language when we have it, otherwise the guide's own. Private or unknown guides get this page.
 export const dynamic = 'force-dynamic';
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://fovddldyfhspgejjkvtd.supabase.co';
@@ -107,6 +111,11 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function ShortLinkPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  const full = await loadFullGuide(id).catch(() => null);
+  if (full) {
+    const lang = pickLocale((await headers()).get('accept-language'), guideLocale(full.guide));
+    redirect(guidePath(lang, full.guide));
+  }
   const [guide, locale] = await Promise.all([loadPublicGuide(id), visitorLocale()]);
   const t = await shareTranslator(locale);
   const appLink = `tripshare://guide/${encodeURIComponent(id)}`;
