@@ -7,7 +7,7 @@ import FeaturedGuides from '../../components/guide/FeaturedGuides';
 import { WEB_APP_PATH } from '../webapp';
 import { Link } from '../i18n/navigation';
 import { localizedMetadata } from '../seo';
-import Nav from './Nav';
+import Nav, { LogoMark } from './Nav';
 import Footer from './Footer';
 
 export async function generateMetadata({
@@ -99,6 +99,10 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
 
         <div className="relative max-w-6xl mx-auto w-full pt-24 pb-16" style={{ zIndex: 3 }}>
           <div className="max-w-2xl stagger">
+            <div className="mb-7 flex items-center gap-3">
+              <LogoMark className="h-14 w-14 shadow-card sm:h-16 sm:w-16" alt="TripShare logo" />
+              <span className="font-display text-2xl font-bold tracking-tight sm:text-3xl">TripShare</span>
+            </div>
             <h1 className="font-display text-5xl sm:text-7xl font-bold leading-[1.02] tracking-tight mb-6 [text-wrap:balance]">
               {t('hero.title')}<br />
               <span className="bg-gradient-to-r from-accent to-[#FFA07A] bg-clip-text text-transparent">
