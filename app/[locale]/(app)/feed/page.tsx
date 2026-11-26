@@ -38,6 +38,7 @@ export default async function FeedPage({ params }: { params: Promise<{ locale: s
     share: all.share,
     feed: all.feed,
     myGuides: all.myGuides,
+    guide: { like: all.guide.like, unlike: all.guide.unlike, likeSignIn: all.guide.likeSignIn },
     app: { home: all.app.home, common: all.app.common, tags: all.app.tags },
   };
 

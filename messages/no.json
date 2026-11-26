@@ -424,7 +424,10 @@
     "allGuides": "Alle guider",
     "ctaTitle": "Planlegg din egen tur med TripShare",
     "ctaText": "Lag guider dag for dag med kart og gåruter, og del dem med venner.",
-    "makeYourOwn": "Lag din egen guide"
+    "makeYourOwn": "Lag din egen guide",
+    "like": "Lik guiden",
+    "unlike": "Fjern liken",
+    "likeSignIn": "Logg inn for å like"
   },
   "featured": {
     "title": "Utvalgte reiseruter",
@@ -840,7 +843,7 @@
   },
   "liked": {
     "title": "Likte guider",
-    "intro": "Guidene du har likt i appen.",
+    "intro": "Guidene du har likt i appen eller på nettet.",
     "empty": "Du har ikke likt noen guider ennå.",
     "emptyCta": "Oppdag guider"
   }

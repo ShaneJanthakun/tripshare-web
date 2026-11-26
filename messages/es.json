@@ -424,7 +424,10 @@
     "allGuides": "Todas las guías",
     "ctaTitle": "Planifica tu propio viaje con TripShare",
     "ctaText": "Crea guías día a día con mapas y rutas a pie, y compártelas con tus amigos.",
-    "makeYourOwn": "Crea tu propia guía"
+    "makeYourOwn": "Crea tu propia guía",
+    "like": "Me gusta esta guía",
+    "unlike": "Quitar me gusta",
+    "likeSignIn": "Inicia sesión para dar me gusta"
   },
   "featured": {
     "title": "Itinerarios destacados",
@@ -840,7 +843,7 @@
   },
   "liked": {
     "title": "Guías que te gustan",
-    "intro": "Las guías que te han gustado en la app.",
+    "intro": "Las guías que te han gustado en la app o en la web.",
     "empty": "Aún no te ha gustado ninguna guía.",
     "emptyCta": "Descubrir guías"
   }

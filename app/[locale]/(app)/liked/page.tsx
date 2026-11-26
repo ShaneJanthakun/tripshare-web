@@ -3,11 +3,13 @@ import Nav from '../../Nav';
 import Footer from '../../Footer';
 import { Link } from '../../../i18n/navigation';
 import GuideCard from '../../../../components/guide/GuideCard';
+import LikeButton from '../../../../components/guide/LikeButton';
+import { showsCounts } from '../../../../lib/guides/model';
 import { createClient } from '../../../../lib/supabase/server';
 import { loadGuidesByIds } from '../../../../lib/guides/feed';
 
 // "Liked guides" (plan F4.7): the guides in profile.upvoted_guides, in the list's order (newest
-// last, as in the app). The list is the one the app keeps; likes on the web come with M2 (F4.6).
+// last, as in the app). The ♥ on each card unlikes (F4.6, lib/guides/likes.ts).
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'liked' });
@@ -19,8 +21,9 @@ export default async function LikedPage({ params }: { params: Promise<{ locale: 
   setRequestLocale(locale);
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
-  const [t, { data }] = await Promise.all([
+  const [t, gt, { data }] = await Promise.all([
     getTranslations({ locale, namespace: 'liked' }),
+    getTranslations({ locale, namespace: 'guide' }),
     supabase.from('user_profiles').select('upvoted_guides').eq('id', user!.id).maybeSingle(),
   ]);
   const ids = ((data as { upvoted_guides?: string[] } | null)?.upvoted_guides ?? []).filter(Boolean);
@@ -34,7 +37,17 @@ export default async function LikedPage({ params }: { params: Promise<{ locale: 
         <p className="mt-4 text-lg text-muted">{t('intro')}</p>
         {guides.length > 0 ? (
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {guides.map((p, i) => <GuideCard key={p.guide.id} p={p} locale={locale} priority={i < 3} />)}
+            {guides.map((p, i) => (
+              <div key={p.guide.id} className="relative">
+                <GuideCard p={p} locale={locale} priority={i < 3} hideCount />
+                {showsCounts(p) && (
+                  <div className="absolute right-3 top-3">
+                    <LikeButton variant="card" guideId={p.guide.id} authorId={p.authorId} count={p.upvotes} locale={locale}
+                      me={user!.id} liked labels={{ like: gt('like'), unlike: gt('unlike'), signIn: gt('likeSignIn') }} />
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         ) : (
           <div className="mt-10 rounded-3xl border border-border bg-surface p-10 text-center">

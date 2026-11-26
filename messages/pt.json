@@ -424,7 +424,10 @@
     "allGuides": "Todos os guias",
     "ctaTitle": "Planeia a tua viagem com o TripShare",
     "ctaText": "Cria guias dia a dia com mapas e percursos a pé, e partilha-os com os teus amigos.",
-    "makeYourOwn": "Cria o teu guia"
+    "makeYourOwn": "Cria o teu guia",
+    "like": "Gostar deste guia",
+    "unlike": "Retirar gosto",
+    "likeSignIn": "Inicia sessão para gostar"
   },
   "featured": {
     "title": "Roteiros em destaque",
@@ -840,7 +843,7 @@
   },
   "liked": {
     "title": "Guias de que gostaste",
-    "intro": "Os guias de que gostaste na app.",
+    "intro": "Os guias de que gostaste na app ou na web.",
     "empty": "Ainda não gostaste de nenhum guia.",
     "emptyCta": "Descobrir guias"
   }

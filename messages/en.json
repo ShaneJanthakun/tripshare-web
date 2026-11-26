@@ -424,7 +424,10 @@
     "allGuides": "All guides",
     "ctaTitle": "Plan your own trip with TripShare",
     "ctaText": "Build day-by-day guides with maps and walking routes, and share them with friends.",
-    "makeYourOwn": "Make your own guide"
+    "makeYourOwn": "Make your own guide",
+    "like": "Like this guide",
+    "unlike": "Remove like",
+    "likeSignIn": "Sign in to like"
   },
   "featured": {
     "title": "Featured itineraries",
@@ -840,7 +843,7 @@
   },
   "liked": {
     "title": "Liked guides",
-    "intro": "Guides you have liked in the app.",
+    "intro": "Guides you have liked in the app or on the web.",
     "empty": "You haven’t liked any guides yet.",
     "emptyCta": "Discover guides"
   }

@@ -424,7 +424,10 @@
     "allGuides": "全部攻略",
     "ctaTitle": "用 TripShare 规划您的旅行",
     "ctaText": "创建带地图和步行路线的每日攻略，并与朋友分享。",
-    "makeYourOwn": "创建您的攻略"
+    "makeYourOwn": "创建您的攻略",
+    "like": "点赞这份攻略",
+    "unlike": "取消点赞",
+    "likeSignIn": "登录后点赞"
   },
   "featured": {
     "title": "精选行程",
@@ -840,7 +843,7 @@
   },
   "liked": {
     "title": "喜欢的攻略",
-    "intro": "你在应用中点赞过的攻略。",
+    "intro": "你在应用或网页上点赞过的攻略。",
     "empty": "你还没有点赞任何攻略。",
     "emptyCta": "发现攻略"
   }

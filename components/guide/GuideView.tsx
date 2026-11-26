@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import LikeButton from './LikeButton';
 import { TAG_META, type CustomSection, type GuideTag, type Stop } from '../../lib/core/guide';
 import { renderUrl } from '../../lib/images';
 import {
@@ -77,7 +78,10 @@ export async function GuideHeader({ p, locale, subtitle }: HeaderProps) {
             </span>
             {n > 0 && <span>{t('share.days', { count: n })} · {t('share.stops', { count: stops })}</span>}
             {counts && <span>{t('guide.views', { count: p.views })}</span>}
-            {counts && p.upvotes > 0 && <span aria-label={t('guide.likes', { count: p.upvotes })}>♥ {p.upvotes}</span>}
+            {counts && (
+              <LikeButton guideId={g.id} authorId={p.authorId} count={p.upvotes} locale={locale}
+                labels={{ like: t('guide.like'), unlike: t('guide.unlike'), signIn: t('guide.likeSignIn') }} />
+            )}
             {lang && <span className="rounded-md border border-border px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide">{lang}</span>}
           </div>
 

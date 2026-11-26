@@ -424,7 +424,10 @@
     "allGuides": "Alle Guides",
     "ctaTitle": "Plane deine eigene Reise mit TripShare",
     "ctaText": "Erstelle Guides Tag für Tag mit Karten und Fußwegen und teile sie mit Freunden.",
-    "makeYourOwn": "Eigenen Guide erstellen"
+    "makeYourOwn": "Eigenen Guide erstellen",
+    "like": "Guide gefällt mir",
+    "unlike": "„Gefällt mir“ entfernen",
+    "likeSignIn": "Melde dich an, um Gefällt mir zu geben"
   },
   "featured": {
     "title": "Ausgewählte Reiserouten",
@@ -840,7 +843,7 @@
   },
   "liked": {
     "title": "Guides, die dir gefallen",
-    "intro": "Die Guides, die dir in der App gefallen haben.",
+    "intro": "Die Guides, die dir in der App oder im Web gefallen haben.",
     "empty": "Dir hat noch kein Guide gefallen.",
     "emptyCta": "Guides entdecken"
   }

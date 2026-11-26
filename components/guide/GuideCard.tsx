@@ -4,8 +4,9 @@ import { cardData, type CardData } from '../../lib/guides/discover';
 import CardView from './CardView';
 
 // A guide in a static list (home page, /guides, landing pages).
-export default async function GuideCard({ p, locale, priority = false }: { p: PublicGuide; locale: string; priority?: boolean }) {
-  return <CardView c={await toCard(p, locale)} priority={priority} />;
+export default async function GuideCard({ p, locale, priority = false, hideCount = false }: { p: PublicGuide; locale: string; priority?: boolean; hideCount?: boolean }) {
+  const c = await toCard(p, locale);
+  return <CardView c={hideCount ? { ...c, showCount: false } : c} priority={priority} />;
 }
 
 /** Card data in the visitor's language (for lists that are filtered in the browser). */

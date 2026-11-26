@@ -11,6 +11,8 @@ import {
   type FeedProfile, type Person,
 } from '../../lib/guides/feed';
 import CardView from '../guide/CardView';
+import LikeButton from '../guide/LikeButton';
+import { myLikes } from '../../lib/guides/likes';
 import FilterBar from '../guide/FilterBar';
 import { Empty } from '../guide/GuideBrowser';
 
@@ -31,6 +33,7 @@ export default function Feed({ locale, me, profile, initial }: Props) {
   const share = useTranslations('share');
   const feed = useTranslations('feed');
   const myGuides = useTranslations('myGuides');
+  const guideT = useTranslations('guide');
 
   const sb = useRef(createClient()).current;
   const [guides, setGuides] = useState(initial.guides);
@@ -45,6 +48,16 @@ export default function Feed({ locale, me, profile, initial }: Props) {
   const [people, setPeople] = useState<Person[]>([]);
   const [seen, setSeen] = useState<Set<string>>(new Set());
   useEffect(() => setSeen(readSeen()), []);
+  const [likes, setLikes] = useState<Set<string>>(new Set());
+  useEffect(() => { myLikes(sb, me).then(setLikes); }, [sb, me]);
+  const likeLabels = { like: guideT('like'), unlike: guideT('unlike'), signIn: guideT('likeSignIn') };
+  // Keep the new state when a card is drawn again (search, "Show more", sections moving).
+  function onLiked(id: string, liked: boolean, count: number) {
+    setLikes(prev => { const next = new Set(prev); if (liked) next.add(id); else next.delete(id); return next; });
+    const bump = (list: PublicGuide[]) => list.map(p => (p.guide.id === id ? { ...p, upvotes: count } : p));
+    setGuides(bump);
+    setServer(bump);
+  }
 
   const tagText = (tag: string) => (tagT.has(tag) ? tagT(tag) : TAG_META[tag as keyof typeof TAG_META]?.label ?? tag);
   const tagLabels = useMemo(() => Object.fromEntries(ALL_TAGS.map(t => [t, tagT.has(t) ? tagT(t) : TAG_META[t].label])), [tagT]);
@@ -100,7 +113,20 @@ export default function Feed({ locale, me, profile, initial }: Props) {
 
   const grid = (list: PublicGuide[], badge?: string) => (
     <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {list.map(p => <CardView key={p.guide.id} c={card(p)} badge={badge} onOpen={() => markSeen(p.guide.id)} />)}
+      {list.map(p => {
+        const c = card(p);
+        return (
+          <div key={p.guide.id} className="relative">
+            <CardView c={{ ...c, showCount: false }} badge={badge} onOpen={() => markSeen(p.guide.id)} />
+            {c.showCount && (
+              <div className="absolute right-3 top-3">
+                <LikeButton variant="card" guideId={p.guide.id} authorId={p.authorId} count={p.upvotes} locale={locale}
+                  me={me} liked={likes.has(p.guide.id)} labels={likeLabels} onChange={(liked, count) => onLiked(p.guide.id, liked, count)} />
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 
