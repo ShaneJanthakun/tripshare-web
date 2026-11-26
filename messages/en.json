@@ -294,6 +294,10 @@
         "body": "When you create an account, we collect your name and email address. When you use TripShare, we store the travel guides you create, including text, images, destinations and trip details. We also store your activity within the app, such as guides you have liked and users you follow."
       },
       {
+        "title": "Signing in with Apple or Google",
+        "body": "If you sign in with Apple or Google, we receive your name and email address from that service, and from Google also your profile picture. We use this only to create your account and sign you in. We never receive your password, and we get no access to anything else in your Google or Apple account, such as contacts, emails or files. We do not share this information with anyone, and it is deleted when you delete your account. TripShare's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements."
+      },
+      {
         "title": "How We Use Your Data",
         "body": "Your data is used solely to provide and improve TripShare. We use it to display your guides to other users (if you choose to make them public), personalise your feed, and enable social features such as following and liking. We do not sell your personal data to third parties and we do not use it for advertising. Public guides are also shown on tripshare.online together with your name: anyone with the link can read them, and search engines such as Google can show them. Private guides and drafts are not shown publicly."
       },

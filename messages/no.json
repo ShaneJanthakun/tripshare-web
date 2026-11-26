@@ -294,6 +294,10 @@
         "body": "Når du oppretter en konto, samler vi inn navn og e-postadresse. Når du bruker TripShare, lagrer vi reiseguidene du lager, inkludert tekst, bilder, destinasjoner og reisedetaljer. Vi lagrer også aktiviteten din i appen, som guider du har likt og brukere du følger."
       },
       {
+        "title": "Innlogging med Apple eller Google",
+        "body": "Logger du inn med Apple eller Google, får vi navnet ditt og e-postadressen din fra den tjenesten, og fra Google også profilbildet ditt. Vi bruker dette bare til å opprette kontoen din og logge deg inn. Vi får aldri passordet ditt, og vi får ikke tilgang til noe annet i Google- eller Apple-kontoen din, som kontakter, e-post eller filer. Vi deler ikke denne informasjonen med noen, og den slettes når du sletter kontoen din. TripShares bruk av informasjon fra Googles API-er følger Google API Services User Data Policy, inkludert kravene om begrenset bruk (Limited Use)."
+      },
+      {
         "title": "Hvordan vi bruker dataene dine",
         "body": "Dataene dine brukes utelukkende til å levere og forbedre TripShare. Vi bruker dem til å vise guidene dine til andre brukere (hvis du velger å gjøre dem offentlige), tilpasse feeden din og aktivere sosiale funksjoner som å følge og like. Vi selger ikke personopplysningene dine til tredjeparter og bruker dem ikke til reklame. Offentlige guider vises også på tripshare.online sammen med navnet ditt: alle med lenken kan lese dem, og søkemotorer som Google kan vise dem. Private guider og utkast vises ikke offentlig."
       },
