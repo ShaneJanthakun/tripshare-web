@@ -36,12 +36,19 @@ export default function DayEditor({ day, index, arrows, onRemove, onDuplicate }:
     change(d => ({ ...d, stops: [...d.stops, { id, name: n, notes: '', address: a, images: [] }] }));
     return id;
   };
-  // A suggestion becomes a stop at once; its street is filled in when found (resolveSuggestion).
-  const pushSuggestion = (sug: Suggestion) => {
+  // An address suggestion for the new stop: the text goes into the address field, the place's
+  // name into the name field when it is still empty. The street is filled in when found
+  // (resolveSuggestion) — in the field, or in the stop if it was added meanwhile.
+  const pickAddress = (sug: Suggestion) => {
     const shown = suggestionText(sug);
-    const id = push(sug.title, shown);
+    setAddress(shown);
+    if (!name.trim()) setName(sug.title);
     void resolveSuggestion(sug, mapLang).then(text => {
-      if (text !== shown) change(d => ({ ...d, stops: d.stops.map(x => (x.id === id && x.address === shown ? { ...x, address: text } : x)) }));
+      if (text === shown) return;
+      setAddress(a => (a === shown ? text : a));
+      update(g => (g.days.some(d => d.id === day.id && d.stops.some(x => x.address === shown))
+        ? { ...g, days: g.days.map(d => (d.id === day.id ? { ...d, stops: d.stops.map(x => (x.address === shown ? { ...x, address: text } : x)) } : d)) }
+        : g), { history: false });
     });
   };
 
@@ -145,12 +152,12 @@ export default function DayEditor({ day, index, arrows, onRemove, onDuplicate }:
       {day.stops.length === 0 && <p className="mt-3 text-sm text-faint">{gd('noStopsYet')}</p>}
 
       <div className="mt-4 grid gap-2 sm:grid-cols-[1fr_1fr_auto_auto]" data-native-undo>
-        {/* Picking a suggestion in the name field adds the stop with its address straight away. */}
-        <PlaceInput className={ui.input} value={name} placeholder={gd('addPlaceName')} dataRole="new-stop-name"
-          onChange={setName} onEnter={addStop} onPaste={pasteStops}
-          onPick={sug => { pushSuggestion(sug); setName(''); setAddress(''); }} />
+        {/* The name is the user's own words; only the address field searches. */}
+        <input className={ui.input} value={name} placeholder={gd('addPlaceName')} data-role="new-stop-name" maxLength={200}
+          onChange={e => setName(e.target.value)} onPaste={pasteStops}
+          onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addStop(); } }} />
         <PlaceInput className={ui.input} value={address} placeholder={gd('addAddressOptional')} dataRole="new-stop-address"
-          onChange={setAddress} onEnter={addStop} />
+          onChange={setAddress} onEnter={addStop} onPick={pickAddress} />
         <MapButton onClick={fromMap} large />
         <button type="button" onClick={addStop} className={ui.softButton}>+ {t('addStop')}</button>
       </div>
