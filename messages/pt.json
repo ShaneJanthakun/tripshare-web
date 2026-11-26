@@ -436,7 +436,9 @@
     "makeYourOwn": "Cria o teu guia",
     "like": "Gostar deste guia",
     "unlike": "Retirar gosto",
-    "likeSignIn": "Inicia sessão para gostar"
+    "likeSignIn": "Inicia sessão para gostar",
+    "translatedNote": "Traduzido automaticamente de {from} com o DeepL. Os nomes e moradas estão como o autor os escreveu.",
+    "translateLimit": "Atingiste o limite de 20 novas traduções por dia. Tenta novamente amanhã."
   },
   "featured": {
     "title": "Roteiros em destaque",

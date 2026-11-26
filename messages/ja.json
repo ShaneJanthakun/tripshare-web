@@ -436,7 +436,9 @@
     "makeYourOwn": "自分のガイドを作る",
     "like": "このガイドにいいね",
     "unlike": "いいねを取り消す",
-    "likeSignIn": "ログインしていいね"
+    "likeSignIn": "ログインしていいね",
+    "translatedNote": "DeepLで{from}から自動翻訳しました。名前と住所は作者が書いたままです。",
+    "translateLimit": "1日あたりの新しい翻訳の上限（20件）に達しました。明日もう一度お試しください。"
   },
   "featured": {
     "title": "おすすめの旅程",

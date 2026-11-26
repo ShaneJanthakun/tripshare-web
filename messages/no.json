@@ -436,7 +436,9 @@
     "makeYourOwn": "Lag din egen guide",
     "like": "Lik guiden",
     "unlike": "Fjern liken",
-    "likeSignIn": "Logg inn for å like"
+    "likeSignIn": "Logg inn for å like",
+    "translatedNote": "Automatisk oversatt fra {from} med DeepL. Navn og adresser står slik forfatteren skrev dem.",
+    "translateLimit": "Du har nådd grensen på 20 nye oversettelser i døgnet. Prøv igjen i morgen."
   },
   "featured": {
     "title": "Utvalgte reiseruter",

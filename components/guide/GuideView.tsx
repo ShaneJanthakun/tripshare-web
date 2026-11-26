@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import LikeButton from './LikeButton';
 import FollowButton from '../social/FollowButton';
 import PrintButton from './PrintButton';
-import { TAG_META, type CustomSection, type GuideTag, type Stop } from '../../lib/core/guide';
+import { TAG_META, type CustomSection, type GuideTag, type Stop, langCode } from '../../lib/core/guide';
 import { renderUrl } from '../../lib/images';
 import {
   type PublicGuide, daysWithStops, stopCount, displayAuthor, showsCounts, orderedBlocks,
@@ -24,10 +24,10 @@ type Props = {
   miniMaps: Record<string, GuideMapData>;
 };
 
-type HeaderProps = { p: PublicGuide; locale: string; subtitle: string };
+type HeaderProps = { p: PublicGuide; locale: string; subtitle: string; canTranslate?: boolean };
 
 /** The card on top: cover, title, subtitle, tags, author line and app buttons. */
-export async function GuideHeader({ p, locale, subtitle }: HeaderProps) {
+export async function GuideHeader({ p, locale, subtitle, canTranslate = false }: HeaderProps) {
   const g = p.guide;
   const t = await getTranslations({ locale });
   const n = daysWithStops(g).length;
@@ -110,6 +110,12 @@ export async function GuideHeader({ p, locale, subtitle }: HeaderProps) {
               {t('share.getApp')}
             </a>
             <PrintButton label={t('app.guideDetail.downloadPdf')} />
+            {/* F6.2: written in another language than the page → translate (signed in; DeepL). */}
+            {canTranslate && langCode(g.language) && langCode(g.language) !== locale && (
+              <a href={`/${locale}/translate/${encodeURIComponent(g.id)}`} className="rounded-xl border border-border px-5 py-3 text-center text-sm font-semibold transition-colors hover:bg-s2">
+                🌐 {t('app.guideDetail.translate')}
+              </a>
+            )}
           </div>
         </div>
     </header>

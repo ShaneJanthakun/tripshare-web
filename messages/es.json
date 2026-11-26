@@ -436,7 +436,9 @@
     "makeYourOwn": "Crea tu propia guía",
     "like": "Me gusta esta guía",
     "unlike": "Quitar me gusta",
-    "likeSignIn": "Inicia sesión para dar me gusta"
+    "likeSignIn": "Inicia sesión para dar me gusta",
+    "translatedNote": "Traducido automáticamente del {from} con DeepL. Los nombres y direcciones están como los escribió el autor.",
+    "translateLimit": "Has alcanzado el límite de 20 traducciones nuevas al día. Inténtalo de nuevo mañana."
   },
   "featured": {
     "title": "Itinerarios destacados",

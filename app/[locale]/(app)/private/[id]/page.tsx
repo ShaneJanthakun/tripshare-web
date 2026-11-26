@@ -31,8 +31,16 @@ export default async function PrivateGuidePage({ params, searchParams }: {
   const code = ((await searchParams).code ?? '').trim().toUpperCase().slice(0, 12);
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
-  const { data: row, error } = await supabase.rpc('get_guide_with_code', { p_guide_id: id, p_code: code });
-  const res = (error ? null : row) as Result;
+  // With a code: the database function (wrong codes are counted, M5d). Without: only what you
+  // may read anyway (your own guide), so opening the form never uses up an attempt.
+  let res: Result = null;
+  if (code) {
+    const { data: row, error } = await supabase.rpc('get_guide_with_code', { p_guide_id: id, p_code: code });
+    res = (error ? null : row) as Result;
+  } else {
+    const { data: own } = await supabase.from('guides').select('data, upvotes, views').eq('id', id).eq('author_id', user!.id).maybeSingle();
+    res = (own ?? null) as Result;
+  }
   const t = await getTranslations({ locale });
 
   if (!res?.data || typeof res.data !== 'object') {

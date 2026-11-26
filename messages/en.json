@@ -436,7 +436,9 @@
     "makeYourOwn": "Make your own guide",
     "like": "Like this guide",
     "unlike": "Remove like",
-    "likeSignIn": "Sign in to like"
+    "likeSignIn": "Sign in to like",
+    "translatedNote": "Translated automatically from {from} with DeepL. Names and addresses are as the author wrote them.",
+    "translateLimit": "You have reached the limit of 20 new translations a day. Try again tomorrow."
   },
   "featured": {
     "title": "Featured itineraries",

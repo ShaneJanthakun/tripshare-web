@@ -436,7 +436,9 @@
     "makeYourOwn": "创建您的攻略",
     "like": "点赞这份攻略",
     "unlike": "取消点赞",
-    "likeSignIn": "登录后点赞"
+    "likeSignIn": "登录后点赞",
+    "translatedNote": "已由 DeepL 从{from}自动翻译。名称和地址保留作者原文。",
+    "translateLimit": "你已达到每天 20 次新翻译的上限。请明天再试。"
   },
   "featured": {
     "title": "精选行程",

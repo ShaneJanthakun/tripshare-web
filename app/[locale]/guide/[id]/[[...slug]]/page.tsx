@@ -135,7 +135,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
         {/* PC: content left, map right and sticky. Phone: card, map, then content. */}
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-7">
-            <GuideHeader p={p} locale={locale} subtitle={subtitle} />
+            <GuideHeader p={p} locale={locale} subtitle={subtitle} canTranslate />
           </div>
           <aside className="lg:col-span-5 lg:col-start-8 lg:row-span-2 lg:row-start-1 print:hidden" aria-label={t('app.guideDetail.map')}>
             <div className="lg:sticky lg:top-24">

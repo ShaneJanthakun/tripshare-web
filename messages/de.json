@@ -436,7 +436,9 @@
     "makeYourOwn": "Eigenen Guide erstellen",
     "like": "Guide gefällt mir",
     "unlike": "„Gefällt mir“ entfernen",
-    "likeSignIn": "Melde dich an, um Gefällt mir zu geben"
+    "likeSignIn": "Melde dich an, um Gefällt mir zu geben",
+    "translatedNote": "Automatisch mit DeepL übersetzt aus: {from}. Namen und Adressen stehen so, wie der Autor sie geschrieben hat.",
+    "translateLimit": "Du hast das Limit von 20 neuen Übersetzungen pro Tag erreicht. Versuch es morgen wieder."
   },
   "featured": {
     "title": "Ausgewählte Reiserouten",

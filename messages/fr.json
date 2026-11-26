@@ -436,7 +436,9 @@
     "makeYourOwn": "Créer votre guide",
     "like": "Aimer ce guide",
     "unlike": "Retirer le j’aime",
-    "likeSignIn": "Connectez-vous pour aimer"
+    "likeSignIn": "Connectez-vous pour aimer",
+    "translatedNote": "Traduit automatiquement depuis : {from}, avec DeepL. Les noms et adresses sont tels que l’auteur les a écrits.",
+    "translateLimit": "Vous avez atteint la limite de 20 nouvelles traductions par jour. Réessayez demain."
   },
   "featured": {
     "title": "Itinéraires à la une",

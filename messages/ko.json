@@ -436,7 +436,9 @@
     "makeYourOwn": "나만의 가이드 만들기",
     "like": "이 가이드 좋아요",
     "unlike": "좋아요 취소",
-    "likeSignIn": "로그인하고 좋아요 누르기"
+    "likeSignIn": "로그인하고 좋아요 누르기",
+    "translatedNote": "DeepL로 {from}에서 자동 번역했어요. 이름과 주소는 작성자가 쓴 그대로예요.",
+    "translateLimit": "하루 새 번역 한도(20회)에 도달했어요. 내일 다시 시도하세요."
   },
   "featured": {
     "title": "추천 여행 일정",
