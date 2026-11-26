@@ -77,7 +77,10 @@ export default async function LocaleLayout({
   }
   setRequestLocale(locale);
 
+  // Only what client components need goes to the browser (today just the menu). The rest,
+  // including the app's texts under `app`, stays on the server and keeps every page light.
   const messages = await getMessages();
+  const clientMessages = { nav: messages.nav };
 
   return (
     <html lang={locale} className={`${display.variable} ${body.variable}`}>
@@ -86,7 +89,7 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
         />
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={clientMessages}>
           {children}
         </NextIntlClientProvider>
       </body>

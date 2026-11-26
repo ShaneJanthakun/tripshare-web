@@ -10,8 +10,13 @@ Hovedplanen ligger i `../plan/README.md`. Arkitektur og datakontrakt står i `..
 - `npm run dev` starter utviklingsserveren.
 - `npm run build` bygger. Kjør den alltid før push.
 - `npx next start -p 3123` lar deg teste produksjonsbygget lokalt.
+- `npm run sync-core` kopierer guidekjernen fra appen til `lib/core/guide.ts`. `-- --check` sjekker bare.
+- `npm run sync-strings` kopierer appens tekster til `messages/*.json` under `app.*`. `-- --check` sjekker bare.
+- `npm run test:roundtrip` sjekker at `migrate` → `guideToRow` ikke mister eller endrer data i noen offentlig guide. Kjøres etter hver sync-core og før publisering som rører lagring.
 
 ## Regler
+- **Supabase:** `lib/supabase/public.ts` på statiske sider (ingen cookies), `server.ts` bare i innloggede sider og route handlers (gjør siden dynamisk), `client.ts` i klientkomponenter og `admin.ts` (service role) bare til `geocode_cache`. Utlogging er alltid `signOut({ scope: 'local' })`.
+- **Klienttekster:** `NextIntlClientProvider` får bare navnerommene klientkomponentene trenger (i dag `nav`). Legg til et navnerom der når en ny klientkomponent trenger det.
 - **Statiske sider.** Sider under `app/[locale]` ferdigbygges (SSG).
   - `layout.tsx` har `generateStaticParams`.
   - Hver side kaller `setRequestLocale(use(params).locale)` og eksporterer `generateMetadata` via `localizedMetadata()` eller `pageMetadata()` i `app/seo.ts`.

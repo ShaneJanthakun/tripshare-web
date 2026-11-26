@@ -5,16 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync-core": "node scripts/sync-core.mjs",
+    "sync-strings": "node scripts/sync-app-strings.mjs",
+    "test:roundtrip": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --disable-warning=ExperimentalWarning scripts/roundtrip-test.mjs"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.47.10",
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.119.0",
     "next": "15.5.20",
     "next-intl": "^4.13.3",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@formatjs/icu-messageformat-parser": "3.5.15",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
