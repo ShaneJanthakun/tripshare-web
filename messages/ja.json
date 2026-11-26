@@ -508,7 +508,13 @@
     "previewNote": "最後に保存した内容で、読者に表示されるガイドです。",
     "previewDraft": "このガイドはまだ公開されていません。このプレビューはあなたにだけ表示されます。",
     "backToEditor": "← 編集に戻る",
-    "openPublic": "公開ページを開く ↗"
+    "openPublic": "公開ページを開く ↗",
+    "undo": "元に戻す",
+    "redo": "やり直す",
+    "dragHandle": "ドラッグして移動",
+    "duplicateDay": "日を複製",
+    "copyOf": "{label}（コピー）",
+    "shortcutsHint": "ショートカット：Ctrl/⌘+Zで元に戻す、Ctrl/⌘+Shift+Zでやり直す、Ctrl/⌘+Sですぐ保存。「場所の名前を追加」にリストを貼り付けると、複数のスポットを一度に追加できます。⠿をドラッグしてスポット・日・セクションを移動できます。"
   },
   "app": {
     "guideDetail": {

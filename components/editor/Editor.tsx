@@ -10,8 +10,9 @@ import type { GuideMapData } from '../../lib/guides/mapdata';
 import * as Core from '../../lib/core/guide';
 import type { TravelGuide, GuideTag } from '../../lib/core/guide';
 import GuideMap from '../guide/GuideMap';
-import { EditorContext, ui, type EditorApi, type PickedPlace } from './context';
-import { Arrows } from './bits';
+import { EditorContext, ui, type EditorApi, type PickedPlace, type DragItem } from './context';
+import { Arrows, DragHandle, indexAt } from './bits';
+import { moveBlockTo, duplicateDay, pastedLines } from './moves';
 import DayEditor from './DayEditor';
 import SectionEditor, { SectionPicker, PlacesEditor } from './SectionEditor';
 
@@ -105,9 +106,8 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
     setStatus(res.status === 'denied' ? 'denied' : 'error');
   }, [supabase, revalidate]);
 
-  const update = useCallback((fn: (g: TravelGuide) => TravelGuide) => {
-    const next = fn(latest.current);
-    if (next === latest.current) return;
+  /** Show a new version of the guide and schedule the save. */
+  const commit = useCallback((next: TravelGuide) => {
     latest.current = next;
     setGuide(next);
     dirty.current = true;
@@ -118,6 +118,65 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
     const wait = Date.now() - dirtySince.current > 5000 ? 0 : 800;
     timer.current = setTimeout(() => { timer.current = null; void run(); }, wait);
   }, [run]);
+
+  // ─── Undo / redo (Ctrl/⌘+Z, Ctrl/⌘+Shift+Z) ───────────────────────────────
+  // Typing in the same field with less than a second between keys is one step (a burst of words,
+  // not a letter); every click, drag, paste or upload is a step of its own. Publishing, finished
+  // uploads and loading a newer version are not steps.
+  const past = useRef<TravelGuide[]>([]);
+  const future = useRef<TravelGuide[]>([]);
+  const lastStep = useRef(0);
+  const lastField = useRef<Element | null>(null);
+  const uploaded = useRef(new Map<string, string>()); // local preview → URL ('' = failed)
+  const [hist, setHist] = useState({ undo: 0, redo: 0 });
+  const syncHist = useCallback(() => setHist({ undo: past.current.length, redo: future.current.length }), []);
+
+  const update = useCallback((fn: (g: TravelGuide) => TravelGuide, opts?: { history?: boolean }) => {
+    const prev = latest.current;
+    const next = fn(prev);
+    if (next === prev) return;
+    if (opts?.history !== false) {
+      const now = Date.now();
+      const el = document.activeElement;
+      const field = el instanceof HTMLTextAreaElement || (el instanceof HTMLInputElement && !['checkbox', 'file', 'radio'].includes(el.type)) ? el : null;
+      const typing = !!field && field === lastField.current && now - lastStep.current < 1000 && past.current.length > 0;
+      if (!typing) {
+        past.current.push(prev);
+        if (past.current.length > 100) past.current.shift();
+      }
+      lastStep.current = now;
+      lastField.current = field;
+      if (future.current.length) future.current = [];
+      syncHist();
+    }
+    commit(next);
+  }, [commit, syncHist]);
+
+  /** An old version back, with photos that finished uploading since then and today's publish state. */
+  const restore = useCallback((old: TravelGuide): TravelGuide => {
+    const now = latest.current;
+    let g: TravelGuide = { ...old, isCompleted: now.isCompleted, isDraft: now.isDraft, publishNotified: now.publishNotified };
+    for (const [local, url] of uploaded.current) g = url ? Core.replaceInGuide(g, local, url) : Core.removeFromGuide(g, local);
+    return g;
+  }, []);
+
+  const undo = useCallback(() => {
+    const prev = past.current.pop();
+    if (!prev) return;
+    future.current.push(latest.current);
+    lastStep.current = 0;
+    syncHist();
+    commit(restore(prev));
+  }, [commit, restore, syncHist]);
+
+  const redo = useCallback(() => {
+    const next = future.current.pop();
+    if (!next) return;
+    past.current.push(latest.current);
+    lastStep.current = 0;
+    syncHist();
+    commit(restore(next));
+  }, [commit, restore, syncHist]);
 
   // ─── Photos: local preview at once, uploaded three at a time ──────────────
   const [uploads, setUploads] = useState(0);
@@ -139,8 +198,8 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
       uploading.current++;
       setUploads(n => n + 1);
       withSlot(() => uploadImage(supabase, file))
-        .then(url => update(g => Core.replaceInGuide(g, local, url)))
-        .catch(() => { update(g => Core.removeFromGuide(g, local)); setError(gd('uploadFailedMsg')); })
+        .then(url => { uploaded.current.set(local, url); update(g => Core.replaceInGuide(g, local, url), { history: false }); })
+        .catch(() => { uploaded.current.set(local, ''); update(g => Core.removeFromGuide(g, local), { history: false }); setError(gd('uploadFailedMsg')); })
         .finally(() => {
           uploading.current--;
           setUploads(n => n - 1);
@@ -245,6 +304,8 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
     return () => window.removeEventListener('keydown', onKey);
   }, [picking]);
 
+  const [drag, setDrag] = useState<DragItem | null>(null);
+
   const api = useMemo<EditorApi>(() => ({
     locale,
     mapLang,
@@ -255,7 +316,33 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
     addImages,
     startPick,
     setError,
-  }), [locale, mapLang, near, update, addImages, startPick]);
+    drag,
+    setDrag,
+  }), [locale, mapLang, near, update, addImages, startPick, drag]);
+
+  // ─── Keyboard: Ctrl/⌘+Z undo, Ctrl/⌘+Shift+Z or Ctrl+Y redo, Ctrl/⌘+S save now ──────
+  // Fields for new things (new stop, add item, new section) keep the browser's own undo.
+  const conflictOpen = !!conflict;
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (!(e.metaKey || e.ctrlKey) || e.altKey) return;
+      const k = e.key.toLowerCase();
+      if (k === 's') { e.preventDefault(); if (dirty.current) void run(); return; }
+      if (k !== 'z' && k !== 'y') return;
+      if (conflictOpen || (e.target as HTMLElement | null)?.closest?.('[data-native-undo]')) return;
+      e.preventDefault();
+      if (k === 'y' || e.shiftKey) redo();
+      else undo();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [run, undo, redo, conflictOpen]);
+
+  // ─── Drag and drop of whole days and sections ─────────────────────────────
+  const blocks = useRef<HTMLDivElement>(null);
+  const [armedBlock, setArmedBlock] = useState<number | null>(null);
+  const [blockOver, setBlockOver] = useState<number | null>(null);
+  const blockEls = () => Array.from(blocks.current?.querySelectorAll(':scope > [data-block]') ?? []);
 
   // ─── Actions ──────────────────────────────────────────────────────────────
   function loadLatest() {
@@ -264,6 +351,9 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
     setGuide(conflict.latest);
     version.current = conflict.version;
     dirty.current = false;
+    past.current = [];
+    future.current = [];
+    syncHist();
     setConflict(null);
     setStatus('saved');
   }
@@ -286,7 +376,7 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
       if (imgs.length === 0) return setError(gd('accomPhotoRequired', { name }));
     }
     setError('');
-    update(x => ({ ...x, isCompleted: true, isDraft: false }));
+    update(x => ({ ...x, isCompleted: true, isDraft: false }), { history: false });
     void run().then(() => { revalidate(true); setNotice(t('publishedNote')); });
   }
 
@@ -337,6 +427,14 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
     update(g => Core.addDay(g, title || gd('dayN', { n: g.days.length + 1 })));
   }
 
+  function copyDay(id: string) {
+    const g = latest.current;
+    const day = g.days.find(d => d.id === id);
+    if (!day) return;
+    if (g.days.length >= Core.LIMITS.days) return setError(gd('invalid_tooManyDays'));
+    update(x => duplicateDay(x, id, t('copyOf', { label: day.label })));
+  }
+
   const removeDay = (id: string) => { if (window.confirm(gd('removeDayMsg'))) update(g => Core.removeDay(g, id)); };
   const removeSection = (id: string) => {
     if (window.confirm(`${gd('removeSectionTitle')}\n\n${gd('removeSectionMsg')}`)) update(g => Core.removeCustomSection(g, id));
@@ -359,6 +457,12 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
           <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:gap-4 sm:px-6">
             <a href={`/${locale}/my-guides`} className="text-sm text-muted hover:text-ink" aria-label={common('back')}>←</a>
             <p className="min-w-0 flex-1 truncate font-display font-semibold">{guide.title || guide.destination}</p>
+            <div className="hidden gap-1 sm:flex">
+              <button type="button" onClick={undo} disabled={!hist.undo} title={`${t('undo')} (Ctrl/⌘+Z)`} aria-label={t('undo')}
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-lg text-muted hover:bg-s2 hover:text-ink disabled:opacity-30">↶</button>
+              <button type="button" onClick={redo} disabled={!hist.redo} title={`${t('redo')} (Ctrl/⌘+Shift+Z)`} aria-label={t('redo')}
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-lg text-muted hover:bg-s2 hover:text-ink disabled:opacity-30">↷</button>
+            </div>
             <span className={`hidden text-sm sm:block ${statusColor}`} role="status">{statusText}</span>
             {status === 'error' && (
               <button type="button" onClick={() => { dirty.current = true; void run(); }} className="text-sm font-semibold text-accent">{t('retry')}</button>
@@ -369,7 +473,7 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
               <span className="hidden sm:inline">{gd('viewGuide')} ↗</span>
             </a>
             {guide.isCompleted ? (
-              <button type="button" onClick={() => update(g => ({ ...g, isCompleted: false }))} className="rounded-xl border border-border px-4 py-2 text-sm font-semibold hover:bg-s2">
+              <button type="button" onClick={() => update(g => ({ ...g, isCompleted: false }), { history: false })} className="rounded-xl border border-border px-4 py-2 text-sm font-semibold hover:bg-s2">
                 {gd('returnToEditing')}
               </button>
             ) : (
@@ -500,16 +604,52 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
 
             <TipsEditor tips={guide.generalTips ?? []} onChange={tips => update(g => ({ ...g, generalTips: tips }))} />
 
-            {order.map((entry, idx) => {
-              const arrows = <Arrows up={idx > 0} down={idx < order.length - 1} onMove={dir => update(g => Core.moveBlock(g, idx, dir))} />;
-              if (entry.kind === 'day') {
-                const index = guide.days.findIndex(d => d.id === entry.id);
-                const day = guide.days[index];
-                return day ? <DayEditor key={day.id} day={day} index={index} arrows={arrows} onRemove={() => removeDay(day.id)} /> : null;
-              }
-              const section = guide.customSections.find(s => s.id === entry.id);
-              return section ? <SectionEditor key={section.id} section={section} arrows={arrows} onRemove={() => removeSection(section.id)} /> : null;
-            })}
+            <div ref={blocks} className="space-y-8"
+              onDragOver={e => { if (drag?.kind !== 'block') return; e.preventDefault(); e.dataTransfer.dropEffect = 'move'; setBlockOver(indexAt(blockEls(), e.clientY)); }}
+              onDragLeave={e => { if (!e.currentTarget.contains(e.relatedTarget as Node)) setBlockOver(null); }}
+              onDrop={e => {
+                if (drag?.kind !== 'block') return;
+                e.preventDefault();
+                const from = drag.index;
+                const to = indexAt(blockEls(), e.clientY);
+                update(g => moveBlockTo(g, from, to));
+                setBlockOver(null);
+                setDrag(null);
+              }}>
+              {order.map((entry, idx) => {
+                const controls = (
+                  <>
+                    <DragHandle onArm={on => setArmedBlock(on ? idx : null)} />
+                    <Arrows up={idx > 0} down={idx < order.length - 1} onMove={dir => update(g => Core.moveBlock(g, idx, dir))} />
+                  </>
+                );
+                let card: React.ReactNode = null;
+                if (entry.kind === 'day') {
+                  const index = guide.days.findIndex(d => d.id === entry.id);
+                  const day = guide.days[index];
+                  if (day) card = <DayEditor day={day} index={index} arrows={controls} onRemove={() => removeDay(day.id)} onDuplicate={() => copyDay(day.id)} />;
+                } else {
+                  const section = guide.customSections.find(s => s.id === entry.id);
+                  if (section) card = <SectionEditor section={section} arrows={controls} onRemove={() => removeSection(section.id)} />;
+                }
+                if (!card) return null;
+                return (
+                  <div key={`${entry.kind}-${entry.id}`} data-block draggable={armedBlock === idx}
+                    onDragStart={e => {
+                      if (armedBlock !== idx) return; // a stop inside is being dragged
+                      e.dataTransfer.effectAllowed = 'move';
+                      e.dataTransfer.setData('text/plain', '');
+                      setDrag({ kind: 'block', index: idx });
+                    }}
+                    onDragEnd={() => { setArmedBlock(null); setBlockOver(null); setDrag(null); }}
+                    className={`relative ${drag?.kind === 'block' && drag.index === idx ? 'opacity-40' : ''}`}>
+                    {blockOver === idx && <span className="pointer-events-none absolute inset-x-0 -top-[18px] z-10 h-1 rounded-full bg-accent" />}
+                    {blockOver === order.length && idx === order.length - 1 && <span className="pointer-events-none absolute inset-x-0 -bottom-[18px] z-10 h-1 rounded-full bg-accent" />}
+                    {card}
+                  </div>
+                );
+              })}
+            </div>
 
             <div className="grid gap-3 sm:grid-cols-2">
               <button type="button" onClick={() => addDay()}
@@ -525,6 +665,8 @@ export default function Editor({ locale, initialGuide, initialVersion, previewPa
             {(guide.placesToVisit ?? []).length > 0 && (
               <PlacesEditor places={guide.placesToVisit} onChange={fn => update(g => ({ ...g, placesToVisit: fn(g.placesToVisit ?? []) }))} />
             )}
+
+            <p className="hidden text-xs leading-relaxed text-faint sm:block">{t('shortcutsHint')}</p>
 
             <button type="button" onClick={deleteGuide}
               className="w-full rounded-2xl border border-red-500/30 px-4 py-3 text-sm font-semibold text-red-300 hover:bg-red-500/10">
@@ -583,7 +725,13 @@ function TipsEditor({ tips, onChange }: { tips: string[]; onChange: (tips: strin
           </li>
         ))}
       </ul>
-      <input className={`${ui.input} mt-3`} value={draft} placeholder={gd('addTip')} onChange={e => setDraft(e.target.value)}
+      <input className={`${ui.input} mt-3`} value={draft} placeholder={gd('addTip')} onChange={e => setDraft(e.target.value)} data-native-undo
+        onPaste={e => {
+          const lines = pastedLines(e.clipboardData.getData('text'));
+          if (lines.length < 2) return;
+          e.preventDefault();
+          onChange([...tips, ...lines]);
+        }}
         onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); add(); } }} onBlur={add} />
     </section>
   );

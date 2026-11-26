@@ -1,27 +1,33 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import * as Core from '../../lib/core/guide';
 import type { TripDay, Stop } from '../../lib/core/guide';
 import { renderUrl } from '../../lib/images';
 import { dayColor } from '../../lib/guides/model';
 import { useEditor, ui } from './context';
-import { Arrows, RemoveButton } from './bits';
+import { Arrows, RemoveButton, DragHandle, DropLine, indexAt } from './bits';
+import { moveStop, pastedLines, stopsFromLines } from './moves';
 import PlaceInput, { suggestionText, resolveSuggestion, type Suggestion } from './PlaceInput';
 
 // One day (plan C): name, route switch, stops with name/address/notes, and new stops by
-// typing, by picking a suggestion, or by clicking on the map.
+// typing, by picking a suggestion, by clicking on the map or by pasting a list. Stops can be
+// dragged to another place in the day or to another day.
 
-export default function DayEditor({ day, index, arrows, onRemove }: {
-  day: TripDay; index: number; arrows: React.ReactNode; onRemove: () => void;
+export default function DayEditor({ day, index, arrows, onRemove, onDuplicate }: {
+  day: TripDay; index: number; arrows: React.ReactNode; onRemove: () => void; onDuplicate: () => void;
 }) {
   const gd = useTranslations('app.guideDetail');
   const t = useTranslations('editor');
-  const { updateDay, startPick, mapLang } = useEditor();
+  const { update, updateDay, startPick, mapLang, drag, setDrag } = useEditor();
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
+  const [armed, setArmed] = useState<string | null>(null); // stop whose grip is held
+  const [over, setOver] = useState<number | null>(null);   // drop position in this day
+  const list = useRef<HTMLOListElement>(null);
   const color = dayColor(index);
+  const stopEls = () => Array.from(list.current?.querySelectorAll(':scope > li[data-stop]') ?? []);
 
   const change = (fn: (d: TripDay) => TripDay) => updateDay(day.id, fn);
   const setStop = (id: string, patch: Partial<Stop>) => change(d => ({ ...d, stops: d.stops.map(s => (s.id === id ? { ...s, ...patch } : s)) }));
@@ -50,14 +56,47 @@ export default function DayEditor({ day, index, arrows, onRemove }: {
   // Stop from the map (app 578): the name is the first part of the address.
   const fromMap = () => startPick(p => push(p.address.split(',')[0].trim() || p.address, p.address));
 
+  // Several lines pasted into the name field: one stop per line ("name<TAB>address" from a sheet).
+  const pasteStops = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    const lines = pastedLines(e.clipboardData.getData('text'));
+    if (lines.length < 2) return;
+    e.preventDefault();
+    const stops = stopsFromLines(lines);
+    change(d => ({ ...d, stops: [...d.stops, ...stops] }));
+    setName('');
+  };
+
+  const dragging = drag?.kind === 'stop';
+  const dropHandlers = {
+    onDragOver: (e: React.DragEvent) => {
+      if (!dragging) return;
+      e.preventDefault();
+      e.stopPropagation();
+      e.dataTransfer.dropEffect = 'move';
+      setOver(indexAt(stopEls(), e.clientY));
+    },
+    onDragLeave: (e: React.DragEvent) => { if (!e.currentTarget.contains(e.relatedTarget as Node)) setOver(null); },
+    onDrop: (e: React.DragEvent) => {
+      if (drag?.kind !== 'stop') return;
+      e.preventDefault();
+      e.stopPropagation();
+      const to = indexAt(stopEls(), e.clientY);
+      update(g => moveStop(g, drag.dayId, drag.stopId, day.id, to));
+      setOver(null);
+      setDrag(null);
+    },
+  };
+
   return (
-    <section className={ui.card}>
+    <section className={ui.card} {...dropHandlers}>
       <div className="flex items-center gap-3">
         <span className="h-3 w-3 shrink-0 rounded-full" style={{ background: color }} />
         <input className={`${ui.input} font-display text-lg font-bold`} value={day.label} maxLength={200}
           onChange={e => change(d => ({ ...d, label: e.target.value }))}
           onBlur={e => { if (!e.target.value.trim()) change(d => ({ ...d, label: gd('dayN', { n: index + 1 }) })); }} />
         {arrows}
+        <button type="button" onClick={onDuplicate} title={t('duplicateDay')} aria-label={t('duplicateDay')}
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-border text-muted hover:text-ink">⧉</button>
         <RemoveButton onClick={onRemove} label={gd('removeDay')} />
       </div>
 
@@ -69,10 +108,16 @@ export default function DayEditor({ day, index, arrows, onRemove }: {
         </label>
       )}
 
-      <ol className="mt-4 space-y-3">
+      <ol ref={list} className={`mt-4 space-y-3 ${dragging && day.stops.length === 0 ? 'min-h-[56px] rounded-2xl border border-dashed border-accent/50' : ''}`}>
         {day.stops.map((s, i) => (
-          <li key={s.id} className="rounded-2xl border border-border bg-bg/40 p-3">
+          <li key={s.id} data-stop draggable={armed === s.id}
+            onDragStart={e => { e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', s.name); setDrag({ kind: 'stop', dayId: day.id, stopId: s.id }); }}
+            onDragEnd={() => { setArmed(null); setOver(null); setDrag(null); }}
+            className={`relative rounded-2xl border border-border bg-bg/40 p-3 ${drag?.kind === 'stop' && drag.stopId === s.id ? 'opacity-40' : ''}`}>
+            {over === i && <DropLine at="top" />}
+            {over === day.stops.length && i === day.stops.length - 1 && <DropLine at="bottom" />}
             <div className="flex items-center gap-2">
+              <DragHandle onArm={on => setArmed(on ? s.id : null)} />
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold text-white" style={{ background: color }}>{i + 1}</span>
               <input className={ui.input} value={s.name} placeholder={t('stopName')} onChange={e => setStop(s.id, { name: e.target.value })} />
               <Arrows up={i > 0} down={i < day.stops.length - 1} onMove={dir => change(d => ({ ...d, stops: Core.moveItem(d.stops, i, dir) }))} />
@@ -99,10 +144,10 @@ export default function DayEditor({ day, index, arrows, onRemove }: {
       </ol>
       {day.stops.length === 0 && <p className="mt-3 text-sm text-faint">{gd('noStopsYet')}</p>}
 
-      <div className="mt-4 grid gap-2 sm:grid-cols-[1fr_1fr_auto_auto]">
+      <div className="mt-4 grid gap-2 sm:grid-cols-[1fr_1fr_auto_auto]" data-native-undo>
         {/* Picking a suggestion in the name field adds the stop with its address straight away. */}
         <PlaceInput className={ui.input} value={name} placeholder={gd('addPlaceName')} dataRole="new-stop-name"
-          onChange={setName} onEnter={addStop}
+          onChange={setName} onEnter={addStop} onPaste={pasteStops}
           onPick={sug => { pushSuggestion(sug); setName(''); setAddress(''); }} />
         <PlaceInput className={ui.input} value={address} placeholder={gd('addAddressOptional')} dataRole="new-stop-address"
           onChange={setAddress} onEnter={addStop} />

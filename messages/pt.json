@@ -508,7 +508,13 @@
     "previewNote": "É assim que os leitores veem o guia, a partir da tua última gravação.",
     "previewDraft": "O guia ainda não está publicado – só tu podes ver esta pré-visualização.",
     "backToEditor": "← Voltar à edição",
-    "openPublic": "Abrir a página pública ↗"
+    "openPublic": "Abrir a página pública ↗",
+    "undo": "Anular",
+    "redo": "Refazer",
+    "dragHandle": "Arrasta para mover",
+    "duplicateDay": "Duplicar dia",
+    "copyOf": "{label} (cópia)",
+    "shortcutsHint": "Atalhos: Ctrl/⌘+Z anula, Ctrl/⌘+Shift+Z refaz, Ctrl/⌘+S grava já. Cola uma lista em «Adicionar nome do lugar» para adicionar várias paragens de uma vez. Arrasta ⠿ para mover paragens, dias e secções."
   },
   "app": {
     "guideDetail": {

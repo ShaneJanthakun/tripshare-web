@@ -508,7 +508,13 @@
     "previewNote": "Voici le guide tel que les lecteurs le voient, d’après ta dernière sauvegarde.",
     "previewDraft": "Le guide n’est pas encore publié – toi seul peux voir cet aperçu.",
     "backToEditor": "← Retour à l’édition",
-    "openPublic": "Ouvrir la page publique ↗"
+    "openPublic": "Ouvrir la page publique ↗",
+    "undo": "Annuler",
+    "redo": "Rétablir",
+    "dragHandle": "Glisser pour déplacer",
+    "duplicateDay": "Dupliquer le jour",
+    "copyOf": "{label} (copie)",
+    "shortcutsHint": "Raccourcis : Ctrl/⌘+Z annule, Ctrl/⌘+Maj+Z rétablit, Ctrl/⌘+S enregistre tout de suite. Colle une liste dans « Ajouter le nom du lieu » pour ajouter plusieurs étapes d’un coup. Fais glisser ⠿ pour déplacer étapes, jours et sections."
   },
   "app": {
     "guideDetail": {

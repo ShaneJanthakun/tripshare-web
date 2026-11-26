@@ -508,7 +508,13 @@
     "previewNote": "This is how readers see the guide, from your latest save.",
     "previewDraft": "The guide isn’t published yet – only you can see this preview.",
     "backToEditor": "← Back to editing",
-    "openPublic": "Open the public page ↗"
+    "openPublic": "Open the public page ↗",
+    "undo": "Undo",
+    "redo": "Redo",
+    "dragHandle": "Drag to move",
+    "duplicateDay": "Duplicate day",
+    "copyOf": "{label} (copy)",
+    "shortcutsHint": "Shortcuts: Ctrl/⌘+Z undoes, Ctrl/⌘+Shift+Z redoes, Ctrl/⌘+S saves now. Paste a list into “Add place name” to add several stops at once. Drag ⠿ to move stops, days and sections."
   },
   "app": {
     "guideDetail": {

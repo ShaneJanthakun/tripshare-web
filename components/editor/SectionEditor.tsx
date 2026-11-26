@@ -55,7 +55,7 @@ export default function SectionEditor({ section, arrows, onRemove }: { section: 
               </li>
             ))}
           </ul>
-          <AddRow placeholder={gd('addItem')} button={gd('add')} onAdd={v => change(x => ({ ...x, items: [...x.items, v] }))} />
+          <AddRow placeholder={gd('addItem')} button={gd('add')} onAdd={vs => change(x => ({ ...x, items: [...x.items, ...vs] }))} />
         </>
       )}
 
@@ -75,7 +75,7 @@ export default function SectionEditor({ section, arrows, onRemove }: { section: 
             ))}
           </ul>
           <AddRow placeholder={gd('addItem')} button={gd('add')}
-            onAdd={v => change(x => ({ ...x, checklistItems: [...x.checklistItems, { id: Core.uid(), text: v, checked: false }] }))} />
+            onAdd={vs => change(x => ({ ...x, checklistItems: [...x.checklistItems, ...vs.map(text => ({ id: Core.uid(), text, checked: false }))] }))} />
         </>
       )}
 
@@ -120,7 +120,7 @@ function MapItems({ section: s }: { section: CustomSection }) {
           </li>
         ))}
       </ul>
-      <div className="mt-3 flex gap-2">
+      <div className="mt-3 flex gap-2" data-native-undo>
         <PlaceInput className={ui.input} value={text} placeholder={gd('typeAddress')} onChange={setText} onEnter={addText}
           onPick={sug => { add(`${suggestionText(sug)}|||${sug.lat},${sug.lng}`); setText(''); }} />
         <button type="button" onClick={addText} className={`${ui.softButton} shrink-0`}>{gd('add')}</button>
@@ -212,7 +212,7 @@ export function SectionPicker({ onClose, onAddDay, onAddSection }: {
     onClose();
   };
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="picker-title"
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="picker-title" data-native-undo
       onKeyDown={e => { if (e.key === 'Escape') onClose(); }}>
       <div className="max-h-[90vh] w-full max-w-lg overflow-auto rounded-3xl border border-border bg-surface p-6 shadow-card">
         <h2 id="picker-title" className="font-display text-xl font-bold">{gd('newSection')}</h2>
@@ -258,7 +258,7 @@ export function PlacesEditor({ places, onChange }: { places: Stop[]; onChange: (
         ))}
       </ul>
       <AddRow placeholder={gd('addPlace')} button={gd('add')}
-        onAdd={name => onChange(list => [...list, { id: Core.uid(), name, notes: '', address: '', images: [] }])} />
+        onAdd={names => onChange(list => [...list, ...names.map(name => ({ id: Core.uid(), name, notes: '', address: '', images: [] }))])} />
     </section>
   );
 }

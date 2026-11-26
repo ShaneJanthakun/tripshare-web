@@ -508,7 +508,13 @@
     "previewNote": "마지막으로 저장한 내용으로 독자에게 보이는 가이드예요.",
     "previewDraft": "아직 공개되지 않은 가이드예요. 이 미리보기는 나만 볼 수 있어요.",
     "backToEditor": "← 편집으로 돌아가기",
-    "openPublic": "공개 페이지 열기 ↗"
+    "openPublic": "공개 페이지 열기 ↗",
+    "undo": "실행 취소",
+    "redo": "다시 실행",
+    "dragHandle": "끌어서 이동",
+    "duplicateDay": "일정 복제",
+    "copyOf": "{label} (사본)",
+    "shortcutsHint": "단축키: Ctrl/⌘+Z 실행 취소, Ctrl/⌘+Shift+Z 다시 실행, Ctrl/⌘+S 바로 저장. ‘장소 이름 추가’에 목록을 붙여 넣으면 여러 장소를 한 번에 추가할 수 있어요. ⠿를 끌어서 장소, 일정, 섹션을 옮기세요."
   },
   "app": {
     "guideDetail": {

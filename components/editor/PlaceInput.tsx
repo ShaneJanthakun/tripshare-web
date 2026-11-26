@@ -45,13 +45,14 @@ type Props = {
   /** Enter without a highlighted suggestion. */
   onEnter?: () => void;
   onBlur?: () => void;
+  onPaste?: (e: React.ClipboardEvent<HTMLInputElement>) => void;
   placeholder?: string;
   className?: string;
   dataRole?: string;
   id?: string;
 };
 
-export default function PlaceInput({ value, onChange, onPick, onEnter, onBlur, placeholder, className, dataRole, id }: Props) {
+export default function PlaceInput({ value, onChange, onPick, onEnter, onBlur, onPaste, placeholder, className, dataRole, id }: Props) {
   const { near, mapLang } = useEditor();
   const [items, setItems] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
@@ -115,6 +116,7 @@ export default function PlaceInput({ value, onChange, onPick, onEnter, onBlur, p
         value={value}
         placeholder={placeholder}
         data-role={dataRole}
+        onPaste={onPaste}
         onChange={e => { onChange(e.target.value); search(e.target.value); }}
         onKeyDown={e => {
           if (open && items.length) {

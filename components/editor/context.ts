@@ -8,13 +8,17 @@ import type { TravelGuide, TripDay, CustomSection } from '../../lib/core/guide';
 
 export type PickedPlace = { lat: number; lng: number; address: string };
 
+/** What is being dragged: a stop (to another place in its day or another day) or a whole block. */
+export type DragItem = { kind: 'stop'; dayId: string; stopId: string } | { kind: 'block'; index: number };
+
 export type EditorApi = {
   locale: string;
   /** Language for Apple's address search ("no" → "nb"). */
   mapLang: string;
   /** "lat,lng" of the destination: address suggestions are ranked around it. */
   near: string | undefined;
-  update: (fn: (g: TravelGuide) => TravelGuide) => void;
+  /** history: false = not an undo step (publishing, finished uploads). */
+  update: (fn: (g: TravelGuide) => TravelGuide, opts?: { history?: boolean }) => void;
   updateDay: (id: string, fn: (d: TripDay) => TripDay) => void;
   updateSection: (id: string, fn: (s: CustomSection) => CustomSection) => void;
   /** Shows the files at once (local preview), uploads them and swaps in the URLs. */
@@ -22,6 +26,8 @@ export type EditorApi = {
   /** The next click on the map gives a place (with the address when one is found). */
   startPick: (onPlace: (p: PickedPlace) => void, allowNoAddress?: boolean) => void;
   setError: (msg: string) => void;
+  drag: DragItem | null;
+  setDrag: (d: DragItem | null) => void;
 };
 
 export const EditorContext = createContext<EditorApi | null>(null);

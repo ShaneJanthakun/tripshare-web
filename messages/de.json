@@ -508,7 +508,13 @@
     "previewNote": "So sehen Leser den Guide, nach deiner letzten Speicherung.",
     "previewDraft": "Der Guide ist noch nicht veröffentlicht – nur du siehst diese Vorschau.",
     "backToEditor": "← Zurück zur Bearbeitung",
-    "openPublic": "Öffentliche Seite öffnen ↗"
+    "openPublic": "Öffentliche Seite öffnen ↗",
+    "undo": "Rückgängig",
+    "redo": "Wiederholen",
+    "dragHandle": "Zum Verschieben ziehen",
+    "duplicateDay": "Tag duplizieren",
+    "copyOf": "{label} (Kopie)",
+    "shortcutsHint": "Tastenkürzel: Strg/⌘+Z macht rückgängig, Strg/⌘+Umschalt+Z wiederholt, Strg/⌘+S speichert sofort. Füge eine Liste in „Ortsnamen hinzufügen“ ein, um mehrere Stopps auf einmal anzulegen. Ziehe ⠿, um Stopps, Tage und Abschnitte zu verschieben."
   },
   "app": {
     "guideDetail": {

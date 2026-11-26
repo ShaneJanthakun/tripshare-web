@@ -508,7 +508,13 @@
     "previewNote": "这是读者看到的指南，基于你最近一次保存。",
     "previewDraft": "指南尚未发布——只有你能看到此预览。",
     "backToEditor": "← 返回编辑",
-    "openPublic": "打开公开页面 ↗"
+    "openPublic": "打开公开页面 ↗",
+    "undo": "撤销",
+    "redo": "重做",
+    "dragHandle": "拖动以移动",
+    "duplicateDay": "复制这一天",
+    "copyOf": "{label}（副本）",
+    "shortcutsHint": "快捷键：Ctrl/⌘+Z 撤销，Ctrl/⌘+Shift+Z 重做，Ctrl/⌘+S 立即保存。在“添加地点名称”中粘贴列表，可一次添加多个站点。拖动 ⠿ 可移动站点、日期和版块。"
   },
   "app": {
     "guideDetail": {

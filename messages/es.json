@@ -508,7 +508,13 @@
     "previewNote": "Así ven la guía los lectores, según tu último guardado.",
     "previewDraft": "La guía aún no está publicada: solo tú puedes ver esta vista previa.",
     "backToEditor": "← Volver a editar",
-    "openPublic": "Abrir la página pública ↗"
+    "openPublic": "Abrir la página pública ↗",
+    "undo": "Deshacer",
+    "redo": "Rehacer",
+    "dragHandle": "Arrastra para mover",
+    "duplicateDay": "Duplicar día",
+    "copyOf": "{label} (copia)",
+    "shortcutsHint": "Atajos: Ctrl/⌘+Z deshace, Ctrl/⌘+Mayús+Z rehace, Ctrl/⌘+S guarda al momento. Pega una lista en «Añadir nombre del lugar» para añadir varias paradas a la vez. Arrastra ⠿ para mover paradas, días y secciones."
   },
   "app": {
     "guideDetail": {

@@ -508,7 +508,13 @@
     "previewNote": "Slik ser leserne guiden, fra siste lagring.",
     "previewDraft": "Guiden er ikke publisert ennå – bare du kan se denne forhåndsvisningen.",
     "backToEditor": "← Tilbake til redigering",
-    "openPublic": "Åpne den offentlige siden ↗"
+    "openPublic": "Åpne den offentlige siden ↗",
+    "undo": "Angre",
+    "redo": "Gjør om",
+    "dragHandle": "Dra for å flytte",
+    "duplicateDay": "Dupliser dag",
+    "copyOf": "{label} (kopi)",
+    "shortcutsHint": "Hurtigtaster: Ctrl/⌘+Z angrer, Ctrl/⌘+Shift+Z gjør om, Ctrl/⌘+S lagrer med en gang. Lim inn en liste i «Legg til stedsnavn» for å legge til flere stopp samtidig. Dra i ⠿ for å flytte stopp, dager og seksjoner."
   },
   "app": {
     "guideDetail": {
