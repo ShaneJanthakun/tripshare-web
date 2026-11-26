@@ -27,7 +27,15 @@
     "guideTitle": "{destination} på {days} dager – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "Reiserute for {destination} på {days} dager",
-    "guideFallback": "Guide til {destination} på {days} dager med {stops} stopp, kart og gåruter."
+    "guideFallback": "Guide til {destination} på {days} dager med {stops} stopp, kart og gåruter.",
+    "guidesCountry": {
+      "title": "Reiseguider til {country} – reiseruter dag for dag | TripShare",
+      "description": "{count, plural, one {# reiserute} other {# reiseruter}} dag for dag til {country}, med kart, stopp og tips fra folk som faktisk har vært der."
+    },
+    "guidesTag": {
+      "title": "{tag}: reiseguider dag for dag | TripShare",
+      "description": "{count, plural, one {# reiserute} other {# reiseruter}} i kategorien {tag}, dag for dag med kart, stopp og tips fra folk som faktisk har vært der."
+    }
   },
   "nav": {
     "features": "Funksjoner",
@@ -426,7 +434,18 @@
     "intro": "Reiseruter dag for dag med kart, gåruter og tips. Åpne en, eller last ned appen og lag din egen.",
     "mostLoved": "Mest likt",
     "newest": "Nyeste",
-    "count": "{count, plural, one {# guide} other {# guider}}"
+    "count": "{count, plural, one {# guide} other {# guider}}",
+    "search": "Søk etter by, land eller reisetype",
+    "countries": "Reisemål",
+    "travelTypes": "Reisetyper",
+    "resultsOne": "1 guide",
+    "resultsMany": "# guider",
+    "countryHeading": "Reiseguider til {country}",
+    "tagHeading": "{tag}: reiseguider",
+    "countryIntro": "{count, plural, one {# reiserute} other {# reiseruter}} dag for dag til {country}, med kart, stopp og tips fra folk som faktisk har vært der.",
+    "tagIntro": "{count, plural, one {# reiserute} other {# reiseruter}} i kategorien {tag}, dag for dag med kart, stopp og tips fra folk som faktisk har vært der.",
+    "moreCountries": "Flere reisemål",
+    "moreTypes": "Flere reisetyper"
   },
   "login": {
     "title": "Logg inn på TripShare",

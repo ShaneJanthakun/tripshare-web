@@ -27,7 +27,15 @@
     "guideTitle": "{destination} {days}일 여행 일정 – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "{destination} {days}일 여행 일정",
-    "guideFallback": "{destination} {days}일 가이드: 방문지 {stops}곳, 지도, 도보 경로 포함."
+    "guideFallback": "{destination} {days}일 가이드: 방문지 {stops}곳, 지도, 도보 경로 포함.",
+    "guidesCountry": {
+      "title": "{country} 여행 가이드 – 일자별 여행 일정 | TripShare",
+      "description": "{country} 일자별 여행 일정 {count}개. 실제로 다녀온 사람들의 지도, 장소, 팁을 함께 담았어요."
+    },
+    "guidesTag": {
+      "title": "{tag}: 일자별 여행 가이드 | TripShare",
+      "description": "{tag} 여행 일정 {count}개. 실제로 다녀온 사람들의 지도, 장소, 팁과 함께 일자별로 정리했어요."
+    }
   },
   "nav": {
     "features": "기능",
@@ -426,7 +434,18 @@
     "intro": "지도, 도보 경로, 팁이 담긴 일별 여행 일정. 하나를 열어 보거나 앱을 받아 나만의 가이드를 만드세요.",
     "mostLoved": "인기순",
     "newest": "최신순",
-    "count": "{count, plural, other {가이드 #개}}"
+    "count": "{count, plural, other {가이드 #개}}",
+    "search": "도시, 국가, 여행 유형 검색",
+    "countries": "여행지",
+    "travelTypes": "여행 유형",
+    "resultsOne": "가이드 1개",
+    "resultsMany": "가이드 #개",
+    "countryHeading": "{country} 여행 가이드",
+    "tagHeading": "{tag}: 여행 가이드",
+    "countryIntro": "{country} 일자별 여행 일정 {count}개. 실제로 다녀온 사람들의 지도, 장소, 팁을 함께 담았어요.",
+    "tagIntro": "{tag} 여행 일정 {count}개. 실제로 다녀온 사람들의 지도, 장소, 팁과 함께 일자별로 정리했어요.",
+    "moreCountries": "다른 여행지",
+    "moreTypes": "다른 여행 유형"
   },
   "login": {
     "title": "TripShare 로그인",

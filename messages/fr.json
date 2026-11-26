@@ -27,7 +27,15 @@
     "guideTitle": "{destination} : itinéraire de {days} jours – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "Itinéraire de {days} jours à {destination}",
-    "guideFallback": "Guide de {days} jours à {destination} avec {stops} étapes, une carte et des itinéraires à pied."
+    "guideFallback": "Guide de {days} jours à {destination} avec {stops} étapes, une carte et des itinéraires à pied.",
+    "guidesCountry": {
+      "title": "Guides de voyage : {country} – itinéraires jour par jour | TripShare",
+      "description": "{count, plural, one {# itinéraire jour par jour} other {# itinéraires jour par jour}} – {country}, avec cartes, étapes et conseils de personnes qui y sont vraiment allées."
+    },
+    "guidesTag": {
+      "title": "{tag} : guides de voyage jour par jour | TripShare",
+      "description": "{count, plural, one {# itinéraire} other {# itinéraires}} – {tag}, jour par jour avec cartes, étapes et conseils de personnes qui y sont vraiment allées."
+    }
   },
   "nav": {
     "features": "Fonctionnalités",
@@ -426,7 +434,18 @@
     "intro": "Des itinéraires jour par jour avec cartes, itinéraires à pied et conseils. Ouvrez-en un, ou téléchargez l’app et créez le vôtre.",
     "mostLoved": "Les plus aimés",
     "newest": "Les plus récents",
-    "count": "{count, plural, one {# guide} other {# guides}}"
+    "count": "{count, plural, one {# guide} other {# guides}}",
+    "search": "Rechercher une ville, un pays ou un type de voyage",
+    "countries": "Destinations",
+    "travelTypes": "Types de voyage",
+    "resultsOne": "1 guide",
+    "resultsMany": "# guides",
+    "countryHeading": "Guides de voyage : {country}",
+    "tagHeading": "{tag} : guides de voyage",
+    "countryIntro": "{count, plural, one {# itinéraire jour par jour} other {# itinéraires jour par jour}} – {country}, avec cartes, étapes et conseils de personnes qui y sont vraiment allées.",
+    "tagIntro": "{count, plural, one {# itinéraire} other {# itinéraires}} – {tag}, jour par jour avec cartes, étapes et conseils de personnes qui y sont vraiment allées.",
+    "moreCountries": "Autres destinations",
+    "moreTypes": "Autres types de voyage"
   },
   "login": {
     "title": "Se connecter à TripShare",

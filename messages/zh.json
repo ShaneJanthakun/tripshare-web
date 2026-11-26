@@ -27,7 +27,15 @@
     "guideTitle": "{destination}{days}日游行程 – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "{destination}{days}日游行程",
-    "guideFallback": "{destination}{days}日游攻略，含{stops}个停留点、地图和步行路线。"
+    "guideFallback": "{destination}{days}日游攻略，含{stops}个停留点、地图和步行路线。",
+    "guidesCountry": {
+      "title": "{country}旅行攻略 – 每日行程 | TripShare",
+      "description": "{count} 份{country}每日行程，附地图、站点和真正去过的人分享的建议。"
+    },
+    "guidesTag": {
+      "title": "{tag}：每日旅行攻略 | TripShare",
+      "description": "{count} 份{tag}行程，按天安排，附地图、站点和真正去过的人分享的建议。"
+    }
   },
   "nav": {
     "features": "功能",
@@ -426,7 +434,18 @@
     "intro": "带地图、步行路线和贴士的每日行程。打开看看，或下载应用创建您自己的攻略。",
     "mostLoved": "最受欢迎",
     "newest": "最新",
-    "count": "{count, plural, other {#篇攻略}}"
+    "count": "{count, plural, other {#篇攻略}}",
+    "search": "搜索城市、国家或旅行类型",
+    "countries": "目的地",
+    "travelTypes": "旅行类型",
+    "resultsOne": "1 份攻略",
+    "resultsMany": "# 份攻略",
+    "countryHeading": "{country}旅行攻略",
+    "tagHeading": "{tag}：旅行攻略",
+    "countryIntro": "{count} 份{country}每日行程，附地图、站点和真正去过的人分享的建议。",
+    "tagIntro": "{count} 份{tag}行程，按天安排，附地图、站点和真正去过的人分享的建议。",
+    "moreCountries": "更多目的地",
+    "moreTypes": "更多旅行类型"
   },
   "login": {
     "title": "登录 TripShare",

@@ -27,7 +27,15 @@
     "guideTitle": "{destination} {days}-Day Itinerary – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "{days}-day {destination} itinerary",
-    "guideFallback": "A {days}-day guide to {destination} with {stops} stops, a map and walking routes."
+    "guideFallback": "A {days}-day guide to {destination} with {stops} stops, a map and walking routes.",
+    "guidesCountry": {
+      "title": "{country} Travel Guides – Day-by-Day Itineraries | TripShare",
+      "description": "{count, plural, one {# day-by-day itinerary} other {# day-by-day itineraries}} for {country}, with maps, stops and tips from people who have actually been there."
+    },
+    "guidesTag": {
+      "title": "{tag}: Day-by-Day Travel Guides | TripShare",
+      "description": "{count, plural, one {# itinerary} other {# itineraries}} for {tag}, day by day with maps, stops and tips from people who have actually been there."
+    }
   },
   "nav": {
     "features": "Features",
@@ -426,7 +434,18 @@
     "intro": "Day-by-day itineraries with maps, walking routes and tips. Open one, or get the app and make your own.",
     "mostLoved": "Most loved",
     "newest": "Newest",
-    "count": "{count, plural, one {# guide} other {# guides}}"
+    "count": "{count, plural, one {# guide} other {# guides}}",
+    "search": "Search city, country or travel type",
+    "countries": "Destinations",
+    "travelTypes": "Travel types",
+    "resultsOne": "1 guide",
+    "resultsMany": "# guides",
+    "countryHeading": "{country} travel guides",
+    "tagHeading": "{tag}: travel guides",
+    "countryIntro": "{count, plural, one {# day-by-day itinerary} other {# day-by-day itineraries}} for {country}, with maps, stops and tips from people who have actually been there.",
+    "tagIntro": "{count, plural, one {# itinerary} other {# itineraries}} in {tag}, day by day with maps, stops and tips from people who have actually been there.",
+    "moreCountries": "More destinations",
+    "moreTypes": "More travel types"
   },
   "login": {
     "title": "Sign in to TripShare",

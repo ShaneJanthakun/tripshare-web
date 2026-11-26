@@ -27,7 +27,15 @@
     "guideTitle": "{destination}: itinerario de {days} días – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "Itinerario de {days} días por {destination}",
-    "guideFallback": "Guía de {days} días por {destination} con {stops} paradas, mapa y rutas a pie."
+    "guideFallback": "Guía de {days} días por {destination} con {stops} paradas, mapa y rutas a pie.",
+    "guidesCountry": {
+      "title": "Guías de viaje de {country}: itinerarios día a día | TripShare",
+      "description": "{count, plural, one {# itinerario día a día} other {# itinerarios día a día}} de {country}, con mapas, paradas y consejos de gente que ha estado allí de verdad."
+    },
+    "guidesTag": {
+      "title": "{tag}: guías de viaje día a día | TripShare",
+      "description": "{count, plural, one {# itinerario} other {# itinerarios}} de {tag}, día a día con mapas, paradas y consejos de gente que ha estado allí de verdad."
+    }
   },
   "nav": {
     "features": "Funciones",
@@ -426,7 +434,18 @@
     "intro": "Itinerarios día a día con mapas, rutas a pie y consejos. Abre uno o descarga la app y crea el tuyo.",
     "mostLoved": "Los más queridos",
     "newest": "Más recientes",
-    "count": "{count, plural, one {# guía} other {# guías}}"
+    "count": "{count, plural, one {# guía} other {# guías}}",
+    "search": "Busca ciudad, país o tipo de viaje",
+    "countries": "Destinos",
+    "travelTypes": "Tipos de viaje",
+    "resultsOne": "1 guía",
+    "resultsMany": "# guías",
+    "countryHeading": "Guías de viaje de {country}",
+    "tagHeading": "{tag}: guías de viaje",
+    "countryIntro": "{count, plural, one {# itinerario día a día} other {# itinerarios día a día}} de {country}, con mapas, paradas y consejos de gente que ha estado allí de verdad.",
+    "tagIntro": "{count, plural, one {# itinerario} other {# itinerarios}} de {tag}, día a día con mapas, paradas y consejos de gente que ha estado allí de verdad.",
+    "moreCountries": "Más destinos",
+    "moreTypes": "Más tipos de viaje"
   },
   "login": {
     "title": "Inicia sesión en TripShare",

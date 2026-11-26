@@ -27,7 +27,15 @@
     "guideTitle": "{destination} {days}日間の旅程 – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "{destination} {days}日間の旅程",
-    "guideFallback": "{destination}を巡る{days}日間のガイド。立ち寄り先{stops}か所、地図、徒歩ルート付き。"
+    "guideFallback": "{destination}を巡る{days}日間のガイド。立ち寄り先{stops}か所、地図、徒歩ルート付き。",
+    "guidesCountry": {
+      "title": "{country}の旅行ガイド – 1日ごとの旅程 | TripShare",
+      "description": "{country}の1日ごとの旅程が{count}件。実際に訪れた人による地図、スポット、ヒント付き。"
+    },
+    "guidesTag": {
+      "title": "{tag}：1日ごとの旅行ガイド | TripShare",
+      "description": "{tag}の旅程が{count}件。実際に訪れた人による地図、スポット、ヒント付きで1日ごとに紹介。"
+    }
   },
   "nav": {
     "features": "機能",
@@ -426,7 +434,18 @@
     "intro": "地図、徒歩ルート、ヒント付きの日ごとの旅程。気になるものを開くか、アプリで自分のガイドを作りましょう。",
     "mostLoved": "人気順",
     "newest": "新着順",
-    "count": "{count, plural, other {#件のガイド}}"
+    "count": "{count, plural, other {#件のガイド}}",
+    "search": "都市、国、旅のタイプで検索",
+    "countries": "旅行先",
+    "travelTypes": "旅のタイプ",
+    "resultsOne": "1件のガイド",
+    "resultsMany": "#件のガイド",
+    "countryHeading": "{country}の旅行ガイド",
+    "tagHeading": "{tag}：旅行ガイド",
+    "countryIntro": "{country}の1日ごとの旅程が{count}件。実際に訪れた人による地図、スポット、ヒント付き。",
+    "tagIntro": "{tag}の旅程が{count}件。実際に訪れた人による地図、スポット、ヒント付きで1日ごとに紹介。",
+    "moreCountries": "ほかの旅行先",
+    "moreTypes": "ほかの旅のタイプ"
   },
   "login": {
     "title": "TripShareにログイン",

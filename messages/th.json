@@ -27,7 +27,15 @@
     "guideTitle": "แผนเที่ยว{destination} {days} วัน – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "แผนเที่ยว{destination} {days} วัน",
-    "guideFallback": "ไกด์เที่ยว{destination} {days} วัน พร้อม {stops} จุดแวะ แผนที่ และเส้นทางเดิน"
+    "guideFallback": "ไกด์เที่ยว{destination} {days} วัน พร้อม {stops} จุดแวะ แผนที่ และเส้นทางเดิน",
+    "guidesCountry": {
+      "title": "ไกด์ท่องเที่ยว{country} – แผนเที่ยวรายวัน | TripShare",
+      "description": "แผนเที่ยว{country}รายวัน {count} แผน พร้อมแผนที่ จุดแวะ และเคล็ดลับจากคนที่ไปมาจริง"
+    },
+    "guidesTag": {
+      "title": "{tag}: ไกด์ท่องเที่ยวรายวัน | TripShare",
+      "description": "แผนเที่ยวแบบ{tag} {count} แผน รายวันพร้อมแผนที่ จุดแวะ และเคล็ดลับจากคนที่ไปมาจริง"
+    }
   },
   "nav": {
     "features": "ฟีเจอร์",
@@ -426,7 +434,18 @@
     "intro": "แผนเที่ยวรายวันพร้อมแผนที่ เส้นทางเดิน และเคล็ดลับ เปิดดูได้เลย หรือดาวน์โหลดแอปแล้วสร้างของคุณเอง",
     "mostLoved": "ถูกใจมากที่สุด",
     "newest": "ใหม่ล่าสุด",
-    "count": "{count, plural, other {# ไกด์}}"
+    "count": "{count, plural, other {# ไกด์}}",
+    "search": "ค้นหาเมือง ประเทศ หรือประเภทการเดินทาง",
+    "countries": "จุดหมายปลายทาง",
+    "travelTypes": "ประเภทการเดินทาง",
+    "resultsOne": "1 ไกด์",
+    "resultsMany": "# ไกด์",
+    "countryHeading": "ไกด์ท่องเที่ยว{country}",
+    "tagHeading": "{tag}: ไกด์ท่องเที่ยว",
+    "countryIntro": "แผนเที่ยว{country}รายวัน {count} แผน พร้อมแผนที่ จุดแวะ และเคล็ดลับจากคนที่ไปมาจริง",
+    "tagIntro": "แผนเที่ยวแบบ{tag} {count} แผน รายวันพร้อมแผนที่ จุดแวะ และเคล็ดลับจากคนที่ไปมาจริง",
+    "moreCountries": "จุดหมายอื่น ๆ",
+    "moreTypes": "ประเภทการเดินทางอื่น ๆ"
   },
   "login": {
     "title": "เข้าสู่ระบบ TripShare",

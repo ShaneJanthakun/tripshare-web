@@ -27,7 +27,15 @@
     "guideTitle": "{destination}: {days}-Tage-Reiseroute – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "{days}-Tage-Reiseroute für {destination}",
-    "guideFallback": "{days}-Tage-Reiseführer für {destination} mit {stops} Stopps, Karte und Fußwegen."
+    "guideFallback": "{days}-Tage-Reiseführer für {destination} mit {stops} Stopps, Karte und Fußwegen.",
+    "guidesCountry": {
+      "title": "Reiseführer {country} – Reiserouten Tag für Tag | TripShare",
+      "description": "{count, plural, one {# Reiseroute} other {# Reiserouten}} Tag für Tag für {country}, mit Karten, Stopps und Tipps von Leuten, die wirklich dort waren."
+    },
+    "guidesTag": {
+      "title": "{tag}: Reiseführer Tag für Tag | TripShare",
+      "description": "{count, plural, one {# Reiseroute} other {# Reiserouten}} zum Thema {tag}, Tag für Tag mit Karten, Stopps und Tipps von Leuten, die wirklich dort waren."
+    }
   },
   "nav": {
     "features": "Funktionen",
@@ -426,7 +434,18 @@
     "intro": "Reiserouten Tag für Tag mit Karten, Fußwegen und Tipps. Öffne eine oder lade die App und erstelle deine eigene.",
     "mostLoved": "Am beliebtesten",
     "newest": "Neueste",
-    "count": "{count, plural, one {# Guide} other {# Guides}}"
+    "count": "{count, plural, one {# Guide} other {# Guides}}",
+    "search": "Stadt, Land oder Reiseart suchen",
+    "countries": "Reiseziele",
+    "travelTypes": "Reisearten",
+    "resultsOne": "1 Guide",
+    "resultsMany": "# Guides",
+    "countryHeading": "Reiseführer {country}",
+    "tagHeading": "{tag}: Reiseführer",
+    "countryIntro": "{count, plural, one {# Reiseroute} other {# Reiserouten}} Tag für Tag für {country}, mit Karten, Stopps und Tipps von Leuten, die wirklich dort waren.",
+    "tagIntro": "{count, plural, one {# Reiseroute} other {# Reiserouten}} zum Thema {tag}, Tag für Tag mit Karten, Stopps und Tipps von Leuten, die wirklich dort waren.",
+    "moreCountries": "Weitere Reiseziele",
+    "moreTypes": "Weitere Reisearten"
   },
   "login": {
     "title": "Bei TripShare anmelden",

@@ -27,7 +27,15 @@
     "guideTitle": "{destination}: roteiro de {days} dias – {title}",
     "guideTitleNoDays": "{title} – {destination}",
     "guideLead": "Roteiro de {days} dias em {destination}",
-    "guideFallback": "Guia de {days} dias em {destination} com {stops} paragens, mapa e percursos a pé."
+    "guideFallback": "Guia de {days} dias em {destination} com {stops} paragens, mapa e percursos a pé.",
+    "guidesCountry": {
+      "title": "Guias de viagem: {country} – roteiros dia a dia | TripShare",
+      "description": "{count, plural, one {# roteiro dia a dia} other {# roteiros dia a dia}} – {country}, com mapas, paragens e dicas de quem lá esteve mesmo."
+    },
+    "guidesTag": {
+      "title": "{tag}: guias de viagem dia a dia | TripShare",
+      "description": "{count, plural, one {# roteiro} other {# roteiros}} – {tag}, dia a dia com mapas, paragens e dicas de quem lá esteve mesmo."
+    }
   },
   "nav": {
     "features": "Funcionalidades",
@@ -426,7 +434,18 @@
     "intro": "Roteiros dia a dia com mapas, percursos a pé e dicas. Abre um, ou descarrega a app e cria o teu.",
     "mostLoved": "Mais gostados",
     "newest": "Mais recentes",
-    "count": "{count, plural, one {# guia} other {# guias}}"
+    "count": "{count, plural, one {# guia} other {# guias}}",
+    "search": "Pesquisa cidade, país ou tipo de viagem",
+    "countries": "Destinos",
+    "travelTypes": "Tipos de viagem",
+    "resultsOne": "1 guia",
+    "resultsMany": "# guias",
+    "countryHeading": "Guias de viagem: {country}",
+    "tagHeading": "{tag}: guias de viagem",
+    "countryIntro": "{count, plural, one {# roteiro dia a dia} other {# roteiros dia a dia}} – {country}, com mapas, paragens e dicas de quem lá esteve mesmo.",
+    "tagIntro": "{count, plural, one {# roteiro} other {# roteiros}} – {tag}, dia a dia com mapas, paragens e dicas de quem lá esteve mesmo.",
+    "moreCountries": "Mais destinos",
+    "moreTypes": "Mais tipos de viagem"
   },
   "login": {
     "title": "Inicia sessão no TripShare",

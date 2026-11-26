@@ -3,9 +3,11 @@ import { routing } from './i18n/routing';
 import { PAGES, SITE_URL, url, languageAlternates } from './seo';
 import { loadPublicGuides } from '../lib/guides/queries';
 import { guideLocale, guidePath, isThin } from '../lib/guides/model';
+import { landingCountries, landingTags } from '../lib/guides/discover';
 
-// Fixed pages in every language, plus each guide once at its canonical URL. Thin guides
-// (noindex) stay out (12-seo.md § 3, rule 5). Rebuilt with the guides (10 minutes).
+// Fixed pages in every language, the landing pages per destination and travel type in every
+// language (F4.2), plus each guide once at its canonical URL. Thin guides (noindex) stay out
+// (12-seo.md § 3, rule 5). Rebuilt with the guides (10 minutes).
 export const revalidate = 600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -28,5 +30,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     }));
-  return [...fixed, ...guidePages];
+  const landingPaths = [
+    ...landingCountries(guides).map(c => `/guides/country/${c.slug}`),
+    ...landingTags(guides).map(t => `/guides/tag/${t.slug}`),
+  ];
+  const landing = landingPaths.flatMap((path) =>
+    routing.locales.map((locale) => ({
+      url: url(locale, path),
+      lastModified,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+      alternates: { languages: languageAlternates(path) },
+    })),
+  );
+  return [...fixed, ...landing, ...guidePages];
 }
