@@ -34,13 +34,15 @@
     "support": "Suporte",
     "privacy": "Privacidade",
     "download": "Descarregar",
-    "guides": "Guias"
+    "guides": "Guias",
+    "webApp": "Usar na web"
   },
   "hero": {
     "title": "A app de viagens criada por",
     "titleAccent": "pessoas que realmente viajam",
     "subtitle": "Cria guias de viagem dia a dia com paragens reais, mapas e fotos — e descobre viagens partilhadas por pessoas que estiveram lá de verdade. Sem anúncios. Sem influencers. Só viagens honestas.",
-    "badge": "Grátis · iOS e Mac"
+    "badge": "Grátis · iOS e Mac",
+    "webApp": "Explora guias no navegador"
   },
   "screenshots": {
     "label": "Ver em ação"

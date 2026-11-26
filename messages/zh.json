@@ -34,13 +34,15 @@
     "support": "支持",
     "privacy": "隐私",
     "download": "下载",
-    "guides": "攻略"
+    "guides": "攻略",
+    "webApp": "网页版"
   },
   "hero": {
     "title": "由真正旅行的人",
     "titleAccent": "打造的旅行应用",
     "subtitle": "创建包含真实地点、地图和照片的逐日旅行攻略，发现真正去过那里的人分享的旅程。没有广告。没有网红。只有真实的旅行。",
-    "badge": "免费 · iOS 和 Mac"
+    "badge": "免费 · iOS 和 Mac",
+    "webApp": "在浏览器中浏览攻略"
   },
   "screenshots": {
     "label": "实际效果"

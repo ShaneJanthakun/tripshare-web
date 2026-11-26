@@ -34,13 +34,15 @@
     "support": "Support",
     "privacy": "Datenschutz",
     "download": "Laden",
-    "guides": "Guides"
+    "guides": "Guides",
+    "webApp": "Im Browser nutzen"
   },
   "hero": {
     "title": "Die Reise-App von Leuten,",
     "titleAccent": "die wirklich reisen",
     "subtitle": "Erstelle Reiseguides Tag für Tag — mit echten Stopps, Karten und Fotos — und entdecke Trips von Menschen, die wirklich dort waren. Keine Werbung. Keine Influencer. Nur ehrliches Reisen.",
-    "badge": "Kostenlos · iOS & Mac"
+    "badge": "Kostenlos · iOS & Mac",
+    "webApp": "Guides im Browser entdecken"
   },
   "screenshots": {
     "label": "So sieht es aus"

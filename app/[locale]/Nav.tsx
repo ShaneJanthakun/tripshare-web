@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '../i18n/navigation';
 import LangSwitcher from './LangSwitcher';
+import { WEB_APP_PATH } from '../webapp';
 
 export function LogoMark({ className = 'w-6 h-6' }: { className?: string }) {
   return (
@@ -11,6 +12,14 @@ export function LogoMark({ className = 'w-6 h-6' }: { className?: string }) {
       <rect width="32" height="32" rx="9" fill="#FF5C38" />
       <path d="M16 8c-3.6 0-6.5 2.85-6.5 6.36 0 4.77 5.7 9.14 6.26 9.56a.4.4 0 0 0 .48 0c.56-.42 6.26-4.79 6.26-9.56C22.5 10.85 19.6 8 16 8Z" fill="#fff" />
       <circle cx="16" cy="14.2" r="2.3" fill="#FF5C38" />
+    </svg>
+  );
+}
+
+function GlobeIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
     </svg>
   );
 }
@@ -43,11 +52,28 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
           TripShare
         </Link>
         <div className="flex items-center gap-1 sm:gap-5 text-sm text-muted">
-          <Link href="/guides" className={item('guides')}>{t('guides')}</Link>
           <Link href="/features" className={item('features')}>{t('features')}</Link>
           <Link href="/support" className={item('support')}>{t('support')}</Link>
           <Link href="/privacy" className={item('privacy')}>{t('privacy')}</Link>
           <LangSwitcher />
+          {/* The browser version, easy to find (Shane, 26.11.2026): a labelled button from sm, an icon on phones. */}
+          <Link
+            href={WEB_APP_PATH}
+            className={`hidden sm:inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-2 text-xs font-semibold whitespace-nowrap transition-colors ${
+              active === 'guides' ? 'border-accent bg-accent/15 text-ink' : 'border-accent/60 text-ink hover:bg-accent/15'
+            }`}
+          >
+            <GlobeIcon className="h-3.5 w-3.5 text-accent" />
+            {t('webApp')}
+          </Link>
+          <Link
+            href={WEB_APP_PATH}
+            aria-label={t('webApp')}
+            className="sm:hidden flex h-9 w-9 items-center justify-center rounded-xl border border-accent/60 text-accent"
+            onClick={() => setMenuOpen(false)}
+          >
+            <GlobeIcon className="h-4 w-4" />
+          </Link>
           <a
             href="https://apps.apple.com/app/apple-store/id6778097653?pt=123110991&ct=tripshare.online&mt=8"
             target="_blank"
@@ -77,6 +103,10 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
 
       {menuOpen && (
         <div className="sm:hidden max-w-5xl mx-auto mt-2 rounded-2xl border border-white/10 bg-bg/90 backdrop-blur-2xl shadow-card p-2">
+          <Link href={WEB_APP_PATH} className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-ink bg-accent/15 border border-accent/40" onClick={() => setMenuOpen(false)}>
+            <GlobeIcon className="h-4 w-4 text-accent" />
+            {t('webApp')}
+          </Link>
           <Link href="/guides" className={mobileItem('guides')} onClick={() => setMenuOpen(false)}>{t('guides')}</Link>
           <Link href="/features" className={mobileItem('features')} onClick={() => setMenuOpen(false)}>{t('features')}</Link>
           <Link href="/support" className={mobileItem('support')} onClick={() => setMenuOpen(false)}>{t('support')}</Link>

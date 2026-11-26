@@ -34,13 +34,15 @@
     "support": "Support",
     "privacy": "Personvern",
     "download": "Last ned",
-    "guides": "Guider"
+    "guides": "Guider",
+    "webApp": "Bruk på nett"
   },
   "hero": {
     "title": "Reiseappen laget av",
     "titleAccent": "folk som faktisk reiser",
     "subtitle": "Lag dag-for-dag reiseguider med ekte stopp, kart og bilder — og oppdag turer delt av folk som faktisk har vært der. Ingen reklame. Ingen influensere. Bare ærlig reising.",
-    "badge": "Gratis · iOS og Mac"
+    "badge": "Gratis · iOS og Mac",
+    "webApp": "Utforsk guider i nettleseren"
   },
   "screenshots": {
     "label": "Se den i bruk"

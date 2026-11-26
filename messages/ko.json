@@ -34,13 +34,15 @@
     "support": "지원",
     "privacy": "개인정보",
     "download": "다운로드",
-    "guides": "가이드"
+    "guides": "가이드",
+    "webApp": "웹에서 사용"
   },
   "hero": {
     "title": "진짜 여행하는 사람들이",
     "titleAccent": "만든 여행 앱",
     "subtitle": "실제 장소, 지도, 사진이 담긴 일자별 여행 가이드를 만들고, 실제로 그곳에 다녀온 사람들의 여행을 발견하세요. 광고 없음. 인플루언서 없음. 오직 정직한 여행뿐.",
-    "badge": "무료 · iOS & Mac"
+    "badge": "무료 · iOS & Mac",
+    "webApp": "브라우저에서 가이드 보기"
   },
   "screenshots": {
     "label": "앱 미리보기"

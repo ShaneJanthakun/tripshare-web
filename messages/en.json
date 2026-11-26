@@ -34,13 +34,15 @@
     "support": "Support",
     "privacy": "Privacy",
     "download": "Download",
-    "guides": "Guides"
+    "guides": "Guides",
+    "webApp": "Use on web"
   },
   "hero": {
     "title": "The travel app built by",
     "titleAccent": "people who actually go",
     "subtitle": "Create day-by-day travel guides with real stops, maps and photos — and discover trips shared by people who've actually been there. No ads. No influencers. Just honest travel.",
-    "badge": "Free · iOS & Mac"
+    "badge": "Free · iOS & Mac",
+    "webApp": "Explore guides in your browser"
   },
   "screenshots": {
     "label": "See it in action"

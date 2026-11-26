@@ -34,13 +34,15 @@
     "support": "サポート",
     "privacy": "プライバシー",
     "download": "ダウンロード",
-    "guides": "ガイド"
+    "guides": "ガイド",
+    "webApp": "Web版"
   },
   "hero": {
     "title": "本当に旅する人たちが",
     "titleAccent": "作った旅行アプリ",
     "subtitle": "実際のスポット、地図、写真つきの日別旅行ガイドを作成し、実際にそこへ行った人たちの旅を発見しよう。広告なし。インフルエンサーなし。正直な旅だけ。",
-    "badge": "無料 · iOS & Mac"
+    "badge": "無料 · iOS & Mac",
+    "webApp": "ブラウザでガイドを見る"
   },
   "screenshots": {
     "label": "アプリを見る"
