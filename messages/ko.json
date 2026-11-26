@@ -48,7 +48,8 @@
     "myGuides": "내 가이드",
     "logout": "로그아웃",
     "feed": "둘러보기",
-    "liked": "좋아요"
+    "liked": "좋아요",
+    "profile": "프로필"
   },
   "hero": {
     "title": "진짜 여행하는 사람들이",
@@ -306,6 +307,10 @@
       {
         "title": "Apple 또는 Google로 로그인",
         "body": "Apple 또는 Google로 로그인하면 해당 서비스에서 이름과 이메일 주소를 받고, Google에서는 프로필 사진도 받습니다. 이 정보는 계정을 만들고 로그인하는 데에만 사용합니다. 비밀번호는 절대 받지 않으며, 연락처, 이메일, 파일 등 Google 또는 Apple 계정의 다른 정보에는 접근하지 않습니다. 이 정보는 누구와도 공유하지 않으며, 계정을 삭제하면 함께 삭제됩니다. TripShare가 Google API에서 받은 정보를 사용하는 방식은 제한된 사용(Limited Use) 요건을 포함한 Google API Services User Data Policy을 준수합니다."
+      },
+      {
+        "title": "공개 프로필",
+        "body": "공개 가이드를 하나 이상 게시하면 tripshare.online에 이름, 소개, 프로필 사진, 팔로워 수, 공개 가이드가 표시되는 공개 프로필이 생겨요. 프로필은 검색 엔진 결과에 표시되지 않아요. 모든 가이드를 비공개로 바꾸거나 삭제하면 프로필이 사라져요. 이름, 소개, 사진은 앱이나 웹사이트에서 바꿀 수 있고, 계정을 삭제하면 프로필도 삭제돼요."
       },
       {
         "title": "데이터 사용 방법",
@@ -836,6 +841,19 @@
       "languageLabel": "앱 언어",
       "noMailApp": "이 기기에 설정된 이메일 앱이 없습니다. support@tripshare.online 으로 연락해 주세요",
       "termsOfUse": "이용약관"
+    },
+    "publicProfile": {
+      "title": "프로필",
+      "noGuidesYet": "아직 가이드가 없습니다",
+      "privateCode": "비공개 · 코드 필요",
+      "signInFollow": "팔로우하려면 계정을 만드세요.",
+      "privateGuideTitle": "비공개 가이드",
+      "privateGuideMessage": "이 가이드를 보려면 액세스 코드를 입력하세요.",
+      "incorrectCode": "잘못된 코드",
+      "incorrectCodeMessage": "입력한 액세스 코드가 올바르지 않습니다.",
+      "moreOptions": "더보기",
+      "reportUser": "사용자 신고",
+      "blockConfirm": "이 사용자의 가이드와 댓글이 더 이상 보이지 않습니다. 설정에서 차단을 해제할 수 있습니다."
     }
   },
   "feed": {
@@ -846,5 +864,18 @@
     "intro": "앱이나 웹에서 좋아요한 가이드예요.",
     "empty": "아직 좋아요한 가이드가 없어요.",
     "emptyCta": "가이드 둘러보기"
+  },
+  "social": {
+    "signInToRead": "댓글을 읽고 쓰려면 로그인하세요.",
+    "profileDescription": "TripShare에서 {name}님이 만든 여행 가이드 {count}개.",
+    "viewPublicProfile": "내 공개 프로필 보기",
+    "interests": "관심사",
+    "interestsHint": "둘러보기의 ‘추천’에 사용돼요.",
+    "countries": "국가",
+    "addCountry": "국가 추가",
+    "add": "추가",
+    "remove": "삭제",
+    "saved": "저장됨 ✓",
+    "changePhoto": "변경"
   }
 }

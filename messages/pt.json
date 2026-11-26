@@ -48,7 +48,8 @@
     "myGuides": "Os meus guias",
     "logout": "Terminar sessão",
     "feed": "Descobrir",
-    "liked": "Gostos"
+    "liked": "Gostos",
+    "profile": "Perfil"
   },
   "hero": {
     "title": "A app de viagens criada por",
@@ -306,6 +307,10 @@
       {
         "title": "Iniciar sessão com a Apple ou a Google",
         "body": "Se iniciares sessão com a Apple ou a Google, recebemos desse serviço o teu nome e o teu endereço de email e, no caso da Google, também a tua foto de perfil. Usamos estes dados apenas para criar a tua conta e iniciar a tua sessão. Nunca recebemos a tua palavra-passe e não temos acesso a mais nada na tua conta Google ou Apple, como contactos, emails ou ficheiros. Não partilhamos estas informações com ninguém e são eliminadas quando eliminas a tua conta. A utilização pelo TripShare de informações recebidas das API da Google cumpre a Google API Services User Data Policy, incluindo os requisitos de utilização limitada (Limited Use)."
+      },
+      {
+        "title": "Perfil público",
+        "body": "Se publicaste pelo menos um guia público, tens um perfil público em tripshare.online com o teu nome, biografia, foto de perfil, número de seguidores e os teus guias públicos. O perfil não aparece nos resultados dos motores de pesquisa. Se tornares todos os teus guias privados ou os eliminares, o perfil desaparece. Podes mudar o nome, a biografia e a foto na app ou no site, e ao eliminares a conta o perfil é removido."
       },
       {
         "title": "Como usamos os teus dados",
@@ -836,6 +841,19 @@
       "languageLabel": "IDIOMA DA APP",
       "noMailApp": "Nenhuma app de e-mail está configurada neste dispositivo. Contacte-nos em support@tripshare.online",
       "termsOfUse": "Termos de Utilização"
+    },
+    "publicProfile": {
+      "title": "Perfil",
+      "noGuidesYet": "Ainda não há guias",
+      "privateCode": "Privado · Código necessário",
+      "signInFollow": "Cria uma conta para seguir pessoas.",
+      "privateGuideTitle": "Guia privado",
+      "privateGuideMessage": "Introduz o código de acesso para ver este guia.",
+      "incorrectCode": "Código incorreto",
+      "incorrectCodeMessage": "O código de acesso que introduziste está errado.",
+      "moreOptions": "Mais opções",
+      "reportUser": "Denunciar utilizador",
+      "blockConfirm": "Deixas de ver os guias e comentários desta pessoa. Podes desbloqueá-la nas Definições."
     }
   },
   "feed": {
@@ -846,5 +864,18 @@
     "intro": "Os guias de que gostaste na app ou na web.",
     "empty": "Ainda não gostaste de nenhum guia.",
     "emptyCta": "Descobrir guias"
+  },
+  "social": {
+    "signInToRead": "Inicia sessão para ler e escrever comentários.",
+    "profileDescription": "{count, plural, one {# guia de viagem} other {# guias de viagem}} de {name} no TripShare.",
+    "viewPublicProfile": "Ver o teu perfil público",
+    "interests": "Interesses",
+    "interestsHint": "Usados em «Para ti» em Descobrir.",
+    "countries": "Países",
+    "addCountry": "Adicionar um país",
+    "add": "Adicionar",
+    "remove": "Remover",
+    "saved": "Guardado ✓",
+    "changePhoto": "Mudar"
   }
 }

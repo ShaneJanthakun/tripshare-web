@@ -48,12 +48,12 @@ export default function Feed({ locale, me, profile, initial }: Props) {
   const [people, setPeople] = useState<Person[]>([]);
   const [seen, setSeen] = useState<Set<string>>(new Set());
   useEffect(() => setSeen(readSeen()), []);
-  const [likes, setLikes] = useState<Set<string>>(new Set());
+  const [likes, setLikes] = useState<Set<string> | null>(null); // null until loaded: ♥ waits for it
   useEffect(() => { myLikes(sb, me).then(setLikes); }, [sb, me]);
   const likeLabels = { like: guideT('like'), unlike: guideT('unlike'), signIn: guideT('likeSignIn') };
   // Keep the new state when a card is drawn again (search, "Show more", sections moving).
   function onLiked(id: string, liked: boolean, count: number) {
-    setLikes(prev => { const next = new Set(prev); if (liked) next.add(id); else next.delete(id); return next; });
+    setLikes(prev => { const next = new Set(prev ?? []); if (liked) next.add(id); else next.delete(id); return next; });
     const bump = (list: PublicGuide[]) => list.map(p => (p.guide.id === id ? { ...p, upvotes: count } : p));
     setGuides(bump);
     setServer(bump);
@@ -121,7 +121,7 @@ export default function Feed({ locale, me, profile, initial }: Props) {
             {c.showCount && (
               <div className="absolute right-3 top-3">
                 <LikeButton variant="card" guideId={p.guide.id} authorId={p.authorId} count={p.upvotes} locale={locale}
-                  me={me} liked={likes.has(p.guide.id)} labels={likeLabels} onChange={(liked, count) => onLiked(p.guide.id, liked, count)} />
+                  me={me} liked={likes ? likes.has(p.guide.id) : undefined} labels={likeLabels} onChange={(liked, count) => onLiked(p.guide.id, liked, count)} />
               </div>
             )}
           </div>

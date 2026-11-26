@@ -30,24 +30,32 @@ export default function LikeButton({ guideId, authorId, count: initialCount, loc
   const [count, setCount] = useState(initialCount);
   const [busy, setBusy] = useState(false);
   const sb = useRef<SupabaseClient | null>(null);
+  const acted = useRef(false); // a click wins over the first check that may answer later
+  // The RPC toggles, so a click before your current state is known could undo an earlier like.
+  const [ready, setReady] = useState(knownMe !== undefined && knownLiked !== undefined);
 
   const client = async () => {
     if (!sb.current) sb.current = (await import('../../lib/supabase/client')).createClient();
     return sb.current;
   };
 
-  useEffect(() => { if (knownLiked !== undefined) setLiked(knownLiked); }, [knownLiked]);
+  useEffect(() => {
+    if (knownLiked === undefined) return;
+    if (!acted.current) setLiked(knownLiked);
+    setReady(true);
+  }, [knownLiked]);
   useEffect(() => { if (knownMe !== undefined) setMe(knownMe); }, [knownMe]);
   useEffect(() => {
     if (knownMe !== undefined) return;
-    if (!hasAuthCookie()) { setMe(null); return; }
+    if (!hasAuthCookie()) { setMe(null); setReady(true); return; }
     let cancelled = false;
     (async () => {
       const c = await client();
       const id = (await c.auth.getSession()).data.session?.user.id ?? null;
       if (cancelled) return;
       setMe(id);
-      if (id && id !== authorId) setLiked(await isLiked(c, id, guideId));
+      if (id && id !== authorId) { const liked = await isLiked(c, id, guideId); if (!cancelled && !acted.current) setLiked(liked); }
+      if (!cancelled) setReady(true);
     })();
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -59,12 +67,13 @@ export default function LikeButton({ guideId, authorId, count: initialCount, loc
   async function click(e: React.MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
-    if (me === undefined || busy) return;
+    if (me === undefined || busy || (me && !ready)) return;
     if (me === null) {
       window.location.assign(`/${locale}/login?next=${encodeURIComponent(window.location.pathname)}`);
       return;
     }
     if (own) return;
+    acted.current = true;
     const was = liked;
     setLiked(!was);
     setCount(c => Math.max(0, c + (was ? -1 : 1)));

@@ -48,7 +48,8 @@
     "myGuides": "我的攻略",
     "logout": "退出登录",
     "feed": "发现",
-    "liked": "喜欢"
+    "liked": "喜欢",
+    "profile": "个人资料"
   },
   "hero": {
     "title": "由真正旅行的人",
@@ -306,6 +307,10 @@
       {
         "title": "使用 Apple 或 Google 登录",
         "body": "如果您使用 Apple 或 Google 登录，我们会从该服务获得您的姓名和电子邮箱，从 Google 还会获得您的头像。我们仅将这些信息用于创建您的账号并让您登录。我们绝不会获得您的密码，也无法访问您 Google 或 Apple 账号中的任何其他内容，例如联系人、邮件或文件。我们不会与任何人分享这些信息，您删除账号时这些信息也会被删除。TripShare 对从 Google API 获得的信息的使用遵守 Google API Services User Data Policy，包括其中的有限使用（Limited Use）要求。"
+      },
+      {
+        "title": "公开主页",
+        "body": "如果你发布了至少一份公开攻略，你会在 tripshare.online 上拥有一个公开主页，显示你的名字、简介、头像、粉丝数和你的公开攻略。公开主页不会出现在搜索引擎结果中。如果你将所有攻略设为私密或删除，公开主页就会消失。你可以在应用或网站上修改名字、简介和头像，删除账号时公开主页也会被删除。"
       },
       {
         "title": "我们如何使用您的数据",
@@ -836,6 +841,19 @@
       "languageLabel": "应用语言",
       "noMailApp": "此设备未设置邮件应用。请通过 support@tripshare.online 联系我们",
       "termsOfUse": "使用条款"
+    },
+    "publicProfile": {
+      "title": "个人主页",
+      "noGuidesYet": "还没有攻略",
+      "privateCode": "私密 · 需要访问码",
+      "signInFollow": "创建账号以关注他人。",
+      "privateGuideTitle": "私密攻略",
+      "privateGuideMessage": "输入访问码以查看此攻略。",
+      "incorrectCode": "访问码错误",
+      "incorrectCodeMessage": "您输入的访问码不正确。",
+      "moreOptions": "更多选项",
+      "reportUser": "举报用户",
+      "blockConfirm": "你将不再看到此用户的攻略和评论。可以在设置中解除屏蔽。"
     }
   },
   "feed": {
@@ -846,5 +864,18 @@
     "intro": "你在应用或网页上点赞过的攻略。",
     "empty": "你还没有点赞任何攻略。",
     "emptyCta": "发现攻略"
+  },
+  "social": {
+    "signInToRead": "登录后即可阅读和发表评论。",
+    "profileDescription": "{name} 在 TripShare 上的 {count} 份旅行攻略。",
+    "viewPublicProfile": "查看你的公开主页",
+    "interests": "兴趣",
+    "interestsHint": "用于“发现”中的“为你推荐”。",
+    "countries": "国家",
+    "addCountry": "添加国家",
+    "add": "添加",
+    "remove": "移除",
+    "saved": "已保存 ✓",
+    "changePhoto": "更换"
   }
 }

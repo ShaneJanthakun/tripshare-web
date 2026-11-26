@@ -48,7 +48,7 @@ function GlobeIcon({ className = '' }: { className?: string }) {
   );
 }
 
-export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' | 'myGuides' | 'login' | 'feed' | 'liked' }) {
+export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' | 'myGuides' | 'login' | 'feed' | 'liked' | 'profile' }) {
   const t = useTranslations('nav');
   const locale = useLocale();
   const signedIn = useSignedIn();
@@ -66,7 +66,7 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  type Key = 'guides' | 'features' | 'support' | 'privacy' | 'feed' | 'liked';
+  type Key = 'guides' | 'features' | 'support' | 'privacy' | 'feed' | 'liked' | 'profile';
   const item = (key: Key) =>
     `hover:text-ink transition-colors hidden sm:block ${active === key ? 'text-ink' : ''}`;
   const mobileItem = (key: Key) =>
@@ -87,6 +87,7 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
             <>
               <Link href="/feed" className={item('feed')}>{t('feed')}</Link>
               <Link href="/liked" className={item('liked')}>{t('liked')}</Link>
+              <Link href="/profile" className={item('profile')}>{t('profile')}</Link>
             </>
           ) : (
             <>
@@ -161,6 +162,7 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
             <>
               <Link href="/feed" className={mobileItem('feed')} onClick={() => setMenuOpen(false)}>{t('feed')}</Link>
               <Link href="/liked" className={mobileItem('liked')} onClick={() => setMenuOpen(false)}>{t('liked')}</Link>
+              <Link href="/profile" className={mobileItem('profile')} onClick={() => setMenuOpen(false)}>{t('profile')}</Link>
             </>
           )}
           <Link href="/guides" className={mobileItem('guides')} onClick={() => setMenuOpen(false)}>{t('guides')}</Link>

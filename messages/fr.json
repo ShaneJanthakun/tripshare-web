@@ -48,7 +48,8 @@
     "myGuides": "Mes guides",
     "logout": "Se déconnecter",
     "feed": "Découvrir",
-    "liked": "Aimés"
+    "liked": "Aimés",
+    "profile": "Profil"
   },
   "hero": {
     "title": "L'app de voyage créée par",
@@ -306,6 +307,10 @@
       {
         "title": "Connexion avec Apple ou Google",
         "body": "Si vous vous connectez avec Apple ou Google, nous recevons de ce service votre nom et votre adresse email, et de Google également votre photo de profil. Nous les utilisons uniquement pour créer votre compte et vous connecter. Nous ne recevons jamais votre mot de passe et n'avons accès à rien d'autre dans votre compte Google ou Apple, comme vos contacts, emails ou fichiers. Nous ne partageons ces informations avec personne, et elles sont supprimées lorsque vous supprimez votre compte. L'utilisation par TripShare des informations reçues des API Google respecte la Google API Services User Data Policy, y compris les exigences d'utilisation limitée (Limited Use)."
+      },
+      {
+        "title": "Profil public",
+        "body": "Si vous avez publié au moins un guide public, vous avez un profil public sur tripshare.online avec votre nom, votre bio, votre photo de profil, votre nombre d’abonnés et vos guides publics. Le profil n’apparaît pas dans les résultats des moteurs de recherche. Si vous rendez tous vos guides privés ou les supprimez, le profil disparaît. Vous pouvez modifier votre nom, votre bio et votre photo dans l’app ou sur le site, et la suppression de votre compte supprime le profil."
       },
       {
         "title": "Comment nous utilisons vos données",
@@ -836,6 +841,19 @@
       "languageLabel": "LANGUE DE L'APP",
       "noMailApp": "Aucune app de messagerie n'est configurée sur cet appareil. Contactez-nous à support@tripshare.online",
       "termsOfUse": "Conditions d'utilisation"
+    },
+    "publicProfile": {
+      "title": "Profil",
+      "noGuidesYet": "Aucun guide pour l'instant",
+      "privateCode": "Privé · Code requis",
+      "signInFollow": "Créez un compte pour suivre des personnes.",
+      "privateGuideTitle": "Guide privé",
+      "privateGuideMessage": "Entrez le code d'accès pour voir ce guide.",
+      "incorrectCode": "Code incorrect",
+      "incorrectCodeMessage": "Le code d'accès que vous avez saisi est incorrect.",
+      "moreOptions": "Plus d'options",
+      "reportUser": "Signaler l'utilisateur",
+      "blockConfirm": "Vous ne verrez plus ses guides ni ses commentaires. Vous pouvez le débloquer dans les Paramètres."
     }
   },
   "feed": {
@@ -846,5 +864,18 @@
     "intro": "Les guides que vous avez aimés dans l’app ou sur le web.",
     "empty": "Vous n’avez encore aimé aucun guide.",
     "emptyCta": "Découvrir des guides"
+  },
+  "social": {
+    "signInToRead": "Connectez-vous pour lire et écrire des commentaires.",
+    "profileDescription": "{count, plural, one {# guide de voyage} other {# guides de voyage}} de {name} sur TripShare.",
+    "viewPublicProfile": "Voir votre profil public",
+    "interests": "Centres d’intérêt",
+    "interestsHint": "Utilisés pour « Pour vous » dans Découvrir.",
+    "countries": "Pays",
+    "addCountry": "Ajouter un pays",
+    "add": "Ajouter",
+    "remove": "Retirer",
+    "saved": "Enregistré ✓",
+    "changePhoto": "Changer"
   }
 }

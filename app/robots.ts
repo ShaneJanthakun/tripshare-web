@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/*/my-guides', '/*/feed', '/*/liked', '/*/edit/', '/*/login', '/*/welcome', '/*/reset-password', '/auth/'],
+      disallow: ['/*/my-guides', '/*/feed', '/*/liked', '/*/profile', '/*/edit/', '/*/login', '/*/welcome', '/*/reset-password', '/auth/'],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,

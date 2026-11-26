@@ -48,7 +48,8 @@
     "myGuides": "Mine guider",
     "logout": "Logg ut",
     "feed": "Oppdag",
-    "liked": "Likte"
+    "liked": "Likte",
+    "profile": "Profil"
   },
   "hero": {
     "title": "Reiseappen laget av",
@@ -306,6 +307,10 @@
       {
         "title": "Innlogging med Apple eller Google",
         "body": "Logger du inn med Apple eller Google, får vi navnet ditt og e-postadressen din fra den tjenesten, og fra Google også profilbildet ditt. Vi bruker dette bare til å opprette kontoen din og logge deg inn. Vi får aldri passordet ditt, og vi får ikke tilgang til noe annet i Google- eller Apple-kontoen din, som kontakter, e-post eller filer. Vi deler ikke denne informasjonen med noen, og den slettes når du sletter kontoen din. TripShares bruk av informasjon fra Googles API-er følger Google API Services User Data Policy, inkludert kravene om begrenset bruk (Limited Use)."
+      },
+      {
+        "title": "Offentlig profil",
+        "body": "Har du publisert minst én offentlig guide, får du en offentlig profil på tripshare.online med navnet ditt, bio, profilbilde, antall følgere og de offentlige guidene dine. Profilen vises ikke i søkemotorenes resultater. Gjør du alle guidene private eller sletter dem, forsvinner profilen. Du kan endre navn, bio og bilde i appen eller på nettsiden, og når du sletter kontoen, fjernes profilen."
       },
       {
         "title": "Hvordan vi bruker dataene dine",
@@ -836,6 +841,19 @@
       "languageLabel": "APP-SPRÅK",
       "noMailApp": "Ingen e-postapp er satt opp på denne enheten. Nå oss på support@tripshare.online",
       "termsOfUse": "Brukervilkår"
+    },
+    "publicProfile": {
+      "title": "Profil",
+      "noGuidesYet": "Ingen guider ennå",
+      "privateCode": "Privat · Kode kreves",
+      "signInFollow": "Opprett en konto for å følge folk.",
+      "privateGuideTitle": "Privat guide",
+      "privateGuideMessage": "Skriv inn tilgangskoden for å se denne guiden.",
+      "incorrectCode": "Feil kode",
+      "incorrectCodeMessage": "Tilgangskoden du skrev inn er feil.",
+      "moreOptions": "Flere valg",
+      "reportUser": "Rapporter bruker",
+      "blockConfirm": "Du ser ikke lenger guidene eller kommentarene deres. Du kan oppheve blokkeringen i Innstillinger."
     }
   },
   "feed": {
@@ -846,5 +864,18 @@
     "intro": "Guidene du har likt i appen eller på nettet.",
     "empty": "Du har ikke likt noen guider ennå.",
     "emptyCta": "Oppdag guider"
+  },
+  "social": {
+    "signInToRead": "Logg inn for å lese og skrive kommentarer.",
+    "profileDescription": "{count, plural, one {# reiseguide} other {# reiseguider}} av {name} på TripShare.",
+    "viewPublicProfile": "Se den offentlige profilen din",
+    "interests": "Interesser",
+    "interestsHint": "Brukes til «For deg» i Oppdag.",
+    "countries": "Land",
+    "addCountry": "Legg til et land",
+    "add": "Legg til",
+    "remove": "Fjern",
+    "saved": "Lagret ✓",
+    "changePhoto": "Bytt"
   }
 }

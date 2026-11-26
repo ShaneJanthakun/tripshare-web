@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import LikeButton from './LikeButton';
+import FollowButton from '../social/FollowButton';
 import { TAG_META, type CustomSection, type GuideTag, type Stop } from '../../lib/core/guide';
 import { renderUrl } from '../../lib/images';
 import {
@@ -70,12 +71,26 @@ export async function GuideHeader({ p, locale, subtitle }: HeaderProps) {
           )}
 
           <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
-            <span className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
-                {author.charAt(0).toUpperCase()}
+            {/* Real users (not the team or seed authors) have a public profile (B9) and can be followed. */}
+            {counts ? (
+              <>
+                <a href={`/${locale}/u/${encodeURIComponent(p.authorId)}`} className="group flex items-center gap-2">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
+                    {author.charAt(0).toUpperCase()}
+                  </span>
+                  <span className="text-ink group-hover:underline">{author}</span>
+                </a>
+                <FollowButton userId={p.authorId} locale={locale}
+                  labels={{ follow: t('app.common.follow'), following: t('app.common.following'), signIn: t('app.publicProfile.signInFollow') }} />
+              </>
+            ) : (
+              <span className="flex items-center gap-2">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
+                  {author.charAt(0).toUpperCase()}
+                </span>
+                <span className="text-ink">{author}</span>
               </span>
-              <span className="text-ink">{author}</span>
-            </span>
+            )}
             {n > 0 && <span>{t('share.days', { count: n })} · {t('share.stops', { count: stops })}</span>}
             {counts && <span>{t('guide.views', { count: p.views })}</span>}
             {counts && (

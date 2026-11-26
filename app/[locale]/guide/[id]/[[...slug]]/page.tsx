@@ -6,6 +6,7 @@ import Footer from '../../../Footer';
 import { Link } from '../../../../i18n/navigation';
 import { GuideHeader, GuideBody } from '../../../../../components/guide/GuideView';
 import GuideMap from '../../../../../components/guide/GuideMap';
+import Comments from '../../../../../components/social/Comments';
 import { loadPublicGuide, loadPublicGuides } from '../../../../../lib/guides/queries';
 import { buildGuideMap, buildMiniMap, type GuideMapData } from '../../../../../lib/guides/mapdata';
 import {
@@ -142,6 +143,17 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
           </aside>
           <div className="lg:col-span-7">
             <GuideBody p={p} locale={locale} miniMaps={Object.fromEntries(minis)} />
+            {!g.commentsDisabled && (
+              <Comments guideId={g.id} ownerId={p.authorId} locale={locale} labels={{
+                title: t('app.guideDetail.comments'), signInToRead: t('social.signInToRead'), signIn: t('app.common.signIn'),
+                loading: t('app.common.loading'), placeholder: t('app.guideDetail.addComment'), post: t('app.guideDetail.postComment'),
+                none: t('app.guideDetail.noComments'), noneSub: t('app.guideDetail.noCommentsSub'), already: t('app.guideDetail.alreadyCommented'),
+                edit: t('app.guideDetail.editComment'), del: t('app.common.delete'), deleteConfirm: t('app.guideDetail.deleteCommentConfirm'),
+                save: t('app.common.save'), cancel: t('app.common.cancel'), moderate: t('app.guideDetail.moderate'),
+                deleteAction: t('app.guideDetail.deleteCommentAction'), blockTitle: t.raw('app.guideDetail.blockUserTitle') as string,
+                blockConfirm: t('app.guideDetail.blockUserConfirm'), failed: t('app.guideDetail.commentFailed'), editFailed: t('app.guideDetail.commentEditFailed'),
+              }} />
+            )}
             <section className="mt-16 rounded-3xl border border-border bg-gradient-to-b from-s2 to-surface p-8 text-center">
               <h2 className="font-display text-2xl font-bold">{t('guide.ctaTitle')}</h2>
               <p className="mx-auto mt-3 max-w-md text-muted">{t('guide.ctaText')}</p>

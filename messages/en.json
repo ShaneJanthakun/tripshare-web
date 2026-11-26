@@ -48,7 +48,8 @@
     "myGuides": "My guides",
     "logout": "Log out",
     "feed": "Discover",
-    "liked": "Liked"
+    "liked": "Liked",
+    "profile": "Profile"
   },
   "hero": {
     "title": "The travel app built by",
@@ -306,6 +307,10 @@
       {
         "title": "Signing in with Apple or Google",
         "body": "If you sign in with Apple or Google, we receive your name and email address from that service, and from Google also your profile picture. We use this only to create your account and sign you in. We never receive your password, and we get no access to anything else in your Google or Apple account, such as contacts, emails or files. We do not share this information with anyone, and it is deleted when you delete your account. TripShare's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements."
+      },
+      {
+        "title": "Public Profile",
+        "body": "If you have published at least one public guide, you get a public profile on tripshare.online showing your name, bio, profile picture, number of followers and your public guides. The profile is not shown in search engine results. If you make all your guides private or delete them, the profile disappears. You can change your name, bio and picture in the app or on the website, and deleting your account removes the profile."
       },
       {
         "title": "How We Use Your Data",
@@ -836,6 +841,19 @@
       "languageLabel": "APP LANGUAGE",
       "noMailApp": "No email app is set up on this device. Reach us at support@tripshare.online",
       "termsOfUse": "Terms of Use"
+    },
+    "publicProfile": {
+      "title": "Profile",
+      "noGuidesYet": "No guides yet",
+      "privateCode": "Private · Code required",
+      "signInFollow": "Create an account to follow people.",
+      "privateGuideTitle": "Private Guide",
+      "privateGuideMessage": "Enter the access code to view this guide.",
+      "incorrectCode": "Incorrect code",
+      "incorrectCodeMessage": "The access code you entered is wrong.",
+      "moreOptions": "More options",
+      "reportUser": "Report user",
+      "blockConfirm": "You won't see their guides or comments anymore. You can unblock them in Settings."
     }
   },
   "feed": {
@@ -846,5 +864,18 @@
     "intro": "Guides you have liked in the app or on the web.",
     "empty": "You haven’t liked any guides yet.",
     "emptyCta": "Discover guides"
+  },
+  "social": {
+    "signInToRead": "Sign in to read and write comments.",
+    "profileDescription": "{count, plural, one {# travel guide} other {# travel guides}} by {name} on TripShare.",
+    "viewPublicProfile": "See your public profile",
+    "interests": "Interests",
+    "interestsHint": "Used for “For you” in Discover.",
+    "countries": "Countries",
+    "addCountry": "Add a country",
+    "add": "Add",
+    "remove": "Remove",
+    "saved": "Saved ✓",
+    "changePhoto": "Change"
   }
 }

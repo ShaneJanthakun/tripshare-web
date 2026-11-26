@@ -48,7 +48,8 @@
     "myGuides": "マイガイド",
     "logout": "ログアウト",
     "feed": "見つける",
-    "liked": "いいね"
+    "liked": "いいね",
+    "profile": "プロフィール"
   },
   "hero": {
     "title": "本当に旅する人たちが",
@@ -306,6 +307,10 @@
       {
         "title": "AppleまたはGoogleでのログイン",
         "body": "AppleまたはGoogleでログインすると、そのサービスからお名前とメールアドレスを受け取ります。Googleの場合はプロフィール写真も受け取ります。これらはアカウントの作成とログインのためにのみ使用します。パスワードを受け取ることはなく、連絡先、メール、ファイルなど、GoogleアカウントやAppleアカウント内のその他の情報にアクセスすることもありません。この情報を第三者と共有することはなく、アカウントを削除すると削除されます。TripShareによるGoogle APIから受け取った情報の利用は、限定使用（Limited Use）の要件を含むGoogle API Services User Data Policyに準拠しています。"
+      },
+      {
+        "title": "公開プロフィール",
+        "body": "公開ガイドを1件以上公開すると、tripshare.onlineに公開プロフィールが作成され、お名前、自己紹介、プロフィール写真、フォロワー数、公開ガイドが表示されます。プロフィールは検索エンジンの検索結果には表示されません。すべてのガイドを非公開にするか削除すると、プロフィールは表示されなくなります。名前、自己紹介、写真はアプリまたはWebサイトで変更でき、アカウントを削除するとプロフィールも削除されます。"
       },
       {
         "title": "データの利用方法",
@@ -836,6 +841,19 @@
       "languageLabel": "アプリの言語",
       "noMailApp": "このデバイスにはメールアプリが設定されていません。support@tripshare.online までご連絡ください",
       "termsOfUse": "利用規約"
+    },
+    "publicProfile": {
+      "title": "プロフィール",
+      "noGuidesYet": "まだガイドがありません",
+      "privateCode": "非公開 · コードが必要",
+      "signInFollow": "フォローするにはアカウントを作成してください。",
+      "privateGuideTitle": "非公開ガイド",
+      "privateGuideMessage": "このガイドを見るにはアクセスコードを入力してください。",
+      "incorrectCode": "コードが違います",
+      "incorrectCodeMessage": "入力されたアクセスコードが間違っています。",
+      "moreOptions": "その他のオプション",
+      "reportUser": "ユーザーを報告",
+      "blockConfirm": "このユーザーのガイドやコメントは表示されなくなります。ブロックは設定から解除できます。"
     }
   },
   "feed": {
@@ -846,5 +864,18 @@
     "intro": "アプリやWebでいいねしたガイドです。",
     "empty": "まだいいねしたガイドはありません。",
     "emptyCta": "ガイドを見つける"
+  },
+  "social": {
+    "signInToRead": "コメントを読んだり書いたりするにはログインしてください。",
+    "profileDescription": "TripShareで{name}さんが作成した旅行ガイド{count}件。",
+    "viewPublicProfile": "公開プロフィールを見る",
+    "interests": "興味",
+    "interestsHint": "「見つける」の「あなたへのおすすめ」に使われます。",
+    "countries": "国",
+    "addCountry": "国を追加",
+    "add": "追加",
+    "remove": "削除",
+    "saved": "保存しました ✓",
+    "changePhoto": "変更"
   }
 }

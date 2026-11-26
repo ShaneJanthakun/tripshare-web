@@ -14,7 +14,7 @@ import { parse, TYPE } from '@formatjs/icu-messageformat-parser';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const APP_LOCALES = resolve(root, '../tripshare/src/i18n/locales');
 const LANGS = ['en', 'no', 'es', 'fr', 'pt', 'th', 'ja', 'zh', 'ko', 'de'];
-const NAMESPACES = ['guideDetail', 'createGuide', 'tags', 'mapPicker', 'auth', 'common', 'home', 'profile'];
+const NAMESPACES = ['guideDetail', 'createGuide', 'tags', 'mapPicker', 'auth', 'common', 'home', 'profile', 'publicProfile'];
 const check = process.argv.includes('--check');
 const errors = [];
 
