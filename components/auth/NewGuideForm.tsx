@@ -78,7 +78,7 @@ export default function NewGuideForm({ locale, authorId, authorName, firstDayLab
       setSaving(false);
       return;
     }
-    window.location.assign(`/${locale}/my-guides?created=1`);
+    window.location.assign(`/${locale}/edit/${encodeURIComponent(guide.id)}`); // straight into the editor
   }
 
   const label = 'mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-faint';
