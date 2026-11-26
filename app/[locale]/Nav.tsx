@@ -1,10 +1,37 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '../i18n/navigation';
 import LangSwitcher from './LangSwitcher';
 import { WEB_APP_PATH } from '../webapp';
+import { SUPABASE_URL } from '../../lib/supabase/env';
+
+// Signed in? Checked in the browser, so the marketing pages stay static. Supabase is only loaded
+// when a session cookie exists; everyone else gets "Log in" without any extra download.
+const AUTH_COOKIE = `sb-${new URL(SUPABASE_URL).hostname.split('.')[0]}-auth-token`;
+
+function useSignedIn(): boolean {
+  const [signedIn, setSignedIn] = useState(false);
+  useEffect(() => {
+    if (!document.cookie.split('; ').some(c => c.startsWith(AUTH_COOKIE))) return;
+    let unsub: (() => void) | undefined;
+    import('../../lib/supabase/client').then(({ createClient }) => {
+      const supabase = createClient();
+      supabase.auth.getSession().then(({ data }) => setSignedIn(!!data.session));
+      unsub = supabase.auth.onAuthStateChange((_e, session) => setSignedIn(!!session)).data.subscription.unsubscribe;
+    });
+    return () => unsub?.();
+  }, []);
+  return signedIn;
+}
+
+async function signOut(locale: string) {
+  const { createClient } = await import('../../lib/supabase/client');
+  // Local only: the default signs out every device, the app too (plan, fallgruve 22b).
+  await createClient().auth.signOut({ scope: 'local' });
+  window.location.assign(`/${locale}`);
+}
 
 // The T logo (brand/source/tripshare-favicon.svg), the same as the favicon and the app icon.
 export function LogoMark({ className = 'w-6 h-6' }: { className?: string }) {
@@ -24,8 +51,13 @@ function GlobeIcon({ className = '' }: { className?: string }) {
   );
 }
 
-export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' }) {
+export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' | 'myGuides' | 'login' }) {
   const t = useTranslations('nav');
+  const locale = useLocale();
+  const signedIn = useSignedIn();
+  const webHref = signedIn ? '/my-guides' : WEB_APP_PATH;
+  const webLabel = signedIn ? t('myGuides') : t('webApp');
+  const webActive = active === (signedIn ? 'myGuides' : 'guides');
   const [menuOpen, setMenuOpen] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
@@ -56,19 +88,24 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
           <Link href="/support" className={item('support')}>{t('support')}</Link>
           <Link href="/privacy" className={item('privacy')}>{t('privacy')}</Link>
           <LangSwitcher />
+          {signedIn ? (
+            <button type="button" onClick={() => signOut(locale)} className="hidden sm:block hover:text-ink transition-colors">{t('logout')}</button>
+          ) : (
+            <Link href="/login" className={`hidden sm:block hover:text-ink transition-colors ${active === 'login' ? 'text-ink' : ''}`}>{t('login')}</Link>
+          )}
           {/* The browser version, easy to find (Shane, 26.11.2026): a labelled button from sm, an icon on phones. */}
           <Link
-            href={WEB_APP_PATH}
+            href={webHref}
             className={`hidden sm:inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-2 text-xs font-semibold whitespace-nowrap transition-colors ${
-              active === 'guides' ? 'border-accent bg-accent/15 text-ink' : 'border-accent/60 text-ink hover:bg-accent/15'
+              webActive ? 'border-accent bg-accent/15 text-ink' : 'border-accent/60 text-ink hover:bg-accent/15'
             }`}
           >
             <GlobeIcon className="h-3.5 w-3.5 text-accent" />
-            {t('webApp')}
+            {webLabel}
           </Link>
           <Link
-            href={WEB_APP_PATH}
-            aria-label={t('webApp')}
+            href={webHref}
+            aria-label={webLabel}
             className="sm:hidden flex h-9 w-9 items-center justify-center rounded-xl border border-accent/60 text-accent"
             onClick={() => setMenuOpen(false)}
           >
@@ -103,10 +140,15 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
 
       {menuOpen && (
         <div className="sm:hidden max-w-5xl mx-auto mt-2 rounded-2xl border border-white/10 bg-bg/90 backdrop-blur-2xl shadow-card p-2">
-          <Link href={WEB_APP_PATH} className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-ink bg-accent/15 border border-accent/40" onClick={() => setMenuOpen(false)}>
+          <Link href={webHref} className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-ink bg-accent/15 border border-accent/40" onClick={() => setMenuOpen(false)}>
             <GlobeIcon className="h-4 w-4 text-accent" />
-            {t('webApp')}
+            {webLabel}
           </Link>
+          {signedIn ? (
+            <button type="button" onClick={() => signOut(locale)} className="block w-full text-left px-4 py-3 rounded-xl text-sm text-muted transition-colors hover:bg-white/5">{t('logout')}</button>
+          ) : (
+            <Link href="/login" className={`block px-4 py-3 rounded-xl text-sm transition-colors hover:bg-white/5 ${active === 'login' ? 'text-ink font-semibold' : 'text-muted'}`} onClick={() => setMenuOpen(false)}>{t('login')}</Link>
+          )}
           <Link href="/guides" className={mobileItem('guides')} onClick={() => setMenuOpen(false)}>{t('guides')}</Link>
           <Link href="/features" className={mobileItem('features')} onClick={() => setMenuOpen(false)}>{t('features')}</Link>
           <Link href="/support" className={mobileItem('support')} onClick={() => setMenuOpen(false)}>{t('support')}</Link>

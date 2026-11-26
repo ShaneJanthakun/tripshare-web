@@ -35,7 +35,10 @@
     "privacy": "Confidentialité",
     "download": "Télécharger",
     "guides": "Guides",
-    "webApp": "Version web"
+    "webApp": "Version web",
+    "login": "Se connecter",
+    "myGuides": "Mes guides",
+    "logout": "Se déconnecter"
   },
   "hero": {
     "title": "L'app de voyage créée par",
@@ -420,6 +423,38 @@
     "mostLoved": "Les plus aimés",
     "newest": "Les plus récents",
     "count": "{count, plural, one {# guide} other {# guides}}"
+  },
+  "login": {
+    "title": "Se connecter à TripShare",
+    "intro": "Utilisez le même compte que dans l’app : vos guides vous suivent.",
+    "sameMethodHint": "Connectez-vous de la même façon que dans l’app pour retrouver vos guides.",
+    "errorProvider": "La connexion a été annulée ou a échoué. Réessayez."
+  },
+  "myGuides": {
+    "title": "Mes guides",
+    "newGuide": "Nouveau guide",
+    "empty": "Vous n’avez encore créé aucun guide.",
+    "emptyCta": "Créer votre premier guide",
+    "statusDraft": "Brouillon",
+    "statusPrivate": "Privé",
+    "statusPublished": "Publié",
+    "statusInProgress": "En cours",
+    "edited": "Modifié le {date}",
+    "view": "Voir",
+    "editSoon": "La modification sur le web arrive bientôt. Ouvrez le guide dans l’app pour le modifier.",
+    "openInApp": "Ouvrir dans l’app",
+    "created": "Guide créé ! Ajoutez des jours, des étapes et des photos dans l’app. La modification sur le web arrive bientôt.",
+    "signedInAs": "Connecté en tant que {name}"
+  },
+  "newGuide": {
+    "title": "Nouveau guide",
+    "creating": "Création…",
+    "tagsCount": "{count} sur {max} sélectionnés"
+  },
+  "welcome": {
+    "title": "Comment devons-nous vous appeler ?",
+    "intro": "Votre nom apparaît sur les guides que vous partagez.",
+    "continue": "Continuer"
   },
   "app": {
     "guideDetail": {

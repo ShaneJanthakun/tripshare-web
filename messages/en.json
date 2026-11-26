@@ -35,7 +35,10 @@
     "privacy": "Privacy",
     "download": "Download",
     "guides": "Guides",
-    "webApp": "Use on web"
+    "webApp": "Use on web",
+    "login": "Log in",
+    "myGuides": "My guides",
+    "logout": "Log out"
   },
   "hero": {
     "title": "The travel app built by",
@@ -420,6 +423,38 @@
     "mostLoved": "Most loved",
     "newest": "Newest",
     "count": "{count, plural, one {# guide} other {# guides}}"
+  },
+  "login": {
+    "title": "Sign in to TripShare",
+    "intro": "Use the same account as in the app – your guides come with you.",
+    "sameMethodHint": "Sign in the same way as in the app, and you'll find your guides.",
+    "errorProvider": "Sign-in was cancelled or failed. Try again."
+  },
+  "myGuides": {
+    "title": "My guides",
+    "newGuide": "New guide",
+    "empty": "You haven't made any guides yet.",
+    "emptyCta": "Make your first guide",
+    "statusDraft": "Draft",
+    "statusPrivate": "Private",
+    "statusPublished": "Published",
+    "statusInProgress": "In progress",
+    "edited": "Edited {date}",
+    "view": "View",
+    "editSoon": "Editing on the web is coming soon. Open the guide in the app to edit it.",
+    "openInApp": "Open in the app",
+    "created": "Guide created! Add days, stops and photos in the app – editing on the web is coming soon.",
+    "signedInAs": "Signed in as {name}"
+  },
+  "newGuide": {
+    "title": "New guide",
+    "creating": "Creating…",
+    "tagsCount": "{count} of {max} selected"
+  },
+  "welcome": {
+    "title": "What should we call you?",
+    "intro": "Your name is shown on the guides you share.",
+    "continue": "Continue"
   },
   "app": {
     "guideDetail": {

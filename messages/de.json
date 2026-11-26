@@ -35,7 +35,10 @@
     "privacy": "Datenschutz",
     "download": "Laden",
     "guides": "Guides",
-    "webApp": "Im Browser nutzen"
+    "webApp": "Im Browser nutzen",
+    "login": "Anmelden",
+    "myGuides": "Meine Guides",
+    "logout": "Abmelden"
   },
   "hero": {
     "title": "Die Reise-App von Leuten,",
@@ -420,6 +423,38 @@
     "mostLoved": "Am beliebtesten",
     "newest": "Neueste",
     "count": "{count, plural, one {# Guide} other {# Guides}}"
+  },
+  "login": {
+    "title": "Bei TripShare anmelden",
+    "intro": "Nutze dasselbe Konto wie in der App – deine Guides kommen mit.",
+    "sameMethodHint": "Melde dich genauso an wie in der App, dann findest du deine Guides.",
+    "errorProvider": "Die Anmeldung wurde abgebrochen oder ist fehlgeschlagen. Versuche es erneut."
+  },
+  "myGuides": {
+    "title": "Meine Guides",
+    "newGuide": "Neuer Guide",
+    "empty": "Du hast noch keine Guides erstellt.",
+    "emptyCta": "Erstelle deinen ersten Guide",
+    "statusDraft": "Entwurf",
+    "statusPrivate": "Privat",
+    "statusPublished": "Veröffentlicht",
+    "statusInProgress": "In Arbeit",
+    "edited": "Bearbeitet am {date}",
+    "view": "Ansehen",
+    "editSoon": "Bearbeiten im Browser kommt bald. Öffne den Guide in der App, um ihn zu bearbeiten.",
+    "openInApp": "In der App öffnen",
+    "created": "Guide erstellt! Füge Tage, Stopps und Fotos in der App hinzu. Bearbeiten im Browser kommt bald.",
+    "signedInAs": "Angemeldet als {name}"
+  },
+  "newGuide": {
+    "title": "Neuer Guide",
+    "creating": "Wird erstellt…",
+    "tagsCount": "{count} von {max} ausgewählt"
+  },
+  "welcome": {
+    "title": "Wie sollen wir dich nennen?",
+    "intro": "Dein Name wird bei den Guides angezeigt, die du teilst.",
+    "continue": "Weiter"
   },
   "app": {
     "guideDetail": {

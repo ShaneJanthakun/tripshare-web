@@ -35,7 +35,10 @@
     "privacy": "개인정보",
     "download": "다운로드",
     "guides": "가이드",
-    "webApp": "웹에서 사용"
+    "webApp": "웹에서 사용",
+    "login": "로그인",
+    "myGuides": "내 가이드",
+    "logout": "로그아웃"
   },
   "hero": {
     "title": "진짜 여행하는 사람들이",
@@ -420,6 +423,38 @@
     "mostLoved": "인기순",
     "newest": "최신순",
     "count": "{count, plural, other {가이드 #개}}"
+  },
+  "login": {
+    "title": "TripShare 로그인",
+    "intro": "앱과 같은 계정을 사용하면 가이드도 그대로 이어집니다.",
+    "sameMethodHint": "앱과 같은 방법으로 로그인하면 내 가이드를 볼 수 있습니다.",
+    "errorProvider": "로그인이 취소되었거나 실패했습니다. 다시 시도해 주세요."
+  },
+  "myGuides": {
+    "title": "내 가이드",
+    "newGuide": "새 가이드",
+    "empty": "아직 만든 가이드가 없습니다.",
+    "emptyCta": "첫 가이드 만들기",
+    "statusDraft": "임시 저장",
+    "statusPrivate": "비공개",
+    "statusPublished": "게시됨",
+    "statusInProgress": "작성 중",
+    "edited": "{date} 수정",
+    "view": "보기",
+    "editSoon": "웹 편집 기능이 곧 제공됩니다. 지금은 앱에서 가이드를 편집하세요.",
+    "openInApp": "앱에서 열기",
+    "created": "가이드가 만들어졌습니다! 앱에서 일정, 장소, 사진을 추가하세요. 웹 편집 기능이 곧 제공됩니다.",
+    "signedInAs": "{name}(으)로 로그인됨"
+  },
+  "newGuide": {
+    "title": "새 가이드",
+    "creating": "만드는 중…",
+    "tagsCount": "{max}개 중 {count}개 선택"
+  },
+  "welcome": {
+    "title": "어떻게 불러 드릴까요?",
+    "intro": "이름은 공유하는 가이드에 표시됩니다.",
+    "continue": "계속"
   },
   "app": {
     "guideDetail": {

@@ -35,7 +35,10 @@
     "privacy": "Privacidad",
     "download": "Descargar",
     "guides": "Guías",
-    "webApp": "Usar en la web"
+    "webApp": "Usar en la web",
+    "login": "Iniciar sesión",
+    "myGuides": "Mis guías",
+    "logout": "Cerrar sesión"
   },
   "hero": {
     "title": "La app de viajes creada por",
@@ -420,6 +423,38 @@
     "mostLoved": "Los más queridos",
     "newest": "Más recientes",
     "count": "{count, plural, one {# guía} other {# guías}}"
+  },
+  "login": {
+    "title": "Inicia sesión en TripShare",
+    "intro": "Usa la misma cuenta que en la app y tus guías te seguirán.",
+    "sameMethodHint": "Inicia sesión del mismo modo que en la app para encontrar tus guías.",
+    "errorProvider": "El inicio de sesión se canceló o falló. Inténtalo de nuevo."
+  },
+  "myGuides": {
+    "title": "Mis guías",
+    "newGuide": "Nueva guía",
+    "empty": "Todavía no has creado ninguna guía.",
+    "emptyCta": "Crea tu primera guía",
+    "statusDraft": "Borrador",
+    "statusPrivate": "Privada",
+    "statusPublished": "Publicada",
+    "statusInProgress": "En curso",
+    "edited": "Editada {date}",
+    "view": "Ver",
+    "editSoon": "Pronto podrás editar en la web. Abre la guía en la app para editarla.",
+    "openInApp": "Abrir en la app",
+    "created": "¡Guía creada! Añade días, paradas y fotos en la app. Pronto podrás editar en la web.",
+    "signedInAs": "Sesión iniciada como {name}"
+  },
+  "newGuide": {
+    "title": "Nueva guía",
+    "creating": "Creando…",
+    "tagsCount": "{count} de {max} seleccionadas"
+  },
+  "welcome": {
+    "title": "¿Cómo te llamamos?",
+    "intro": "Tu nombre aparece en las guías que compartes.",
+    "continue": "Continuar"
   },
   "app": {
     "guideDetail": {

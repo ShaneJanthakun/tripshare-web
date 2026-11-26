@@ -35,7 +35,10 @@
     "privacy": "隐私",
     "download": "下载",
     "guides": "攻略",
-    "webApp": "网页版"
+    "webApp": "网页版",
+    "login": "登录",
+    "myGuides": "我的攻略",
+    "logout": "退出登录"
   },
   "hero": {
     "title": "由真正旅行的人",
@@ -420,6 +423,38 @@
     "mostLoved": "最受欢迎",
     "newest": "最新",
     "count": "{count, plural, other {#篇攻略}}"
+  },
+  "login": {
+    "title": "登录 TripShare",
+    "intro": "使用与应用相同的账户，您的攻略会随之同步。",
+    "sameMethodHint": "用与应用相同的方式登录，即可找到您的攻略。",
+    "errorProvider": "登录已取消或失败，请重试。"
+  },
+  "myGuides": {
+    "title": "我的攻略",
+    "newGuide": "新建攻略",
+    "empty": "您还没有创建任何攻略。",
+    "emptyCta": "创建您的第一篇攻略",
+    "statusDraft": "草稿",
+    "statusPrivate": "私密",
+    "statusPublished": "已发布",
+    "statusInProgress": "进行中",
+    "edited": "更新于 {date}",
+    "view": "查看",
+    "editSoon": "网页编辑即将推出。请在应用中打开攻略进行编辑。",
+    "openInApp": "在应用中打开",
+    "created": "攻略已创建！请在应用中添加日程、景点和照片。网页编辑即将推出。",
+    "signedInAs": "已登录：{name}"
+  },
+  "newGuide": {
+    "title": "新建攻略",
+    "creating": "创建中…",
+    "tagsCount": "已选 {count}/{max}"
+  },
+  "welcome": {
+    "title": "我们该怎么称呼您？",
+    "intro": "您的名字会显示在您分享的攻略上。",
+    "continue": "继续"
   },
   "app": {
     "guideDetail": {

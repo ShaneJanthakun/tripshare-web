@@ -1,9 +1,14 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from './seo';
 
+// Signed-in pages and the login page are never indexed (plan F2.6).
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: '*', allow: '/' },
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/*/my-guides', '/*/edit/', '/*/login', '/*/welcome', '/auth/'],
+    },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,
   };

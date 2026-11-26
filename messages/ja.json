@@ -35,7 +35,10 @@
     "privacy": "プライバシー",
     "download": "ダウンロード",
     "guides": "ガイド",
-    "webApp": "Web版"
+    "webApp": "Web版",
+    "login": "ログイン",
+    "myGuides": "マイガイド",
+    "logout": "ログアウト"
   },
   "hero": {
     "title": "本当に旅する人たちが",
@@ -420,6 +423,38 @@
     "mostLoved": "人気順",
     "newest": "新着順",
     "count": "{count, plural, other {#件のガイド}}"
+  },
+  "login": {
+    "title": "TripShareにログイン",
+    "intro": "アプリと同じアカウントを使えば、ガイドもそのまま使えます。",
+    "sameMethodHint": "アプリと同じ方法でログインすると、あなたのガイドが表示されます。",
+    "errorProvider": "ログインがキャンセルされたか、失敗しました。もう一度お試しください。"
+  },
+  "myGuides": {
+    "title": "マイガイド",
+    "newGuide": "新しいガイド",
+    "empty": "まだガイドを作成していません。",
+    "emptyCta": "最初のガイドを作成",
+    "statusDraft": "下書き",
+    "statusPrivate": "非公開",
+    "statusPublished": "公開中",
+    "statusInProgress": "作成中",
+    "edited": "{date}に更新",
+    "view": "見る",
+    "editSoon": "Webでの編集はまもなく対応予定です。編集はアプリで行ってください。",
+    "openInApp": "アプリで開く",
+    "created": "ガイドを作成しました！日程、スポット、写真はアプリで追加してください。Webでの編集はまもなく対応予定です。",
+    "signedInAs": "{name}としてログイン中"
+  },
+  "newGuide": {
+    "title": "新しいガイド",
+    "creating": "作成中…",
+    "tagsCount": "{max}個中{count}個を選択"
+  },
+  "welcome": {
+    "title": "お名前を教えてください",
+    "intro": "名前は共有するガイドに表示されます。",
+    "continue": "続ける"
   },
   "app": {
     "guideDetail": {

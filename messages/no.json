@@ -35,7 +35,10 @@
     "privacy": "Personvern",
     "download": "Last ned",
     "guides": "Guider",
-    "webApp": "Bruk på nett"
+    "webApp": "Bruk på nett",
+    "login": "Logg inn",
+    "myGuides": "Mine guider",
+    "logout": "Logg ut"
   },
   "hero": {
     "title": "Reiseappen laget av",
@@ -420,6 +423,38 @@
     "mostLoved": "Mest likt",
     "newest": "Nyeste",
     "count": "{count, plural, one {# guide} other {# guider}}"
+  },
+  "login": {
+    "title": "Logg inn på TripShare",
+    "intro": "Bruk samme konto som i appen, så følger guidene dine med.",
+    "sameMethodHint": "Logg inn på samme måte som i appen, så finner du guidene dine.",
+    "errorProvider": "Innloggingen ble avbrutt eller feilet. Prøv igjen."
+  },
+  "myGuides": {
+    "title": "Mine guider",
+    "newGuide": "Ny guide",
+    "empty": "Du har ikke laget noen guider ennå.",
+    "emptyCta": "Lag din første guide",
+    "statusDraft": "Utkast",
+    "statusPrivate": "Privat",
+    "statusPublished": "Publisert",
+    "statusInProgress": "Under arbeid",
+    "edited": "Endret {date}",
+    "view": "Vis",
+    "editSoon": "Redigering på nett kommer snart. Åpne guiden i appen for å redigere den.",
+    "openInApp": "Åpne i appen",
+    "created": "Guiden er laget! Legg til dager, stopp og bilder i appen. Redigering på nett kommer snart.",
+    "signedInAs": "Innlogget som {name}"
+  },
+  "newGuide": {
+    "title": "Ny guide",
+    "creating": "Lager…",
+    "tagsCount": "{count} av {max} valgt"
+  },
+  "welcome": {
+    "title": "Hva skal vi kalle deg?",
+    "intro": "Navnet ditt vises på guidene du deler.",
+    "continue": "Fortsett"
   },
   "app": {
     "guideDetail": {
