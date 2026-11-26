@@ -46,7 +46,9 @@
     "webApp": "Im Browser nutzen",
     "login": "Anmelden",
     "myGuides": "Meine Guides",
-    "logout": "Abmelden"
+    "logout": "Abmelden",
+    "feed": "Entdecken",
+    "liked": "Gefällt mir"
   },
   "hero": {
     "title": "Die Reise-App von Leuten,",
@@ -832,5 +834,14 @@
       "noMailApp": "Auf diesem Gerät ist keine E-Mail-App eingerichtet. Erreiche uns unter support@tripshare.online",
       "termsOfUse": "Nutzungsbedingungen"
     }
+  },
+  "feed": {
+    "showMore": "Mehr anzeigen"
+  },
+  "liked": {
+    "title": "Guides, die dir gefallen",
+    "intro": "Die Guides, die dir in der App gefallen haben.",
+    "empty": "Dir hat noch kein Guide gefallen.",
+    "emptyCta": "Guides entdecken"
   }
 }

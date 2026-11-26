@@ -46,7 +46,9 @@
     "webApp": "网页版",
     "login": "登录",
     "myGuides": "我的攻略",
-    "logout": "退出登录"
+    "logout": "退出登录",
+    "feed": "发现",
+    "liked": "喜欢"
   },
   "hero": {
     "title": "由真正旅行的人",
@@ -832,5 +834,14 @@
       "noMailApp": "此设备未设置邮件应用。请通过 support@tripshare.online 联系我们",
       "termsOfUse": "使用条款"
     }
+  },
+  "feed": {
+    "showMore": "查看更多"
+  },
+  "liked": {
+    "title": "喜欢的攻略",
+    "intro": "你在应用中点赞过的攻略。",
+    "empty": "你还没有点赞任何攻略。",
+    "emptyCta": "发现攻略"
   }
 }

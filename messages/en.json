@@ -46,7 +46,9 @@
     "webApp": "Use on web",
     "login": "Log in",
     "myGuides": "My guides",
-    "logout": "Log out"
+    "logout": "Log out",
+    "feed": "Discover",
+    "liked": "Liked"
   },
   "hero": {
     "title": "The travel app built by",
@@ -832,5 +834,14 @@
       "noMailApp": "No email app is set up on this device. Reach us at support@tripshare.online",
       "termsOfUse": "Terms of Use"
     }
+  },
+  "feed": {
+    "showMore": "Show more"
+  },
+  "liked": {
+    "title": "Liked guides",
+    "intro": "Guides you have liked in the app.",
+    "empty": "You haven’t liked any guides yet.",
+    "emptyCta": "Discover guides"
   }
 }

@@ -46,7 +46,9 @@
     "webApp": "웹에서 사용",
     "login": "로그인",
     "myGuides": "내 가이드",
-    "logout": "로그아웃"
+    "logout": "로그아웃",
+    "feed": "둘러보기",
+    "liked": "좋아요"
   },
   "hero": {
     "title": "진짜 여행하는 사람들이",
@@ -832,5 +834,14 @@
       "noMailApp": "이 기기에 설정된 이메일 앱이 없습니다. support@tripshare.online 으로 연락해 주세요",
       "termsOfUse": "이용약관"
     }
+  },
+  "feed": {
+    "showMore": "더 보기"
+  },
+  "liked": {
+    "title": "좋아요한 가이드",
+    "intro": "앱에서 좋아요한 가이드예요.",
+    "empty": "아직 좋아요한 가이드가 없어요.",
+    "emptyCta": "가이드 둘러보기"
   }
 }

@@ -46,7 +46,9 @@
     "webApp": "Bruk på nett",
     "login": "Logg inn",
     "myGuides": "Mine guider",
-    "logout": "Logg ut"
+    "logout": "Logg ut",
+    "feed": "Oppdag",
+    "liked": "Likte"
   },
   "hero": {
     "title": "Reiseappen laget av",
@@ -832,5 +834,14 @@
       "noMailApp": "Ingen e-postapp er satt opp på denne enheten. Nå oss på support@tripshare.online",
       "termsOfUse": "Brukervilkår"
     }
+  },
+  "feed": {
+    "showMore": "Vis flere"
+  },
+  "liked": {
+    "title": "Likte guider",
+    "intro": "Guidene du har likt i appen.",
+    "empty": "Du har ikke likt noen guider ennå.",
+    "emptyCta": "Oppdag guider"
   }
 }

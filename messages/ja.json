@@ -46,7 +46,9 @@
     "webApp": "Web版",
     "login": "ログイン",
     "myGuides": "マイガイド",
-    "logout": "ログアウト"
+    "logout": "ログアウト",
+    "feed": "見つける",
+    "liked": "いいね"
   },
   "hero": {
     "title": "本当に旅する人たちが",
@@ -832,5 +834,14 @@
       "noMailApp": "このデバイスにはメールアプリが設定されていません。support@tripshare.online までご連絡ください",
       "termsOfUse": "利用規約"
     }
+  },
+  "feed": {
+    "showMore": "もっと見る"
+  },
+  "liked": {
+    "title": "いいねしたガイド",
+    "intro": "アプリでいいねしたガイドです。",
+    "empty": "まだいいねしたガイドはありません。",
+    "emptyCta": "ガイドを見つける"
   }
 }

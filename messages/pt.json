@@ -46,7 +46,9 @@
     "webApp": "Usar na web",
     "login": "Iniciar sessão",
     "myGuides": "Os meus guias",
-    "logout": "Terminar sessão"
+    "logout": "Terminar sessão",
+    "feed": "Descobrir",
+    "liked": "Gostos"
   },
   "hero": {
     "title": "A app de viagens criada por",
@@ -832,5 +834,14 @@
       "noMailApp": "Nenhuma app de e-mail está configurada neste dispositivo. Contacte-nos em support@tripshare.online",
       "termsOfUse": "Termos de Utilização"
     }
+  },
+  "feed": {
+    "showMore": "Ver mais"
+  },
+  "liked": {
+    "title": "Guias de que gostaste",
+    "intro": "Os guias de que gostaste na app.",
+    "empty": "Ainda não gostaste de nenhum guia.",
+    "emptyCta": "Descobrir guias"
   }
 }

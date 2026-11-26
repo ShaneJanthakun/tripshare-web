@@ -48,7 +48,7 @@ function GlobeIcon({ className = '' }: { className?: string }) {
   );
 }
 
-export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' | 'myGuides' | 'login' }) {
+export default function Nav({ active }: { active?: 'guides' | 'features' | 'support' | 'privacy' | 'terms' | 'myGuides' | 'login' | 'feed' | 'liked' }) {
   const t = useTranslations('nav');
   const locale = useLocale();
   const signedIn = useSignedIn();
@@ -66,9 +66,10 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  const item = (key: 'guides' | 'features' | 'support' | 'privacy') =>
+  type Key = 'guides' | 'features' | 'support' | 'privacy' | 'feed' | 'liked';
+  const item = (key: Key) =>
     `hover:text-ink transition-colors hidden sm:block ${active === key ? 'text-ink' : ''}`;
-  const mobileItem = (key: 'guides' | 'features' | 'support' | 'privacy') =>
+  const mobileItem = (key: Key) =>
     `block px-4 py-3 rounded-xl text-sm transition-colors hover:bg-white/5 ${
       active === key ? 'text-ink font-semibold' : 'text-muted'
     }`;
@@ -81,9 +82,19 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
           TripShare
         </Link>
         <div className="flex items-center gap-1 sm:gap-5 text-sm text-muted">
-          <Link href="/features" className={item('features')}>{t('features')}</Link>
-          <Link href="/support" className={item('support')}>{t('support')}</Link>
-          <Link href="/privacy" className={item('privacy')}>{t('privacy')}</Link>
+          {/* Signed in: the app's own pages instead of the product pages (those stay in the footer). */}
+          {signedIn ? (
+            <>
+              <Link href="/feed" className={item('feed')}>{t('feed')}</Link>
+              <Link href="/liked" className={item('liked')}>{t('liked')}</Link>
+            </>
+          ) : (
+            <>
+              <Link href="/features" className={item('features')}>{t('features')}</Link>
+              <Link href="/support" className={item('support')}>{t('support')}</Link>
+              <Link href="/privacy" className={item('privacy')}>{t('privacy')}</Link>
+            </>
+          )}
           <LangSwitcher />
           {signedIn ? (
             <button type="button" onClick={() => signOut(locale)} className="hidden sm:block hover:text-ink transition-colors">{t('logout')}</button>
@@ -145,6 +156,12 @@ export default function Nav({ active }: { active?: 'guides' | 'features' | 'supp
             <button type="button" onClick={() => signOut(locale)} className="block w-full text-left px-4 py-3 rounded-xl text-sm text-muted transition-colors hover:bg-white/5">{t('logout')}</button>
           ) : (
             <Link href="/login" className={`block px-4 py-3 rounded-xl text-sm transition-colors hover:bg-white/5 ${active === 'login' ? 'text-ink font-semibold' : 'text-muted'}`} onClick={() => setMenuOpen(false)}>{t('login')}</Link>
+          )}
+          {signedIn && (
+            <>
+              <Link href="/feed" className={mobileItem('feed')} onClick={() => setMenuOpen(false)}>{t('feed')}</Link>
+              <Link href="/liked" className={mobileItem('liked')} onClick={() => setMenuOpen(false)}>{t('liked')}</Link>
+            </>
           )}
           <Link href="/guides" className={mobileItem('guides')} onClick={() => setMenuOpen(false)}>{t('guides')}</Link>
           <Link href="/features" className={mobileItem('features')} onClick={() => setMenuOpen(false)}>{t('features')}</Link>

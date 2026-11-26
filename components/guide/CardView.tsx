@@ -5,9 +5,11 @@ import type { CardData } from '../../lib/guides/discover';
 // A guide card, shared by the static lists (GuideCard) and the search on /guides (client).
 // Links straight to the canonical URL, so search engines don't crawl ten copies of each guide.
 // ♥ is left out on team guides, as in the app (H:35–37, 315).
-export default function CardView({ c, priority = false }: { c: CardData; priority?: boolean }) {
+export default function CardView({ c, priority = false, badge, onOpen }: {
+  c: CardData; priority?: boolean; badge?: string; onOpen?: () => void;
+}) {
   return (
-    <a href={c.href} className="group block overflow-hidden rounded-3xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/40">
+    <a href={c.href} onClick={onOpen} className="group relative block overflow-hidden rounded-3xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/40">
       {c.cover ? (
         <Image src={renderUrl(c.cover, 640, 420)} alt="" width={640} height={420} unoptimized priority={priority}
           sizes="(min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw"
@@ -16,6 +18,9 @@ export default function CardView({ c, priority = false }: { c: CardData; priorit
         <div className="flex aspect-[3/2] w-full items-center justify-center bg-[#1A1A2E] font-display text-6xl font-bold text-white/80">
           {c.initial}
         </div>
+      )}
+      {badge && (
+        <span className="absolute left-3 top-3 rounded-full bg-accent px-2.5 py-1 text-[11px] font-semibold text-white shadow-card">{badge}</span>
       )}
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">
