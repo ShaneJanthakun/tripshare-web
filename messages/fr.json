@@ -485,7 +485,6 @@
     "stopName": "Nom de l’étape",
     "moveUp": "Monter",
     "moveDown": "Descendre",
-    "sectionInApp": "Pour l’instant, cette section se modifie dans l’app – la modification sur le web arrive bientôt.",
     "cover": "Photo de couverture",
     "uploadCover": "Importer une photo de couverture",
     "changeCover": "Changer la photo de couverture",
@@ -497,7 +496,19 @@
     "denied": "Non enregistré : vous n’avez pas accès à la modification de ce guide.",
     "details": "Détails",
     "remove": "Retirer",
-    "edit": "Modifier"
+    "edit": "Modifier",
+    "pickHint": "Clique sur la carte à l’endroit du lieu.",
+    "noAddressHere": "Aucune adresse trouvée ici. Essaie un autre point de la carte.",
+    "showMap": "Afficher la carte",
+    "hideMap": "Masquer la carte",
+    "missingOnMap": "{count, plural, one {# adresse introuvable} other {# adresses introuvables}} sur la carte.",
+    "maxPhotos": "Jusqu’à {max} photos ici.",
+    "dropPhotos": "Glisse des photos ici, ou clique pour choisir",
+    "preview": "Aperçu",
+    "previewNote": "Voici le guide tel que les lecteurs le voient, d’après ta dernière sauvegarde.",
+    "previewDraft": "Le guide n’est pas encore publié – toi seul peux voir cet aperçu.",
+    "backToEditor": "← Retour à l’édition",
+    "openPublic": "Ouvrir la page publique ↗"
   },
   "app": {
     "guideDetail": {

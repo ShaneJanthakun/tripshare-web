@@ -485,7 +485,6 @@
     "stopName": "景点名称",
     "moveUp": "上移",
     "moveDown": "下移",
-    "sectionInApp": "此部分目前需在应用中编辑，网页编辑即将推出。",
     "cover": "封面照片",
     "uploadCover": "上传封面照片",
     "changeCover": "更换封面照片",
@@ -497,7 +496,19 @@
     "denied": "未保存：您无权编辑此攻略。",
     "details": "详情",
     "remove": "移除",
-    "edit": "编辑"
+    "edit": "编辑",
+    "pickHint": "在地图上点击该地点的位置。",
+    "noAddressHere": "那里没有找到地址。请在地图上换个位置试试。",
+    "showMap": "显示地图",
+    "hideMap": "隐藏地图",
+    "missingOnMap": "有 {count} 个地址无法在地图上找到。",
+    "maxPhotos": "这里最多 {max} 张照片。",
+    "dropPhotos": "将照片拖到这里，或点击选择",
+    "preview": "预览",
+    "previewNote": "这是读者看到的指南，基于你最近一次保存。",
+    "previewDraft": "指南尚未发布——只有你能看到此预览。",
+    "backToEditor": "← 返回编辑",
+    "openPublic": "打开公开页面 ↗"
   },
   "app": {
     "guideDetail": {

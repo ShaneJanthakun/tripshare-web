@@ -28,6 +28,8 @@ export default async function EditPage({ params }: { params: Promise<{ locale: s
 
   // Only the texts the editor needs go to the browser.
   const all = (await getMessages({ locale })) as Record<string, any>;
+  const t = await getTranslations({ locale });
+  const mapLabels = { all: t('guide.mapAll'), empty: t('app.guideDetail.addStopsToMap'), error: t('guide.mapError') };
   const messages = {
     editor: all.editor,
     app: { guideDetail: all.app.guideDetail, createGuide: all.app.createGuide, common: all.app.common, tags: all.app.tags },
@@ -39,7 +41,8 @@ export default async function EditPage({ params }: { params: Promise<{ locale: s
         locale={locale}
         initialGuide={guide}
         initialVersion={row.version ?? 0}
-        publicPath={guidePath(guideLocale(guide), guide)}
+        previewPath={`/${locale}/edit/${encodeURIComponent(guide.id)}/preview`}
+        mapLabels={mapLabels}
         supabaseUrl={SUPABASE_URL}
         supabaseKey={SUPABASE_ANON_KEY}
       />

@@ -485,7 +485,6 @@
     "stopName": "Navn på stoppet",
     "moveUp": "Flytt opp",
     "moveDown": "Flytt ned",
-    "sectionInApp": "Denne seksjonen redigeres foreløpig i appen – redigering på nett kommer snart.",
     "cover": "Forsidebilde",
     "uploadCover": "Last opp forsidebilde",
     "changeCover": "Bytt forsidebilde",
@@ -497,7 +496,19 @@
     "denied": "Ikke lagret: du har ikke tilgang til å redigere denne guiden.",
     "details": "Detaljer",
     "remove": "Fjern",
-    "edit": "Rediger"
+    "edit": "Rediger",
+    "pickHint": "Klikk i kartet der stedet er.",
+    "noAddressHere": "Fant ingen adresse der. Prøv et annet sted i kartet.",
+    "showMap": "Vis kart",
+    "hideMap": "Skjul kart",
+    "missingOnMap": "{count, plural, one {# adresse} other {# adresser}} ble ikke funnet på kartet.",
+    "maxPhotos": "Maks {max} bilder her.",
+    "dropPhotos": "Dra bilder hit, eller klikk for å velge",
+    "preview": "Forhåndsvisning",
+    "previewNote": "Slik ser leserne guiden, fra siste lagring.",
+    "previewDraft": "Guiden er ikke publisert ennå – bare du kan se denne forhåndsvisningen.",
+    "backToEditor": "← Tilbake til redigering",
+    "openPublic": "Åpne den offentlige siden ↗"
   },
   "app": {
     "guideDetail": {

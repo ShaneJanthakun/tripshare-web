@@ -485,7 +485,6 @@
     "stopName": "장소 이름",
     "moveUp": "위로 이동",
     "moveDown": "아래로 이동",
-    "sectionInApp": "이 섹션은 현재 앱에서 편집합니다. 웹 편집 기능이 곧 제공됩니다.",
     "cover": "커버 사진",
     "uploadCover": "커버 사진 업로드",
     "changeCover": "커버 사진 변경",
@@ -497,7 +496,19 @@
     "denied": "저장되지 않음: 이 가이드를 편집할 권한이 없습니다.",
     "details": "세부 정보",
     "remove": "삭제",
-    "edit": "편집"
+    "edit": "편집",
+    "pickHint": "지도에서 장소가 있는 곳을 클릭하세요.",
+    "noAddressHere": "그곳에서 주소를 찾지 못했어요. 지도의 다른 곳을 눌러 보세요.",
+    "showMap": "지도 보기",
+    "hideMap": "지도 숨기기",
+    "missingOnMap": "주소 {count}개를 지도에서 찾지 못했어요.",
+    "maxPhotos": "여기에는 사진을 최대 {max}장까지 넣을 수 있어요.",
+    "dropPhotos": "사진을 여기로 끌어 놓거나 클릭해서 선택하세요",
+    "preview": "미리보기",
+    "previewNote": "마지막으로 저장한 내용으로 독자에게 보이는 가이드예요.",
+    "previewDraft": "아직 공개되지 않은 가이드예요. 이 미리보기는 나만 볼 수 있어요.",
+    "backToEditor": "← 편집으로 돌아가기",
+    "openPublic": "공개 페이지 열기 ↗"
   },
   "app": {
     "guideDetail": {

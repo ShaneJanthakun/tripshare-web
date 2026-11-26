@@ -5,8 +5,22 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 const MAX_SIDE = 2048;
 const MAX_BYTES = 10 * 1024 * 1024;
 
+export const isHeic = (file: File) => /hei[cf]/i.test(file.type) || /\.hei[cf]$/i.test(file.name);
+
+/** Safari reads HEIC itself; Chrome and Firefox can't, so heic2any (≈1 MB) is loaded only then. */
+async function decode(file: File): Promise<ImageBitmap> {
+  try {
+    return await createImageBitmap(file);
+  } catch (e) {
+    if (!isHeic(file)) throw e;
+    const heic2any = (await import('heic2any')).default;
+    const jpeg = await heic2any({ blob: file, toType: 'image/jpeg', quality: 0.92 });
+    return createImageBitmap(Array.isArray(jpeg) ? jpeg[0] : jpeg);
+  }
+}
+
 async function toJpeg(file: File): Promise<Blob> {
-  const bitmap = await createImageBitmap(file); // Safari also reads HEIC; Chrome may not (heic2any comes later)
+  const bitmap = await decode(file);
   const scale = Math.min(1, MAX_SIDE / Math.max(bitmap.width, bitmap.height));
   const w = Math.round(bitmap.width * scale);
   const h = Math.round(bitmap.height * scale);
@@ -25,4 +39,9 @@ export async function uploadImage(supabase: SupabaseClient, file: File): Promise
   const { error } = await supabase.storage.from('guide-images').upload(path, blob, { contentType: 'image/jpeg', upsert: false });
   if (error) throw error;
   return supabase.storage.from('guide-images').getPublicUrl(path).data.publicUrl;
+}
+
+/** Image files from a file picker or a drop (anything else is ignored). */
+export function imageFiles(list: FileList | null | undefined): File[] {
+  return Array.from(list ?? []).filter(f => f.type.startsWith('image/') || isHeic(f));
 }

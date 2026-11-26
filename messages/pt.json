@@ -485,7 +485,6 @@
     "stopName": "Nome da paragem",
     "moveUp": "Mover para cima",
     "moveDown": "Mover para baixo",
-    "sectionInApp": "Por agora, esta secção edita-se na app – em breve vais poder editá-la na web.",
     "cover": "Foto de capa",
     "uploadCover": "Carregar foto de capa",
     "changeCover": "Mudar foto de capa",
@@ -497,7 +496,19 @@
     "denied": "Não guardado: não tens acesso para editar este guia.",
     "details": "Detalhes",
     "remove": "Remover",
-    "edit": "Editar"
+    "edit": "Editar",
+    "pickHint": "Clica no mapa onde fica o local.",
+    "noAddressHere": "Não foi encontrada nenhuma morada aí. Experimenta outro ponto do mapa.",
+    "showMap": "Mostrar mapa",
+    "hideMap": "Ocultar mapa",
+    "missingOnMap": "{count, plural, one {# morada não foi encontrada} other {# moradas não foram encontradas}} no mapa.",
+    "maxPhotos": "Até {max} fotos aqui.",
+    "dropPhotos": "Arrasta fotos para aqui, ou clica para escolher",
+    "preview": "Pré-visualização",
+    "previewNote": "É assim que os leitores veem o guia, a partir da tua última gravação.",
+    "previewDraft": "O guia ainda não está publicado – só tu podes ver esta pré-visualização.",
+    "backToEditor": "← Voltar à edição",
+    "openPublic": "Abrir a página pública ↗"
   },
   "app": {
     "guideDetail": {

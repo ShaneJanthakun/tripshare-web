@@ -485,7 +485,6 @@
     "stopName": "Stop name",
     "moveUp": "Move up",
     "moveDown": "Move down",
-    "sectionInApp": "This section is edited in the app for now – editing it on the web is coming soon.",
     "cover": "Cover photo",
     "uploadCover": "Upload cover photo",
     "changeCover": "Change cover photo",
@@ -497,7 +496,19 @@
     "denied": "Not saved: you don't have access to edit this guide.",
     "details": "Details",
     "remove": "Remove",
-    "edit": "Edit"
+    "edit": "Edit",
+    "pickHint": "Click on the map where the place is.",
+    "noAddressHere": "No address found there. Try another spot on the map.",
+    "showMap": "Show map",
+    "hideMap": "Hide map",
+    "missingOnMap": "{count, plural, one {# address} other {# addresses}} could not be found on the map.",
+    "maxPhotos": "Up to {max} photos here.",
+    "dropPhotos": "Drag photos here, or click to choose",
+    "preview": "Preview",
+    "previewNote": "This is how readers see the guide, from your latest save.",
+    "previewDraft": "The guide isn’t published yet – only you can see this preview.",
+    "backToEditor": "← Back to editing",
+    "openPublic": "Open the public page ↗"
   },
   "app": {
     "guideDetail": {
