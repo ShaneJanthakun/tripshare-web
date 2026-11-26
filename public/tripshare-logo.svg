@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>TripShare app icon (light)</title>
+  <defs>
+    <linearGradient id="bg-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1024" y2="1024">
+      <stop offset="0" stop-color="#FD6C4F"/>
+      <stop offset="1" stop-color="#DF3A1E"/>
+    </linearGradient>
+    <linearGradient id="face-shading" gradientUnits="userSpaceOnUse" x1="0" y1="256" x2="0" y2="768">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F5ECE8"/>
+    </linearGradient>
+    <filter id="shadow-blur" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <g id="background">
+    <rect width="1024" height="1024" fill="url(#bg-gradient)"/>
+  </g>
+  <g id="shadow" opacity="0.42" filter="url(#shadow-blur)">
+    <path transform="translate(18 34)" fill="#A7301A" d="M336.5,256 H688.5 A65.5,65.5 0 0 1 745.892,289.934 L767.892,329.934 A65.5,65.5 0 0 1 776,361.5 V369.5 A65.5,65.5 0 0 1 710.5,435 H646.5 A41.5,41.5 0 0 0 605,476.5 V742 A66,66 0 0 1 539,808 H529 A66,66 0 0 1 471.17,773.807 L449.17,733.807 A66,66 0 0 1 441,702 V439.867 A41.5,41.5 0 0 0 421.5,435 H358.5 A65.5,65.5 0 0 1 301.108,401.066 L279.108,361.066 A65.5,65.5 0 0 1 271,329.5 V321.5 A65.5,65.5 0 0 1 336.5,256 Z"/>
+  </g>
+  <g id="extrusion">
+    <path fill="#B13722" d="M336.5,256 H688.5 A65.5,65.5 0 0 1 745.892,289.934 L767.892,329.934 A65.5,65.5 0 0 1 776,361.5 V369.5 A65.5,65.5 0 0 1 710.5,435 H646.5 A41.5,41.5 0 0 0 605,476.5 V742 A66,66 0 0 1 539,808 H529 A66,66 0 0 1 471.17,773.807 L449.17,733.807 A66,66 0 0 1 441,702 V439.867 A41.5,41.5 0 0 0 421.5,435 H358.5 A65.5,65.5 0 0 1 301.108,401.066 L279.108,361.066 A65.5,65.5 0 0 1 271,329.5 V321.5 A65.5,65.5 0 0 1 336.5,256 Z"/>
+  </g>
+  <g id="face">
+    <path fill="url(#face-shading)" d="M336.5,256 H688.5 A65.5,65.5 0 0 1 754,321.5 V329.5 A65.5,65.5 0 0 1 688.5,395 H624.5 A41.5,41.5 0 0 0 583,436.5 V702 A66,66 0 0 1 517,768 H507 A66,66 0 0 1 441,702 V436.5 A41.5,41.5 0 0 0 399.5,395 H336.5 A65.5,65.5 0 0 1 271,329.5 V321.5 A65.5,65.5 0 0 1 336.5,256 Z"/>
+  </g>
+</svg>

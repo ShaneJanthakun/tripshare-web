@@ -40,7 +40,7 @@ const JSON_LD = {
       name: 'TripShare',
       legalName: 'Janthakun Tech',
       url: SITE_URL,
-      logo: `${SITE_URL}/icon.png`,
+      logo: `${SITE_URL}/tripshare-logo.png`,
     },
     {
       '@type': 'MobileApplication',

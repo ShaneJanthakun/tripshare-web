@@ -33,14 +33,11 @@ async function signOut(locale: string) {
   window.location.assign(`/${locale}`);
 }
 
-// The T logo (brand/source/tripshare-favicon.svg), the same as the favicon and the app icon.
-export function LogoMark({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 1024 1024" fill="none" aria-hidden>
-      <rect width="1024" height="1024" rx="204.8" fill="#FF5C38" />
-      <path fill="#fff" d="M336.5,256 H688.5 A65.5,65.5 0 0 1 754,321.5 V329.5 A65.5,65.5 0 0 1 688.5,395 H624.5 A41.5,41.5 0 0 0 583,436.5 V702 A66,66 0 0 1 517,768 H507 A66,66 0 0 1 441,702 V436.5 A41.5,41.5 0 0 0 399.5,395 H336.5 A65.5,65.5 0 0 1 271,329.5 V321.5 A65.5,65.5 0 0 1 336.5,256 Z" />
-    </svg>
-  );
+// The TripShare logo: the app icon (brand/source/tripshare-icon-light-layered.svg, in public/).
+// The same image is the logo on Google's sign-in screen, so it must look the same here.
+export function LogoMark({ className = 'w-7 h-7', alt = '' }: { className?: string; alt?: string }) {
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src="/tripshare-logo.svg" alt={alt} width={28} height={28} className={`${className} rounded-[22%]`} />;
 }
 
 function GlobeIcon({ className = '' }: { className?: string }) {
