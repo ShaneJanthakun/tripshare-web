@@ -420,7 +420,10 @@
     "privateTitle": "คู่มือนี้เป็นแบบส่วนตัวหรือไม่มีอยู่แล้ว",
     "privateMsg": "หากคุณได้รับรหัสเข้าถึง ให้เปิดคู่มือในแอป TripShare",
     "tagline": "คู่มือท่องเที่ยวจากนักเดินทางตัวจริง",
-    "fallbackDescription": "คู่มือท่องเที่ยวรายวันสำหรับ {destination} พร้อมจุดแวะ แผนที่ และเคล็ดลับ"
+    "fallbackDescription": "คู่มือท่องเที่ยวรายวันสำหรับ {destination} พร้อมจุดแวะ แผนที่ และเคล็ดลับ",
+    "codeLabel": "รหัสเข้าถึง",
+    "openWithCode": "เปิดไกด์",
+    "privateMsgWeb": "มีรหัสเข้าถึงไหม ใส่ที่นี่ หรือเปิดไกด์ในแอป TripShare"
   },
   "guide": {
     "views": "{count, plural, other {ดู # ครั้ง}}",

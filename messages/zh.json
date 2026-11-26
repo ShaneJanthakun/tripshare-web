@@ -420,7 +420,10 @@
     "privateTitle": "此攻略为私密攻略或已不存在",
     "privateMsg": "如果你收到了访问码，请在 TripShare 应用中打开此攻略。",
     "tagline": "真实旅行者的旅行攻略",
-    "fallbackDescription": "{destination}逐日旅行攻略，包含地点、地图和小贴士。"
+    "fallbackDescription": "{destination}逐日旅行攻略，包含地点、地图和小贴士。",
+    "codeLabel": "访问码",
+    "openWithCode": "打开攻略",
+    "privateMsgWeb": "收到访问码了吗？在这里输入，或在 TripShare 应用中打开攻略。"
   },
   "guide": {
     "views": "{count, plural, other {#次浏览}}",

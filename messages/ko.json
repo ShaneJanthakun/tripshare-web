@@ -420,7 +420,10 @@
     "privateTitle": "이 가이드는 비공개이거나 더 이상 존재하지 않습니다",
     "privateMsg": "액세스 코드를 받았다면 TripShare 앱에서 가이드를 여세요.",
     "tagline": "실제 여행자의 여행 가이드",
-    "fallbackDescription": "{destination} 일자별 여행 가이드 – 장소, 지도, 팁 포함."
+    "fallbackDescription": "{destination} 일자별 여행 가이드 – 장소, 지도, 팁 포함.",
+    "codeLabel": "접근 코드",
+    "openWithCode": "가이드 열기",
+    "privateMsgWeb": "접근 코드를 받았나요? 여기에 입력하거나 TripShare 앱에서 가이드를 여세요."
   },
   "guide": {
     "views": "{count, plural, other {조회 #회}}",

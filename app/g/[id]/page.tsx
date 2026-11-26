@@ -12,7 +12,8 @@ import { pickLocale, shareTranslator } from '../locale';
 // Everyone else (no app, PC, in-app browsers) gets a preview with buttons to the app and App Store,
 // and link previews (WhatsApp, iMessage, Slack) get the guide's title and cover.
 // Phase 1 (F1.6): a published public guide redirects (307) to its full page, in the visitor's
-// language when we have it, otherwise the guide's own. Private or unknown guides get this page.
+// language when we have it, otherwise the guide's own. Private or unknown guides get this page,
+// with a field for the access code that opens the guide on the web (F6.6).
 export const dynamic = 'force-dynamic';
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://fovddldyfhspgejjkvtd.supabase.co';
@@ -177,7 +178,14 @@ export default async function ShortLinkPage({ params }: { params: Promise<{ id: 
         ) : (
           <div className="rounded-3xl border border-border bg-surface p-8 text-center shadow-card">
             <h1 className="font-display text-xl font-bold">{t('privateTitle')}</h1>
-            <p className="mt-3 text-muted">{t('privateMsg')}</p>
+            <p className="mt-3 text-muted">{t('privateMsgWeb')}</p>
+            {/* Private guides open on the web too (F6.6): signed in, with the code. */}
+            <form method="get" action={`/${locale}/private/${encodeURIComponent(id)}`} className="mt-6 flex gap-2">
+              <label className="sr-only" htmlFor="code">{t('codeLabel')}</label>
+              <input id="code" name="code" autoComplete="off" autoCapitalize="characters" maxLength={12} required placeholder={t('codeLabel')}
+                className="min-w-0 flex-1 rounded-xl border border-border bg-s2 px-4 py-3 text-center font-mono uppercase tracking-[0.3em] text-ink outline-none placeholder:font-sans placeholder:text-sm placeholder:normal-case placeholder:tracking-normal placeholder:text-faint focus:border-accent/60" />
+              <button type="submit" className="shrink-0 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent2">{t('openWithCode')}</button>
+            </form>
             {buttons}
           </div>
         )}

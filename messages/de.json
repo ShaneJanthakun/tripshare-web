@@ -420,7 +420,10 @@
     "privateTitle": "Dieser Guide ist privat oder existiert nicht mehr",
     "privateMsg": "Wenn du einen Zugangscode bekommen hast, öffne den Guide in der TripShare-App.",
     "tagline": "Reiseguides von echten Reisenden",
-    "fallbackDescription": "Ein Reiseguide Tag für Tag für {destination}, mit Stopps, Karte und Tipps."
+    "fallbackDescription": "Ein Reiseguide Tag für Tag für {destination}, mit Stopps, Karte und Tipps.",
+    "codeLabel": "Zugangscode",
+    "openWithCode": "Guide öffnen",
+    "privateMsgWeb": "Hast du einen Zugangscode bekommen? Gib ihn hier ein oder öffne den Guide in der TripShare-App."
   },
   "guide": {
     "views": "{count, plural, one {# Aufruf} other {# Aufrufe}}",

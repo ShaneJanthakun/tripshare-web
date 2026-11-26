@@ -36,3 +36,22 @@ html { scroll-behavior: smooth; }
   .stagger > *, .animate-marquee, .animate-fade-up { animation: none !important; }
   * { transition-duration: 0.01ms !important; }
 }
+
+/* Printing a guide / "Save as PDF" (plan F6.4): white A4 pages with margins on every page (the
+   app's PDF had none after the first), dark text, no shadows; stops and photos don't split. */
+@media print {
+  @page { size: A4; margin: 16mm 14mm; }
+  html, body { background: #fff !important; color: #111 !important; }
+  .bg-bg, .bg-surface, .bg-s2, .bg-bg\/40, .bg-bg\/60, .bg-bg\/90 { background: #fff !important; }
+  .bg-gradient-to-b { background-image: none !important; }
+  .text-ink, .text-ink\/90, .text-ink\/80, .text-ink\/70 { color: #111 !important; }
+  [class*="text-ink\/"] { color: #222 !important; }
+  .text-muted { color: #444 !important; }
+  .text-faint { color: #666 !important; }
+  .border-border { border-color: #ddd !important; }
+  .shadow-card { box-shadow: none !important; }
+  a { color: inherit !important; text-decoration: none !important; }
+  li, figure, img, section > h2 { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  img { max-height: 110mm; object-fit: cover; }
+}

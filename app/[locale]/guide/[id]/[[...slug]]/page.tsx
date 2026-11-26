@@ -7,6 +7,7 @@ import { Link } from '../../../../i18n/navigation';
 import { GuideHeader, GuideBody } from '../../../../../components/guide/GuideView';
 import GuideMap from '../../../../../components/guide/GuideMap';
 import Comments from '../../../../../components/social/Comments';
+import { commentLabels } from '../../../../../components/social/commentLabels';
 import { loadPublicGuide, loadPublicGuides } from '../../../../../lib/guides/queries';
 import { buildGuideMap, buildMiniMap, type GuideMapData } from '../../../../../lib/guides/mapdata';
 import {
@@ -125,10 +126,10 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
 
   return (
     <div className="flex min-h-screen flex-col bg-bg text-ink">
-      <Nav />
+      <div className="print:hidden"><Nav /></div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(p, description)).replace(/</g, '\\u003c') }} />
-      <main className="mx-auto w-full max-w-6xl px-4 pb-20 pt-24 sm:px-6">
-        <Link href="/guides" className="mb-5 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink">
+      <main className="mx-auto w-full max-w-6xl px-4 pb-20 pt-24 sm:px-6 print:pb-0 print:pt-0">
+        <Link href="/guides" className="mb-5 print:hidden inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink">
           <span aria-hidden>←</span> {t('guide.allGuides')}
         </Link>
         {/* PC: content left, map right and sticky. Phone: card, map, then content. */}
@@ -136,7 +137,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
           <div className="lg:col-span-7">
             <GuideHeader p={p} locale={locale} subtitle={subtitle} />
           </div>
-          <aside className="lg:col-span-5 lg:col-start-8 lg:row-span-2 lg:row-start-1" aria-label={t('app.guideDetail.map')}>
+          <aside className="lg:col-span-5 lg:col-start-8 lg:row-span-2 lg:row-start-1 print:hidden" aria-label={t('app.guideDetail.map')}>
             <div className="lg:sticky lg:top-24">
               <GuideMap data={map} labels={mapLabels} />
             </div>
@@ -144,17 +145,9 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
           <div className="lg:col-span-7">
             <GuideBody p={p} locale={locale} miniMaps={Object.fromEntries(minis)} />
             {!g.commentsDisabled && (
-              <Comments guideId={g.id} ownerId={p.authorId} locale={locale} labels={{
-                title: t('app.guideDetail.comments'), signInToRead: t('social.signInToRead'), signIn: t('app.common.signIn'),
-                loading: t('app.common.loading'), placeholder: t('app.guideDetail.addComment'), post: t('app.guideDetail.postComment'),
-                none: t('app.guideDetail.noComments'), noneSub: t('app.guideDetail.noCommentsSub'), already: t('app.guideDetail.alreadyCommented'),
-                edit: t('app.guideDetail.editComment'), del: t('app.common.delete'), deleteConfirm: t('app.guideDetail.deleteCommentConfirm'),
-                save: t('app.common.save'), cancel: t('app.common.cancel'), moderate: t('app.guideDetail.moderate'),
-                deleteAction: t('app.guideDetail.deleteCommentAction'), blockTitle: t.raw('app.guideDetail.blockUserTitle') as string,
-                blockConfirm: t('app.guideDetail.blockUserConfirm'), failed: t('app.guideDetail.commentFailed'), editFailed: t('app.guideDetail.commentEditFailed'),
-              }} />
+              <div className="print:hidden"><Comments guideId={g.id} ownerId={p.authorId} locale={locale} labels={commentLabels(t)} /></div>
             )}
-            <section className="mt-16 rounded-3xl border border-border bg-gradient-to-b from-s2 to-surface p-8 text-center">
+            <section className="mt-16 rounded-3xl border border-border bg-gradient-to-b from-s2 to-surface p-8 text-center print:hidden">
               <h2 className="font-display text-2xl font-bold">{t('guide.ctaTitle')}</h2>
               <p className="mx-auto mt-3 max-w-md text-muted">{t('guide.ctaText')}</p>
               <a href="https://apps.apple.com/app/id6778097653" className="mt-6 inline-block rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent2">
@@ -164,7 +157,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
           </div>
         </div>
       </main>
-      <Footer />
+      <div className="print:hidden"><Footer /></div>
     </div>
   );
 }

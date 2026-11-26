@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import LikeButton from './LikeButton';
 import FollowButton from '../social/FollowButton';
+import PrintButton from './PrintButton';
 import { TAG_META, type CustomSection, type GuideTag, type Stop } from '../../lib/core/guide';
 import { renderUrl } from '../../lib/images';
 import {
@@ -80,8 +81,8 @@ export async function GuideHeader({ p, locale, subtitle }: HeaderProps) {
                   </span>
                   <span className="text-ink group-hover:underline">{author}</span>
                 </a>
-                <FollowButton userId={p.authorId} locale={locale}
-                  labels={{ follow: t('app.common.follow'), following: t('app.common.following'), signIn: t('app.publicProfile.signInFollow') }} />
+                <span className="print:hidden"><FollowButton userId={p.authorId} locale={locale}
+                  labels={{ follow: t('app.common.follow'), following: t('app.common.following'), signIn: t('app.publicProfile.signInFollow') }} /></span>
               </>
             ) : (
               <span className="flex items-center gap-2">
@@ -93,20 +94,22 @@ export async function GuideHeader({ p, locale, subtitle }: HeaderProps) {
             )}
             {n > 0 && <span>{t('share.days', { count: n })} · {t('share.stops', { count: stops })}</span>}
             {counts && <span>{t('guide.views', { count: p.views })}</span>}
+            {counts && p.upvotes > 0 && <span className="hidden print:inline">♥ {p.upvotes}</span>}
             {counts && (
-              <LikeButton guideId={g.id} authorId={p.authorId} count={p.upvotes} locale={locale}
-                labels={{ like: t('guide.like'), unlike: t('guide.unlike'), signIn: t('guide.likeSignIn') }} />
+              <span className="print:hidden"><LikeButton guideId={g.id} authorId={p.authorId} count={p.upvotes} locale={locale}
+                labels={{ like: t('guide.like'), unlike: t('guide.unlike'), signIn: t('guide.likeSignIn') }} /></span>
             )}
             {lang && <span className="rounded-md border border-border px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide">{lang}</span>}
           </div>
 
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row print:hidden">
             <a href={`tripshare://guide/${encodeURIComponent(g.id)}`} className="rounded-xl bg-accent px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-accent2 lg:hidden">
               {t('share.openInApp')}
             </a>
             <a href={APP_STORE_URL} className="rounded-xl border border-border px-5 py-3 text-center text-sm font-semibold transition-colors hover:bg-s2">
               {t('share.getApp')}
             </a>
+            <PrintButton label={t('app.guideDetail.downloadPdf')} />
           </div>
         </div>
     </header>

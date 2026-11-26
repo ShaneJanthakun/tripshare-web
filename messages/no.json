@@ -420,7 +420,10 @@
     "privateTitle": "Denne guiden er privat eller finnes ikke lenger",
     "privateMsg": "Har du fått en tilgangskode, åpner du guiden i TripShare-appen.",
     "tagline": "Reiseguider fra ekte reisende",
-    "fallbackDescription": "En reiseguide dag for dag til {destination}, med stopp, kart og tips."
+    "fallbackDescription": "En reiseguide dag for dag til {destination}, med stopp, kart og tips.",
+    "codeLabel": "Tilgangskode",
+    "openWithCode": "Åpne guiden",
+    "privateMsgWeb": "Har du fått en tilgangskode? Skriv den inn her, eller åpne guiden i TripShare-appen."
   },
   "guide": {
     "views": "{count, plural, one {# visning} other {# visninger}}",

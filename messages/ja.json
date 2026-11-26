@@ -420,7 +420,10 @@
     "privateTitle": "このガイドは非公開か、すでに存在しません",
     "privateMsg": "アクセスコードを受け取った場合は、TripShareアプリでガイドを開いてください。",
     "tagline": "実際に旅した人の旅行ガイド",
-    "fallbackDescription": "{destination}の日ごとの旅行ガイド。スポット、地図、ヒント付き。"
+    "fallbackDescription": "{destination}の日ごとの旅行ガイド。スポット、地図、ヒント付き。",
+    "codeLabel": "アクセスコード",
+    "openWithCode": "ガイドを開く",
+    "privateMsgWeb": "アクセスコードをお持ちですか？ここに入力するか、TripShareアプリでガイドを開いてください。"
   },
   "guide": {
     "views": "{count, plural, other {#回閲覧}}",
