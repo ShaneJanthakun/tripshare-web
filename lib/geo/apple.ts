@@ -66,7 +66,11 @@ function toPlace(r: any): Place | null {
   return { lat: c.latitude, lng: c.longitude, name, address, street, city, region, country, countryCode: r.countryCode ?? '' };
 }
 
-/** Text → first matching place, or null. */
+/**
+ * Text → first matching place, or null. Addresses only: Apple's /search would turn a bare place
+ * name into a wrong place far away (tested: "Fløibanen, Bergen" → Telemark), and a wrong pin is
+ * worse than none. The editor therefore saves suggestions with their street address.
+ */
 export async function geocode(query: string, lang?: string): Promise<Place | null> {
   const j = await call('/geocode', { q: query, lang });
   return toPlace(j?.results?.[0]);

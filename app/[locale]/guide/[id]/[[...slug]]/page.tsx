@@ -150,9 +150,10 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
             <section className="mt-16 rounded-3xl border border-border bg-gradient-to-b from-s2 to-surface p-8 text-center print:hidden">
               <h2 className="font-display text-2xl font-bold">{t('guide.ctaTitle')}</h2>
               <p className="mx-auto mt-3 max-w-md text-muted">{t('guide.ctaText')}</p>
-              <a href="https://apps.apple.com/app/id6778097653" className="mt-6 inline-block rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent2">
+              {/* New guide on the web; visitors who aren't signed in go via the login page and come back. */}
+              <Link href="/my-guides/new" className="mt-6 inline-block rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent2">
                 {t('guide.makeYourOwn')}
-              </a>
+              </Link>
             </section>
           </div>
         </div>

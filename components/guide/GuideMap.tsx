@@ -53,13 +53,21 @@ type Props = {
   data: GuideMapData;
   mini?: boolean;
   labels: { all: string; empty: string; error: string };
+  /** Editor: show the map even when there is nothing on it yet. */
+  alwaysShow?: boolean;
+  /** Editor: while true, a click on the map calls onPick with the coordinate. */
+  picking?: boolean;
+  onPick?: (lat: number, lng: number) => void;
 };
 
-export default function GuideMap({ data, mini = false, labels }: Props) {
+export default function GuideMap({ data, mini = false, labels, alwaysShow = false, picking = false, onPick }: Props) {
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
-  const itemsRef = useRef<{ annotations: any[]; overlays: any[] }>({ annotations: [], overlays: [] });
+  const itemsRef = useRef<{ annotations: any[]; overlays: any[]; key: string }>({ annotations: [], overlays: [], key: '' });
+  const pickRef = useRef<{ picking: boolean; onPick?: Props['onPick'] }>({ picking, onPick });
+  pickRef.current = { picking, onPick };
   const [visible, setVisible] = useState(false);
+  const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const [active, setActive] = useState<number | null>(null);
 
@@ -69,19 +77,22 @@ export default function GuideMap({ data, mini = false, labels }: Props) {
   }, [data.groups, mini]);
 
   const hasContent = data.pins.length > 0 || !!data.center;
+  const showMap = hasContent || alwaysShow;
   const dayGroups = data.groups.filter(g => g.kind === 'day');
   const showFilter = !mini && dayGroups.length >= 2;
+  const activeGroup = active !== null && dayGroups.some(g => g.group === active) ? active : null;
 
   // Load MapKit only when the map is about to be seen.
   useEffect(() => {
-    if (!hasContent || !box.current) return;
+    if (!showMap || !box.current) return;
     const io = new IntersectionObserver(entries => {
       if (entries.some(e => e.isIntersecting)) { setVisible(true); io.disconnect(); }
     }, { rootMargin: '300px' });
     io.observe(box.current);
     return () => io.disconnect();
-  }, [hasContent]);
+  }, [showMap]);
 
+  // The map itself is made once; pins and routes are swapped below when the data changes.
   useEffect(() => {
     if (!visible || !box.current) return;
     let cancelled = false;
@@ -94,50 +105,75 @@ export default function GuideMap({ data, mini = false, labels }: Props) {
         isRotationEnabled: false,
       });
       mapRef.current = map;
-      const annotations = data.pins.map(pin => new mapkit.Annotation(
-        new mapkit.Coordinate(pin.lat, pin.lng),
-        () => pinElement(pin, colorOf(pin)),
-        { title: pin.title, subtitle: pin.subtitle, data: { group: pin.group, kind: pin.kind }, calloutEnabled: !!pin.title },
-      ));
-      const color = new Map(data.groups.map(g => [g.group, g.color]));
-      const overlays = mini ? [] : data.lines.map(line => {
-        const o = new mapkit.PolylineOverlay(
-          line.coords.map(([lat, lng]) => new mapkit.Coordinate(lat, lng)),
-          { style: new mapkit.Style({ strokeColor: color.get(line.group) ?? MINI_COLOR, lineWidth: 3, lineDash: line.dashed ? [8, 6] : [], lineCap: 'round', lineJoin: 'round' }) },
-        );
-        o.data = { group: line.group };
-        return o;
-      });
-      map.addAnnotations(annotations);
-      map.addOverlays(overlays);
-      itemsRef.current = { annotations, overlays };
-      if (annotations.length) fit(mapkit, map, annotations, overlays);
-      else if (data.center) map.region = new mapkit.CoordinateRegion(new mapkit.Coordinate(...data.center), new mapkit.CoordinateSpan(0.15, 0.15));
+      itemsRef.current = { annotations: [], overlays: [], key: '' };
+      setReady(true);
     }).catch(() => !cancelled && setFailed(true));
-    return () => { cancelled = true; mapRef.current?.destroy?.(); mapRef.current = null; };
-  }, [visible, data, mini, colorOf]);
+    return () => { cancelled = true; setReady(false); mapRef.current?.destroy?.(); mapRef.current = null; };
+  }, [visible]);
 
-  // Day filter: the chosen day's pins and route only (no sections or stays), zoomed to it.
+  // Picking (editor): a click that didn't move the map gives the coordinate under the pointer.
+  useEffect(() => {
+    const el = box.current;
+    if (!ready || !el) return;
+    let down: { x: number; y: number } | null = null;
+    const onDown = (e: PointerEvent) => { down = { x: e.clientX, y: e.clientY }; };
+    const onClick = (e: MouseEvent) => {
+      const { picking: on, onPick: pick } = pickRef.current;
+      const map = mapRef.current;
+      if (!on || !pick || !map || !window.mapkit) return;
+      if (down && Math.hypot(e.clientX - down.x, e.clientY - down.y) > 6) return; // that was a drag
+      const c = map.convertPointOnPageToCoordinate(new DOMPoint(e.pageX, e.pageY));
+      if (c) pick(c.latitude, c.longitude);
+    };
+    el.addEventListener('pointerdown', onDown, true);
+    el.addEventListener('click', onClick, true);
+    return () => { el.removeEventListener('pointerdown', onDown, true); el.removeEventListener('click', onClick, true); };
+  }, [ready]);
+
   useEffect(() => {
     const map = mapRef.current;
     const mapkit = typeof window !== 'undefined' ? window.mapkit : null;
-    if (!map || !mapkit) return;
-    const { annotations, overlays } = itemsRef.current;
-    const show = (item: any) => active === null || item.data?.group === active;
+    if (!ready || !map || !mapkit) return;
+    const old = itemsRef.current;
+    map.removeAnnotations(old.annotations);
+    map.removeOverlays(old.overlays);
+    const annotations = data.pins.map(pin => new mapkit.Annotation(
+      new mapkit.Coordinate(pin.lat, pin.lng),
+      () => pinElement(pin, colorOf(pin)),
+      { title: pin.title, subtitle: pin.subtitle, data: { group: pin.group, kind: pin.kind }, calloutEnabled: !!pin.title },
+    ));
+    const color = new Map(data.groups.map(g => [g.group, g.color]));
+    const overlays = mini ? [] : data.lines.map(line => {
+      const o = new mapkit.PolylineOverlay(
+        line.coords.map(([lat, lng]) => new mapkit.Coordinate(lat, lng)),
+        { style: new mapkit.Style({ strokeColor: color.get(line.group) ?? MINI_COLOR, lineWidth: 3, lineDash: line.dashed ? [8, 6] : [], lineCap: 'round', lineJoin: 'round' }) },
+      );
+      o.data = { group: line.group };
+      return o;
+    });
+    const show = (item: any) => activeGroup === null || item.data?.group === activeGroup;
     annotations.forEach(a => { a.visible = show(a); });
     overlays.forEach(o => { o.visible = show(o); });
-    fit(mapkit, map, annotations.filter(show), overlays.filter(show));
-  }, [active]);
+    map.addAnnotations(annotations);
+    map.addOverlays(overlays);
+    // Zoom only when the places themselves changed, not when a name or the filter did not move anything.
+    const key = `${activeGroup}|${data.pins.map(p => `${p.lat},${p.lng}`).join(';')}|${data.center ?? ''}`;
+    itemsRef.current = { annotations, overlays, key };
+    if (key === old.key) return;
+    const shown = annotations.filter(show);
+    if (shown.length) fit(mapkit, map, shown, overlays.filter(show));
+    else if (data.center) map.region = new mapkit.CoordinateRegion(new mapkit.Coordinate(...data.center), new mapkit.CoordinateSpan(0.15, 0.15));
+  }, [ready, data, mini, colorOf, activeGroup]);
 
-  if (!hasContent) return <p className="rounded-2xl border border-border bg-surface p-5 text-sm text-muted">{labels.empty}</p>;
+  if (!showMap) return <p className="rounded-2xl border border-border bg-surface p-5 text-sm text-muted">{labels.empty}</p>;
 
   return (
     <div>
       {showFilter && (
         <div className="mb-3 flex flex-wrap gap-2">
-          <FilterButton on={active === null} color="#F5F1EE" onClick={() => setActive(null)}>{labels.all}</FilterButton>
+          <FilterButton on={activeGroup === null} color="#F5F1EE" onClick={() => setActive(null)}>{labels.all}</FilterButton>
           {dayGroups.map(g => (
-            <FilterButton key={g.group} on={active === g.group} color={g.color} onClick={() => setActive(active === g.group ? null : g.group)}>
+            <FilterButton key={g.group} on={activeGroup === g.group} color={g.color} onClick={() => setActive(activeGroup === g.group ? null : g.group)}>
               {g.label}
             </FilterButton>
           ))}
@@ -145,7 +181,8 @@ export default function GuideMap({ data, mini = false, labels }: Props) {
       )}
       <div
         ref={box}
-        className={`w-full overflow-hidden rounded-2xl border border-border bg-s2 ${mini ? 'h-[260px]' : 'h-[360px] lg:h-[calc(100vh-11rem)]'}`}
+        className={`w-full overflow-hidden rounded-2xl border bg-s2 ${picking ? 'border-accent [&_*]:!cursor-crosshair' : 'border-border'} ${
+          mini ? 'h-[260px]' : alwaysShow ? 'h-[320px] lg:h-[calc(100vh-13rem)]' : 'h-[360px] lg:h-[calc(100vh-11rem)]'}`}
       >
         {failed && <p className="flex h-full items-center justify-center p-6 text-center text-sm text-muted">{labels.error}</p>}
       </div>

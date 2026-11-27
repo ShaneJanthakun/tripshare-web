@@ -35,8 +35,9 @@ export default async function MyGuidesPage({
   const { created } = await searchParams;
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
-  const [t, { data: profile }, guides] = await Promise.all([
+  const [t, te, { data: profile }, guides] = await Promise.all([
     getTranslations({ locale, namespace: 'myGuides' }),
+    getTranslations({ locale, namespace: 'editor' }),
     supabase.from('user_profiles').select('name').eq('id', user!.id).maybeSingle(),
     loadOwnGuides(supabase, user!.id),
   ]);
@@ -69,8 +70,7 @@ export default async function MyGuidesPage({
           </div>
         ) : (
           <>
-            <p className="mt-8 text-sm text-faint">{t('editSoon')}</p>
-            <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {guides.map(({ guide: g, updatedAt, upvotes, views }) => {
                 const s = status(g);
                 const live = s === 'statusPublished' || s === 'statusInProgress';
@@ -92,6 +92,7 @@ export default async function MyGuidesPage({
                       <p className="mt-1 text-sm text-muted">{[g.destination, g.country].filter(Boolean).join(', ')}</p>
                       <p className="mt-2 text-xs text-faint">♥ {upvotes} · 👁 {views}</p>
                       <div className="mt-auto flex flex-wrap gap-2 pt-5">
+                        <Link href={`/edit/${encodeURIComponent(g.id)}`} className="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent2">{te('edit')}</Link>
                         {live && (
                           <a href={guidePath(guideLocale(g), g)} className="rounded-xl border border-border px-4 py-2 text-sm font-semibold hover:bg-s2">{t('view')}</a>
                         )}
