@@ -38,8 +38,9 @@ export default async function PrivateGuidePage({ params, searchParams }: {
     const { data: row, error } = await supabase.rpc('get_guide_with_code', { p_guide_id: id, p_code: code });
     res = (error ? null : row) as Result;
   } else {
-    const { data: own } = await supabase.from('guides').select('data, upvotes, views').eq('id', id).eq('author_id', user!.id).maybeSingle();
-    res = (own ?? null) as Result;
+    // Without a code: what you may read anyway (a public guide, or your own) – RLS decides.
+    const { data: readable } = await supabase.from('guides').select('data, upvotes, views').eq('id', id).maybeSingle();
+    res = (readable ?? null) as Result;
   }
   const t = await getTranslations({ locale });
 
